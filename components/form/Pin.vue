@@ -1,7 +1,7 @@
 <template>
   <v-text-field
     variant="solo-filled"
-    type="password"
+    :type="type"
     hide-details
     flat
     color="primary"
@@ -12,6 +12,13 @@
   ></v-text-field>
 </template>
 <script setup lang="ts">
+defineProps({
+  type: {
+    type: String,
+    default: 'password'
+  }
+});
+
 const emit = defineEmits(['update:pin']);
 const pin = ref('');
 function handlePin() {

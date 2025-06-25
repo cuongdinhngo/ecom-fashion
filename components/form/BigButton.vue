@@ -1,9 +1,9 @@
 <template>
   <v-btn
-    color="primary"
+    :color="color"
     variant="flat"
     class="text-none rounded-xl"
-    width="100%"
+    :width="width"
     size="x-large"
     :to="to"
   >
@@ -19,6 +19,14 @@ const props = defineProps({
   title: {
     type: String,
     default: 'Done'
+  },
+  color: {
+    type: String,
+    default: 'primary'
+  },
+  width: {
+    type: [String, Number],
+    default: '100%'
   }
 });
 </script>
