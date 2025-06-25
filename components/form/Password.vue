@@ -2,7 +2,7 @@
   <v-text-field
     variant="solo"
     flat
-    label="Password"
+    :label="label"
     class="mb-4"
     rounded="pill"
     hide-details
@@ -12,5 +12,11 @@
   ></v-text-field>
 </template>
 <script setup lang="ts">
+defineProps({
+  label: {
+    type: String,
+    default: 'Password',
+  },
+});
 const showPasswd = ref(false);
 </script>
