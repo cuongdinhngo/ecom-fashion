@@ -45,6 +45,7 @@
 </template>
 
 <script setup lang="ts">
+console.log('Welcome to Shoppe! This is the index page.');
 </script>
 
 <style scoped>
