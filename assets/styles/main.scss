@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
 
 body {
   font-family: 'Nunito Sans', sans-serif;
@@ -25,4 +25,9 @@ body {
   font-weight: 900 !important;
   line-height: 1.5 !important;
   letter-spacing: 0.0073529412em !important;
-  }
+}
+
+.hidden-block {
+  opacity: 0;
+  pointer-events: none;
+}

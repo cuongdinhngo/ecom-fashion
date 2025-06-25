@@ -6,11 +6,12 @@
       "dependencies": {
         "@mdi/font": "^7.4.47",
         "@vueuse/core": "^13.4.0",
+        "@vueuse/router": "^13.4.0",
         "nuxt": "^3.17.5",
         "sass": "^1.89.2",
         "sass-loader": "^16.0.5",
         "vue": "^3.5.17",
-        "vue-router": "^4.5.1",
+        "vue-router": "4",
         "vuetify-nuxt-module": "0.18.7",
       },
       "devDependencies": {
@@ -420,6 +421,8 @@
     "@vueuse/metadata": ["@vueuse/metadata@13.4.0", "", {}, "sha512-CPDQ/IgOeWbqItg1c/pS+Ulum63MNbpJ4eecjFJqgD/JUCJ822zLfpw6M9HzSvL6wbzMieOtIAW/H8deQASKHg=="],
 
     "@vueuse/nuxt": ["@vueuse/nuxt@13.4.0", "", { "dependencies": { "@nuxt/kit": "^3.17.5", "@vueuse/core": "13.4.0", "@vueuse/metadata": "13.4.0", "local-pkg": "^1.1.1" }, "peerDependencies": { "nuxt": "^3.0.0 || ^4.0.0-0", "vue": "^3.5.0" } }, "sha512-0NY8CXQVTZhPipgfUyK9TuEP+tIiy1PteDVPcjdCkDqyGzhrUef4/6j7FeVn/YGgOFqFWfgdrmayESMwHv/onQ=="],
+
+    "@vueuse/router": ["@vueuse/router@13.4.0", "", { "dependencies": { "@vueuse/shared": "13.4.0" }, "peerDependencies": { "vue": "^3.5.0", "vue-router": "^4.0.0" } }, "sha512-3NL9RFgTiWN4SVp6CUFK/9db10BnoLU3iX+TRgcG4HEuR7GC1g+yMqxe33L6kjUTv8Dc9WeaER714vGBc9Xyjg=="],
 
     "@vueuse/shared": ["@vueuse/shared@13.4.0", "", { "peerDependencies": { "vue": "^3.5.0" } }, "sha512-+AxuKbw8R1gYy5T21V5yhadeNM7rJqb4cPaRI9DdGnnNl3uqXh+unvQ3uCaA2DjYLbNr1+l7ht/B4qEsRegX6A=="],
 

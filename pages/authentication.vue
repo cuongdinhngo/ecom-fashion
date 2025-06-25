@@ -18,24 +18,11 @@
 
     <v-card-title class="d-flex flex-column align-center">
       <p>Type your password</p>
-      <div class="d-flex justify-center align-center ga-2 mt-6">
-        <FormPin
-          v-model:pin="pinOne"
-          @update:pin="concatPin"
-        ></FormPin>
-        <FormPin
-          v-model:pin="pinTwo"
-          @update:pin="concatPin"
-        ></FormPin>
-        <FormPin
-          v-model:pin="pinThree"
-          @update:pin="concatPin"
-        ></FormPin>
-        <FormPin
-          v-model:pin="pinFour"
-          @update:pin="concatPin"
-        ></FormPin>
-      </div>
+    </v-card-title>
+    <v-card-title>
+       <component
+        :is="resolveAuthentication()"
+      />
     </v-card-title>
 
     <v-spacer></v-spacer>
@@ -64,16 +51,18 @@
 </template>
 
 <script setup lang="ts">
-const pinOne = ref('');
-const pinTwo = ref('');
-const pinThree = ref('');
-const pinFour = ref('');
-const pin = ref('');
+import { AuthenticationAlphanumeric, AuthenticationPin } from '#components';
+import { useRouteQuery } from '@vueuse/router';
+const type = useRouteQuery('type', 'pin');
 
-function concatPin() {
-  pin.value = pinOne.value + pinTwo.value + pinThree.value + pinFour.value;
-  console.log('PIN:', pin.value);
-}
+const resolveAuthentication = () => {
+  switch (type.value) {
+    case 'pin':
+      return AuthenticationPin;
+    case 'alphanumeric':
+      return AuthenticationAlphanumeric;
+  }
+};
 </script>
 
 <style scoped>
