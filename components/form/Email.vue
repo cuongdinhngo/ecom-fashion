@@ -1,0 +1,10 @@
+<template>
+  <v-text-field
+    variant="solo"
+    flat
+    label="Email"
+    class="mb-4"
+    rounded="pill"
+    hide-details
+  ></v-text-field>
+</template>
