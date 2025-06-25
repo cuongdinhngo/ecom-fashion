@@ -7,33 +7,33 @@ export default defineVuetifyConfiguration({
       light: {
         dark: false,
         colors: {
-          primary: '#4F46E5',
-          secondary: '#424242',
-          accent: '#82B1FF',
-          error: '#FF5252',
-          info: '#2196F3',
-          success: '#4CAF50',
-          warning: '#FFC107',
-          background: '#F3F4F6',
-          surface: '#FFFFFF',
-          'on-background': '#000000',
-          'on-surface': '#3e3d3d',
+          primary: '#004CFF',
+          secondary: '#6B7280',
+          accent: '#8B5CF6',
+          error: '#EF4444',
+          info: '#3B82F6',
+          success: '#08C514',
+          warning: '#F59E0B',
+          background: '#FFFFFF',
+          surface: '#F9FAFB',
+          'discount-surface': '#F1AEAE',
+          'discount-badge-bg': '#F81140'
         }
       },
       dark: {
         dark: true,
         colors: {
-          primary: '#4F46E5',
-          secondary: '#03DAC6',
-          accent: '#03DAC5',
-          error: '#CF6679',
-          info: '#6200EE',
-          success: '#03DAC5',
-          warning: '#FF9800',
+          primary: '#4D82F3',
+          secondary: '#9CA3AF',
+          accent: '#A78BFA',
+          error: '#F87171',
+          info: '#60A5FA',
+          success: '#34D399',
+          warning: '#FBBF24',
           background: '#1F2937',
           surface: '#374151',
           'on-background': '#FFFFFF',
-          'on-surface': '#F9FAFB',
+          'on-surface': '#F9FAFB'
         }
       }
     }
@@ -41,4 +41,4 @@ export default defineVuetifyConfiguration({
   icons: {
     defaultSet: 'mdi'
   }
-});
+})

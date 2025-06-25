@@ -16,6 +16,10 @@ export default defineNuxtConfig({
           rel: 'icon',
           type: 'image/svg+xml',
           href: '/logo.svg'
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap'
         }
       ]
     }
