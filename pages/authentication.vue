@@ -5,13 +5,7 @@
   >
     <v-spacer></v-spacer>
     <v-card-title class="d-flex justify-center align-center flex-column">
-      <div class="avatar-frame">
-        <v-avatar
-          size="91"
-          image="/public/images/avatar.png"
-        >
-        </v-avatar>
-      </div>
+      <ItemsAvatar />
 
       <h2 class="my-4">Hello, Romina!!!</h2>
     </v-card-title>
@@ -20,7 +14,7 @@
       <p>Type your password</p>
     </v-card-title>
     <v-card-title>
-       <component
+      <component
         :is="resolveAuthentication()"
       />
     </v-card-title>
@@ -70,15 +64,5 @@ const resolveAuthentication = () => {
   background-image: url('/public/images/header-bubbles-bg.png');
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-.avatar-frame {
-  width: 105px;
-  height: 105px;
-  border-radius: 50%;
-  background-color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 </style>
