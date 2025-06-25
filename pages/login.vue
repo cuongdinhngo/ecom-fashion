@@ -1,0 +1,71 @@
+<template>
+  <v-card
+    class="bg-transparent elevation-0 d-flex flex-column wrapper"
+    min-height="100vh"
+  >
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
+    <v-card-title class="title-h1 text-wrap">Login</v-card-title>
+    <v-card-title class="text-black">Good to see you back! <v-icon>mdi-heart</v-icon></v-card-title>
+    <v-card-text class="mt-4">
+      <v-text-field
+        variant="solo"
+        flat
+        label="Email"
+        class="mb-4"
+        rounded="pill"
+        hide-details
+      ></v-text-field>
+    </v-card-text>
+
+    <v-spacer></v-spacer>
+    <v-card-actions class="justify-center d-flex flex-column">
+      <v-btn
+        color="primary"
+        variant="flat"
+        class="text-none rounded-xl"
+        width="100%"
+        size="x-large"
+        :to="{ name: 'index' }"
+      >
+        <span class="btn-text">Next</span>
+      </v-btn>
+
+      <v-list-item class="text-black">
+        <template #title>
+          <v-btn
+            variant="text"
+            class="text-subtitle-2"
+            :to="{ name: 'index' }"
+          >Cancel</v-btn>
+        </template>
+      </v-list-item>
+    </v-card-actions>
+  </v-card>
+</template>
+
+<script setup lang="ts">
+</script>
+
+<style scoped>
+.wrapper {
+  background-image: url('/public/images/login-bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+</style>
