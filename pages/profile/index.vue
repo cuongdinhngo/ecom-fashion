@@ -29,6 +29,9 @@
 
     <!-- Categories -->
     <ShopCategories />
+
+    <!-- Flash Sale -->
+    <ShopFlashSale />
   </v-card>
 </template>
 <script setup lang="ts">
