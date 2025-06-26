@@ -1,7 +1,10 @@
 <template>
   <v-card class="elevation-0 bg-transparent my-3">
   <v-card-title class="d-flex justify-space-between px-0">
-    <span class="text-h6 font-weight-bold">{{ title }}</span>
+    <span class="text-h6 font-weight-bold d-flex align-center">
+      {{ title }}
+      <v-icon :color="icon?.color" :size="icon?.size" class="ml-2">{{ icon?.name }}</v-icon>
+    </span>
     <div
       v-if="seeAll"
       class="d-flex align-center"
@@ -30,6 +33,10 @@ defineProps({
   seeAll: {
     type: Boolean,
     default: false
+  },
+  icon: {
+    type: Object,
+    default: () => ({ name: null, color: null, size: null })
   }
 });
 </script>
