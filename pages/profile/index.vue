@@ -32,6 +32,9 @@
 
     <!-- Flash Sale -->
     <ShopFlashSale />
+
+    <!-- Top Products -->
+    <ShopTopProducts />
   </v-card>
 </template>
 <script setup lang="ts">
