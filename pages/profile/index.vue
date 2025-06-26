@@ -23,6 +23,9 @@
 
     <!-- New Items -->
     <ShopNewItems />
+
+    <!-- Most Popular Items -->
+    <ShopMostPopular />
   </v-card>
 </template>
 <script setup lang="ts">
