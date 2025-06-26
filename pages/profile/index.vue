@@ -35,9 +35,14 @@
 
     <!-- Top Products -->
     <ShopTopProducts />
+
+    <!-- Just For You -->
+    <ProfileJustForYou />
   </v-card>
 </template>
 <script setup lang="ts">
+import { ProfileJustForYou } from '#components';
+
 definePageMeta({
   layout: 'profile',
   title: 'Profile Page',
