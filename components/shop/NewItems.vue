@@ -19,7 +19,6 @@
   </ItemsTopDataCard>
 </template>
 <script setup lang="ts">
-import { ItemsNewItemCard } from '#components';
 import { faker } from '@faker-js/faker';
 const model = ref(null)
 const newItems = Array.from({ length: 15 }, () => ({

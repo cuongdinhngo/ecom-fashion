@@ -39,8 +39,6 @@ const props = defineProps({
     required: true
   }
 });
-
-console.log('NewItemCard props:', props);
 </script>
 <style scoped>
 .photo-frame {
