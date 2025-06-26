@@ -31,3 +31,12 @@ body {
   opacity: 0;
   pointer-events: none;
 }
+
+.subtitle-two-lines {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important; /* Limit to 2 lines */
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important; /* Optional, for ellipsis on the second line */
+  white-space: normal !important; /* Allow wrapping */
+}

@@ -1,5 +1,5 @@
 <template>
-  <v-card height="100vh" class="ma-0 pa-0 elevation-0 bg-transparent">
+  <v-card min-height="100vh" class="ma-0 pa-0 elevation-0 bg-transparent">
     <!-- Greeting -->
     <v-card-title class="text-h5 font-weight-bold px-0">
       Hello, Kitty!
@@ -19,7 +19,10 @@
     <ProfileMyOrders />
 
     <!-- Stories -->
-    <ProfileStories />
+    <ShopStories />
+
+    <!-- New Items -->
+    <ShopNewItems />
   </v-card>
 </template>
 <script setup lang="ts">
