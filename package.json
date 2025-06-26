@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@faker-js/faker": "^9.8.0",
     "@mdi/font": "^7.4.47",
     "@vueuse/core": "^13.4.0",
     "@vueuse/router": "^13.4.0",
