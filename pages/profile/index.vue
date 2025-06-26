@@ -18,12 +18,11 @@
     <!-- My Orders -->
     <ProfileMyOrders />
 
-    
+    <!-- Stories -->
+    <ProfileStories />
   </v-card>
 </template>
 <script setup lang="ts">
-import { ItemsDirectionBoard, ProfileMyOrders } from '#components';
-
 definePageMeta({
   layout: 'profile',
   title: 'Profile Page',
