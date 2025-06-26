@@ -26,6 +26,9 @@
 
     <!-- Most Popular Items -->
     <ShopMostPopular />
+
+    <!-- Categories -->
+    <ShopCategories />
   </v-card>
 </template>
 <script setup lang="ts">

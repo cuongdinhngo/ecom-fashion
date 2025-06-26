@@ -1,0 +1,45 @@
+<template>
+  <v-card class="ma-0 pa-0 category elevation-4" width="100%">
+    <v-card-text class="pa-0">
+      <v-row no-gutters class="pt-1 pr-1">
+        <v-col
+          v-for="(item, index) in items"
+          :key="index"
+          cols="6"
+          class="d-flex justify-center pb-1 pl-1"
+        >
+          <v-img
+            :src="item"
+            width="75"
+            height="75"
+            cover
+            class="rounded-lg mx-auto"
+          ></v-img>
+        </v-col>
+      </v-row>
+    </v-card-text>
+    <v-card-title class="ma-0 px-1 d-flex justify-space-between align-center">
+      <span class="text-subtitle-1 font-weight-bold">{{ category }}</span>
+      <v-chip class="font-weight-bold">{{ counts }}</v-chip>
+    </v-card-title>
+  </v-card>
+</template>
+<script setup lang="ts">
+defineProps({
+  items: {
+    type: Array,
+    required: true,
+    default: () => []
+  },
+  category: {
+    type: String,
+    required: true,
+    default: ''
+  },
+  counts: {
+    type: Number,
+    required: true,
+    default: 0
+  }
+});
+</script>
