@@ -1,7 +1,20 @@
 <template>
   <v-card class="elevation-0 bg-transparent my-3">
-  <v-card-title class="text-h6 font-weight-bold px-0">
-    {{ title }}
+  <v-card-title class="d-flex justify-space-between px-0">
+    <span class="text-h6 font-weight-bold">{{ title }}</span>
+    <div
+      v-if="seeAll"
+      class="d-flex align-center"
+    >
+      <span class="text-subtitle-1 font-weight-bold mr-2">See All</span>
+      <v-btn
+        icon
+        variant="flat"
+        color="primary"
+        size="x-small"
+      ><v-icon size="x-large">mdi-arrow-right-thin</v-icon>
+      </v-btn>
+    </div>
   </v-card-title>
   <v-card-text class="d-flex justify-space-between px-0">
     <slot />
@@ -13,6 +26,10 @@ defineProps({
   title: {
     type: String,
     default: 'Top Data'
+  },
+  seeAll: {
+    type: Boolean,
+    default: false
   }
 });
 </script>

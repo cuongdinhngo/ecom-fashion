@@ -1,5 +1,5 @@
 <template>
-  <ItemsTopDataCard title="Stories">
+  <ItemsTopDataCard title="Stories" :see-all="true">
     <v-slide-group
       v-model="model"
       center-active

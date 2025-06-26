@@ -9,6 +9,7 @@
       </template>
       <template #append>
         <v-btn
+          size="x-small"
           icon="mdi-chevron-right"
           variant="flat"
           color="primary"
