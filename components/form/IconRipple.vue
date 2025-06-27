@@ -30,7 +30,9 @@ const route = useRoute();
 const page = route.name || 'index';
 
 const isActive = computed(() => {
-  return route.name === props.menu.page;
+  const name = route.name || '';
+  const pageKey = props.menu.page;
+  return name.includes(pageKey);
 });
 console.log('Current page:', page);
 </script>
