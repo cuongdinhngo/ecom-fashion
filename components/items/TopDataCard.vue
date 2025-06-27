@@ -9,12 +9,16 @@
       v-if="seeAll"
       class="d-flex align-center"
     >
-      <span class="text-subtitle-1 font-weight-bold mr-2">See All</span>
+      <span
+        class="text-subtitle-1 font-weight-bold mr-2"
+        @click="navigateTo(to)"
+      >See All</span>
       <v-btn
         icon
         variant="flat"
         color="primary"
         size="x-small"
+        :to="to"
       ><v-icon size="x-large">mdi-arrow-right-thin</v-icon>
       </v-btn>
     </div>
@@ -37,6 +41,10 @@ defineProps({
   icon: {
     type: Object,
     default: () => ({ name: null, color: null, size: null })
+  },
+  to: {
+    type: Object,
+    default: () => ({ name: 'index' })
   }
 });
 </script>

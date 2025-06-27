@@ -1,5 +1,8 @@
 <template>
-  <ItemsFlashSaleCard title="Flash Sale" :duration="3700">
+  <ItemsFlashSaleCard
+    title="Flash Sale"
+    :duration="3700"
+  >
     <div class="grid-container d-flex ga-2">
       <v-row no-gutters>
         <v-col

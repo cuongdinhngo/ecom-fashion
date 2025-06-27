@@ -13,6 +13,7 @@
         size="40"
         class="border-thin border-white bg-grey-lighten-1 opacity-80 play-button"
         v-ripple
+        @click="navigateTo({ name: 'shop-flash-sale' })"
       >
         <v-icon color="white">mdi-play</v-icon>
       </v-avatar>

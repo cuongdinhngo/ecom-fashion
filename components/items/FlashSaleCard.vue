@@ -1,7 +1,10 @@
 <template>
   <v-card class="elevation-0 bg-transparent my-3">
     <v-card-title class="d-flex justify-space-between px-0">
-      <span class="text-h6 font-weight-bold">{{ title }}</span>
+      <span
+        class="text-h6 font-weight-bold cursor-pointer"
+        @click="navigateTo({ name: 'shop-flash-sale' })"
+      >{{ title }}</span>
       <SaleCountDown 
         color="primary"
         bgColor="pink-lighten-5"
