@@ -20,7 +20,14 @@
 </template>
 <script setup lang="ts">
 import { faker } from '@faker-js/faker';
-const categories = Array.from({ length: 4 }, () => ({
+const props = defineProps({
+  quantity: {
+    type: Number,
+    default: 4
+  }
+});
+
+const categories = Array.from({ length: props.quantity }, () => ({
   category: faker.commerce.department(),
   items: Array.from({ length: 4 }, () => `https://picsum.photos/75/75?random=${Math.floor(Math.random() * 1000)}`),
   counts: faker.number.int({ min: 50, max: 500 })
