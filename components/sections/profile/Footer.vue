@@ -4,33 +4,18 @@
     class="d-flex justify-space-between align-center border-t-thin"
   >
     <FormIconRipple
-      icon="mdi-wallet-giftcard"
-      size="x-large"
-      :to="{ name: 'index' }"
-    />
-
-    <FormIconRipple
-      icon="mdi-heart-outline"
-      size="x-large"
-      :to="{ name: 'index' }"
-    />
-
-    <FormIconRipple
-      icon="mdi-list-box-outline"
-      size="x-large"
-      :to="{ name: 'index' }"
-    />
-
-    <FormIconRipple
-      icon="mdi-shopping-outline"
-      size="x-large"
-      :to="{ name: 'index' }"
-    />
-
-    <FormIconRipple
-      icon="mdi-account-circle-outline"
-      size="x-large"
-      :to="{ name: 'index' }"
+      v-for="(menu, index) in footerMenu"
+      :key="index"
+      :menu="menu"
     />
   </v-footer>
 </template>
+<script setup lang="ts">
+const footerMenu = [
+  { icon: 'mdi-wallet-giftcard', to: { name: 'shop' }, page: 'shop', size: 'x-large', color: 'primary' },
+  { icon: 'mdi-heart-outline', to: { name: 'index' }, page: 'index', size: 'x-large', color: 'primary' },
+  { icon: 'mdi-list-box-outline', to: { name: 'index' }, page: 'index', size: 'x-large', color: 'primary' },
+  { icon: 'mdi-shopping-outline', to: { name: 'index' }, page: 'index', size: 'x-large', color: 'primary' },
+  { icon: 'mdi-account-circle-outline', to: { name: 'profile' }, page: 'profile', size: 'x-large', color: 'primary' },
+];
+</script>
