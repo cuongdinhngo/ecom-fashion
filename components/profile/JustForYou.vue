@@ -20,6 +20,6 @@ import { faker } from '@faker-js/faker';
 const products = Array.from({ length: 8 }, () => ({
   image: 'https://picsum.photos/seed/' + faker.string.alphanumeric(10) + '/180/200',
   description: faker.commerce.productDescription(),
-  price: faker.commerce.price(),
+  price: faker.commerce.price({ min: 10, max: 200, dec: 2, symbol: '$' }),
 }));
 </script>
