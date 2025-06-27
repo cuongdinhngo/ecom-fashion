@@ -2,12 +2,11 @@
   <v-card class="elevation-0 bg-transparent my-3">
     <v-card-title class="d-flex justify-space-between px-0">
       <span class="text-h6 font-weight-bold">{{ title }}</span>
-      <div class="d-flex align-center">
-        <v-icon size="default" class="mr-2" color="primary">mdi-alarm</v-icon>
-        <span class="text-subtitle-1 font-weight-bold px-2 rounded-lg bg-pink-lighten-5 mr-1">{{ pad(hour) }}</span>
-        <span class="text-subtitle-1 font-weight-bold px-2 rounded-lg bg-pink-lighten-5 mr-1">{{ pad(minute) }}</span>
-        <span class="text-subtitle-1 font-weight-bold px-2 rounded-lg bg-pink-lighten-5">{{ pad(second) }}</span>
-      </div>
+      <SaleCountDown 
+        color="primary"
+        bgColor="pink-lighten-5"
+        :duration="duration"
+      />
     </v-card-title>
     <v-card-text class="d-flex justify-space-between px-0">
       <slot />
