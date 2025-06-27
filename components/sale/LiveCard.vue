@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-4 mt-8 elevation-0 bg-transparent border-thin rounded-lg">
+  <v-card class="mt-8 elevation-0 bg-transparent border-thin rounded-lg">
     <v-card-title class="text-subtitle-1 text-center">
       ARTICALE REIMAGINED
     </v-card-title>
