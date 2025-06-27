@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 const route = useRoute();
-const defaultBg = '/images/flash-sale-bg.png';
+const defaultBg = '';
 const backgroundImage = computed(() => (route.meta.backgroundImage as string) || defaultBg);
 
 const wrapperStyle = computed(() => ({
