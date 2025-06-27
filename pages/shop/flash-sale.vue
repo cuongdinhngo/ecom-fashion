@@ -1,12 +1,12 @@
 <template>
   <v-card
-    class="bg-transparent elevation-0 d-flex flex-column wrapper"
+    class="bg-transparent elevation-0 d-flex flex-column"
     tile
   >
     <v-card-actions></v-card-actions>
 
     <!-- Flash Sale Header -->
-    <v-card-title class="d-flex justify-space-between pb-0">
+    <v-card-title class="d-flex justify-space-between pb-0 px-0">
       <span class="text-h5 font-weight-bold">Flash Sale</span>
       <SaleCountDown 
         color="white"
@@ -16,11 +16,11 @@
     </v-card-title>
 
     <!-- Discount Option -->
-    <v-card-title class="text-subtitle-1 py-0 text-black">
+    <v-card-title class="text-subtitle-1 pa-0 text-black">
       Choose Your Discount
     </v-card-title>
 
-    <v-card-title class="d-flex justify-center px-2 py-0 mt-4">
+    <v-card-title class="d-flex justify-center pa-0 mt-4">
       <v-slide-group
         v-model="selectedDiscount"
         class="discount-menu bg-grey-lighten-4 rounded-lg px-6 py-2"
@@ -49,7 +49,7 @@
     <SaleLiveCard />
 
     <!-- Discount Products -->
-    <v-card-text>
+    <v-card-text class="pa-0">
       <v-tabs-window v-model="selectedDiscount">
         <v-tabs-window-item
           v-for="(option, idx) in discountOptions"
@@ -63,14 +63,14 @@
         </v-tabs-window-item>
       </v-tabs-window>
     </v-card-text>
-
-  <!-- End of Card-->  
   </v-card>
+
+  <ShopMostPopular />
 </template>
 
 <script setup lang="ts">
 definePageMeta({
-  layout: 'sale',
+  backgroundImage: '/images/flash-sale-bg.png',
   title: 'Shoppe - Home',
   meta: [
     { name: 'description', content: 'Welcome to Shoppe, your online store for beautiful products.' },
@@ -80,7 +80,7 @@ definePageMeta({
 
 import { faker } from '@faker-js/faker';
 
-const selectedDiscount = ref('all');
+const selectedDiscount = ref<string | number>('all');
 const duration = ref(3700);
 const discountOptions = [
   { label: 'All', value: 'all' },
@@ -91,7 +91,7 @@ const discountOptions = [
   { label: '50%', value: 50 },
 ];
 
-const products = Array.from({ length: 4 }, () => {
+const products = Array.from({ length: 30 }, () => {
   const discount = faker.helpers.arrayElement([10, 20, 30, 40, 50]);
   const originalPrice = faker.commerce.price({ min: 10, max: 100, dec: 2});
   const price = (parseFloat(originalPrice) * (1 - discount / 100)).toFixed(2);
@@ -115,12 +115,6 @@ const discountProducts = computed(() => {
 </script>
 
 <style scoped>
-.wrapper {
-  background-image: url('/public/images/flash-sale-bg.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 .discount-item {
   position: relative;
   min-width: 58px;
