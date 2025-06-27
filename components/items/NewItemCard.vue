@@ -18,7 +18,7 @@
       <span class="text-caption">{{ item.description }}</span>
     </v-card-subtitle>
     <v-card-title class="ma-0 pa-0">
-      <span class="text-subtitle font-weight-bold">${{ item.price }}</span>
+      <span class="text-subtitle font-weight-bold">{{ item.price }}</span>
     </v-card-title>
   </v-card>
 </template>
