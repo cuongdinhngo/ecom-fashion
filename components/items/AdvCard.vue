@@ -6,20 +6,19 @@
       height="250"
       class="rounded-lg"
     >
-      <v-card-title class="text-subtitle-1 bg-yellow-lighten-4 opacity-50 text-black font-weight-bold pb-0">
-        {{ title }}
+      <v-card-title class="bg-yellow-lighten-4 opacity-50 text-black">
+        <p class="text-subtitle-1 font-weight-bold">{{ title }}</p>
+        <p class="text-caption">{{ subtitle }}</p>
       </v-card-title>
-      <v-card-subtitle class="bg-yellow-lighten-4 opacity-50 text-black font-weight-bold">
-        {{ subtitle }}
-      </v-card-subtitle>
     </v-img>
   </v-card>
 </template>
 <script setup lang="ts">
+import { faker } from '@faker-js/faker';
 defineProps({
   image: {
     type: String,
-    default: 'https://picsum.photos/id/7/400/250'
+    default: `https://picsum.photos/id/${ faker.number.int({ min: 1, max: 1000 }) }/400/250`
   },
   title: {
     type: String,
