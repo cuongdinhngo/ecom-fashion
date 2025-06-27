@@ -45,6 +45,15 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  layout: 'fullview',
+  title: 'Shoppe - Home',
+  meta: [
+    { name: 'description', content: 'Welcome to Shoppe, your online store for beautiful products.' },
+    { name: 'keywords', content: 'eCommerce, online store, shopping, fashion' }
+  ]
+});
+
 import { AuthenticationAlphanumeric, AuthenticationPin } from '#components';
 import { useRouteQuery } from '@vueuse/router';
 const type = useRouteQuery('type', 'pin');

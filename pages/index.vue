@@ -45,6 +45,14 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  layout: 'fullview',
+  title: 'Shoppe - Home',
+  meta: [
+    { name: 'description', content: 'Welcome to Shoppe, your online store for beautiful products.' },
+    { name: 'keywords', content: 'eCommerce, online store, shopping, fashion' }
+  ]
+});
 console.log('Welcome to Shoppe! This is the index page.');
 </script>
 
