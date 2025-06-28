@@ -10,7 +10,7 @@
           variant="solo-filled"
           rounded="pill"
           menu-icon=""
-          width="300"
+          width="320"
           placeholder="Search ..."
           item-title="title"
           item-value="title"
@@ -19,18 +19,28 @@
             <v-icon color="primary">mdi-camera-outline</v-icon>
           </template>
 
-          <template v-slot:chip="{ props, item }">
-            <v-chip
-              v-bind="props"
-              :text="item.raw.title"
-              color="primary"
-            ></v-chip>
+          <template v-slot:chip="{ props, item, index }">
+            <template v-if="index < 2">
+              <v-chip
+                v-bind="props"
+                :text="item.raw.title"
+                color="primary"
+              />
+            </template>
+            <template v-else-if="index === 2">
+              <v-chip color="primary">
+                +{{ searchQuery.length - 2 }}
+              </v-chip>
+            </template>
           </template>
 
           <template v-slot:item="{ props, item }">
             <v-list-item
               v-bind="props"
               :title="item.raw.title"
+              :value="item.raw.title"
+              :prepend-avatar="item.raw.image"
+              color="primary"
               density="compact"
               link
             ></v-list-item>
