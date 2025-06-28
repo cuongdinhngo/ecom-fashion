@@ -18,7 +18,10 @@
     </v-card-subtitle>
     <v-card-title class="ma-0 px-1 py-0">
       <span class="font-weight-bold">{{ item.price }}</span>
-      <span class="text-subtitle-2 font-weight-bold text-pink-lighten-3 ml-2 text-decoration-line-through">
+      <span
+        v-if="!hiddenOriginalPrice"
+        class="text-subtitle-2 font-weight-bold text-pink-lighten-3 ml-2 text-decoration-line-through"
+      >
         {{ item.originalPrice }}
       </span>
     </v-card-title>
@@ -30,6 +33,10 @@ const props = defineProps({
     type: Object,
     required: true,
     default: () => ({})
+  },
+  hiddenOriginalPrice: {
+    type: Boolean,
+    default: true
   }
 });
 </script>
