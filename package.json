@@ -23,5 +23,8 @@
   },
   "devDependencies": {
     "@vueuse/nuxt": "^13.4.0"
+  },
+  "overrides": {
+    "css-select": "4.3.0"
   }
 }

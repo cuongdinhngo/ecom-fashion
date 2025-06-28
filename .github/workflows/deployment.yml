@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: "20"
       # Pick your own package manager and build script
-      - run: npm install
+      - run: npm ci
       - run: NUXT_APP_BASE_URL=/ecom-fashion/ npx nuxt build --preset github_pages
         env:
           APP_URL: ${{ secrets.APP_URL }}
