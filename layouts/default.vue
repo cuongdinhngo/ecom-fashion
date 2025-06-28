@@ -15,12 +15,16 @@
 
 <script setup lang="ts">
 const route = useRoute();
-const defaultBg = '';
-const backgroundImage = computed(() => (route.meta.backgroundImage as string) || defaultBg);
+const backgroundImage = computed(() => (route.meta.backgroundImage as string));
 
-const wrapperStyle = computed(() => ({
-  backgroundImage: `url('${imagePath(backgroundImage.value)}')`,
-  backgroundSize: 'contain',
-  backgroundRepeat: 'no-repeat'
-}))
+const wrapperStyle = computed(() => {
+  const style: Record<string, string> = {
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat'
+  };
+  if (backgroundImage.value) {
+    style.backgroundImage = `url('${imagePath(backgroundImage.value)}')`;
+  }
+  return style;
+});
 </script>
