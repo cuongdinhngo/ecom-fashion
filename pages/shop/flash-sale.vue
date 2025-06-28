@@ -70,7 +70,7 @@
 
 <script setup lang="ts">
 definePageMeta({
-  backgroundImage: imagePath('flash-sale-bg.png'),
+  backgroundImage: '/images/flash-sale-bg.png',
   title: 'Shoppe - Home',
   meta: [
     { name: 'description', content: 'Welcome to Shoppe, your online store for beautiful products.' },
