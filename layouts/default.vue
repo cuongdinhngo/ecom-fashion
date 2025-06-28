@@ -19,7 +19,7 @@ const defaultBg = '';
 const backgroundImage = computed(() => (route.meta.backgroundImage as string) || defaultBg);
 
 const wrapperStyle = computed(() => ({
-  backgroundImage: `url('${backgroundImage.value}')`,
+  backgroundImage: `url('${imagePath(backgroundImage.value)}')`,
   backgroundSize: 'contain',
   backgroundRepeat: 'no-repeat'
 }))
