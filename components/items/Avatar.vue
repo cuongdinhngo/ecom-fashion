@@ -6,8 +6,7 @@
     <v-avatar
       :size="size"
       :image="avatar"
-    >
-    </v-avatar>
+    ></v-avatar>
   </div>
 </template>
 <script setup lang="ts">
