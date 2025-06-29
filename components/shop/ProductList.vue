@@ -47,17 +47,17 @@
       <v-card-title class="mt-4">
         <v-slide-group
           v-model="selectedGender"
-          selected-class="border-thin border-primary text-primary"
+          selected-class="text-primary bg-grey-lighten-5"
         >
           <v-slide-group-item
             v-for="gender in GENDERS"
             :key="gender.value"
             :value="gender.value"
-            v-slot="{ toggle, selectedClass }"
+            v-slot="{ toggle, selectedClass, isSelected }"
             
           >
             <v-btn
-              variant="tonal"
+              :variant="isSelected ? 'outlined' : 'tonal'"
               :class="['text-none', 'text-h6', selectedClass]"
               rounded="lg"
               width="30%"

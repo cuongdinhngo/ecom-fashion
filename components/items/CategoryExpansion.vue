@@ -5,7 +5,7 @@
       :key="idx"
       class="elevation-0 bg-white my-2"
     >
-      <v-expansion-panel-title class="ma-0 py-1 px-0 elevation-1 rounded-lg">
+      <v-expansion-panel-title class="ma-0 py-1 px-0 elevation-2 rounded-lg">
         <v-list-item>
           <template #prepend>
             <v-avatar
@@ -20,21 +20,22 @@
         </v-list-item>
       </v-expansion-panel-title>
 
-      <v-expansion-panel-text>
-        <v-row no-gutters>
+      <v-expansion-panel-text class="pa-2">
+        <v-row>
           <v-col
             v-for="(item, index) in category.relatives"
             :key="index"
             cols="6"
-            class="my-1 text-center"
+            class="pa-1"
           >
             <v-chip
               label
               color="primary"
               variant="outlined"
-              style="width: 90%;"
-              class="d-flex justify-center align-center"
-            ><span>{{ item.title }}</span></v-chip>
+              class="w-100 d-flex justify-center align-center"
+            >
+              <span>{{ item.title }}</span>
+            </v-chip>
           </v-col>
         </v-row>
       </v-expansion-panel-text>
@@ -74,3 +75,8 @@ defineProps({
   }
 });
 </script>
+<style>
+.v-expansion-panel-text__wrapper {
+  padding: 8px !important;
+}
+</style>
