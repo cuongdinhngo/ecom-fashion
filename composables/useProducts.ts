@@ -52,6 +52,7 @@ export const CATEGORIES = [
 const KINDS = [
   {
     category: 'Clothing',
+    image: 'https://picsum.photos/50/50?random=6',
     relatives: [
       {
         title: 'T-Shirts',
@@ -89,6 +90,7 @@ const KINDS = [
   },
   {
     category: 'Shoes',
+    image: 'https://picsum.photos/50/50?random=7',
     relatives: [
       {
         title: 'Sneakers',
@@ -118,6 +120,7 @@ const KINDS = [
   },
   {
     category: 'Bags',
+    image: 'https://picsum.photos/50/50?random=8',
     relatives: [
       {
         title: 'Handbags',
@@ -143,6 +146,7 @@ const KINDS = [
   },
   {
     category: 'Lingerie',
+    image: 'https://picsum.photos/50/50?random=9',
     relatives: [
       {
         title: 'Bras',
@@ -164,6 +168,7 @@ const KINDS = [
   },
   {
     category: 'Watch',
+    image: 'https://picsum.photos/50/50?random=10',
     relatives: [
       {
         title: 'Smart Watches',
@@ -181,6 +186,7 @@ const KINDS = [
   },
   {
     category: 'Hoodies',
+    image: 'https://picsum.photos/50/50?random=11',
     relatives: [
       {
         title: 'Pullover Hoodies',
