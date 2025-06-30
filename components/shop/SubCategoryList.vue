@@ -4,7 +4,7 @@
   >
     <v-row no-gutters>
       <v-col
-        v-for="(item, index) in relatives"
+        v-for="(item, index) in subCategories"
         :key="index"
         cols="2"
         class="d-flex flex-column align-center justify-center"
@@ -23,7 +23,7 @@
 </template>
 <script setup lang="ts">
 defineProps({
-  relatives: {
+  subCategories: {
     type: Array as () => Object[],
     default: () => []
   }

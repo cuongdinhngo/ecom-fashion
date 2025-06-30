@@ -36,9 +36,9 @@
   />
 
   <!-- Relative List -->
-  <ShopRelativeList
-    v-if="relatives.length > 0"
-    :relatives="relatives"
+  <ShopSubCategoryList
+    v-if="subCategories.length > 0"
+    :subCategories="subCategories"
   />
 
   <!-- Product List -->
@@ -56,14 +56,14 @@ import type { Product } from '@/composables/useProducts';
 
 const searchQuery = useSearchQuery();
 
-const { SEARCH_TERMS, CATEGORIES, searchProducts, searchRelatives } = useProducts();
+const { SEARCH_TERMS, CATEGORIES, searchProducts, searchSubCategories } = useProducts();
 const products = ref<Product[]>([]);
-const relatives = ref<any[]>([]);
+const subCategories = ref<any[]>([]);
 
 watch(searchQuery, (newValue) => {
   console.log('Search Query Updated:', newValue);
-  relatives.value = searchRelatives(newValue);
-  console.log('Filtered Relatives:', relatives.value);
+  subCategories.value = searchSubCategories(newValue);
+  console.log('Filtered subCategories:', subCategories.value);
   products.value = searchProducts(newValue);
   console.log('Filtered Products:', products.value);
 }, { immediate: true });

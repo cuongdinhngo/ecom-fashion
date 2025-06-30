@@ -53,7 +53,7 @@ const KINDS = [
   {
     category: 'Clothing',
     image: categoryImg(),
-    relatives: [
+    subCategories: [
       {
         title: 'T-Shirts',
         image: categoryImg(),
@@ -91,7 +91,7 @@ const KINDS = [
   {
     category: 'Shoes',
     image: categoryImg(),
-    relatives: [
+    subCategories: [
       {
         title: 'Sneakers',
         image: categoryImg(),
@@ -121,7 +121,7 @@ const KINDS = [
   {
     category: 'Bags',
     image: categoryImg(),
-    relatives: [
+    subCategories: [
       {
         title: 'Handbags',
         image: categoryImg(),
@@ -147,7 +147,7 @@ const KINDS = [
   {
     category: 'Lingerie',
     image: categoryImg(),
-    relatives: [
+    subCategories: [
       {
         title: 'Bras',
         image: categoryImg(),
@@ -169,7 +169,7 @@ const KINDS = [
   {
     category: 'Watch',
     image: categoryImg(),
-    relatives: [
+    subCategories: [
       {
         title: 'Smart Watches',
         image: categoryImg(),
@@ -187,7 +187,7 @@ const KINDS = [
   {
     category: 'Hoodies',
     image: categoryImg(),
-    relatives: [
+    subCategories: [
       {
         title: 'Pullover Hoodies',
         image: categoryImg(),
@@ -210,19 +210,23 @@ const SEARCH_TERMS = [
   'Pullover Hoodies', 'Zip-Up Hoodies'
 ];
 
+const SIZE_OPTIONS = {
+  0: 'XS', 1: 'S', 2: 'M', 3: 'L', 4: 'XL', 5: 'XXL'
+};
+
 export const useProducts = (options: ProductOptions = defaultOptions) => {
   const products = Array.from({ length: options.quantity }, () => {
     const discount = faker.helpers.arrayElement([10, 20, 30, 40, 50]);
     const originalPrice = faker.commerce.price({ min: 10, max: 100, dec: 2 });
     const price = (parseFloat(originalPrice) * (1 - discount / 100)).toFixed(2);
     const category = faker.helpers.arrayElement(CATEGORIES).title;
-    const relative = KINDS.find(item => item.category === category)?.relatives || [];
+    const subCategories = KINDS.find(item => item.category === category)?.subCategories || [];
     return {
       id: faker.string.uuid(),
       name: faker.commerce.productName(),
       description: faker.commerce.productDescription(),
       category: category,
-      relative: relative.length > 0 ? faker.helpers.arrayElement(relative).title : '',
+      relative: subCategories.length > 0 ? faker.helpers.arrayElement(subCategories).title : '',
       image: smallProductImg(),
       originalPrice: `$${originalPrice}`,
       price: `$${price}`,
@@ -235,13 +239,13 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
     return products.filter(product => searchTerms.includes(product.category));
   }
 
-  const searchRelatives = (searchTerms: string[]): Object[] => {
-    // Return relatives' titles for the given categories
+  const searchSubCategories = (searchTerms: string[]): Object[] => {
+    // Return subCategories' titles for the given categories
     const category = KINDS.filter(kind => searchTerms.includes(kind.category));
     if (category.length === 0) {
       return [];
     } else {
-      return category.flatMap(kind => kind.relatives);
+      return category.flatMap(kind => kind.subCategories);
     }
   }
 
@@ -250,7 +254,8 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
     SEARCH_TERMS,
     CATEGORIES,
     KINDS,
+    SIZE_OPTIONS,
     searchProducts,
-    searchRelatives
+    searchSubCategories
   };
 }

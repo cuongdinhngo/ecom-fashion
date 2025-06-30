@@ -23,7 +23,7 @@
       <v-expansion-panel-text class="pa-2">
         <v-row>
           <v-col
-            v-for="(item, index) in category.relatives"
+            v-for="(item, index) in category.subCategories"
             :key="index"
             cols="6"
             class="pa-1"
@@ -70,7 +70,7 @@
 <script setup lang="ts">
 defineProps({
   categories: {
-    type: Array as () => { category: string; image: string; relatives: { title: string }[] }[],
+    type: Array as () => { category: string; image: string; subCategories: { title: string }[] }[],
     default: () => []
   }
 });
