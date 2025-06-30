@@ -28,12 +28,3 @@ defineProps({
   }
 });
 </script>
-<style scoped>
-.avatar-frame {
-  border-radius: 50%;
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-</style>

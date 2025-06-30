@@ -40,3 +40,11 @@ body {
   text-overflow: ellipsis !important; /* Optional, for ellipsis on the second line */
   white-space: normal !important; /* Allow wrapping */
 }
+
+.avatar-frame {
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
