@@ -1,7 +1,7 @@
 <template>
   <v-card flat class="d-flex ga-2 my-2" height="170px">
     <div class="product-image">
-      <div class="frame pa-2 elevation-2 rounded-lg">
+      <div class="frame pa-2 elevation-2 rounded-lg" style="position: relative;">
         <v-img
           :src="smallProductImg()"
           width="150px"
@@ -10,6 +10,15 @@
           cover
           class="rounded-lg"
         ></v-img>
+
+        <v-btn
+          icon
+          variant="flat"
+          style="position: absolute; bottom: 10px; left: 10px;"
+          size="small"
+        >
+          <v-icon color="error" icon="mdi-trash-can-outline"></v-icon>
+        </v-btn>
       </div>
     </div>
     <div class="product-info">
