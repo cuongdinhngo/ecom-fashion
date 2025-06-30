@@ -29,12 +29,25 @@
   </v-card-text>
 
   <!-- Wishlist -->
-  <v-card-text class="pa-0">
+  <v-card-text class="pa-0 wishlist-container">
     <ItemsWishlistCard
       v-for="i in 5"
       :key="i"
     />
+
+    <!-- If wishlist is empty, it will be showed -->
+    <!-- <v-btn
+      variant="tonal"
+      size="100"
+      icon
+      class="mx-auto"
+    >
+      <v-icon size="70">mdi-hand-heart-outline</v-icon>
+    </v-btn> -->
   </v-card-text>
+
+  <!-- If wishlist is empty, most popular list should be showed -->
+  <!-- <ShopMostPopular /> -->
 
 </template>
 <script setup lang="ts">
@@ -63,6 +76,13 @@ const recentlyViews = [
   height: 160px;
   border-radius: 10px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wishlist-container {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
