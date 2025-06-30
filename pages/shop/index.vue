@@ -1,9 +1,4 @@
 <template>
-  <!-- Shop Search Header -->
-  <ShopSearchHeader
-    v-model:search-query="searchQuery"
-  />
-
   <!-- Shop Banner -->
   <ShopBanner
     v-if="products.length === 0"
@@ -53,13 +48,17 @@
   />
 </template>
 <script setup lang="ts">
+definePageMeta({
+  layout: 'shop'
+});
+
 import type { Product } from '@/composables/useProducts';
 
-const searchQuery = ref<string[]>([]);
+const searchQuery = useSearchQuery();
 
 const { SEARCH_TERMS, CATEGORIES, searchProducts, searchRelatives } = useProducts();
 const products = ref<Product[]>([]);
-const relatives = ref<string[]>([]);
+const relatives = ref<any[]>([]);
 
 watch(searchQuery, (newValue) => {
   console.log('Search Query Updated:', newValue);
