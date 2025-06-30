@@ -322,7 +322,7 @@
     </v-card>
   </v-dialog>
 
-    <!-- Product Options Dialog -->
+  <!-- Product Options Dialog -->
   <v-dialog
     v-model="reviewDialog"
     transition="dialog-bottom-transition"
@@ -354,11 +354,14 @@
   <!-- Product Options at the bottom of screen -->
   <div class="sticky-actions">
     <v-card-actions class="justify-center">
-      <v-btn
-        icon="mdi-heart-outline"
-        variant="text"
-        size="large"
-      ></v-btn>
+      <v-rating
+        clearable
+        :length="1"
+        :size="40"
+        active-color="error"
+        empty-icon="mdi-heart-outline"
+        full-icon="mdi-heart"
+      />
       <v-btn
         variant="outlined"
         class="text-none rounded-lg bg-black text-white"
