@@ -58,12 +58,20 @@
         <span class="text-h5 font-weight-bold">Variations</span>
         <div class="selected-options ml-3">
           <v-chip
-            v-for="(option, i) in ['Color', 'Size']" :key="i"
-            class="ma-1"
+            v-if="selectedColor"
+            class="mx-1 text-capitalize"
             variant="tonal"
             label
           >
-            {{ option }}
+            {{ selectedColor }}
+          </v-chip>
+          <v-chip
+            v-if="selectedSize"
+            class="mx-1 text-capitalize"
+            variant="tonal"
+            label
+          >
+            {{ selectedSize }}
           </v-chip>
         </div>
       </div>
@@ -74,6 +82,7 @@
           color="primary"
           size="30"
           icon
+          @click="dialog = true"
         >
           <v-icon icon="mdi-arrow-right" size="x-small" />
         </v-btn>
@@ -162,6 +171,7 @@
         color="primary"
         class="text-none rounded-lg"
         width="100%"
+        @click="reviewDialog = true"
       >
         View All Reviews
       </v-btn>
@@ -176,6 +186,170 @@
     </v-card-title>
   <!-- End of Card -->
   </v-card>
+
+  <!-- Product Options Dialog -->
+  <v-dialog
+    v-model="dialog"
+    transition="dialog-bottom-transition"
+    height="50%"
+    min-width="100%"
+    location="bottom"
+  >
+    <v-card>
+      <template #prepend>
+        <v-img
+          width="100"
+          height="100"
+          aspect-ratio="16/9"
+          cover
+          :src="smallProductImg()"
+        ></v-img>
+      </template>
+      <template #title>
+        <div class="d-flex flex-column justify-end">
+          <span class="text-h4 font-weight-bold">${{ faker.commerce.price() }}</span>
+          <div class="selected-options">
+            <v-chip
+              v-if="selectedColor"
+              class="ma-1 text-capitalize"
+              variant="tonal"
+              label
+            >
+              {{ selectedColor }}
+            </v-chip>
+            <v-chip
+              v-if="selectedSize"
+              class="ma-1 text-capitalize"
+              variant="tonal"
+              label
+            >
+              {{ selectedSize }}
+            </v-chip>
+          </div>
+        </div>
+      </template>
+
+      <!-- Color Options -->
+      <v-card-title class="text-h6 font-weight-bold">Color Options</v-card-title>
+      <v-card-title>
+        <v-item-group selected-class="bg-primary">
+          <v-row>
+            <v-col
+              v-for="color in colorOptions"
+              :key="color.value"
+              cols="3"
+            >
+              <v-item v-slot="{ isSelected, selectedClass, toggle }">
+                <div
+                  style="position: relative;"
+                  @click="toggle(); selectedColor = color.value"
+                >
+                  <v-img
+                    :src="color.image"
+                    width="100"
+                    height="100"
+                    aspect-ratio="16/9"
+                    cover
+                  ></v-img>
+                  
+                  <!-- Check Signal-->
+                  <v-avatar
+                    v-if="isSelected || selectedColor === color.value"
+                    size="20"
+                    color="primary"
+                    style="position: absolute; bottom: 3px; left: 3px;"
+                  >
+                    <v-icon size="10">mdi-check-bold</v-icon>
+                  </v-avatar>
+                </div>
+              </v-item>
+            </v-col>
+          </v-row>
+        </v-item-group>
+      </v-card-title>
+
+      <!-- Size Options -->
+      <v-card-title class="text-h6 font-weight-bold pb-0">Size</v-card-title>
+      <v-card-title class="pt-0">
+        <v-chip-group
+          selected-class="text-primary"
+          v-model="selectedSize"
+        >
+          <v-chip
+            v-for="size in ['S', 'M', 'L', 'XL', 'XXL']"
+            :key="size"
+            :text="size"
+            :value="size"
+            label
+            color="primary"
+            class="px-3"
+          ></v-chip>
+        </v-chip-group>
+      </v-card-title> 
+
+      <v-card-title class="d-flex justify-space-between align-center">
+        <span class="text-h6 font-weight-bold">Quantity</span>
+        <div class="d-flex align-center">
+          <v-btn
+            variant="outlined"
+            icon="mdi-minus"
+            size="50"
+            class="mr-2"
+            color="primary"
+            @click="quantity = Math.max(1, quantity - 1)"
+          ></v-btn>
+          <v-text-field
+            v-model="quantity"
+            type="number"
+            variant="solo-filled"
+            hide-details
+            flat
+            width="40"
+            height="50"
+            size="100"
+            class="text-h1 font-weight-bold"
+          ></v-text-field>
+          <v-btn
+            variant="outlined"
+            icon="mdi-plus"
+            size="50"
+            class="ml-2"
+            color="primary"
+            @click="quantity++"
+          ></v-btn>
+        </div>
+      </v-card-title>
+    </v-card>
+  </v-dialog>
+
+    <!-- Product Options Dialog -->
+  <v-dialog
+    v-model="reviewDialog"
+    transition="dialog-bottom-transition"
+    fullscreen
+  >
+    <v-card>
+      <template #append>
+        <v-btn
+          icon="mdi-close"
+          variant="text"
+          size="large"
+          class="mr-2"
+          @click="reviewDialog = false"
+        ></v-btn>
+      </template>
+      <template #title>
+        <h3>Reviews</h3>
+      </template>
+
+      <v-card-text>
+        <ItemsReviewCard
+          v-for="i in 5"
+          :key="i"
+        ></ItemsReviewCard>
+      </v-card-text>
+    </v-card>
+  </v-dialog>
   
   <!-- Product Options at the bottom of screen -->
   <div class="sticky-actions">
@@ -234,6 +408,19 @@ const deliveryOptions = [
     price: '$10.00'
   }
 ];
+
+const dialog = ref(false);
+const colorOptions = ref([
+  { name: 'Red', value: 'red', image: smallProductImg() },
+  { name: 'Blue', value: 'green', image: smallProductImg() },
+  { name: 'Green', value: 'blue', image: smallProductImg() },
+  { name: 'Black', value: 'black', image: smallProductImg() },
+]);
+const selectedColor = ref('');
+const selectedSize = ref('');
+const quantity = ref(1);
+
+const reviewDialog = ref(false);
 </script>
 <style scoped>
 .sticky-actions {
