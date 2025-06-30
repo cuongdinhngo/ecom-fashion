@@ -9,7 +9,7 @@ export function avatarImg(): string {
 }
 
 export function bannerImg(): string {
-  return `${useRuntimeConfig().app.baseURL}/images/banner-${faker.number.int({min: 1, max: 2})}.jpg`;
+  return `${useRuntimeConfig().app.baseURL}/images/banner-${faker.number.int({min: 1, max: 6})}.jpg`;
 }
 
 export function categoryImg(): string {
