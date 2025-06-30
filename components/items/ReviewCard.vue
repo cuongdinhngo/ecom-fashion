@@ -12,7 +12,7 @@
         <span class="text-subtitle-1 font-weight-bold">{{ faker.person.fullName() }}</span>
         <v-rating
           length="5"
-          :model-value="3"
+          :model-value="faker.number.int({ min: 1, max: 5 })"
           active-color="orange-lighten-1"
           density="compact"
         ></v-rating>
