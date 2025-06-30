@@ -29,6 +29,7 @@
     </v-row>
   </ItemsContainerCard>
 
+  <!-- Dialog for Categories -->
   <v-dialog
     v-model="dialog"
     transition="dialog-bottom-transition"
