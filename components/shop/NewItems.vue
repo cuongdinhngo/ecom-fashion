@@ -25,6 +25,6 @@ const newItems = Array.from({ length: 15 }, () => ({
   id: faker.string.uuid(),
   description: faker.lorem.sentence({ min: 5, max: 10 }),
   price: faker.commerce.price({ min: 10, max: 200, dec: 2, symbol: '$' }),
-  image: `https://picsum.photos/130/130?random=${Math.floor(Math.random() * 1000)}`,
+  image: smallProductImg(),
 }));
 </script>

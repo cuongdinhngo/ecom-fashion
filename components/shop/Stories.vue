@@ -17,7 +17,7 @@
           @click="toggle"
         >
           <v-img
-            :src="`https://picsum.photos/110/200?random=${n}`"
+            :src="smallProductImg()"
             height="200"
             width="110"
             cover

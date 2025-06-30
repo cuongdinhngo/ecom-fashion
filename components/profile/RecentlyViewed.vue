@@ -14,6 +14,6 @@ import { faker } from '@faker-js/faker';
 
 const recentlyViews = Array.from({ length: 5 }, () => ({
   name: faker.person.fullName(),
-  avatar: faker.image.avatar(),
+  avatar: avatarImg(),
 }));
 </script>

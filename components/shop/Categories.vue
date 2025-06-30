@@ -29,7 +29,7 @@ const props = defineProps({
 
 const categories = Array.from({ length: props.quantity }, () => ({
   category: faker.commerce.department(),
-  items: Array.from({ length: 4 }, () => `https://picsum.photos/75/75?random=${Math.floor(Math.random() * 1000)}`),
+  items: Array.from({ length: 4 }, () => categoryImg()),
   counts: faker.number.int({ min: 50, max: 500 })
 }));
 </script>

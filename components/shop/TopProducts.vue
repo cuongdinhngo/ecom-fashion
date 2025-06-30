@@ -14,6 +14,6 @@ import { faker } from '@faker-js/faker';
 
 const recentlyViews = Array.from({ length: 5 }, () => ({
   name: faker.person.fullName(),
-  avatar: 'https://picsum.photos/100/100?random=' + faker.number.int({ min: 10, max: 100 }),
+  avatar: categoryImg(),
 }));
 </script>

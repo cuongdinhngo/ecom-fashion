@@ -25,7 +25,7 @@ const newItems = Array.from({ length: 15 }, () => ({
   id: faker.string.uuid(),
   description: faker.lorem.sentence({ min: 5, max: 10 }),
   like: faker.number.int({ min: 1000, max: 99999 }),
-  image: `https://picsum.photos/130/130?random=${Math.floor(Math.random() * 1000)}`,
+  image: smallProductImg(),
   status: faker.helpers.arrayElement(['New', 'Popular', 'Sale', 'Limited'])
 }));
 </script>

@@ -35,7 +35,7 @@ const banners = Array.from({ length: 4 }, () => {
   return {
     title: faker.commerce.productName(),
     description: faker.commerce.productDescription(),
-    image: 'https://picsum.photos/800/400?random=' + Math.floor(Math.random() * 1000),
+    image: bannerImg(),
   };
 });
 </script>

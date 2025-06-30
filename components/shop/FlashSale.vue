@@ -24,7 +24,7 @@
 import { ItemsSaleCard } from '#components';
 import { faker } from '@faker-js/faker';
 const saleItems = Array.from({ length: 6 }, () => ({
-  image: 'https://picsum.photos/100/100?random=' + faker.number.int({ min: 10, max: 100 }),
+  image: smallProductImg(),
   discount: faker.number.int({ min: 10, max: 50 }) + '%',
 }));
 </script>

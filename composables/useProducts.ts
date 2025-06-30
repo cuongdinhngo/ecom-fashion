@@ -27,174 +27,174 @@ type ProductOptions = {
 export const CATEGORIES = [
   {
     title: 'Clothing',
-    image: 'https://picsum.photos/50/50?random=1',
+    image: categoryImg(),
   },
   { title: 'Shoes',
-    image: 'https://picsum.photos/50/50?random=2',
+    image: categoryImg(),
   },
   {
     title: 'Bags',
-    image: 'https://picsum.photos/50/50?random=3',
+    image: categoryImg(),
   },
   {
     title: 'Lingerie',
-    image: 'https://picsum.photos/50/50?random=4',
+    image: categoryImg(),
   },
   {
     title: 'Watch',
-    image: 'https://picsum.photos/50/50?random=5',
+    image: categoryImg(),
   },
   {
     title: 'Hoodies',
-    image: 'https://picsum.photos/50/50?random=6',
+    image: categoryImg(),
   }
 ];
 const KINDS = [
   {
     category: 'Clothing',
-    image: 'https://picsum.photos/50/50?random=6',
+    image: categoryImg(),
     relatives: [
       {
         title: 'T-Shirts',
-        image: 'https://picsum.photos/50/50?random=7',
+        image: categoryImg(),
       },
       {
         title: 'Pants',
-        image: 'https://picsum.photos/50/50?random=8',
+        image: categoryImg(),
       },
       {
         title: 'Dresses',
-        image: 'https://picsum.photos/50/50?random=9',
+        image: categoryImg(),
       },
       {
         title: 'Jackets',
-        image: 'https://picsum.photos/50/50?random=10',
+        image: categoryImg(),
       },
       {
         title: 'Skirts',
-        image: 'https://picsum.photos/50/50?random=11',
+        image: categoryImg(),
       },
       {
         title: 'Shorts',
-        image: 'https://picsum.photos/50/50?random=12',
+        image: categoryImg(),
       },
       {
         title: 'Sweaters',
-        image: 'https://picsum.photos/50/50?random=13',
+        image: categoryImg(),
       },
       {
         title: 'Blouses',
-        image: 'https://picsum.photos/50/50?random=14',
+        image: categoryImg(),
       }
     ],
   },
   {
     category: 'Shoes',
-    image: 'https://picsum.photos/50/50?random=7',
+    image: categoryImg(),
     relatives: [
       {
         title: 'Sneakers',
-        image: 'https://picsum.photos/50/50?random=15',
+        image: categoryImg(),
       },
       {
         title: 'Boots',
-        image: 'https://picsum.photos/50/50?random=16',
+        image: categoryImg(),
       },
       {
         title: 'Sandals',
-        image: 'https://picsum.photos/50/50?random=17',
+        image: categoryImg(),
       },
       {
         title: 'Loafers',
-        image: 'https://picsum.photos/50/50?random=18',
+        image: categoryImg(),
       },
       {
         title: 'Heels',
-        image: 'https://picsum.photos/50/50?random=19',
+        image: categoryImg(),
       },
       {
         title: 'Flats',
-        image: 'https://picsum.photos/50/50?random=20',
+        image: categoryImg(),
       }
     ],
   },
   {
     category: 'Bags',
-    image: 'https://picsum.photos/50/50?random=8',
+    image: categoryImg(),
     relatives: [
       {
         title: 'Handbags',
-        image: 'https://picsum.photos/50/50?random=21',
+        image: categoryImg(),
       },
       {
         title: 'Backpacks',
-        image: 'https://picsum.photos/50/50?random=22',
+        image: categoryImg(),
       },
       {
         title: 'Clutches',
-        image: 'https://picsum.photos/50/50?random=23',
+        image: categoryImg(),
       },
       {
         title: 'Totes',
-        image: 'https://picsum.photos/50/50?random=24',
+        image: categoryImg(),
       },
       {
         title: 'Crossbody Bags',
-        image: 'https://picsum.photos/50/50?random=25',
+        image: categoryImg(),
       }
     ],
   },
   {
     category: 'Lingerie',
-    image: 'https://picsum.photos/50/50?random=9',
+    image: categoryImg(),
     relatives: [
       {
         title: 'Bras',
-        image: 'https://picsum.photos/50/50?random=26',
+        image: categoryImg(),
       },
       {
         title: 'Panties',
-        image: 'https://picsum.photos/50/50?random=27',
+        image: categoryImg(),
       },
       {
         title: 'Loungewear',
-        image: 'https://picsum.photos/50/50?random=28',
+        image: categoryImg(),
       },
       {
         title: 'Sleepwear',
-        image: 'https://picsum.photos/50/50?random=29',
+        image: categoryImg(),
       }
     ],
   },
   {
     category: 'Watch',
-    image: 'https://picsum.photos/50/50?random=10',
+    image: categoryImg(),
     relatives: [
       {
         title: 'Smart Watches',
-        image: 'https://picsum.photos/50/50?random=30',
+        image: categoryImg(),
       },
       {
         title: 'Analog Watches',
-        image: 'https://picsum.photos/50/50?random=31',
+        image: categoryImg(),
       },
       {
         title: 'Digital Watches',
-        image: 'https://picsum.photos/50/50?random=32',
+        image: categoryImg(),
       }
     ],
   },
   {
     category: 'Hoodies',
-    image: 'https://picsum.photos/50/50?random=11',
+    image: categoryImg(),
     relatives: [
       {
         title: 'Pullover Hoodies',
-        image: 'https://picsum.photos/50/50?random=33',
+        image: categoryImg(),
       },
       {
         title: 'Zip-Up Hoodies',
-        image: 'https://picsum.photos/50/50?random=34',
+        image: categoryImg(),
       }
     ],
   },
@@ -223,7 +223,7 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
       description: faker.commerce.productDescription(),
       category: category,
       relative: relative.length > 0 ? faker.helpers.arrayElement(relative).title : '',
-      image: `https://picsum.photos/${options.photoWidth}/${options.photoHeight}?random=` + faker.number.int({ min: 1, max: 1000 }),
+      image: smallProductImg(),
       originalPrice: `$${originalPrice}`,
       price: `$${price}`,
       discount,
