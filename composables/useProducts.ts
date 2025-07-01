@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
 
 export interface Product {
-  id: number;
+  id: number|string;
   name: string;
   description: string;
   shortDescription: string;
@@ -14,6 +14,9 @@ export interface Product {
   likeCount: number;
   status: string;
   to: { name: string; params: { id: number } };
+  quantity?: number;
+  size?: string;
+  color?: string;
 }
 
 const defaultOptions = {
@@ -234,7 +237,7 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
       relative: subCategories.length > 0 ? faker.helpers.arrayElement(subCategories).title : '',
       image: smallProductImg(),
       originalPrice: `$${originalPrice}`,
-      price: `$${price}`,
+      price: price,
       discount,
       likeCount: faker.number.int({ min: 0, max: 10000 }),
       status: faker.helpers.arrayElement(['New', 'Popular', 'Sale', 'Limited']),
