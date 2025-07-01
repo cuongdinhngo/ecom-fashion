@@ -18,7 +18,7 @@
             variant="flat"
             style="position: absolute; bottom: 10px; left: 10px;"
             size="small"
-            @click.prevent="removeFromWishlist(product.id)"
+            @click.prevent="removeFromCart(product.id)"
           >
             <v-icon color="error" icon="mdi-trash-can-outline"></v-icon>
           </v-btn>
@@ -74,7 +74,7 @@
 import type { Product } from '@/composables/useProducts';
 
 const props = defineProps<{ product: Product }>();
-const { addToCart } = useCart();
+const { addToCart, removeFromCart } = useCart();
 
 const totalPrice = ref((Number(props.product.price) * Number(props.product.quantity)).toFixed(2));
 

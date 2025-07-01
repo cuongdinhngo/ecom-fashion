@@ -30,7 +30,7 @@
   </v-card-text>
 
   <!-- Wishlist -->
-  <v-card-text :class="['pa-0', {'wishlist-container': wishlistItems.length === 0}]">
+  <v-card-text :class="['pa-0', {'blank-container': wishlistItems.length === 0}]">
     <ItemsWishlistCard
       v-if="wishlistItems.length"
       v-for="item in wishlistItems"
@@ -97,13 +97,6 @@ watch(wishlist, (newWishlist) => {
   height: 160px;
   border-radius: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.wishlist-container {
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }

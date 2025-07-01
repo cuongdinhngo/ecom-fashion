@@ -40,6 +40,7 @@
           size="x-large"
           v-ripple
           class="ma-2"
+          @click.prevent="addToCart({ productId: product.id, quantity: 1, size: product.size, color: product.color })"
         ></v-icon>
       </div>
     </v-card>
@@ -56,4 +57,5 @@ defineProps({
 });
 
 const { removeFromWishlist } = useWishlist();
+const { addToCart } = useCart();
 </script>

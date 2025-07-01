@@ -19,24 +19,59 @@
     </template>
   </v-list-item>
 
-  <v-card-text class="px-0">
+  <!-- Products from Cart -->
+  <v-card-text :class="['pa-0', {'blank-container': productsFromCart.length === 0}]">
     <ItemsCartItemCard
+      v-if="productsFromCart.length"
       v-for="(product, index) in productsFromCart"
       :key="index"
       :product="product"
     />
+
+    <!-- If wishlist is empty, it will be showed -->
+    <v-btn
+      v-else
+      variant="tonal"
+      size="100"
+      icon
+      class="mx-auto"
+    >
+      <v-icon size="70" color="primary">mdi-shopping-outline</v-icon>
+    </v-btn>
   </v-card-text>
 
-  <v-card-title class="text-h5 font-weight-bold pa-0 d-flex align-center">
+  <!-- Wishlist -->
+  <v-card-title
+    v-if="wishlistItems.length"
+    class="text-h5 font-weight-bold pa-0 d-flex align-center"
+  >
     From Your Wishlist
   </v-card-title>
-  <v-card-text class="px-0">
+  <v-card-text
+    v-if="wishlistItems.length"
+    class="px-0" min-height="130vh"
+  >
     <ItemsWishlistCard
       v-for="(product, index) in wishlistItems"
       :key="index"
       :product="product"
     />
   </v-card-text>
+
+  <ShopMostPopular
+    v-else
+  />
+
+  <div class="sticky-actions">
+    <v-card-title class="d-flex justify-space-between align-center px-0 mb-0">
+      <span class="text-h6 font-weight-bold">Total ${{ '18.00' }}</span>
+      <v-btn
+        variant="tonal"
+        class="text-none"
+        width="40%"
+      >Checkout</v-btn>
+    </v-card-title>
+  </div>
 </template>
 <script setup lang="ts">
 
@@ -69,6 +104,10 @@ console.log('productsFromCart', productsFromCart.value);
 const wishlistItems = computed(() => {
   return products.filter(product => wishlist.value.includes(product.id));
 });
+
+watch(cartItems, (newCartItems) => {
+  console.log('Updated Cart Items:', newCartItems);
+});
 </script>
 <style scoped>
 .cart-counts {
@@ -79,5 +118,16 @@ const wishlistItems = computed(() => {
   align-items: center;
   justify-content: center;
   font-weight: bold;
+}
+
+.sticky-actions {
+  position: fixed;
+  left: 0;
+  bottom: 80px;
+  width: 100vw;
+  background: #fff;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+  z-index: 100;
+  padding: 12px 8px 8px 8px;
 }
 </style>
