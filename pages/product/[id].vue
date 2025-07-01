@@ -368,9 +368,9 @@
       <v-btn
         variant="outlined"
         class="text-none rounded-lg bg-black text-white"
-        @click="$emit('close')"
         width="40%"
         size="large"
+        @click="addProductToCart()"
       >
         Add to Cart
       </v-btn>
@@ -396,7 +396,6 @@ definePageMeta({
 import { useRoute, useRouter } from 'vue-router';
 import { faker } from '@faker-js/faker';
 
-const route = useRoute();
 const router = useRouter();
 
 function goBack() {
@@ -405,6 +404,18 @@ function goBack() {
 
 const productId = useRouteParams('id', null, { transform: Number });
 const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
+const { addToCart, isInCart } = useCart();
+
+function addProductToCart() {
+  const newQuantity = isInCart(productId.value) ? quantity.value + 1 : quantity.value;
+
+  addToCart({
+    productId: productId.value,
+    quantity: newQuantity,
+    color: selectedColor.value,
+    size: selectedSize.value
+  });
+}
 
 const productImgs = Array.from({ length: 4 }, () => {
   return productImg();
