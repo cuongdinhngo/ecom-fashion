@@ -39,6 +39,7 @@
           color="deep-orange-lighten-2"
           size="35"
           class="ml-2"
+          @click="goBack"
         ></v-btn>
       </div>
     </v-card-title>
@@ -391,8 +392,16 @@ definePageMeta({
   layout: 'product'
 });
 
-import { useRouteParams } from '@vueuse/router';
+
+import { useRoute, useRouter } from 'vue-router';
 import { faker } from '@faker-js/faker';
+
+const route = useRoute();
+const router = useRouter();
+
+function goBack() {
+  router.back();
+}
 
 const productId = useRouteParams('id', null, { transform: Number });
 const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
