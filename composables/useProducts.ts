@@ -20,8 +20,6 @@ const defaultOptions = {
 
 type ProductOptions = {
   quantity: number;
-  photoWidth: number;
-  photoHeight: number;
 };
 
 export const CATEGORIES = [
@@ -215,14 +213,15 @@ const SIZE_OPTIONS = {
 };
 
 export const useProducts = (options: ProductOptions = defaultOptions) => {
-  const products = Array.from({ length: options.quantity }, () => {
+  const products = Array.from({ length: options.quantity }, (_, index) => {
     const discount = faker.helpers.arrayElement([10, 20, 30, 40, 50]);
     const originalPrice = faker.commerce.price({ min: 10, max: 100, dec: 2 });
     const price = (parseFloat(originalPrice) * (1 - discount / 100)).toFixed(2);
     const category = faker.helpers.arrayElement(CATEGORIES).title;
     const subCategories = KINDS.find(item => item.category === category)?.subCategories || [];
+    const id = index + 1;
     return {
-      id: faker.string.uuid(),
+      id: id,
       name: faker.commerce.productName(),
       description: faker.commerce.productDescription(),
       category: category,
@@ -231,6 +230,9 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
       originalPrice: `$${originalPrice}`,
       price: `$${price}`,
       discount,
+      likeCount: faker.number.int({ min: 0, max: 10000 }),
+      status: faker.helpers.arrayElement(['New', 'Popular', 'Sale', 'Limited']),
+      to: { name: 'product-id', params: { id: id } }
     };
   });
 

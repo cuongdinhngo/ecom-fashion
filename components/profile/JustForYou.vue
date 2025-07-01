@@ -15,11 +15,5 @@
   </ItemsTopDataCard>
 </template>
 <script setup lang="ts">
-import { faker } from '@faker-js/faker';
-
-const products = Array.from({ length: 8 }, () => ({
-  image: smallProductImg(),
-  description: faker.commerce.productDescription(),
-  price: faker.commerce.price({ min: 10, max: 200, dec: 2, symbol: '$' }),
-}));
+const { products } = useProducts({ quantity: 8 });
 </script>

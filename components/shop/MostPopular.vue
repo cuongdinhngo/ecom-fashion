@@ -6,7 +6,7 @@
       :show-arrows="false"
     >
       <v-slide-group-item
-        v-for="item in newItems"
+        v-for="item in products"
         :key="item.id"
         v-slot="{ isSelected, toggle }"
       >
@@ -19,13 +19,7 @@
   </ItemsTopDataCard>
 </template>
 <script setup lang="ts">
-import { faker } from '@faker-js/faker';
 const model = ref(null)
-const newItems = Array.from({ length: 15 }, () => ({
-  id: faker.string.uuid(),
-  description: faker.lorem.sentence({ min: 5, max: 10 }),
-  like: faker.number.int({ min: 1000, max: 99999 }),
-  image: smallProductImg(),
-  status: faker.helpers.arrayElement(['New', 'Popular', 'Sale', 'Limited'])
-}));
+
+const { products } = useProducts({ quantity: 15});
 </script>
