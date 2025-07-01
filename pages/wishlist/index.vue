@@ -29,25 +29,30 @@
   </v-card-text>
 
   <!-- Wishlist -->
-  <v-card-text class="pa-0 wishlist-container">
+  <v-card-text :class="['pa-0', {'wishlist-container': wishlistItems.length === 0}]">
     <ItemsWishlistCard
-      v-for="i in 5"
-      :key="i"
+      v-if="wishlistItems.length"
+      v-for="item in wishlistItems"
+      :key="item.id"
+      :product="item"
     />
 
     <!-- If wishlist is empty, it will be showed -->
-    <!-- <v-btn
+    <v-btn
+      v-else
       variant="tonal"
       size="100"
       icon
       class="mx-auto"
     >
-      <v-icon size="70">mdi-hand-heart-outline</v-icon>
-    </v-btn> -->
+      <v-icon size="70" color="primary">mdi-hand-heart-outline</v-icon>
+    </v-btn>
   </v-card-text>
 
   <!-- If wishlist is empty, most popular list should be showed -->
-  <!-- <ShopMostPopular /> -->
+  <ShopMostPopular
+    v-if="wishlistItems.length === 0"
+  />
 
 </template>
 <script setup lang="ts">
@@ -69,6 +74,21 @@ const recentlyViews = [
     avatar: smallProductImg(),
   },
 ];
+
+const { wishlist } = useWishlist();
+const { products } = useProducts();
+
+const wishlistItems = computed(() => {
+  return products.filter(product => wishlist.value.includes(product.id));
+});
+
+watch(wishlistItems, (newWishlist) => {
+  console.log('wishlistItems => ', newWishlist);
+}, { immediate: true });
+
+watch(wishlist, (newWishlist) => {
+  console.log('Wishlist => ', newWishlist);
+}, { immediate: true });
 </script>
 <style scoped>
 .frame {

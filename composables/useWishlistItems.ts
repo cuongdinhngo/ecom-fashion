@@ -1,0 +1,1 @@
+export const useWishlistItems = () => useState<(number|string)[]>('wishlistItems', () => []);

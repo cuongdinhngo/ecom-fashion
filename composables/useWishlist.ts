@@ -1,5 +1,7 @@
+import { useWishlistItems } from "@/composables/useWishlistItems";
+
 export const useWishlist = () => {
-  const wishlist = ref<(number | string)[]>([]);
+  const wishlist = useWishlistItems();
 
   const getWishlist = () => {
     const storedWishlist = localStorage.getItem('wishlist');
