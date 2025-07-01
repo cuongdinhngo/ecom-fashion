@@ -4,7 +4,7 @@
   <v-card min-height="90vh" class="pa-0 bg-white" tile elevation="0">
     <!-- Shipping Address -->
     <v-list-item
-      subtitle="666 Hoang Hoa, Ward 17, Binh Thanh District, HCM City"
+      :subtitle="`${shippingAddress.address}, ${shippingAddress.ward} Ward, ${shippingAddress.district} District, ${shippingAddress.state} City`"
       link
       class="bg-grey-lighten-3 rounded-lg pa-3 my-2"
     >
@@ -12,7 +12,10 @@
         <span class="text-subtitle-1 font-weight-bold">Shipping Address</span>
       </template>
       <template #append>
-        <v-btn icon variant="flat" color="primary" size="25" class="ml-4">
+        <v-btn
+          icon variant="flat" color="primary" size="25" class="ml-4"
+          @click="shippingAddressDialog = true"
+        >
           <v-icon size="17">mdi-pencil</v-icon>
         </v-btn>
       </template>
@@ -178,6 +181,54 @@
     </v-card-title>
   </v-card>
 
+  <!-- Shipping Address Dialog -->
+  <v-dialog
+    v-model="shippingAddressDialog"
+    transition="dialog-bottom-transition"
+    min-width="100%"
+  >
+    <template v-slot:default="{ isActive }">
+      <v-card width="100%">
+        <v-card-title class="d-flex justify-space-between align-center py-4">
+          <span class="text-h5 font-weight-bold">Shipping Address</span>
+        </v-card-title>
+
+        <v-card-text>
+          <v-text-field
+            v-model="shippingAddress.address"
+            label="Address"
+            variant="outlined"
+            color="primary"
+          ></v-text-field>
+          <v-text-field
+            v-model="shippingAddress.ward"
+            label="Ward"
+            variant="outlined"
+            color="primary"
+          ></v-text-field>
+          <v-text-field
+            v-model="shippingAddress.district"
+            label="District"
+            variant="outlined"
+            color="primary"
+          ></v-text-field>
+          <v-text-field
+            v-model="shippingAddress.state"
+            label="State"
+            variant="outlined"
+            color="primary"
+          ></v-text-field>
+          <v-btn
+            variant="flat"
+            color="primary"
+            class="text-none rounded-lg"
+            @click="shippingAddressDialog = false"
+          >Save</v-btn>
+        </v-card-text>
+      </v-card>
+    </template>
+  </v-dialog>
+
   <!-- Active Vouchers Dialog -->
   <v-dialog
     v-model="voucherDialog"
@@ -220,6 +271,7 @@
     </v-card-title>
   </div>
 
+  <!-- Payment Processing Dialog -->
   <v-dialog
     v-model="processDialog"
     transition="dialog-bottom-transition"
@@ -406,6 +458,14 @@ function processPayment() {
     isProcessing.value = false;
   }, 3000);
 }
+
+const shippingAddressDialog = ref(false);
+const shippingAddress = ref({
+  address: '666 Hoang Hoa st',
+  ward: 'Binh Minh',
+  district: 'Hai Chau',
+  state: 'Da Nang',
+});
 
 </script>
 <style scoped>
