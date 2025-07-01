@@ -15,6 +15,7 @@
           size="x-small"
           icon="mdi-arrow-right"
           color="primary"
+          :to="{ name: 'wishlist-recently-viewed' }"
         >
         </v-btn>
       </template>
