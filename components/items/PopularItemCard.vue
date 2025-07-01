@@ -1,26 +1,28 @@
 <template>
-  <v-card
-    class="mr-3 rounded-lg elevation-1 pa-0 my-1 bg-transparent d-flex flex-column"
-    height="210"
-    width="150"
-    @click="toggle"
-  >
-    <div>
-      <v-img
-        :src="item.image"
-        width="140"
-        height="160"
-        cover
-        class="rounded-lg mt-2 mx-auto"
-      />
-    </div>
-    <v-card-title class="px-2 ma-0 d-flex justify-space-between align-center">
-      <span class="font-weight-bold text-subtitle-1">
-        {{ item.like }} <v-icon color="primary" size="small">mdi-heart</v-icon>
-      </span>
-      <span class="text-subtitle-2">{{ item.status }}</span>
-    </v-card-title>
-  </v-card>
+  <NuxtLink :to="item.to" class="nuxt-link-reset">
+    <v-card
+      class="mr-3 rounded-lg elevation-1 pa-0 my-1 bg-transparent d-flex flex-column"
+      height="210"
+      width="150"
+      @click="toggle"
+    >
+      <div>
+        <v-img
+          :src="item.image"
+          width="140"
+          height="160"
+          cover
+          class="rounded-lg mt-2 mx-auto"
+        />
+      </div>
+      <v-card-title class="px-2 ma-0 d-flex justify-space-between align-center">
+        <span class="font-weight-bold text-subtitle-1">
+          {{ item.likeCount }} <v-icon color="primary" size="small">mdi-heart</v-icon>
+        </span>
+        <span class="text-subtitle-2">{{ item.status }}</span>
+      </v-card-title>
+    </v-card>
+  </NuxtLink>
 </template>
 <script setup lang="ts">
 const props = defineProps({
