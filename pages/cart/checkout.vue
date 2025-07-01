@@ -44,12 +44,12 @@
         <span class="cart-counts bg-blue-lighten-4 text-subtitle-1 ml-2">{{ sellProducts.length }}</span>
       </div>
       <v-btn
-        variant="outlined"
+        :variant="selectedVoucher.value ? 'flat' : 'outlined'"
         color="primary"
         class="rounded-xl text-none"
         @click="voucherDialog = true"
       >
-        Add Voucher
+        {{ selectedVoucher.value ? `${selectedVoucher.value}% Discount` : `Add Voucher` }}
       </v-btn>
     </v-card-title>
     <v-card-text class="px-0 py-4">
@@ -198,6 +198,7 @@
           v-for="(voucher, index) in vouchers"
           :key="index"
           :voucher="voucher"
+          v-model:selected-voucher="selectedVoucher"
         />
       </v-card>
     </template>
@@ -206,7 +207,7 @@
   <!-- Total price & Pay -->
   <div class="sticky-actions">
     <v-card-title class="d-flex justify-space-between align-center px-0 mb-0">
-      <span class="text-h6 font-weight-bold">Total ${{ '18.00' }}</span>
+      <span class="text-h6 font-weight-bold">Total ${{ totalPrice }}</span>
       <v-btn
         variant="flat"
         class="text-none rounded-lg"
@@ -221,6 +222,8 @@
 const { cartItems } = useCart();
 const { products } = useProducts();
 const shippingOption = ref('standard');
+
+const totalPrice = ref(0);
 
 const recievedDate = computed(() => {
   const today = new Date();
@@ -243,23 +246,47 @@ const sellProducts = computed(() => {
   });
 });
 
+onMounted(() => {
+  totalPrice.value = sellProducts.value.reduce((total, item) => {
+    return total + (item ? Number(item.price) * Number(item.quantity) : 0);
+  }, 0).toFixed(2);
+});
+
+
 const voucherDialog = ref(false);
 const vouchers = ref([
   {
     title: 'First Purchase',
     description: 'off for your next order',
-    value: '5%',
+    value: '5',
     icon: 'mdi-ticket-percent',
     expiredDate: 'Jul 25th, 25'
   },
   {
     title: 'Summer Sale',
     description: 'off on all items',
-    value: '10%',
+    value: '10',
     icon: 'mdi-gift-outline',
     expiredDate: 'Aug 15th, 25'
   }
 ]);
+const selectedVoucher = ref({});
+
+watch(selectedVoucher, (newValue) => {
+  console.log('Selected Voucher:', newValue);
+  if (newValue) {
+    totalPrice.value = (Number(totalPrice.value) * (1 - Number(newValue.value) / 100)).toFixed(2);
+  }
+});
+
+watch(shippingOption, (newValue) => {
+  console.log('Selected Shipping Option:', newValue);
+  if (newValue === 'express') {
+    totalPrice.value = (Number(totalPrice.value) + 12).toFixed(2);
+  } else {
+    totalPrice.value = (Number(totalPrice.value) - 12).toFixed(2);
+  }
+});
 
 </script>
 <style scoped>

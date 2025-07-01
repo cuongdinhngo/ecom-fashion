@@ -14,13 +14,16 @@
     <span
       class="voucher-desc text-subtitle-2"
       style="position: absolute; top: 90px; left: 40px;"
-    >{{ `${voucher.value} ${voucher.description}` }}</span>
+    >{{ `${voucher.value}% ${voucher.description}` }}</span>
     <v-btn
-      variant="flat"
+      :variant="selectedVoucher.value === voucher.value ? 'tonal' : 'flat'"
       class="text-none rounded-lg px-10"
-      color="primary"
+      :color="selectedVoucher.value === voucher.value ? 'grey' : 'primary'"
       style="position: absolute; bottom: 10px; right: 30px;"
-    >Apply</v-btn>
+      @click="applyVoucher"
+    >
+      {{ selectedVoucher.value === voucher.value ? 'Applied' : 'Apply' }}
+    </v-btn>
   </div>
 </template>
 <script setup lang="ts">
@@ -30,6 +33,16 @@ const props = defineProps({
     required: true
   }
 });
+
+const selectedVoucher = defineModel('selectedVoucher', {
+  type: Object,
+  default: null
+});
+
+function applyVoucher() {
+  selectedVoucher.value = props.voucher;
+  console.log('Voucher applied:', props.voucher);
+}
 </script>
 <style scoped>
 .vouchers {
