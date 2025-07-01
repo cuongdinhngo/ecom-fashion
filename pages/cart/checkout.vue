@@ -222,8 +222,9 @@
             variant="flat"
             color="primary"
             class="text-none rounded-lg"
+            width="100%"
             @click="shippingAddressDialog = false"
-          >Save</v-btn>
+          >Save Change</v-btn>
         </v-card-text>
       </v-card>
     </template>
