@@ -70,3 +70,15 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+/* Keep total price at the bottom of page */
+.sticky-actions {
+  position: fixed;
+  left: 0;
+  bottom: 80px;
+  width: 100vw;
+  background: #fff;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+  z-index: 100;
+  padding: 12px 8px 8px 8px;
+}
