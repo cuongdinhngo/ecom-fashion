@@ -355,12 +355,14 @@
   <div class="sticky-actions">
     <v-card-actions class="justify-center">
       <v-rating
+        :model-value="isInWishlist(productId) ? 1 : 0"
         clearable
         :length="1"
         :size="40"
         active-color="error"
         empty-icon="mdi-heart-outline"
         full-icon="mdi-heart"
+        @click="isInWishlist(productId) ? removeFromWishlist(productId) : addToWishlist(productId)"
       />
       <v-btn
         variant="outlined"
@@ -389,7 +391,11 @@ definePageMeta({
   layout: 'product'
 });
 
+import { useRouteParams } from '@vueuse/router';
 import { faker } from '@faker-js/faker';
+
+const productId = useRouteParams('id', null, { transform: Number });
+const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
 
 const productImgs = Array.from({ length: 4 }, () => {
   return productImg();
