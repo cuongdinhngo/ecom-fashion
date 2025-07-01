@@ -1,21 +1,23 @@
 import { faker } from '@faker-js/faker';
 
 export interface Product {
-  id: string;
+  id: number;
   name: string;
   description: string;
+  shortDescription: string;
   category: string;
   relative: string;
   image: string;
   originalPrice: string;
   price: string;
   discount: number;
+  likeCount: number;
+  status: string;
+  to: { name: string; params: { id: number } };
 }
 
 const defaultOptions = {
-  quantity: 30, // Default number of products
-  photoWidth: 200, // Default width for product images
-  photoHeight: 300, // Default height for product images
+  quantity: 30
 };
 
 type ProductOptions = {
@@ -220,10 +222,14 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
     const category = faker.helpers.arrayElement(CATEGORIES).title;
     const subCategories = KINDS.find(item => item.category === category)?.subCategories || [];
     const id = index + 1;
+    const description = faker.commerce.productDescription();
     return {
       id: id,
       name: faker.commerce.productName(),
-      description: faker.commerce.productDescription(),
+      description: description,
+      shortDescription: description.length > 50
+        ? description.slice(0, description.slice(0, 50).lastIndexOf(' ')) + ' ...'
+        : description,
       category: category,
       relative: subCategories.length > 0 ? faker.helpers.arrayElement(subCategories).title : '',
       image: smallProductImg(),
