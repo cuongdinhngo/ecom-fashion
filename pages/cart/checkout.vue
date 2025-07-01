@@ -62,8 +62,9 @@
 
     <v-card-title class="text-h6 font-weight-bold px-0">Shipping Options</v-card-title>
     <v-item-group selected-class="" v-model="shippingOption">
+
+      <!-- Standard Shipping -->
       <v-item v-slot="{ isSelected, selectedClass, toggle }" value="standard">
-        <!-- Standard Shipping -->
         <v-list-item
           @click="toggle()"
           :class="[
@@ -104,8 +105,8 @@
         </v-list-item>
       </v-item>
 
+      <!-- Express Shipping -->
       <v-item v-slot="{ isSelected, selectedClass, toggle }" value="express">
-        <!-- Express Shipping -->
         <v-list-item
           @click="toggle()"
           :class="[
@@ -177,6 +178,7 @@
     </v-card-title>
   </v-card>
 
+  <!-- Active Vouchers Dialog -->
   <v-dialog
     v-model="voucherDialog"
     transition="dialog-bottom-transition"
@@ -213,12 +215,115 @@
         class="text-none rounded-lg"
         color="black"
         width="40%"
-        :to="{ name: 'cart-checkout' }"
+        @click="processDialog = true; processPayment()"
       >Pay</v-btn>
     </v-card-title>
   </div>
+
+  <v-dialog
+    v-model="processDialog"
+    transition="dialog-bottom-transition"
+  >
+    <template v-slot:default="{ isActive }">
+      <div style="position: relative;">
+        <!-- Payment Processing Card -->
+        <v-card
+          v-if="isProcessing"
+          class="rounded-xl py-10" width="100%"
+        >
+          <v-card-title class="text-h5 font-weight-bold text-center">
+            Processing Payment
+          </v-card-title>
+          <v-card-title class="text-center text-subtitle-2 text-wrap">
+            Please wait while we process your payment...
+          </v-card-title>
+        </v-card>
+        <div
+          v-if="isProcessing"
+          class="wrapper-progress"
+        >
+          <v-progress-circular
+            indeterminate
+            color="primary"
+            size="60"
+            width="10"
+            class="mx-auto my-6"
+          ></v-progress-circular>
+        </div>
+
+        <!-- Failed Payment -->
+        <v-card
+          v-if="paymentStatus === 'failed'"
+          class="py-10 rounded-xl" width="100%"
+        >
+          <v-card-title class="text-h6 font-weight-bold text-center text-wrap">
+            We couldn't process your payment
+          </v-card-title>
+          <v-card-title class="text-center text-subtitle-2 text-wrap">
+            Please try again or change your payment.
+          </v-card-title>
+          <v-card-actions class="d-flex justify-center">
+            <v-btn
+              variant="flat"
+              color="black"
+            >Try Again</v-btn>
+            <v-btn
+              variant="flat"
+              color="grey"
+            >Change</v-btn>
+          </v-card-actions>
+        </v-card>
+        <div
+          v-if="paymentStatus === 'failed'"
+          class="wrapper-progress"
+        >
+          <v-btn
+            icon
+            variant="flat"
+            color="error"
+            size="60"
+          ><v-icon size="50">mdi-alert-circle</v-icon></v-btn>
+        </div>
+
+        <!-- Sucessful Payment -->
+        <v-card
+          v-if="paymentStatus === 'success'"
+          class="py-10 rounded-xl" width="100%"
+        >
+          <v-card-title class="text-h5 font-weight-bold text-center">
+            DONE!
+          </v-card-title>
+          <v-card-title class="text-center text-subtitle-2 text-wrap">
+            Your payment has been successfully processed.
+          </v-card-title>
+          <v-card-actions class="d-flex justify-center">
+            <v-btn
+              variant="flat"
+              color="grey"
+            >Track Your Order</v-btn>
+          </v-card-actions>
+        </v-card>
+        <div
+          v-if="paymentStatus === 'success'"
+          class="wrapper-progress"
+        >
+          <v-btn
+            icon
+            variant="flat"
+            color="primary"
+            size="60"
+          >
+            <v-icon size="50">mdi-check-bold</v-icon>
+          </v-btn>
+        </div>
+
+      </div>
+    </template>
+  </v-dialog>
 </template>
 <script lang="ts" setup>
+import { fa, faker, tr } from '@faker-js/faker';
+
 const { cartItems } = useCart();
 const { products } = useProducts();
 const shippingOption = ref('standard');
@@ -251,7 +356,6 @@ onMounted(() => {
     return total + (item ? Number(item.price) * Number(item.quantity) : 0);
   }, 0).toFixed(2);
 });
-
 
 const voucherDialog = ref(false);
 const vouchers = ref([
@@ -288,6 +392,21 @@ watch(shippingOption, (newValue) => {
   }
 });
 
+const processDialog = ref(false);
+const isProcessing = ref(false);
+const paymentStatus = ref('')
+
+function processPayment() {
+  console.log('Processing payment...');
+  paymentStatus.value = '';
+  isProcessing.value = true;
+  setTimeout(() => {
+    paymentStatus.value = faker.datatype.boolean() ? 'failed' : 'success';
+    console.log('Payment processed => ', paymentStatus.value);
+    isProcessing.value = false;
+  }, 3000);
+}
+
 </script>
 <style scoped>
 .cart-counts {
@@ -311,5 +430,21 @@ watch(shippingOption, (newValue) => {
   align-items: center;
   justify-content: center;
   font-weight: bold;
+}
+
+.wrapper-progress {
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 </style>
