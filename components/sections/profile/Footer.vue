@@ -6,7 +6,7 @@
     <FormIconRipple
       v-for="(menu, index) in footerMenu"
       :key="index"
-      :menu="menu"
+      :menu="menu"t
     />
   </v-footer>
 </template>
@@ -15,7 +15,7 @@ const footerMenu = [
   { icon: 'mdi-wallet-giftcard', to: { name: 'shop' }, page: 'shop', size: 'x-large', color: 'primary' },
   { icon: 'mdi-heart-outline', to: { name: 'wishlist' }, page: 'wishlist', size: 'x-large', color: 'primary' },
   { icon: 'mdi-list-box-outline', to: { name: 'index' }, page: 'index', size: 'x-large', color: 'primary' },
-  { icon: 'mdi-shopping-outline', to: { name: 'index' }, page: 'index', size: 'x-large', color: 'primary' },
+  { icon: 'mdi-shopping-outline', to: { name: 'cart' }, page: 'cart', size: 'x-large', color: 'primary' },
   { icon: 'mdi-account-circle-outline', to: { name: 'profile' }, page: 'profile', size: 'x-large', color: 'primary' },
 ];
 </script>
