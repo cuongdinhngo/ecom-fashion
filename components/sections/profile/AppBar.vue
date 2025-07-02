@@ -24,6 +24,7 @@
       class="ml-2 rounded-pill text-none"
       variant="flat"
       color="primary"
+      :to="{ name: 'profile-my-activity' }"
     >My Activity</v-btn>
 
     <v-spacer></v-spacer>
