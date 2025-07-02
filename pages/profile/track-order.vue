@@ -2,9 +2,10 @@
   <!-- Track Stepper -->
   <ProfileTrackStepper
     :step="currentStep"
+    :attemp-to-deliver="attempToDelivery"
   />
 
-  <v-list-item class="bg-grey-lighten-3 px-2 py-1 mt-4 mb-6" rounded="lg">
+  <v-list-item :class="[attempToDelivery ? 'bg-red-lighten-1' : 'bg-grey-lighten-3', 'px-2 py-1 mt-4 mb-6']" rounded="lg">
     <template #title>
       <span class="text-subtitle-1 font-weight-bold">Tracking Number</span>
     </template>
@@ -12,7 +13,7 @@
       <span class="text-body-2">#123456789</span>
     </template>
     <template #append>
-      <v-btn variant="text" color="primary">
+      <v-btn variant="text" :color="attempToDelivery ? '' : 'primary'">
         <v-icon>mdi-content-copy</v-icon>
       </v-btn>
     </template>
@@ -31,8 +32,15 @@ definePageMeta({
   pageDetail: 'Track Your Order',
 })
 
+import { faker } from '@faker-js/faker';
+
+const finalSteps = ['attempt-to-deliver', 'delivered'];
 const { getTrackerSteps } = useTracker();
-const steps = getTrackerSteps('delivered');
+const steps = getTrackerSteps(faker.helpers.arrayElement(finalSteps));
+
+const attempToDelivery = computed(() => {
+  return steps.some(step => step.status.toLowerCase() === 'attempt to deliver');
+});
 
 const currentStep = computed(() => {
   const lastStep = steps[steps.length - 1].value;

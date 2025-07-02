@@ -41,7 +41,7 @@ const deliveredStep =   {
 };
 
 const attempToDeliver =   {
-  status: 'Attemp to Deliver',
+  status: 'Attempt to Deliver',
   value: 5,
   description: 'An attempt to deliver your order was made but no one was available to receive it.',
   timestamp: useDateFormat(faker.date.past(), 'MMM, DD HH:mm'),

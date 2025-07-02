@@ -7,8 +7,8 @@
       prepend-icon="mdi-shopping-outline"
       append-icon="mdi-home-account"
       show-ticks="always"
-      tick-size="15"
-      color="primary"
+      tick-size="5"
+      :color="attempToDeliver ? 'error' : 'primary'"
       readonly
       elevation="5"
     ></v-slider>
@@ -19,6 +19,10 @@ defineProps({
   step: {
     type: Number,
     default: 0,
+  },
+  attempToDeliver: {
+    type: Boolean,
+    default: true,
   },
 })
 const milestones = {
