@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  modules: ['vuetify-nuxt-module', '@vueuse/nuxt'],
+  modules: ['vuetify-nuxt-module', '@vueuse/nuxt', 'nuxt-charts'],
   css: [
     '~/assets/styles/main.scss',
     '@mdi/font/css/materialdesignicons.css',
