@@ -22,6 +22,34 @@
       />
     </template>
   </ProfileOrderCard>
+
+  <v-dialog
+    min-width="100%"
+    scrollable
+    v-model="ordersDialog"
+  >
+    <template v-slot:default="{ isActive }">
+      <v-card>
+        <v-card-title class="d-flex justify-space-between align-center">
+          <span class="text-h5 font-weight-bold">To Review {{ `#${orderToReview?.orderNumber}` }}</span>
+          <v-btn
+            variant="text"
+            size="small"
+            icon
+            @click="isActive.value = false"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </v-card-title>
+
+        <ProfileProductReivewCard
+          v-for="item in orderToReview?.quantity"
+        />
+
+      </v-card>
+    </template>
+  </v-dialog>
+
 </template>
 <script setup lang="ts">
 definePageMeta({
@@ -33,4 +61,17 @@ definePageMeta({
 });
 
 const { orders } = useOrders({ quantity: 5 });
+const ordersDialog = ref(false);
+const orderToReview = ref<Order | null>(null);
+
+function openOrdersDialog() {
+  ordersDialog.value = true;
+  console.log('Opening orders dialog => ', orderToReview);
+}
+
+provide('ordersDialog', {
+  ordersDialog,
+  openOrdersDialog,
+  orderToReview
+});
 </script>
