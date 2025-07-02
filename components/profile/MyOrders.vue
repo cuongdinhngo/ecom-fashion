@@ -2,22 +2,35 @@
   <ItemsTopDataCard title="My Orders">
     <ItemsChipLabel
       :show-badge="true"
-      badge-color="green"
-      label="To Pay"
+      :label="{
+        title: 'To Pay',
+        to: { name: 'profile' }
+      }"
+      :options="labelOptions"
     />
 
     <ItemsChipLabel
       :show-badge="true"
-      badge-color="green"
-      label="To Receive"
+      :options="labelOptions"
+      :label="{
+        title: 'To Receive ',
+        to: { name: 'profile-to-receive' }
+      }"
     />
 
     <ItemsChipLabel
-      badge-color="green"
-      label="To Review"
+      :options="labelOptions"
+      :label="{
+        title: 'To Review',
+        to: { name: 'profile' }
+      }"
     />
   </ItemsTopDataCard>
 </template>
 <script setup lang="ts">
-
+const labelOptions = {
+  chipColor: 'primary',
+  badgeColor: 'green',
+  size: 'x-large'
+};
 </script>
