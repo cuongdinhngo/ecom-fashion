@@ -26,6 +26,7 @@
         variant="outlined"
         class="text-none rounded-lg"
         width="40%"
+        @click="openOrdersDialog(); orderToReview = order"
       >Review</v-btn>
       <v-btn
         v-else
@@ -46,4 +47,6 @@ defineProps({
 });
 
 import type { Order } from '@/composables/useOrders';
+
+const { ordersDialog, openOrdersDialog, orderToReview } = inject('ordersDialog');
 </script>
