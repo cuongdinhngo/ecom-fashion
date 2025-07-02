@@ -10,7 +10,7 @@
     />
 
     <div
-      v-if="route.meta.pageTitle && route.meta.pageDetail"
+      v-if="route.meta.pageTitle"
       class="page-detail">
       <v-card-title class="text-h5 font-weight-bold py-0">
         {{ route.meta.pageTitle }}
