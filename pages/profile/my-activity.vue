@@ -83,6 +83,7 @@
       class="text-none rounded-lg"
       width="100%"
       size="large"
+      :to="{ name: 'profile-history' }"
     >Order History</v-btn>
   </v-card-title>
 </template>
