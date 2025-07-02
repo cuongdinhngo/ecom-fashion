@@ -48,5 +48,4 @@
 </template>
 <script setup lang="ts">
 const route = useRoute();
-console.log('Route:', route);
 </script>
