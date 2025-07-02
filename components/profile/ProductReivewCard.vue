@@ -28,13 +28,20 @@
             variant="outlined"
             class="text-none rounded-lg"
             width="45%"
+            @click="reviewDialog = true"
           >Review</v-btn>
         </v-card-title>
       </v-col>
     </v-row>
   </v-card>
+
+  <ProfileReviewDiaglog
+    v-model:review-dialog="reviewDialog"
+  />
 </template>
 <script setup lang="ts">
 import { faker } from '@faker-js/faker';
 const deliveryDate = faker.date.past();
+
+const reviewDialog = ref(false);
 </script>

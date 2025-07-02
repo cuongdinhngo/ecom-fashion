@@ -23,6 +23,7 @@
     </template>
   </ProfileOrderCard>
 
+  <!-- Order List Dialog -->
   <v-dialog
     min-width="100%"
     scrollable
