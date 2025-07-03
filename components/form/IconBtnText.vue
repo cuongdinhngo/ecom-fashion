@@ -1,23 +1,24 @@
 <template>
-  <v-badge v-if="showBadge" color="primary" dot offset-y="10">
+  <v-badge v-if="showBadge" color="green" dot offset-y="10">
     <v-btn
-      variant="tonal" color="primary" :icon="icon"
-      :to="to"
+      icon
+      :variant="isActive ? 'flat' : 'tonal'"
+      color="primary"
+      @click="navigateTo(to)"
       :size="size"
-      active-color="primary"
     >
-      <v-icon :icon="icon" :size="size"></v-icon>
+      <v-icon :size="size">{{ icon }}</v-icon>
     </v-btn>
   </v-badge>
   <v-btn v-else
-    variant="tonal" color="primary" :icon="icon"
-    :to="to"
+    :variant="isActive ? 'flat' : 'tonal'"
+    color="primary"
+    icon
+    @click="navigateTo(to)"
     :size="size"
-    active-color="primary"
   >
-    <v-icon :icon="icon" :size="size"></v-icon>
+    <v-icon :size="size">{{ icon }}</v-icon>
   </v-btn>
-
 </template>
 <script setup lang="ts">
 defineProps({
@@ -36,6 +37,10 @@ defineProps({
   size: {
     type: [String, Number],
     default: 'default'
+  },
+  isActive: {
+    type: Boolean,
+    default: false
   }
 });
 </script>
