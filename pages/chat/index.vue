@@ -1,15 +1,15 @@
 <template>
   <!-- Chat Header: Receiver Info -->
   <ChatHeader
-    :receiver="faker.helpers.arrayElement(receivers)"
+    :receiver="receivers[0]"
   />
 
   <!-- Main chat area -->
   <v-card
     tile
-    class="message-area bg-grey-lighten-3 elevation-0"
+    class="message-area elevation-0"
   >
-    <v-card class="message-content">
+    <v-card class="message-content bg-grey-lighten-3">
       <template
         v-for="(message, index) in messages"
         :key="index"
@@ -45,7 +45,7 @@
                 :key="index"
                 :issue="issue"
                 :is-selected="currentMessage === issue"
-                @click="addMessage(issue, 'issue')"
+                @click="currentMessage = issue; currentMessageType = 'issue'"
               />
             </v-sheet>
             <ChatOrderMessage
@@ -54,7 +54,7 @@
               :order="issue"
               :is-selected="currentMessage === issue"
               :selectable="true"
-              @click="addMessage(issue, 'order')"
+              @click="currentMessage = issue; currentMessageType = 'order'"
             />
           </template>
         </v-list>
@@ -75,7 +75,10 @@
   </v-dialog>
 
   <!-- Chat Input -->
-  <ChatInputFooter />
+  <ChatInputFooter
+    v-model:sender-message="senderMessage"
+    @handleSendMessage="sendMessage"
+  />
 </template>
 <script lang="ts" setup>
 definePageMeta({
@@ -101,13 +104,25 @@ const messageList = ref([]);
 const deepProgress = ref(false); 
 const isReceiverTurn = ref(false);
 const senderMessage = ref('');
+const currentMessageType = ref('text');
 
 onMounted(() => {
   facingIssues.value = getMainIssues();
 });
 
+function sendMessage() {
+  messages.value.push({
+    id: new Date().getTime(),
+    text: senderMessage.value,
+    timestamp: new Date().toISOString(),
+    type: 'sender',
+    category: 'text'
+  });
+  senderMessage.value = '';
+  isReceiverTurn.value = true;
+}
+
 function addMessage(issue: Object, type: string = 'text') {
-  console.log('Adding issue:', issue);
   currentMessage.value = issue;
   const message = reformatMessage(issue, type);
   if (!messageList.value.includes(message)) {
@@ -118,14 +133,13 @@ function addMessage(issue: Object, type: string = 'text') {
 }
 
 function loadNextProgress(issue: Object) {
-  console.log('Loading next process for issue:', issue);
+  addMessage(currentMessage.value, currentMessageType.value);
   if (issue.nextProcess) {
     deepProgress.value = true;
     const nextProcess = issue.nextProcess;
     switch (issue.category) {
       case 'order':
         facingIssues.value = loadOrderFunction(nextProcess);
-        console.log('NEXT PRCESS => ', facingIssues.value);
         break;
     }
   } else if (deepProgress.value) {
@@ -133,7 +147,6 @@ function loadNextProgress(issue: Object) {
     deepProgress.value = false;
     issueDialog.value = false;
     messages.value.push(...messageList.value);
-    console.log('Messages after deep progress:', messages.value);
     isReceiverTurn.value = true;
   } else {
     const subIssues = getSubIssues(issue.value);
@@ -183,13 +196,6 @@ const receivers = [
   }
 ];
 
-const categories = [
-  'text',
-  'issue',
-  'order',
-  'voucher',
-];
-
 const messages = ref(Array.from({ length: 1 }, (_, index) => ({
   id: index + 1,
   text: faker.lorem.sentence(),
@@ -199,17 +205,30 @@ const messages = ref(Array.from({ length: 1 }, (_, index) => ({
 })));
 
 watch(isReceiverTurn, (newValue) => {
-  console.log('isReceiverTurn changed:', newValue);
   if (newValue) {
-    setTimeout(() => {
-      messages.value.push({
-        id: new Date().getTime(),
+    const category = Math.random() > 0.5 ? 'text' : 'voucher';
+    let message = {
+      id: new Date().getTime(),
+      timestamp: new Date().toISOString(),
+      type: 'receiver',
+      category: category
+    }
+    if (category === 'voucher') {
+      message = {
+        ...message,
+        description: 'off on your next purchase',
+        value: 15,
+        expiredDate: 'Aug 31, 25',
+      };
+    } else {
+      message = {
+        ...message,
         text: faker.lorem.sentence(),
-        timestamp: new Date().toISOString(),
-        type: 'receiver',
-        category: Math.random() > 0.5 ? 'text' : 'voucher'
-      });
-    }, 3000);
+      };
+    }
+    setTimeout(() => {
+      messages.value.push(message);
+    }, 2000);
     isReceiverTurn.value = false;
   }
 });

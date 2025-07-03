@@ -2,7 +2,7 @@
   <v-sheet
     :class="[isSender ? 'bg-white text-black' : 'bg-primary text-white', 'px-4 py-2 rounded-lg']"
   >
-    {{ message.id }} - {{ message.text }}
+    {{ message.text }}
   </v-sheet>
 </template>
 <script lang="ts" setup>

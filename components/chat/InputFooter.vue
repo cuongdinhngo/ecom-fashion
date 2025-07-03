@@ -9,6 +9,8 @@
       auto-grow
       flat
       hide-details
+      v-model="senderMessage"
+      @keyup.enter.prevent="handleSendMessage"
     />
     <div class="actions d-flex align-center">
       <v-btn
@@ -30,6 +32,20 @@
     </div>
   </v-card-title>
 </template>
+<script setup lang="ts">
+const senderMessage = defineModel<string>('senderMessage', {
+  default: '',
+  type: String,
+});
+
+const emit = defineEmits(['handleSendMessage']);
+
+function handleSendMessage() {
+  if (senderMessage.value.trim() === '') return;
+
+  emit('handleSendMessage');
+}
+</script>
 <style scoped>
 .chat-input {
   position: fixed;

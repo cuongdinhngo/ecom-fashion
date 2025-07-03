@@ -14,7 +14,7 @@
   />
   <ChatVoucherMessage
     v-else-if="message.category === 'voucher'"
-    :message="message"
+    :voucher="message"
   />
 </template>
 <script lang="ts" setup>
