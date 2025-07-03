@@ -14,7 +14,7 @@ interface OrdersOptions {
 }
 
 const defaultOption = {
-  quantity: 5
+  quantity: 2
 }
 
 const deliveryOptions = [
@@ -42,7 +42,21 @@ export const useOrders = (options: OrdersOptions = defaultOption) => {
     }
   });
 
+  const getOrderList = () => {
+    return orders;
+  }
+
+  const loadOrderFunction = (aliasFunction: string) => {
+    console.log('Loading order function for alias => ', aliasFunction);
+    switch (aliasFunction) {
+      case 'load-order-list':
+        return getOrderList();
+    }
+  }
+
   return {
     orders,
+    getOrderList,
+    loadOrderFunction
   }
 }
