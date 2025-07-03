@@ -6,11 +6,7 @@
     </v-card-title>
 
     <!-- Anouncement -->
-    <ItemsDirectionBoard
-      title="Announcement"
-      description="Check out the latest updates and features. We have some exciting new features coming soon!"
-      :to="{ name: 'index' }"
-    ></ItemsDirectionBoard>
+    <ProfileAnnoucementCard />
 
     <!-- Recently Viewed Items -->
     <ProfileRecentlyViewed />
@@ -41,8 +37,6 @@
   </v-card>
 </template>
 <script setup lang="ts">
-import { ProfileJustForYou } from '#components';
-
 definePageMeta({
   layout: 'profile',
   title: 'Profile Page',

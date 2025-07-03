@@ -1,7 +1,7 @@
 <template>
   <v-badge v-if="showBadge" color="primary" dot offset-y="10">
     <v-btn
-      variant="plain" color="primary" :icon="icon"
+      variant="tonal" color="primary" :icon="icon"
       :to="to"
       :size="size"
       active-color="primary"
@@ -10,7 +10,7 @@
     </v-btn>
   </v-badge>
   <v-btn v-else
-    variant="plain" color="primary" :icon="icon"
+    variant="tonal" color="primary" :icon="icon"
     :to="to"
     :size="size"
     active-color="primary"
