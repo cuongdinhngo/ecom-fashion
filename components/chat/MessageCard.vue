@@ -7,6 +7,11 @@
     v-else-if="message.category === 'issue'"
     :message="message"
   />
+  <ChatOrderMessage
+    v-else-if="message.category === 'order'"
+    :order="JSON.parse(message.text)"
+    :is-selected="true"
+  />
   <ChatVoucherMessage
     v-else-if="message.category === 'voucher'"
     :message="message"
@@ -25,5 +30,5 @@ const props = defineProps({
   }
 });
 
-console.log('MessageCard props:', props);
+console.log('MessageCard props:', props.message);
 </script>
