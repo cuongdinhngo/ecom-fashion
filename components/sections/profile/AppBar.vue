@@ -33,6 +33,9 @@
       <!-- Voucher -->
       <FormIconBtnText
         icon="mdi-wallet-giftcard"
+        :to="{ name: 'profile-voucher', query: { type: 'active' } }"
+        :is-active="pageName === 'profile-voucher'"
+        :show-badge="false"
       ></FormIconBtnText>
 
       <!-- Top Menu -->
@@ -49,4 +52,5 @@
 </template>
 <script setup lang="ts">
 const route = useRoute();
+const pageName = route.name || 'index';
 </script>
