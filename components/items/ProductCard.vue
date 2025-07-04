@@ -6,11 +6,13 @@
       width="100%"
     >
       <v-card class="rounded-lg elevation-4 bg-white pa-1">
-        <v-responsive aspect-ratio="4/5" class="product-image-frame">
+        <v-responsive :aspect-ratio="4/5">
           <v-img
             :src="item.image"
-            class="product-image rounded-lg"
+            class="rounded-lg"
             cover
+            width="100%"
+            height="100%"
           />
         </v-responsive>
       </v-card>
@@ -42,20 +44,3 @@ const props = defineProps({
   }
 });
 </script>
-<style scoped>
-.product-image-frame {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-}
-
-.product-image {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-</style>

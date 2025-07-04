@@ -17,7 +17,7 @@ export function categoryImg(): string {
 }
 
 export function smallProductImg(): string {
-  return `${useRuntimeConfig().app.baseURL}/images/item-${faker.number.int({min: 1, max: 16})}.jpg`;
+  return `${useRuntimeConfig().app.baseURL}/images/item-${faker.number.int({min: 1, max: 13})}.jpg`;
 }
 
 export function productImg(): string {
