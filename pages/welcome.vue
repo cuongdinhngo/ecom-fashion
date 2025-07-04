@@ -1,7 +1,8 @@
 <template>
   <v-card
-    class="bg-transparent elevation-0 d-flex flex-column wrapper"
+    class="bg-transparent elevation-0 d-flex flex-column"
     min-height="100vh"
+    tile
   >
     <v-card-actions></v-card-actions>
     <v-carousel
@@ -11,7 +12,7 @@
       color="primary"
       height="80vh"
       cycle
-      class="mt-15"
+      class="mt-15 elevation-0"
       hideDelimiterBackground
     >
       <v-carousel-item
@@ -27,6 +28,7 @@
 definePageMeta({
   layout: 'fullview',
   title: 'Shoppe - Home',
+  backgroundImage: '/images/welcome-bg.png',
   meta: [
     { name: 'description', content: 'Welcome to Shoppe, your online store for beautiful products.' },
     { name: 'keywords', content: 'eCommerce, online store, shopping, fashion' }
@@ -42,11 +44,3 @@ const slides = [
   WelcomeReady
 ]
 </script>
-
-<style scoped>
-.wrapper {
-  background-image: url('/public/images/welcome-bg.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-</style>
