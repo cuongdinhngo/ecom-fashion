@@ -1,14 +1,16 @@
 <template>
-  <v-card>
-    <v-img
-      :src="item.image"
-      width="110"
-      height="110"
-      cover
-      class="rounded-lg mx-auto my-2"
-    >
-      <span class="discount">-{{ item.discount }}</span>
-    </v-img>
+  <v-card class="rounded-lg elevation-4 bg-white pa-1">
+    <v-responsive :aspect-ratio="4/5">
+      <v-img
+        :src="item.image"
+        class="rounded-lg"
+        cover
+        width="100%"
+        height="100%"
+      >
+        <span class="discount">-{{ item.discount }}</span>
+      </v-img>
+    </v-responsive>
   </v-card>
 </template>
 <script setup lang="ts">
