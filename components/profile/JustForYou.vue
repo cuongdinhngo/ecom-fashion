@@ -8,6 +8,7 @@
         v-for="(item, index) in products"
         :key="index"
         cols="6"
+        class="px-1"
       >
         <ItemsProductCard :item="item" />
       </v-col>
