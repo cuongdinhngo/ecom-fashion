@@ -21,10 +21,11 @@
 <script setup lang="ts">
 import { faker } from '@faker-js/faker';
 const model = ref(null)
-const newItems = Array.from({ length: 15 }, () => ({
-  id: faker.string.uuid(),
+const newItems = Array.from({ length: 15 }, (_, index) => ({
+  id: index + 1,
   description: faker.lorem.sentence({ min: 5, max: 10 }),
   price: faker.commerce.price({ min: 10, max: 200, dec: 2, symbol: '$' }),
   image: smallProductImg(),
+  to: { name: 'product-id', params: { id: index + 1 } },
 }));
 </script>

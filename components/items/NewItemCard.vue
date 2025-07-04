@@ -3,7 +3,7 @@
     class="mr-3 rounded-lg elevation-0 pa-0 my-0 bg-transparent"
     height="240"
     width="150"
-    @click="toggle"
+    @click="toggle(); navigateTo(item.to)"
   >
     <div class="photo-frame elevation-5">
       <v-img
