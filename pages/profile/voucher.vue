@@ -17,9 +17,13 @@
   </v-card-title>
 
   <ItemsVoucherCard
+    v-if="type === 'active'"
     v-for="(voucher, index) in vouchers"
     :key="index"
     :voucher="voucher"
+  />
+  <ProfileVoucherProgress
+    v-if="type === 'progress'"
   />
 </template>
 <script lang="ts" setup>
@@ -61,3 +65,5 @@ const vouchers = ref([
   }
 ]);
 </script>
+<style scoped>
+</style>
