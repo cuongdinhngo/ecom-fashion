@@ -12,18 +12,18 @@
       <v-carousel-item
         v-for="(banner, i) in banners" :key="i"
       >
-        <v-img
-          :src="banner.image"
-          height="300px"
-          width="100%"
-          cover
-          class="rounded-lg"
-        >
-          <div class="content-wrapper">
-            <v-card-title class="bg-amber-lighten-4 opacity-50 font-weight-bold px-2">{{ banner.title }}</v-card-title>
-            <v-card-subtitle class="bg-amber-lighten-4 opacity-50 font-weight-bold px-2">{{ banner.description }}</v-card-subtitle>
-          </div>
-        </v-img>
+        <v-responsive aspect-ratio="4/3">
+          <v-img
+            :src="banner.image"
+            cover
+            class="rounded-lg"
+          >
+            <div class="content-wrapper">
+              <v-card-title class="bg-amber-lighten-4 opacity-50 font-weight-bold px-2">{{ banner.title }}</v-card-title>
+              <v-card-subtitle class="bg-amber-lighten-4 opacity-50 font-weight-bold px-2">{{ banner.description }}</v-card-subtitle>
+            </div>
+          </v-img>
+        </v-responsive>
       </v-carousel-item>
     </v-carousel>
   </v-card>
