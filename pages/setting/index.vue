@@ -25,14 +25,14 @@ const menu = [
     header: 'Personal',
     subMenu: [
       { title: 'Profile', to: { name: 'setting-profile' } },
-      { title: 'Shipping Address', to: { name: 'setting' } },
+      { title: 'Shipping Address', to: { name: 'setting-address' } },
       { title: 'Payment methods', to: { name: 'setting' } }
     ]
   },
   {
     header: 'Shop',
     subMenu: [
-      { title: 'Country', to: { name: 'setting' } },
+      { title: 'Country', to: { name: 'setting-country' } },
       { title: 'Currency', to: { name: 'setting' } },
       { title: 'Sizes', to: { name: 'setting' } },
       { title: 'Terms and Conditions', to: { name: 'setting' } },
@@ -41,7 +41,7 @@ const menu = [
   {
     header: 'Account',
     subMenu: [
-      { title: 'Language', to: { name: 'setting' } },
+      { title: 'Language', to: { name: 'setting-language' } },
       { title: 'Contact Us', to: { name: 'setting' } }
     ]
   }
