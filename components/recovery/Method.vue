@@ -6,6 +6,7 @@
       color="primary"
       variant="text"
       link
+      @click="recoveryWay = 'sms'"
     >
       <v-list-item-title class="text-subtitle-1 font-weight-bold text-primary">
         SMS
@@ -23,6 +24,7 @@
       color="primary"
       variant="text"
       link
+      @click="recoveryWay = 'email'"
     >
       <v-list-item-title class="text-subtitle-1 font-weight-bold">
         Email

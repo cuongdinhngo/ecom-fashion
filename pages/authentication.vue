@@ -1,7 +1,8 @@
 <template>
   <v-card
-    class="bg-transparent elevation-0 d-flex flex-column wrapper"
+    class="bg-transparent elevation-0 d-flex flex-column"
     min-height="100vh"
+    tile
   >
     <v-spacer></v-spacer>
     <v-card-title class="d-flex justify-center align-center flex-column">
@@ -48,6 +49,7 @@
 definePageMeta({
   layout: 'fullview',
   title: 'Shoppe - Home',
+  backgroundImage: '/images/header-bubbles-bg.png',
   meta: [
     { name: 'description', content: 'Welcome to Shoppe, your online store for beautiful products.' },
     { name: 'keywords', content: 'eCommerce, online store, shopping, fashion' }
@@ -67,11 +69,3 @@ const resolveAuthentication = () => {
   }
 };
 </script>
-
-<style scoped>
-.wrapper {
-  background-image: url('/public/images/header-bubbles-bg.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-</style>

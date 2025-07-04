@@ -34,8 +34,9 @@
       <template v-slot:actions>
         <v-btn
           size="large"
-          class="mx-auto bg-deep-purple-darken-3 text-white"
+          class="mx-auto bg-black text-white rounded-xl"
           text="Ok"
+          width="70%"
           @click="dialog = false"
         ></v-btn>
       </template>
