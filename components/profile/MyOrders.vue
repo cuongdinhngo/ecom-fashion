@@ -22,7 +22,7 @@
       :options="labelOptions"
       :label="{
         title: 'To Review',
-        to: { name: 'profile' }
+        to: { name: 'profile-history' }
       }"
     />
   </ItemsTopDataCard>
