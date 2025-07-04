@@ -1,6 +1,6 @@
 <template>
   <div
-    class="avatar-frame elevation-1"
+    class="avatar-frame elevation-1 cursor-pointer"
     :style="{ width: frameSize.width, height: frameSize.height }"
   >
     <v-avatar

@@ -6,24 +6,27 @@
       :show-arrows="false"
     >
       <v-slide-group-item
-        v-for="n in 15"
-        :key="n"
+        v-for="(story, index) in stories"
+        :key="index"
         v-slot="{ isSelected, toggle }"
       >
         <v-card
-          class="mr-4 rounded-lg elevation-0 pa-0 my-0"
+          class="mr-4 rounded-lg elevation-2 px-0 my-2"
           height="200"
           width="110"
           @click="toggle"
         >
           <v-img
-            :src="smallProductImg()"
+            :src="story.image"
             height="200"
             width="110"
             cover
+            aspect-ratio="16/9"
           >
             <v-card-title class="ma-0 pa-0">
-              <span class="text-caption bg-green text-white pa-1 rounded-lg ml-1">Live</span></v-card-title>
+              <span
+                :class="[{'hidden-block': !story.isLive},'text-caption bg-green text-white pa-1 rounded-lg ml-1']"
+              >Live</span></v-card-title>
             <v-card-title></v-card-title>
             <v-card-title></v-card-title>
             <v-card-title></v-card-title>
@@ -31,7 +34,7 @@
               <v-avatar
                 size="40"
                 class="circle-target"
-                @click="navigateTo({ name: 'index' })"
+                @click="navigateTo(story.to)"
               >
                 <v-icon>mdi-play</v-icon>
               </v-avatar>
@@ -43,6 +46,16 @@
   </ItemsTopDataCard>
 </template>
 <script setup lang="ts">
+import { faker } from '@faker-js/faker';
+
+const stories = Array.from({ length: 15 }, () => {
+  const isLive = faker.datatype.boolean();
+  return {
+    image: smallProductImg(),
+    isLive: isLive,
+    to: isLive ? { name: 'profile-live' } : { name: 'profile-story' }
+  }
+});
 const model = ref(null)
 </script>
 <style scoped>
