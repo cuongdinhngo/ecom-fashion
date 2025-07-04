@@ -14,6 +14,7 @@
           <!-- Sale Items -->
           <ItemsSaleCard
             :item="item"
+            @click="navigateTo(item.to)"
           />
         </v-col>
       </v-row>
@@ -23,8 +24,9 @@
 <script setup lang="ts">
 import { ItemsSaleCard } from '#components';
 import { faker } from '@faker-js/faker';
-const saleItems = Array.from({ length: 6 }, () => ({
+const saleItems = Array.from({ length: 6 }, (_, index) => ({
   image: smallProductImg(),
   discount: faker.number.int({ min: 10, max: 50 }) + '%',
+  to: { name: 'product-id', params: { id: index + 1 } },
 }));
 </script>
