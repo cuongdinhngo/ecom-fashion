@@ -46,6 +46,9 @@
       <!-- Setting -->
       <FormIconBtnText
         icon="mdi-cog-outline"
+        :to="{ name: 'setting' }"
+        :is-active="pageName === 'setting'"
+        :show-badge="false"
       ></FormIconBtnText>
     </div>
   </v-app-bar>
