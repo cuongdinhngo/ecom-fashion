@@ -1,21 +1,19 @@
 <template>
   <ItemsTopDataCard title="Categories" :see-all="true">
-    <div class="grid-container d-flex ga-2">
-      <v-row no-gutters>
-        <v-col
-          v-for="(category, index) in categories"
-          :key="index"
-          cols="6"
-          class="pr-2 pb-3"
-        >
-          <ItemsCategoryCard
-            :items="category.items"
-            :category="category.category"
-            :counts="category.counts"
-          />
-        </v-col>
-      </v-row>
-    </div>
+    <v-row no-gutters>
+      <v-col
+        v-for="(category, index) in categories"
+        :key="index"
+        cols="6" sm="6" md="3" lg="3"
+        class="pa-1"
+      >
+        <ItemsCategoryCard
+          :items="category.items"
+          :category="category.category"
+          :counts="category.counts"
+        />
+      </v-col>
+    </v-row>
   </ItemsTopDataCard>
 </template>
 <script setup lang="ts">

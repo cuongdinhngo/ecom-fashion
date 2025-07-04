@@ -1,20 +1,20 @@
 <template>
   <v-card class="ma-0 pa-0 category elevation-4" width="100%">
     <v-card-text class="pa-0">
-      <v-row no-gutters class="pt-1 pr-1">
+      <v-row no-gutters>
         <v-col
           v-for="(item, index) in items"
           :key="index"
           cols="6"
-          class="d-flex justify-center pb-1 pl-1"
+          class="d-flex justify-center pa-1"
         >
-          <v-img
-            :src="item"
-            width="75"
-            height="75"
-            cover
-            class="rounded-lg mx-auto"
-          ></v-img>
+          <v-responsive :aspect-ratio="4/3">
+            <v-img
+              :src="item"
+              cover
+              class="rounded-lg mx-auto"
+            ></v-img>
+          </v-responsive>
         </v-col>
       </v-row>
     </v-card-text>
