@@ -17,6 +17,4 @@ import { fa, faker } from '@faker-js/faker';
 const announcement = {
   type: faker.helpers.arrayElement(['news', 'new-reward', 'expire-reward']),
 }
-
-console.log('Announcement Type:', announcement.type);
 </script>

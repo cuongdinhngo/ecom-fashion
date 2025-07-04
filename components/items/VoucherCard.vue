@@ -62,7 +62,6 @@ const expireSoon = computed(() => {
   const expiryDate = parseExpiredDate(props.voucher.expiredDate);
   const timeDiff = expiryDate.getTime() - today.getTime();
   daysLeft.value = Math.ceil(timeDiff / (1000 * 3600 * 24));
-  console.log('Days until expiry:', daysLeft.value);
   return daysLeft.value <= 7;
 });
 
