@@ -52,5 +52,6 @@
 </template>
 <script setup lang="ts">
 const route = useRoute();
-const pageName = route.name || 'index';
+const pageName = computed(() => route.name || 'index');
+console.log('Current page name:', pageName.value);
 </script>
