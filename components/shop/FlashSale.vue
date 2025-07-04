@@ -3,22 +3,20 @@
     title="Flash Sale"
     :duration="3700"
   >
-    <div class="grid-container d-flex ga-2">
-      <v-row no-gutters>
-        <v-col
-          v-for="(item, index) in saleItems"
-          :key="index"
-          cols="4"
-          class="pr-2 pb-3"
-        >
-          <!-- Sale Items -->
-          <ItemsSaleCard
-            :item="item"
-            @click="navigateTo(item.to)"
-          />
-        </v-col>
-      </v-row>
-    </div>
+    <v-row no-gutters>
+      <v-col
+        v-for="(item, index) in saleItems"
+        :key="index"
+        cols="4" sm="4" md="2" lg="2"
+        class="pa-1"
+      >
+        <!-- Sale Items -->
+        <ItemsSaleCard
+          :item="item"
+          @click="navigateTo(item.to)"
+        />
+      </v-col>
+    </v-row>
   </ItemsFlashSaleCard>
 </template>
 <script setup lang="ts">
