@@ -35,7 +35,14 @@
           <span class="text-subtitle-2">I already have an account</span>
         </template>
         <template #append>
-          <v-btn color="primary" class="text-none ml-4" icon variant="flat" size="x-small">
+          <v-btn
+            icon
+            color="primary"
+            class="text-none ml-4"
+            variant="flat"
+            size="x-small"
+            :to="{ name: 'login' }"
+          >
             <v-icon>mdi-arrow-right</v-icon>
           </v-btn>
         </template>
