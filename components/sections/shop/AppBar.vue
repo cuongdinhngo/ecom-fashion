@@ -3,66 +3,66 @@
     app
     class="pa-4 elevation-0 bg-white"
   >
-    <span class="text-h5 font-weight-bold">Shop</span>
-
-    <v-spacer></v-spacer>
+    <span class="text-h5 font-weight-bold mr-4">Shop</span>
 
     <!-- Search Bar -->
-    <div class="search-bar d-flex align-center">
-      <v-autocomplete
-        v-model="searchQuery"
-        :items="searchTerms"
-        hide-details flat chips closable-chips multiple 
-        variant="solo-filled"
-        rounded="pill"
-        menu-icon=""
-        :width="searchQuery.length === 0 ? 320 : 290"
-        placeholder="Search ..."
-        item-title="title"
-        item-value="title"
-      >
-        <template #append-inner>
-          <v-icon color="primary">mdi-camera-outline</v-icon>
-        </template>
+    <v-row>
+      <v-col cols="12" class="d-flex align-center justify-center">
+        <v-autocomplete
+          v-model="searchQuery"
+          :items="searchTerms"
+          hide-details flat chips closable-chips multiple 
+          variant="solo-filled"
+          rounded="pill"
+          menu-icon=""
+          :width="searchQuery.length === 0 ? '100%' : '90%'"
+          placeholder="Search ..."
+          item-title="title"
+          item-value="title"
+        >
+          <template #append-inner>
+            <v-icon color="primary">mdi-camera-outline</v-icon>
+          </template>
 
-        <template v-slot:chip="{ props, item, index }">
-          <template v-if="index < 2">
-            <v-chip
+          <template v-slot:chip="{ props, item, index }">
+            <template v-if="index < 1">
+              <v-chip
+                v-bind="props"
+                :text="item.raw.title"
+                color="primary"
+              />
+            </template>
+            <template v-else-if="index === 1">
+              <v-chip color="primary">
+                +{{ searchQuery.length - 1 }}
+              </v-chip>
+            </template>
+          </template>
+
+          <template v-slot:item="{ props, item }">
+            <v-list-item
               v-bind="props"
-              :text="item.raw.title"
+              :title="item.raw.title"
+              :value="item.raw.title"
+              :prepend-avatar="item.raw.image"
               color="primary"
-            />
+              density="compact"
+              link
+            ></v-list-item>
           </template>
-          <template v-else-if="index === 2">
-            <v-chip color="primary">
-              +{{ searchQuery.length - 2 }}
-            </v-chip>
-          </template>
-        </template>
+        </v-autocomplete>
 
-        <template v-slot:item="{ props, item }">
-          <v-list-item
-            v-bind="props"
-            :title="item.raw.title"
-            :value="item.raw.title"
-            :prepend-avatar="item.raw.image"
-            color="primary"
-            density="compact"
-            link
-          ></v-list-item>
-        </template>
-      </v-autocomplete>
-
-      <v-btn
-        v-if="searchQuery.length > 0"
-        variant="text"
-        icon
-        size="small"
-        @click="dialog = !dialog"
-      >
-        <v-icon>mdi-tune-vertical</v-icon>
-      </v-btn>
-    </div>
+        <v-btn
+          v-if="searchQuery.length > 0"
+          variant="text"
+          icon
+          size="small"
+          @click="dialog = !dialog"
+        >
+          <v-icon>mdi-tune-vertical</v-icon>
+        </v-btn>
+      </v-col>
+    </v-row>
   </v-app-bar>
   
   <!-- Dialog for Filter -->
