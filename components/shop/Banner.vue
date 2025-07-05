@@ -35,7 +35,7 @@ const banners = Array.from({ length: 4 }, () => {
   return {
     title: faker.commerce.productName(),
     description: faker.commerce.productDescription(),
-    image: bannerImg(),
+    image: productImg(),
   };
 });
 </script>
