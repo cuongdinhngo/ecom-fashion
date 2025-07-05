@@ -20,7 +20,8 @@
       <v-col
         v-for="(item, index) in products"
         :key="index"
-        cols="6"
+        cols="6" sm="4" md="3" lg="3"
+        class="pa-1"
       >
         <ItemsProductCard
           :item="item"
