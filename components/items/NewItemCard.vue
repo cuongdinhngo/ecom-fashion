@@ -1,22 +1,27 @@
 <template>
   <v-card
-    class="mr-3 rounded-lg elevation-0 pa-0 my-0 bg-transparent"
-    height="240"
-    width="150"
+    :class="[
+      'mr-3 rounded-lg elevation-0 pa-0 my-0 bg-transparent',
+    ]"
+    max-width="150"
     @click="toggle(); navigateTo(item.to)"
   >
-    <div class="photo-frame elevation-5">
-      <v-img
-        :src="item.image"
-        width="100%"
-        height="100%"
-        cover
-        class="rounded-lg photo-img"
-      />
-    </div>
-    <v-card-subtitle class="pa-0 my-2 subtitle-two-lines">
-      <span class="text-caption">{{ item.description }}</span>
-    </v-card-subtitle>
+    <v-card class="rounded-lg elevation-4 pa-1">
+      <v-responsive :aspect-ratio="3/4">
+        <v-img
+          :src="item.image"
+          class="rounded-lg"
+          cover
+          width="100%"
+          height="100%"
+        />
+      </v-responsive>
+    </v-card>
+
+    <ItemsProductDescription
+      :description="item.description"
+    />
+
     <v-card-title class="ma-0 pa-0">
       <span class="text-subtitle font-weight-bold">{{ item.price }}</span>
     </v-card-title>

@@ -16,9 +16,9 @@
           />
         </v-responsive>
       </v-card>
-      <v-card-subtitle class="px-1 my-2 subtitle-two-lines">
-        <span class="text-caption">{{ item.description }}</span>
-      </v-card-subtitle>
+      <ItemsProductDescription
+        :description="item.description"
+      />
       <v-card-title class="ma-0 px-1 py-0">
         <span class="font-weight-bold">${{ item.price }}</span>
         <span
