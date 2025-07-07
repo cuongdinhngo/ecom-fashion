@@ -54,6 +54,7 @@ definePageMeta({
 
 import type { Product } from '@/composables/useProducts';
 
+const queries = useRouteQuery('terms');
 const searchQuery = useSearchQuery();
 
 const { SEARCH_TERMS, CATEGORIES, searchProducts, searchSubCategories } = useProducts();
@@ -66,5 +67,14 @@ watch(searchQuery, (newValue) => {
   console.log('Filtered subCategories:', subCategories.value);
   products.value = searchProducts(newValue);
   console.log('Filtered Products:', products.value);
+}, { immediate: true });
+
+watch(queries, (newValue) => {
+  if (newValue?.length > 0) {
+    console.log('Route Query Changed:', newValue);
+    searchQuery.value = newValue;
+    subCategories.value = searchSubCategories(newValue);
+    products.value = searchProducts(newValue);
+  }
 }, { immediate: true });
 </script>
