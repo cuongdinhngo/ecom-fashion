@@ -6,7 +6,7 @@
   >
     <v-card class="bg-white">
       <v-toolbar class="bg-white">
-        <v-toolbar-title class="text-h5">All Categories</v-toolbar-title>
+        <v-toolbar-title class="text-h6 font-weight-bold">All Categories</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-btn
           icon="mdi-close"
