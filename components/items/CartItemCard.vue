@@ -69,6 +69,8 @@
 <script setup lang="ts">
 import type { Product } from '@/composables/useProducts';
 
+const emit = defineEmits(['cart-updated']);
+
 const props = defineProps<{ product: Product }>();
 const { addToCart, removeFromCart } = useCart();
 
@@ -95,6 +97,7 @@ function updateProductQuantity(mode: 'increment' | 'decrement') {
   });
 
   totalPrice.value = (Number(props.product.price) * Number(props.product.quantity)).toFixed(2);
+  emit('cart-updated');
 }
 
 </script>

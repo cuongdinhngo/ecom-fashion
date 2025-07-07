@@ -1,7 +1,7 @@
 <template>
   <v-card-title class="text-h5 px-0">Payment</v-card-title>
 
-  <v-card min-height="90vh" class="pa-0 bg-white" tile elevation="0">
+  <v-card min-height="90vh" class="pa-0 bg-white mb-15" tile elevation="0">
     <!-- Shipping Address -->
     <v-list-item
       :subtitle="`${shippingAddress.address}, ${shippingAddress.ward} Ward, ${shippingAddress.district} District, ${shippingAddress.state} City`"

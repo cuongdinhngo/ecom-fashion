@@ -27,6 +27,7 @@
         v-for="(product, index) in productsFromCart"
         :key="index"
         :product="product"
+        @cart-updated="onCartUpdated"
       />
 
       <!-- If wishlist is empty, it will be showed -->
@@ -67,11 +68,12 @@
   </v-card>
   <div class="sticky-actions">
     <v-card-title class="d-flex justify-space-between align-center px-0 mb-0">
-      <span class="text-h6 font-weight-bold">Total ${{ '18.00' }}</span>
+      <span class="text-h6 font-weight-bold">Total ${{ totalPrice }}</span>
       <v-btn
         variant="tonal"
         class="text-none"
         width="40%"
+        :to="{ name: 'cart-checkout' }"
       >Checkout</v-btn>
     </v-card-title>
   </div>
@@ -82,6 +84,7 @@ const { wishlist } = useWishlist();
 const { products } = useProducts();
 const { cartItems } = useCart();
 const productsFromCart = ref<Product[]>([]);
+const totalPrice = ref(0);
 
 onMounted(() => {
   if (cartItems.value.length > 0) {
@@ -104,6 +107,10 @@ function remapCartItems() {
       };
     })
     .filter((p): p is Product => p !== null) as Product[];
+  
+  totalPrice.value = productsFromCart.value.reduce((total, product) => {
+    return total + (Number(product.price) * Number(product.quantity));
+  }, 0);  
 }
 
 const wishlistItems = computed(() => {

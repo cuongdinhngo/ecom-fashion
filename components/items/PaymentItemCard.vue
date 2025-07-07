@@ -16,7 +16,7 @@
       <span class="text-wrap text-caption">{{ product.shortDescription }}</span>
     </template>
     <template #append>
-      <p class="text-h6 text-black font-weight-bold">${{ Number(product.price) * Number(product.quantity) }}</p>
+      <p class="text-h6 text-black font-weight-bold">${{ totalPrice }}</p>
     </template>
   </v-list-item>
 </template>
@@ -27,6 +27,8 @@ const props = defineProps({
     required: true
   }
 });
+
+const totalPrice = ref((Number(props.product.price) * Number(props.product.quantity)).toFixed(2));
 
 console.log('Product in PaymentItemCard:', props.product);
 </script>
