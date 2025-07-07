@@ -18,7 +18,7 @@
         variant="flat"
         color="primary"
         size="x-small"
-        :to="to"
+        @click="navigateTo(to)"
       ><v-icon size="x-large">mdi-arrow-right-thin</v-icon>
       </v-btn>
     </div>
@@ -44,7 +44,7 @@ defineProps({
   },
   to: {
     type: Object,
-    default: () => ({ name: 'index' })
+    default: () => ({ name: 'shop' })
   }
 });
 </script>
