@@ -34,6 +34,7 @@
         variant="flat"
         class="text-none rounded-lg"
         width="40%"
+        :to="{ name: 'profile-track-order' }"
       >Track</v-btn>
     </v-card-title>
   </div>

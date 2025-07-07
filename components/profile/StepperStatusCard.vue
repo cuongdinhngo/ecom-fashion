@@ -51,6 +51,7 @@
             color="primary"
             class="mx-auto text-none"
             width="100%"
+            :to="{ name: 'chat' }"
           >Chat Now</v-btn>
         </v-card-actions>
       </v-card>
