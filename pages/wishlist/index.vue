@@ -25,6 +25,7 @@
         :avatar="item.avatar"
         :size="60"
         :frame-size="{ width: '75px', height: '70px' }"
+        @click="navigateTo({ name: 'product-id', params: { id: index + 1 } })"
       />
     </ItemsContainerCard>
   </v-card-text>
