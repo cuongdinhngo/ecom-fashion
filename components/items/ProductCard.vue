@@ -2,7 +2,6 @@
   <NuxtLink :to="item.to" class="nuxt-link-reset">
     <v-card
       class="rounded-lg elevation-0 pa-0 mb-2 bg-white"
-      min-height="300"
       width="100%"
     >
       <v-card class="rounded-lg elevation-4 bg-white pa-1">
