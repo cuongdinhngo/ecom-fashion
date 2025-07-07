@@ -28,7 +28,6 @@
         <v-card-title class="ma-0 px-1 py-0">
           <span class="text-h6 text-black font-weight-bold">${{ product.price }}</span>
           <span
-            v-if="!product.hiddenOriginalPrice"
             class="text-subtitle-2 font-weight-bold text-pink-lighten-3 ml-2 text-decoration-line-through"
           >
            {{ product.originalPrice }}
