@@ -21,9 +21,7 @@ export const useCart = () => {
   getCartItems();
 
   const addToCart = ( cartItem: CartItem) => {
-
-
-
+    console.log('Adding item to cart:', cartItem);
     const existingItemIndex = cartItems.value.findIndex(item => 
       item.productId === cartItem.productId
     );
@@ -40,6 +38,7 @@ export const useCart = () => {
   };
 
   const removeFromCart = (item: number | string) => {
+    console.log('Removing item from cart:', item);
     cartItems.value = cartItems.value.filter(i => i.productId !== item);
     localStorage.setItem('cartItems', JSON.stringify(cartItems.value));
   };

@@ -19,49 +19,52 @@
     </template>
   </v-list-item>
 
-  <!-- Products from Cart -->
-  <v-card-text :class="['pa-0', {'blank-container': productsFromCart.length === 0}]">
-    <ItemsCartItemCard
-      v-if="productsFromCart.length"
-      v-for="(product, index) in productsFromCart"
-      :key="index"
-      :product="product"
-    />
+  <v-card min-height="90vh" tile class="elevation-0 bg-white mb-10">
+    <!-- Products from Cart -->
+    <v-card-text :class="['pa-0', {'blank-container': productsFromCart.length === 0}]">
+      <ItemsCartItemCard
+        v-if="productsFromCart.length"
+        v-for="(product, index) in productsFromCart"
+        :key="index"
+        :product="product"
+      />
 
-    <!-- If wishlist is empty, it will be showed -->
-    <v-btn
-      v-else
-      variant="tonal"
-      size="100"
-      icon
-      class="mx-auto"
+      <!-- If wishlist is empty, it will be showed -->
+      <v-btn
+        v-else
+        variant="tonal"
+        size="100"
+        icon
+        class="mx-auto"
+      >
+        <v-icon size="70" color="primary">mdi-shopping-outline</v-icon>
+      </v-btn>
+    </v-card-text>
+
+    <!-- Wishlist -->
+    <v-card-title
+      v-if="wishlistItems.length"
+      class="text-h5 font-weight-bold pa-0 d-flex align-center"
     >
-      <v-icon size="70" color="primary">mdi-shopping-outline</v-icon>
-    </v-btn>
-  </v-card-text>
+      From Your Wishlist
+    </v-card-title>
+    <v-card-text
+      v-if="wishlistItems.length"
+      class="px-0" min-height="130vh"
+    >
+      <ItemsWishlistCard
+        v-for="(product, index) in wishlistItems"
+        :key="index"
+        :product="product"
+        @cart-updated="onCartUpdated"
+      />
+    </v-card-text>
 
-  <!-- Wishlist -->
-  <v-card-title
-    v-if="wishlistItems.length"
-    class="text-h5 font-weight-bold pa-0 d-flex align-center"
-  >
-    From Your Wishlist
-  </v-card-title>
-  <v-card-text
-    v-if="wishlistItems.length"
-    class="px-0" min-height="130vh"
-  >
-    <ItemsWishlistCard
-      v-for="(product, index) in wishlistItems"
-      :key="index"
-      :product="product"
+    <ShopMostPopular
+      v-else
     />
-  </v-card-text>
 
-  <ShopMostPopular
-    v-else
-  />
-
+  </v-card>
   <div class="sticky-actions">
     <v-card-title class="d-flex justify-space-between align-center px-0 mb-0">
       <span class="text-h6 font-weight-bold">Total ${{ '18.00' }}</span>
@@ -80,34 +83,46 @@ const { products } = useProducts();
 const { cartItems } = useCart();
 const productsFromCart = ref<Product[]>([]);
 
-console.log('Cart Items:', cartItems.value);
-
 onMounted(() => {
   if (cartItems.value.length > 0) {
-    productsFromCart.value = cartItems.value
-      .map(item => {
-        const product = products.find(p => p.id === item.productId);
-        if (!product || product.id === undefined || product.id === null) return null;
-        return {
-          ...product,
-          quantity: item.quantity,
-          color: item.color,
-          size: item.size
-        };
-      })
-      .filter((p): p is Product => p !== null) as Product[];
+    remapCartItems();
+  } else {
+    productsFromCart.value = [];
   }
 });
 
-console.log('productsFromCart', productsFromCart.value);
+function remapCartItems() {
+  productsFromCart.value = cartItems.value
+    .map(item => {
+      const product = products.find(p => p.id === item.productId);
+      if (!product || product.id === undefined || product.id === null) return null;
+      return {
+        ...product,
+        quantity: item.quantity,
+        color: item.color,
+        size: item.size
+      };
+    })
+    .filter((p): p is Product => p !== null) as Product[];
+}
 
 const wishlistItems = computed(() => {
   return products.filter(product => wishlist.value.includes(product.id));
 });
 
 watch(cartItems, (newCartItems) => {
-  console.log('Updated Cart Items:', newCartItems);
+  console.log('WATCHING => Updated Cart Items:', newCartItems);
+  if (newCartItems.length > 0) {
+    remapCartItems();
+  } else {
+    productsFromCart.value = [];
+  }
 });
+
+function onCartUpdated() {
+  console.log('Cart updated, remapping items...');
+  remapCartItems();
+}
 </script>
 <style scoped>
 .cart-counts {

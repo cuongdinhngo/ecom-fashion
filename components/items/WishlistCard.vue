@@ -52,7 +52,7 @@
             size="x-large"
             v-ripple
             class="ma-2"
-            @click.prevent="addToCart({ productId: product.id, quantity: 1, size: product.size, color: product.color })"
+            @click.prevent="handleAddToCart"
           ></v-icon>
         </v-card-actions>
       </v-col>
@@ -61,7 +61,7 @@
 </template>
 <script setup lang="ts">
 import type { Product } from '@/composables/useProducts';
-defineProps({
+const props = defineProps({
   product: {
     type: Object as () => Product,
     required: true,
@@ -71,4 +71,10 @@ defineProps({
 
 const { removeFromWishlist } = useWishlist();
 const { addToCart } = useCart();
+const emit = defineEmits(['cart-updated']);
+
+function handleAddToCart() {
+  addToCart({ productId: props.product.id, quantity: 1, size: props.product.size, color: props.product.color });
+  emit('cart-updated');
+}
 </script>
