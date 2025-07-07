@@ -1,7 +1,7 @@
 <template>
   <v-card-title class="text-h5 font-weight-bold pa-0 d-flex align-center">
     Cart
-    <span class="cart-counts bg-blue-lighten-4 text-subtitle-1 ml-2">2</span>
+    <span class="cart-counts bg-blue-lighten-4 text-subtitle-1 ml-2">{{ itemCounts }}</span>
   </v-card-title>
 
   <v-list-item
@@ -85,6 +85,7 @@ const { products } = useProducts();
 const { cartItems } = useCart();
 const productsFromCart = ref<Product[]>([]);
 const totalPrice = ref(0);
+const itemCounts = ref(0);
 
 onMounted(() => {
   if (cartItems.value.length > 0) {
@@ -111,6 +112,8 @@ function remapCartItems() {
   totalPrice.value = productsFromCart.value.reduce((total, product) => {
     return total + (Number(product.price) * Number(product.quantity));
   }, 0);  
+
+  itemCounts.value = productsFromCart.value.length;
 }
 
 const wishlistItems = computed(() => {
