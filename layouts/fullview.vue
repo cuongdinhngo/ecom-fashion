@@ -13,10 +13,11 @@
 </template>
 <script setup lang="ts">
 const route = useRoute();
-const backgroundImage = computed(() => (route.meta.backgroundImage as string));
+const backgroundImage = computed(() => {
+  return route.meta.backgroundImage ? imagePath(route.meta.backgroundImage as string) : '';
+});
 
 watch(backgroundImage, (newValue) => {
-  console.log('Background image URL:', newValue);
   document.documentElement.style.setProperty(
     '--background-image-url',
     newValue ? `url('${newValue}')` : ''

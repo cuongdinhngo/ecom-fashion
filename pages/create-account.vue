@@ -47,7 +47,7 @@
 definePageMeta({
   layout: 'fullview',
   title: 'Shoppe - Home',
-  backgroundImage: '/images/bg-bubbles.png',
+  backgroundImage: 'bg-bubbles.png',
   meta: [
     { name: 'description', content: 'Welcome to Shoppe, your online store for beautiful products.' },
     { name: 'keywords', content: 'eCommerce, online store, shopping, fashion' }
