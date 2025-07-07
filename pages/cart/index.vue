@@ -68,7 +68,7 @@
   </v-card>
   <div class="sticky-actions">
     <v-card-title class="d-flex justify-space-between align-center px-0 mb-0">
-      <span class="text-h6 font-weight-bold">Total ${{ totalPrice }}</span>
+      <span class="text-h6 font-weight-bold">Total ${{ totalPrice.toFixed(2) }}</span>
       <v-btn
         variant="tonal"
         class="text-none"
