@@ -182,9 +182,9 @@
       <ShopMostPopular />
     </v-card-title>
 
-    <v-card-title class="py-0">
+    <v-card class="py-0">
       <ProfileJustForYou />
-    </v-card-title>
+    </v-card>
   <!-- End of Card -->
   </v-card>
 
