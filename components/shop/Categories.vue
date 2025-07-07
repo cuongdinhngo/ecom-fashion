@@ -25,8 +25,10 @@ const props = defineProps({
   }
 });
 
-const categories = Array.from({ length: props.quantity }, () => ({
-  category: faker.commerce.department(),
+const { CATEGORIES } = useProducts();
+
+const categories = CATEGORIES.map(category => ({
+  category: category.title,
   items: Array.from({ length: 4 }, () => categoryImg()),
   counts: faker.number.int({ min: 50, max: 500 })
 }));

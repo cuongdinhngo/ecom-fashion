@@ -271,7 +271,14 @@
   </v-dialog>
 </template>
 <script setup lang="ts">
+const queries = useRouteQuery('terms', '');
 const searchQuery = useSearchQuery();
+
+onMounted(() => {
+  if (queries.value) {
+    searchQuery.value = queries.value.split(',');
+  }
+});
 
 const { SEARCH_TERMS, CATEGORIES, SIZE_OPTIONS, searchSubCategories } = useProducts();
 const searchTerms = ref<Object[]>(CATEGORIES);
