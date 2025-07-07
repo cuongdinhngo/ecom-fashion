@@ -1,38 +1,35 @@
 <template>
   <NuxtLink :to="product.to" class="nuxt-link-reset">
-    <v-card flat class="d-flex ga-2 my-2" height="170px">
-      <div class="product-image">
-        <div class="frame pa-2 elevation-2 rounded-lg" style="position: relative;">
-          <v-img
-            :src="product.image"
-            width="150px"
-            height="150px"
-            aspect-ratio="16/9"
-            cover
-            class="rounded-lg"
-          ></v-img>
+    <v-row no-gutters>
+      <v-col cols="4" sm="4" md="4" lg="4" class="my-2">
+        <v-card class="rounded-lg elevation-4 bg-white pa-1">
+          <v-responsive :aspect-ratio="4/5">
+            <v-img
+              :src="product.image"
+              class="rounded-lg"
+              cover
+              width="100%"
+              height="100%"
+            >
+              <v-btn
+                icon
+                variant="flat"
+                style="position: absolute; bottom: 5px; left: 5px;"
+                size="small"
+                @click.prevent="removeFromCart(product.id)"
+              >
+                <v-icon color="error" icon="mdi-trash-can-outline"></v-icon>
+              </v-btn>
+            </v-img>
+          </v-responsive>
+        </v-card>
+      </v-col>
 
-          <!-- Remove -->
-          <v-btn
-            icon
-            variant="flat"
-            style="position: absolute; bottom: 10px; left: 10px;"
-            size="small"
-            @click.prevent="removeFromCart(product.id)"
-          >
-            <v-icon color="error" icon="mdi-trash-can-outline"></v-icon>
-          </v-btn>
-        </div>
-      </div>
-      <div class="product-info">
+      <v-col cols="8" sm="8" md="8" lg="8" class="my-2 px-2 d-flex justify-space-between flex-column">
         <p class="text-subtitle-2">{{ product.shortDescription }}</p>
-        <v-card-title></v-card-title>
-
-        <v-card-title class="text-h6 px-0">
+        <v-card-title class="text-h6 px-0" style="min-height: 60px;">
           <span class="text-capitalize">{{ product.color }} {{ product.size ? `, Size: ${product.size}` : '' }}</span>
         </v-card-title>
-
-        <v-card-title></v-card-title>
 
         <div class="cart-actions d-flex align-center justify-space-between">
           <p class="text-h6 text-black font-weight-bold">${{ totalPrice }}</p>
@@ -55,7 +52,6 @@
               flat
               class="mx-1 text-center font-weight-bold"
               density="compact"
-              @click.prevent=""
             ></v-text-field>
             <v-btn
               variant="outlined"
@@ -66,8 +62,8 @@
             ><v-icon>mdi-plus</v-icon></v-btn>
           </div>
         </div>
-      </div>
-    </v-card>
+      </v-col>
+    </v-row>
   </NuxtLink>
 </template>
 <script setup lang="ts">
