@@ -6,16 +6,29 @@
     <FormIconRipple
       v-for="(menu, index) in footerMenu"
       :key="index"
-      :menu="menu"t
+      :menu="menu"
+      @click.prevent="enableCategoryDialog(menu.page)"
     />
   </v-footer>
+  <ItemsCategoryDialog
+    v-model:category-dialog="categoryDialog"
+  />
 </template>
 <script setup lang="ts">
 const footerMenu = [
   { icon: 'mdi-wallet-giftcard', to: { name: 'shop' }, page: 'shop', size: 'x-large', color: 'primary' },
   { icon: 'mdi-heart-outline', to: { name: 'wishlist' }, page: 'wishlist', size: 'x-large', color: 'primary' },
-  { icon: 'mdi-list-box-outline', to: { name: 'index' }, page: 'index', size: 'x-large', color: 'primary' },
+  { icon: 'mdi-list-box-outline', page: 'category', size: 'x-large', color: 'primary' },
   { icon: 'mdi-shopping-outline', to: { name: 'cart' }, page: 'cart', size: 'x-large', color: 'primary' },
   { icon: 'mdi-account-circle-outline', to: { name: 'profile' }, page: 'profile', size: 'x-large', color: 'primary' },
 ];
+
+const categoryDialog = ref(false);
+
+function enableCategoryDialog(page: string) {
+  if (page === 'category') {
+    categoryDialog.value = true;
+    return;
+  }
+}
 </script>

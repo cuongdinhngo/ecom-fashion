@@ -6,7 +6,7 @@
       class="pa-8 rounded-circle"
       :color="isActive ? 'black' : menu.color"
       v-ripple
-      @click="navigateTo(menu.to)"
+      @click="directTo(menu)"
     >
     </v-icon>
     <span v-if="isActive" class="active-indicator"></span>
@@ -28,6 +28,14 @@ const props = defineProps({
 
 const route = useRoute();
 const page = route.name || 'index';
+
+function directTo(menu) {
+  if (menu.to) {
+    navigateTo(menu.to);
+  } else {
+    console.warn('No route defined for this menu item:', menu);
+  }
+}
 
 const isActive = computed(() => {
   const name = route.name || '';
