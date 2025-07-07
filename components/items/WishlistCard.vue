@@ -1,18 +1,15 @@
 <template>
   <NuxtLink :to="product.to" class="nuxt-link-reset">
-    <v-card flat class="d-flex ga-2 my-2" height="170px">
-      <div class="product-image">
-        <div class="frame pa-2 elevation-2 rounded-lg" style="position: relative;">
+    <v-row no-gutters>
+      <v-col cols="4" sm="4" md="6" lg="6" class="my-2">
+        <v-card class="frame pa-1 elevation-2 rounded-lg" style="position: relative;">
           <v-img
             :src="product.image"
-            width="150px"
-            height="150px"
-            aspect-ratio="16/9"
+            :aspect-ratio="4/5"
             cover
             class="rounded-lg"
           ></v-img>
 
-          <!-- Remove -->
           <v-btn
             icon
             variant="flat"
@@ -22,28 +19,45 @@
           >
             <v-icon color="error" icon="mdi-trash-can-outline"></v-icon>
           </v-btn>
-        </div>
-      </div>
-      <div class="product-info">
-        <p class="text-subtitle-2">{{ product.shortDescription }}</p>
-        <v-card-title></v-card-title>
-        <p class="text-h6 text-black font-weight-bold">{{ product.price }}</p>
-        <v-card-title></v-card-title>
-        <v-chip label class="mr-1">Blue</v-chip>
-        <v-chip label>XL</v-chip>
-      </div>
-      <div class="product-actions align-content-end">
-        <v-icon
-          variant="text"
-          icon="mdi-basket-plus-outline"
-          color="primary"
-          size="x-large"
-          v-ripple
-          class="ma-2"
-          @click.prevent="addToCart({ productId: product.id, quantity: 1, size: product.size, color: product.color })"
-        ></v-icon>
-      </div>
-    </v-card>
+        </v-card>
+      </v-col>
+      <v-col cols="8" sm="8" md="6" lg="6" class="px-2 d-flex justify-space-between flex-column">
+        <ItemsProductDescription
+          :description="product.description"
+        />
+        <v-card-title class="ma-0 px-1 py-0">
+          <span class="text-h6 text-black font-weight-bold">${{ product.price }}</span>
+          <span
+            v-if="!product.hiddenOriginalPrice"
+            class="text-subtitle-2 font-weight-bold text-pink-lighten-3 ml-2 text-decoration-line-through"
+          >
+           {{ product.originalPrice }}
+          </span>
+        </v-card-title>
+        <v-card-actions class="d-flex justify-space-between align-center">
+          <div class="d-flex flex-wrap ga-2">
+            <v-chip
+              v-if="product.color"
+              label
+              class="mr-1"
+            >{{ product.color }}</v-chip>
+            <v-chip
+              v-if="product.size"
+              label
+            >{{ product.size }}</v-chip>
+          </div>
+          <v-icon
+            variant="text"
+            icon="mdi-basket-plus-outline"
+            color="primary"
+            size="x-large"
+            v-ripple
+            class="ma-2"
+            @click.prevent="addToCart({ productId: product.id, quantity: 1, size: product.size, color: product.color })"
+          ></v-icon>
+        </v-card-actions>
+      </v-col>
+    </v-row>
   </NuxtLink>
 </template>
 <script setup lang="ts">
