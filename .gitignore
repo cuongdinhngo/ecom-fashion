@@ -18,6 +18,19 @@ logs
 .fleet
 .idea
 
+# VS Code settings (optional - remove if you want to commit)
+.vscode/
+
+# Tauri build outputs
+src-tauri/target/
+src-tauri/gen/
+
+# Screenshots and temporary files
+screenshot.png
+*.png
+*.jpg
+*.jpeg
+
 # Local env files
 .env
 .env.*
