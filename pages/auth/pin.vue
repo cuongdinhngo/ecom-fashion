@@ -69,7 +69,7 @@
           <v-btn
             variant="text"
             class="text-subtitle-2"
-            :to="{ name: 'index' }"
+            :to="{ name: 'login' }"
           >
             <template #append>
               <v-btn
