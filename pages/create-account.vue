@@ -27,7 +27,7 @@
     <v-spacer></v-spacer>
     <v-card-actions class="justify-center d-flex flex-column">
       <FormBigButton
-        :to="{ name: 'login' }"
+        :to="{ name: 'welcome' }"
         title="Done"
       />
 

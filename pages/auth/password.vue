@@ -42,7 +42,7 @@
 
         <div class="w-100 d-flex justify-center">
           <NuxtLink
-            :to="{ name: 'password-recovery'}"
+            :to="{ name: 'password-recovery-choose-method'}"
             :class="[{'hidden-block': activeColor !== 'error'}, 'nuxt-link-reset']"
           ><span>Forgot your password?</span>
           </NuxtLink>

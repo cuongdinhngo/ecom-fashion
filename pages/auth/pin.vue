@@ -48,6 +48,15 @@
     </v-card-title>
 
     <v-card-title class="text-center">
+      <NuxtLink
+        :to="{ name: 'password-recovery-choose-method'}"
+        :class="[{'hidden-block': activeColor !== 'error'}, 'nuxt-link-reset']"
+      >
+        <span>Forgot your password?</span>
+      </NuxtLink>
+    </v-card-title>
+
+    <v-card-title class="text-center">
       <NuxtLink :to="{ name: 'auth-password' }" class="nuxt-link-reset">
         <p class="text-subtitle-2">Use Combined Code</p>
       </NuxtLink>
@@ -112,6 +121,7 @@ const pinFourRef = ref();
 
 const defaultPin = '1234';
 const dialog = ref(false);
+const activeColor = ref('primary');
 
 function concatPin() {
   pin.value = pinOne.value + pinTwo.value + pinThree.value + pinFour.value;
@@ -122,6 +132,8 @@ function concatPin() {
       dialog.value = false;
     }, 3000);
     navigateTo({ name: 'shop' });
+  } else {
+    activeColor.value = 'error';
   }
 }
 
