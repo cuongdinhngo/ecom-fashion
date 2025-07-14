@@ -57,24 +57,18 @@ import type { Product } from '@/composables/useProducts';
 const queries = useRouteQuery('terms');
 const searchQuery = useSearchQuery();
 
-const { SEARCH_TERMS, CATEGORIES, searchProducts, searchSubCategories } = useProducts();
+const { searchProducts, searchSubCategories } = useProducts();
 const products = ref<Product[]>([]);
 const subCategories = ref<any[]>([]);
 
 watch(searchQuery, (newValue) => {
-  console.log('Search Query Updated:', newValue);
-  subCategories.value = searchSubCategories(newValue);
-  console.log('Filtered subCategories:', subCategories.value);
-  products.value = searchProducts(newValue);
-  console.log('Filtered Products:', products.value);
-}, { immediate: true });
-
-watch(queries, (newValue) => {
-  if (newValue?.length > 0) {
-    console.log('Route Query Changed:', newValue);
-    searchQuery.value = newValue;
-    subCategories.value = searchSubCategories(newValue);
+  console.log('Search Query:', newValue);
+  if (newValue.categories.length > 0) {
+    subCategories.value = searchSubCategories(newValue.categories);
     products.value = searchProducts(newValue);
   }
-}, { immediate: true });
+
+  console.log('Filtered Products =>>> ', products.value.length);
+}, { immediate: true, deep: true });
+
 </script>
