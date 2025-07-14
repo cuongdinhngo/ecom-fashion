@@ -7,15 +7,6 @@
       />
     </template>
 
-    <!-- Header Right -->
-    <template #header-right>
-      <v-btn
-        variant="text"
-        icon="mdi-tune-vertical"
-        @click="categoryDialog = true"
-      ></v-btn>
-    </template>
-
     <v-row no-gutters>
       <v-col
         v-for="(item, index) in products"

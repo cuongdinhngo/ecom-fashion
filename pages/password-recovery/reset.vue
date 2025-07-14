@@ -15,21 +15,29 @@
     <v-card-title class="d-flex justify-center align-center">
       <FormPassword
         label="New Password"
+        @update:password="password = $event"
       />
     </v-card-title>
     <v-card-title class="d-flex justify-center align-center">
       <FormPassword
         label="Confirm Password"
+        @update:password="confirmPassword = $event"
       />
     </v-card-title>
 
     <v-spacer></v-spacer>
 
     <v-card-actions class="justify-center d-flex flex-column">
-      <FormBigButton
-        :to="{ name: 'index' }"
-        title="Save"
-      />
+      <v-btn
+        color="primary"
+        variant="flat"
+        class="text-none rounded-xl"
+        width="100%"
+        size="x-large"
+        @click="handleSubmit"
+      >
+        <span class="btn-text">Save</span>
+      </v-btn>
 
       <FormCancel />
     </v-card-actions>
@@ -47,16 +55,16 @@ definePageMeta({
   ]
 });
 
-import { RecoveryConfirmation, RecoveryMethod } from '#components';
-import { useRouteQuery } from '@vueuse/router';
-const step = useRouteQuery('step', 'method');
+const password = ref('');
+const confirmPassword = ref('');
 
-const resolveRecovery = () => {
-  switch (step.value) {
-    case 'method':
-      return RecoveryMethod;
-    case 'confirmation':
-      return RecoveryConfirmation;
+function handleSubmit() {
+  if (password.value && confirmPassword.value && password.value === confirmPassword.value) {
+    navigateTo({ name: 'shop' });
+  } else {
+    console.error('Passwords do not match or are empty => ', password.value, confirmPassword.value);
+    alert('Passwords do not match or are empty.');
   }
-};
+}
+
 </script>

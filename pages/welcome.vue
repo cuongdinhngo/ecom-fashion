@@ -1,27 +1,21 @@
 <template>
-  <v-card
-    class="bg-transparent elevation-0 d-flex flex-column"
-    min-height="100vh"
-    tile
-  >
+  <v-sheet height="100%" class="bg-transparent elevation-0">
     <v-card-actions></v-card-actions>
     <v-carousel
-      :continuous="true"
+      height="100%"
+      hide-delimiter-background
       :show-arrows="false"
-      delimiter-icon="mdi-circle"
       color="primary"
-      height="80vh"
       cycle
-      class="mt-15 elevation-0"
-      hideDelimiterBackground
     >
       <v-carousel-item
-        v-for="(slide, i) in slides" :key="i"
+        v-for="(slide, index) in slides"
+        :key="index"
       >
         <component :is="slide" />
       </v-carousel-item>
     </v-carousel>
-  </v-card>
+  </v-sheet>
 </template>
 
 <script setup lang="ts">

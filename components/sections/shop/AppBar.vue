@@ -9,13 +9,13 @@
     <v-row>
       <v-col cols="12" class="d-flex align-center justify-center">
         <v-autocomplete
-          v-model="searchQuery"
+          v-model="searchQuery.categories"
           :items="searchTerms"
           hide-details flat chips closable-chips multiple 
           variant="solo-filled"
           rounded="pill"
           menu-icon=""
-          :width="searchQuery.length === 0 ? '100%' : '90%'"
+          :width="searchQuery.categories.length === 0 ? '100%' : '90%'"
           placeholder="Search ..."
           item-title="title"
           item-value="title"
@@ -34,7 +34,7 @@
             </template>
             <template v-else-if="index === 1">
               <v-chip color="primary">
-                +{{ searchQuery.length - 1 }}
+                +{{ searchQuery.categories.length - 1 }}
               </v-chip>
             </template>
           </template>
@@ -53,7 +53,7 @@
         </v-autocomplete>
 
         <v-btn
-          v-if="searchQuery.length > 0"
+          v-if="searchQuery.categories.length > 0"
           variant="text"
           icon
           size="small"
@@ -86,7 +86,7 @@
         v-if="subCategories.length > 0"
         class="mt-0 py-0"
       >
-        <v-item-group selected-class="bg-primary" multiple>
+        <v-item-group selected-class="bg-primary" multiple v-model="selectedSubCategory">
           <v-row no-gutters>
             <v-col
               v-for="(item, index) in subCategories"
@@ -94,7 +94,7 @@
               cols="2"
               class="d-flex flex-column align-center justify-center"
             >
-              <v-item v-slot="{ isSelected, selectedClass, toggle }">
+              <v-item v-slot="{ isSelected, selectedClass, toggle }" :value="item.title">
                 <div
                   class="avatar-frame elevation-1"
                   :style="{ width: '60px', height: '60px', position: 'relative' }"
@@ -124,23 +124,13 @@
         </v-item-group>
       </v-card-title>
 
-      <!-- Size Filter -->
+      <!-- SIZE Filter -->
       <v-card-title class="d-flex justify-space-between align-center">
         <span class="text-h6 font-weight-bold">Size</span>
-        <div class="selected-categories">
-          <v-chip
-            v-for="(category, index) in searchQuery"
-            :key="index"
-            class="mr-2"
-            color="primary"
-            variant="outlined"
-          >
-            {{ category }}
-          </v-chip>
-        </div>
       </v-card-title>
       <v-card-title>
         <v-slider
+          v-model="selectedSize"
           color="primary"
           :max="5"
           :ticks="SIZE_OPTIONS"
@@ -151,7 +141,7 @@
         ></v-slider>
       </v-card-title>
 
-      <!-- Color Filter -->
+      <!-- COLOR Filter -->
       <v-card-title class="d-flex justify-space-between align-center">
         <span class="text-h6 font-weight-bold">Color</span>
       </v-card-title>
@@ -171,7 +161,7 @@
               style="width: 50px; height: 50px; position: relative;"
             >
               <span
-                class="color-picker" :style="{backgroundColor: item.color}" @click="toggle"
+                class="color-picker" :style="{backgroundColor: item.color}" @click="toggle();"
               ></span>
               <v-avatar
                 v-if="isSelected"
@@ -190,12 +180,12 @@
       <v-card-title class="d-flex justify-space-between align-center">
         <span class="text-h6 font-weight-bold">Price</span>
         <div class="price-range">
-          <span class="min-price">${{ range[0] }}</span> - <span class="min-price">${{ range[1] }}</span>
+          <span class="min-price">${{ priceRange[0] }}</span> - <span class="min-price">${{ priceRange[1] }}</span>
         </div>
       </v-card-title>
       <v-card-title>
         <v-range-slider
-          v-model="range"
+          v-model="priceRange"
           :max="100"
           :min="1"
           :step="1"
@@ -208,7 +198,7 @@
 
       <!--Quick filter-->
       <v-card-title>
-        <v-item-group selected-class="text-primary font-weight-bold">
+        <v-item-group selected-class="text-primary font-weight-bold" v-model="selectedQuickFilter">
           <v-row no-gutters>
             <v-col
               v-for="(filter, index) in quickFilters"
@@ -216,7 +206,7 @@
               cols="6"
               class="ma-0 pa-0 pa-1"
             >
-              <v-item v-slot="{ isSelected, selectedClass, toggle }">
+              <v-item v-slot="{ isSelected, selectedClass, toggle }" :value="filter.value">
                 <v-list-item
                   @click="toggle(); selectedQuickFilter = filter.value"
                   rounded="pill"
@@ -260,7 +250,7 @@
           variant="flat"
           color="primary"
           class="text-none rounded-xl"
-          @click="dialog = false"
+          @click="updateFilter(); dialog = false"
           width="70%"
           size="large"
         >
@@ -280,12 +270,10 @@ onMounted(() => {
   }
 });
 
-const { SEARCH_TERMS, CATEGORIES, SIZE_OPTIONS, searchSubCategories } = useProducts();
+const { CATEGORIES, SIZE_OPTIONS, searchSubCategories } = useProducts();
 const searchTerms = ref<Object[]>(CATEGORIES);
 const dialog = ref(false);
 const subCategories = ref<any[]>([]);
-const size = ref(1);
-const selectedColor = ref<string>('grey');
 const colors = [
   { color: 'grey' },
   { color: 'red' },
@@ -297,21 +285,34 @@ const colors = [
   { color: 'pink' }
 ];
 
-const range = ref([1, 100]);
-
 const quickFilters = ref([
   { label: 'Popular', value: 'popular' },
   { label: 'Newest', value: 'newest' },
   { label: 'Price Low to High', value: 'price_low' },
   { label: 'Price High to Low', value: 'price_high' }
 ]);
+
 const selectedQuickFilter = ref('');
+const selectedSubCategory = ref([]);
+const selectedColor = ref('');
+const selectedSize = ref(0);
+const priceRange = ref([1, 100]);
+
+function updateFilter() {
+  searchQuery.value.subCategories = selectedSubCategory.value;
+  searchQuery.value.size = selectedSize.value;
+  searchQuery.value.color = selectedColor.value;
+  searchQuery.value.quickSearch = selectedQuickFilter.value;
+  searchQuery.value.price = [priceRange.value[0], priceRange.value[1]] as [number, number];
+  console.log('SEARCH QUERY =>>> ', searchQuery.value);
+}
 
 watch(searchQuery, (newValue) => {
-  console.log('Search Query Updated:', newValue);
-  subCategories.value = searchSubCategories(newValue);
-  console.log('subCategories Updated:', subCategories.value);
-});
+  if (newValue.categories.length > 0) {
+    subCategories.value = searchSubCategories(newValue.categories);
+  }
+}, { immediate: true, deep: true });
+
 </script>
 <style scoped>
 .frame {

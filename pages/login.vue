@@ -23,13 +23,21 @@
     <v-card-title class="title-h1 text-wrap">Login</v-card-title>
     <v-card-title class="text-black">Good to see you back! <v-icon>mdi-heart</v-icon></v-card-title>
     <v-card-text class="mt-4">
-      <FormEmail />
+      <v-text-field
+        variant="solo"
+        label="Email"
+        class="mb-4 rounded-pill"
+        flat
+        hide-details
+        v-model="email"
+        type="email"
+      ></v-text-field>
     </v-card-text>
 
     <v-spacer></v-spacer>
     <v-card-actions class="justify-center d-flex flex-column">
       <FormBigButton
-        :to="{ name: 'authentication' }"
+        :to="{ name: 'auth-pin' }"
         title="Next"
       />
 
@@ -56,6 +64,8 @@ definePageMeta({
     { name: 'keywords', content: 'eCommerce, online store, shopping, fashion' }
   ]
 });
+
+const email = ref('shop@localhost.test');
 </script>
 
 <style scoped>

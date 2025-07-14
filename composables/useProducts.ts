@@ -19,8 +19,19 @@ export interface Product {
   color?: string;
 }
 
+export interface SearchFilters {
+  categories: string[];
+  subCategories?: string[];
+  priceRange?: {
+    min: number;
+    max: number;
+  };
+  size?: string;
+  color?: string;
+}
+
 const defaultOptions = {
-  quantity: 30
+  quantity: 300
 };
 
 type ProductOptions = {
@@ -217,6 +228,17 @@ const SIZE_OPTIONS = {
   0: 'XS', 1: 'S', 2: 'M', 3: 'L', 4: 'XL', 5: 'XXL'
 };
 
+const COLORS = [
+  { color: 'grey' },
+  { color: 'red' },
+  { color: 'blue' },
+  { color: 'green' },
+  { color: 'yellow' },
+  { color: 'purple' },
+  { color: 'orange' },
+  { color: 'pink' }
+];
+
 export const useProducts = (options: ProductOptions = defaultOptions) => {
   const products = Array.from({ length: options.quantity }, (_, index) => {
     const discount = faker.helpers.arrayElement([10, 20, 30, 40, 50]);
@@ -236,6 +258,8 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
       category: category,
       relative: subCategories.length > 0 ? faker.helpers.arrayElement(subCategories).title : '',
       image: smallProductImg(),
+      size: faker.helpers.arrayElement(Object.values(SIZE_OPTIONS)),
+      color: faker.helpers.arrayElement(COLORS).color,
       originalPrice: `$${originalPrice}`,
       price: price,
       discount,
@@ -245,13 +269,82 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
     };
   });
 
-  const searchProducts = (searchTerms: string[]): Product[] => {
-    // Filter products by matching category
-    return products.filter(product => searchTerms.includes(product.category));
+  const searchProducts = (searchTerms: SearchFilters): Product[] => {
+    console.log('SEARCH TERMS =>>> ', searchTerms);
+
+    // If no filters are provided, return all products
+    if (!searchTerms || typeof searchTerms !== 'object') {
+      return products;
+    }
+
+    let filteredProducts = products;
+
+    // Filter by categories
+    if (searchTerms.categories && Array.isArray(searchTerms.categories) && searchTerms.categories.length > 0) {
+      filteredProducts = filteredProducts.filter(product => 
+        searchTerms.categories.includes(product.category)
+      );
+    }
+
+    // Filter by subcategories
+    if (searchTerms.subCategories && Array.isArray(searchTerms.subCategories) && searchTerms.subCategories.length > 0) {
+      filteredProducts = filteredProducts.filter(product => 
+        searchTerms.subCategories.includes(product.relative)
+      );
+    }    // Filter by price range
+    if (searchTerms.priceRange && typeof searchTerms.priceRange === 'object') {
+      const { min, max } = searchTerms.priceRange;
+      
+      if (typeof min === 'number' || typeof max === 'number') {
+        filteredProducts = filteredProducts.filter(product => {
+          const productPrice = parseFloat(product.price.replace('$', ''));
+          
+          if (typeof min === 'number' && productPrice < min) {
+            return false;
+          }
+          
+          if (typeof max === 'number' && productPrice > max) {
+            return false;
+          }
+          
+          return true;
+        });
+      }
+    }
+
+    // Filter by size 
+    if (searchTerms.size && typeof searchTerms.size === 'string') {
+      filteredProducts = filteredProducts.filter(product => {
+        // Check if searchTerms.sizes is a number (index) or string (size name)
+        const isIndex = /^\d+$/.test(searchTerms.size!);
+        
+        if (isIndex) {
+          // Convert index to size name
+          const sizeIndex = parseInt(searchTerms.size!);
+          const sizeName = SIZE_OPTIONS[sizeIndex as keyof typeof SIZE_OPTIONS];
+          return product.size === sizeName;
+        } else {
+          // Direct size name comparison
+          return product.size === searchTerms.size;
+        }
+      });
+    }
+
+    // Filter by color
+    if (searchTerms.color && typeof searchTerms.color === 'string') {
+      filteredProducts = filteredProducts.filter(product => 
+        product.color === searchTerms.color
+      );
+    }
+
+    return filteredProducts;
   }
 
   const searchSubCategories = (searchTerms: string[]): Object[] => {
-    // Return subCategories' titles for the given categories
+
+    if (!Array.isArray(searchTerms) || searchTerms.length === 0) {
+      return [];
+    }
     const category = KINDS.filter(kind => searchTerms.includes(kind.category));
     if (category.length === 0) {
       return [];
@@ -266,6 +359,7 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
     CATEGORIES,
     KINDS,
     SIZE_OPTIONS,
+    COLORS,
     searchProducts,
     searchSubCategories
   };

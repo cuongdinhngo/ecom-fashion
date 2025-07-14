@@ -7,8 +7,9 @@
     rounded="pill"
     hide-details
     :append-inner-icon="showPasswd ? 'mdi-eye' : 'mdi-eye-off'"
-    @click:append="showPasswd = !showPasswd"
+    @click:append-inner="showPasswd = !showPasswd"
     :type="showPasswd ? 'text' : 'password'"
+    @update:model-value="$emit('update:password', $event)"
   ></v-text-field>
 </template>
 <script setup lang="ts">
@@ -19,4 +20,5 @@ defineProps({
   },
 });
 const showPasswd = ref(false);
+const emit = defineEmits(['update:password']);
 </script>

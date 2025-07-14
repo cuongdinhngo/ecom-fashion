@@ -1,17 +1,17 @@
 <template>
   <v-card
     tile
-    height="93%"
     width="90%"
     class="mx-auto rounded-xl text-center text-black elevation-10"
   >
-    <div class="d-flex justify-center align-center">
+    <v-responsive :aspect-ratio="16/9">
       <v-img
-        :src="data.image || 'https://picsum.photos/600/600'"
-        height="100%"
+        :src="data.image || productImg()"
+        cover
+        max-height="470px"
         class="rounded-t-xl"
       ></v-img>
-    </div>
+    </v-responsive>
     <v-card-title class="text-h4 font-weight-bold mt-5 mb-3">
       {{ data.slogon || 'Welcome' }}
     </v-card-title>
