@@ -8,9 +8,21 @@ export default defineNuxtConfig({
     '@mdi/font/css/materialdesignicons.css',
   ],
   ssr: false,
+  nitro: {
+    preset: 'static',
+    prerender: {
+      routes: ['/']
+    }
+  },
   app: {
-    baseURL: '/ecom-fashion',
+    baseURL: '',
     head: {
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' },
+        { name: 'theme-color', content: '#1976d2' },
+        { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }
+      ],
       link: [
         {
           rel: 'icon',
