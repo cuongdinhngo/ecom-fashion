@@ -1,7 +1,7 @@
 <template>
   <WelcomeCard
     :data="{
-      image: 'https://picsum.photos/600/600',
+      image: productImg(),
       slogon: 'Enjoy',
       description: 'Enjoy your experience with our application! We hope you find it useful and enjoyable.'
     }"
@@ -10,6 +10,7 @@
       <FormBigButton
         width="70%"
         title="Explore Now"
+        :to="{ name: 'shop' }"
       />
     </template>
   </WelcomeCard>
