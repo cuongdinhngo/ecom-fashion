@@ -208,7 +208,36 @@ $env:ANDROID_NDK_ROOT = "$env:LOCALAPPDATA\Android\Sdk\ndk\29.0.13599879"
 bun tauri android build --debug --target aarch64 --apk
 ```
 
+**Note**: The `.cargo/config.toml` file uses environment variables instead of hardcoded paths, making it portable across different machines and users.
+
 ## 📱 Testing & Deployment
+
+### Alternative Emulator Options (No Android Studio Required)
+
+#### 1. Command Line Emulator
+```powershell
+# Set environment variables
+$env:ANDROID_HOME = "$env:LOCALAPPDATA\Android\Sdk"
+$env:PATH += ";$env:ANDROID_HOME\emulator;$env:ANDROID_HOME\platform-tools"
+
+# List available emulators
+emulator -list-avds
+
+# Start specific emulator
+emulator -avd Your_AVD_Name
+```
+
+#### 2. Use the Provided Script
+Run the included PowerShell script:
+```powershell
+powershell -ExecutionPolicy Bypass -File "start-emulator.ps1"
+```
+
+#### 3. Third-Party Emulators
+- **Genymotion**: Fast, professional emulator (https://www.genymotion.com/)
+- **BlueStacks**: User-friendly, gaming-focused (https://www.bluestacks.com/)
+- **NoxPlayer**: Lightweight alternative (https://www.bignox.com/)
+- **LDPlayer**: Another reliable option (https://www.ldplayer.net/)
 
 ### 1. Install on Android Device
 ```bash
