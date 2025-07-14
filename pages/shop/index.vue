@@ -66,6 +66,8 @@ watch(searchQuery, (newValue) => {
   if (newValue.categories.length > 0) {
     subCategories.value = searchSubCategories(newValue.categories);
     products.value = searchProducts(newValue);
+  } else {
+    products.value = [];
   }
 
   console.log('Filtered Products =>>> ', products.value.length);
