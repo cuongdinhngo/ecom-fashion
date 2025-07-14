@@ -9,13 +9,14 @@ export default defineNuxtConfig({
   ],
   ssr: false,
   nitro: {
-    preset: 'static',
+    preset: 'github-pages',
     prerender: {
-      routes: ['/']
+      routes: ['/'],
+      failOnError: false
     }
   },
   app: {
-    baseURL: '',
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' },
@@ -27,7 +28,7 @@ export default defineNuxtConfig({
         {
           rel: 'icon',
           type: 'image/svg+xml',
-          href: '/logo.svg'
+          href: `${process.env.NUXT_APP_BASE_URL || '/'}logo.svg`
         },
         {
           rel: 'stylesheet',

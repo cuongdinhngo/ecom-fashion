@@ -16,8 +16,9 @@ jobs:
           node-version: "20"
       # Pick your own package manager and build script
       - run: npm install
-      - run: NUXT_APP_BASE_URL=/ecom-fashion/ npx nuxt build --preset github_pages
+      - run: npm run build
         env:
+          NUXT_APP_BASE_URL: /ecom-fashion/
           APP_URL: ${{ secrets.APP_URL }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
