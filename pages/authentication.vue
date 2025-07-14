@@ -20,6 +20,12 @@
       />
     </v-card-title>
 
+    <v-card-title class="text-center">
+      <NuxtLink :to="{ name: 'authentication', query: { type: 'alphanumeric' } }" class="nuxt-link-reset">
+        <p class="text-subtitle-2">Use Combine Code</p>
+      </NuxtLink>
+    </v-card-title>
+
     <v-spacer></v-spacer>
     <v-card-actions class="justify-center d-flex flex-column">
       <v-list-item class="text-black">
