@@ -42,26 +42,26 @@ type ProductOptions = {
 export const CATEGORIES = [
   {
     title: 'Clothing',
-    image: categoryImg(),
+    image: imagePath('c-6.jpg'),
   },
   { title: 'Shoes',
-    image: categoryImg(),
+    image: imagePath('c-4.jpg'),
   },
   {
     title: 'Bags',
-    image: categoryImg(),
+    image: imagePath('c-11.jpg'),
   },
   {
     title: 'Lingerie',
-    image: categoryImg(),
+    image: imagePath('c-5.jpg'),
   },
   {
     title: 'Watch',
-    image: categoryImg(),
+    image: imagePath('c-14.jpg'),
   },
   {
     title: 'Hoodies',
-    image: categoryImg(),
+    image: imagePath('c-20.jpg'),
   }
 ];
 const KINDS = [
@@ -340,18 +340,23 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
     // Filter by quick search => popular, sale, price_low, price_high
     if (searchTerms.quickSearch && typeof searchTerms.quickSearch === 'string') {
       switch (searchTerms.quickSearch) {
+        // Sort by likeCount (descending - most liked first)
         case 'popular':
-          // Sort by likeCount (descending - most liked first)
           filteredProducts = filteredProducts.sort((a, b) => b.likeCount - a.likeCount);
           break;
 
+        // Filter by products with 'New' status
+        case 'new':
+          filteredProducts = filteredProducts.filter(product => product.status === 'New');
+          break;
+
+        // Filter by products with 'Sale' status
         case 'sale':
-          // Filter by products with 'Sale' status
           filteredProducts = filteredProducts.filter(product => product.status === 'Sale');
           break;
 
+        // Sort by price (ascending - lowest price first)
         case 'price_low':
-          // Sort by price (ascending - lowest price first)
           filteredProducts = filteredProducts.sort((a, b) => {
             const priceA = parseFloat(a.price.replace('$', ''));
             const priceB = parseFloat(b.price.replace('$', ''));
@@ -359,8 +364,8 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
           });
           break;
 
+        // Sort by price (descending - highest price first)
         case 'price_high':
-          // Sort by price (descending - highest price first)
           filteredProducts = filteredProducts.sort((a, b) => {
             const priceA = parseFloat(a.price.replace('$', ''));
             const priceB = parseFloat(b.price.replace('$', ''));

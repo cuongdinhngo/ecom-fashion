@@ -1,7 +1,27 @@
 <template>
-  <ItemsTopDataCard title="Most Popular" :see-all="true">
+  <v-card class="elevation-0 bg-transparent my-3">
+    <v-card-title class="d-flex justify-space-between px-0">
+      <span class="text-h6 font-weight-bold d-flex align-center">
+        Most Popular
+      </span>
+      <div
+        class="d-flex align-center"
+      >
+        <span
+          class="text-subtitle-1 font-weight-bold mr-2"
+        >See All</span>
+        <v-btn
+          icon
+          variant="flat"
+          color="primary"
+          size="x-small"
+          @click="searchQuery.quickSearch = 'popular'"
+        ><v-icon size="x-large">mdi-arrow-right-thin</v-icon>
+        </v-btn>
+      </div>
+    </v-card-title>
+    <v-card-text class="d-flex justify-space-between px-0">
     <v-slide-group
-      v-model="model"
       center-active
       :show-arrows="false"
     >
@@ -16,10 +36,11 @@
         />
       </v-slide-group-item>
     </v-slide-group>
-  </ItemsTopDataCard>
+    </v-card-text>
+  </v-card>
 </template>
 <script setup lang="ts">
-const model = ref(null)
+const searchQuery = useSearchQuery();
 
 const { products } = useProducts({ quantity: 15});
 </script>

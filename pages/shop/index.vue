@@ -62,11 +62,15 @@ const products = ref<Product[]>([]);
 const subCategories = ref<any[]>([]);
 
 watch(searchQuery, (newValue) => {
+  console.log('Search Query Updated =>> ', newValue);
   if (newValue.categories.length > 0) {
     subCategories.value = searchSubCategories(newValue.categories);
     const remappedSubCategories = remapSubCategories(newValue);
     const newSearchQuery = { ...newValue, subCategories: remappedSubCategories };
     products.value = searchProducts(newSearchQuery);
+  } else if (newValue.quickSearch) {
+    subCategories.value = [];
+    products.value = searchProducts(newValue);
   } else {
     products.value = [];
   }

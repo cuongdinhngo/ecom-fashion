@@ -7,7 +7,7 @@
       v-for="(menu, index) in footerMenu"
       :key="index"
       :menu="menu"
-      @click.prevent="enableCategoryDialog(menu.page)"
+      @click.prevent="handleMenu(menu.page)"
     />
   </v-footer>
   <ItemsCategoryDialog
@@ -24,11 +24,23 @@ const footerMenu = [
 ];
 
 const categoryDialog = ref(false);
+const searchQuery = useSearchQuery();
 
-function enableCategoryDialog(page: string) {
+function handleMenu(page: string) {
   if (page === 'category') {
     categoryDialog.value = true;
     return;
+  }
+
+  if (page === 'shop') {
+    searchQuery.value = {
+      categories: [],
+      subCategories: [],
+      priceRange: [1, 100],
+      size: 0,
+      color: '',
+      quickSearch: ''
+    };
   }
 }
 </script>

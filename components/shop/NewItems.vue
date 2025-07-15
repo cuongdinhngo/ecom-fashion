@@ -1,31 +1,47 @@
 <template>
-  <ItemsTopDataCard title="New Items" :see-all="true">
-    <v-slide-group
-      v-model="model"
-      center-active
-      :show-arrows="false"
-    >
-      <v-slide-group-item
-        v-for="item in newItems"
-        :key="item.id"
-        v-slot="{ isSelected, toggle }"
+  <v-card class="elevation-0 bg-transparent my-3">
+    <v-card-title class="d-flex justify-space-between px-0">
+      <span class="text-h6 font-weight-bold d-flex align-center">
+        New Items
+      </span>
+      <div
+        class="d-flex align-center"
       >
-        <ItemsNewItemCard
-          :item="item"
-          :toggle="toggle"
-        />
-      </v-slide-group-item>
-    </v-slide-group>
-  </ItemsTopDataCard>
+        <span
+          class="text-subtitle-1 font-weight-bold mr-2"
+        >See All</span>
+        <v-btn
+          icon
+          variant="flat"
+          color="primary"
+          size="x-small"
+          @click="searchQuery.quickSearch = 'new'"
+        ><v-icon size="x-large">mdi-arrow-right-thin</v-icon>
+        </v-btn>
+      </div>
+    </v-card-title>
+    <v-card-text class="d-flex justify-space-between px-0">
+      <v-slide-group
+        center-active
+        :show-arrows="false"
+      >
+        <v-slide-group-item
+          v-for="item in products"
+          :key="item.id"
+          v-slot="{ isSelected, toggle }"
+        >
+          <ItemsNewItemCard
+            :item="item"
+            :toggle="toggle"
+          />
+        </v-slide-group-item>
+      </v-slide-group>
+    </v-card-text>
+  </v-card>
 </template>
 <script setup lang="ts">
-import { faker } from '@faker-js/faker';
-const model = ref(null)
-const newItems = Array.from({ length: 15 }, (_, index) => ({
-  id: index + 1,
-  description: faker.lorem.sentence({ min: 10, max: 15 }),
-  price: faker.commerce.price({ min: 10, max: 200, dec: 2, symbol: '$' }),
-  image: smallProductImg(),
-  to: { name: 'product-id', params: { id: index + 1 } },
-}));
+const { products } = useProducts({ quantity: 15});
+
+const searchQuery = useSearchQuery();
+
 </script>
