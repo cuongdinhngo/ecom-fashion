@@ -28,11 +28,13 @@
     <!-- Product Price -->
     <v-card-title class="d-flex justify-space-between pb-0">
       <div class="d-flex flex-column">
-        <span class="text-h5 font-weight-bold">$20.59</span>
+        <span class="text-h5 font-weight-bold">${{ product?.price }}</span>
       </div>
 
       <div class="d-flex align-center">
-        <SaleCountDown/>
+        <SaleCountDown
+          v-if="product?.discount"
+        />
         <v-btn
           variant="tonal"
           icon="mdi-redo-variant"
@@ -44,13 +46,13 @@
       </div>
     </v-card-title>
     <v-card-title class="text-subtitle-1 py-0">
-      <span class="text-red-lighten-3 text-decoration-line-through text-subtitle-2 font-weight-bold"> $30.00</span>
-      <span class="discount-tag ml-2">-20%</span>
+      <span class="text-red-lighten-3 text-decoration-line-through text-subtitle-2 font-weight-bold"> ${{ product?.originalPrice }}</span>
+      <span class="discount-tag ml-2">-{{ product?.discount }}%</span>
     </v-card-title>
 
     <!-- Product Description -->
     <v-card-title class="text-subtitle-1 text-wrap">
-      {{ faker.commerce.productDescription() }}
+      {{ product?.description }}
     </v-card-title>
 
     <!-- Variations -->
@@ -125,6 +127,7 @@
         color="primary"
         size="30"
         icon
+        @click="sizeGuideDialog = true"
       >
         <v-icon icon="mdi-arrow-right" size="x-small" />
       </v-btn>
@@ -335,7 +338,7 @@
     </v-card>
   </v-dialog>
 
-  <!-- Product Options Dialog -->
+  <!-- Product Reivews Dialog -->
   <v-dialog
     v-model="reviewDialog"
     transition="dialog-bottom-transition"
@@ -363,6 +366,20 @@
       </v-card-text>
     </v-card>
   </v-dialog>
+
+  <!-- Product Options Dialog -->
+  <v-dialog
+    v-model="sizeGuideDialog"
+    transition="dialog-bottom-transition"
+    min-height="50%"
+    min-width="100%"
+    location="bottom"
+  >
+    <ShopSizeGuide
+      @close="sizeGuideDialog = false"
+    ></ShopSizeGuide>
+  </v-dialog>
+
   
   <!-- Product Options at the bottom of screen -->
   <div class="sticky-actions">
@@ -404,20 +421,44 @@ definePageMeta({
   layout: 'product'
 });
 
-
-import { useRoute, useRouter } from 'vue-router';
+import { useRouter } from 'vue-router';
 import { faker } from '@faker-js/faker';
 
+const deliveryOptions = [
+  {
+    title: 'Standard',
+    duration: '3-5 days',
+    price: '$5.00'
+  },
+  {
+    title: 'Express',
+    duration: '1-2 days',
+    price: '$10.00'
+  }
+];
+
+const colorOptions = ref([
+  { name: 'Red', value: 'red', image: smallProductImg() },
+  { name: 'Blue', value: 'green', image: smallProductImg() },
+  { name: 'Green', value: 'blue', image: smallProductImg() },
+  { name: 'Black', value: 'black', image: smallProductImg() },
+]);
+
 const router = useRouter();
-
-function goBack() {
-  router.back();
-}
-
 const productId = useRouteParams('id', null, { transform: Number });
 const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
 const { addToCart, isInCart } = useCart();
+const { getProductById } = useProducts();
+
 const action = ref('');
+const dialog = ref(false);
+const selectedColor = ref('');
+const selectedSize = ref('');
+const quantity = ref(1);
+const reviewDialog = ref(false);
+const sizeGuideDialog = ref(false);
+
+const product = getProductById(productId.value);
 
 function selectVariation(type: string) {
   action.value = type;
@@ -429,7 +470,6 @@ function handleAction() {
     addProductToCart();
     dialog.value = false;
   } else if (action.value === 'buy-now') {
-    // Handle buy now action
     addProductToCart();
     router.push({ name: 'cart-checkout' });
   }
@@ -467,31 +507,9 @@ const thumbernailImgs = Array.from({ length: 3 }, () => {
   return smallProductImg();
 });
 
-const deliveryOptions = [
-  {
-    title: 'Standard',
-    duration: '3-5 days',
-    price: '$5.00'
-  },
-  {
-    title: 'Express',
-    duration: '1-2 days',
-    price: '$10.00'
-  }
-];
-
-const dialog = ref(false);
-const colorOptions = ref([
-  { name: 'Red', value: 'red', image: smallProductImg() },
-  { name: 'Blue', value: 'green', image: smallProductImg() },
-  { name: 'Green', value: 'blue', image: smallProductImg() },
-  { name: 'Black', value: 'black', image: smallProductImg() },
-]);
-const selectedColor = ref('');
-const selectedSize = ref('');
-const quantity = ref(1);
-
-const reviewDialog = ref(false);
+function goBack() {
+  router.back();
+}
 </script>
 <style scoped>
 .sticky-actions {

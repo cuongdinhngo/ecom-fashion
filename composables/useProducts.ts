@@ -415,6 +415,10 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
     return validSubCategories.map(sub => sub.title);
   }
 
+  const getProductById = (id: number|string): Product | undefined => {
+    return products.find(product => product.id === id);
+  }
+
   return {
     products,
     SEARCH_TERMS,
@@ -424,6 +428,7 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
     COLORS,
     searchProducts,
     searchSubCategories,
-    remapSubCategories
+    remapSubCategories,
+    getProductById
   };
 }
