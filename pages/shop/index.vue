@@ -57,15 +57,16 @@ import type { Product } from '@/composables/useProducts';
 const queries = useRouteQuery('terms');
 const searchQuery = useSearchQuery();
 
-const { searchProducts, searchSubCategories } = useProducts();
+const { searchProducts, searchSubCategories, remapSubCategories } = useProducts();
 const products = ref<Product[]>([]);
 const subCategories = ref<any[]>([]);
 
 watch(searchQuery, (newValue) => {
-  console.log('Search Query:', newValue);
   if (newValue.categories.length > 0) {
     subCategories.value = searchSubCategories(newValue.categories);
-    products.value = searchProducts(newValue);
+    const remappedSubCategories = remapSubCategories(newValue);
+    const newSearchQuery = { ...newValue, subCategories: remappedSubCategories };
+    products.value = searchProducts(newSearchQuery);
   } else {
     products.value = [];
   }

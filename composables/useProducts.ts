@@ -353,6 +353,30 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
     }
   }
 
+  const remapSubCategories = (searchQuery: SearchFilters): any => {
+    if (!searchQuery.categories || !Array.isArray(searchQuery.categories) || searchQuery.categories.length === 0) {
+      return [];
+    }
+    
+    if (searchQuery.subCategories && Array.isArray(searchQuery.subCategories) && searchQuery.subCategories.length === 0) {
+      return [];
+    }
+    
+    const filteredKinds = KINDS.filter(kind => 
+      searchQuery.categories.includes(kind.category)
+    );
+    
+    const validSubCategories = filteredKinds.flatMap(kind => kind.subCategories);
+    
+    if (searchQuery.subCategories && Array.isArray(searchQuery.subCategories) && searchQuery.subCategories.length > 0) {
+      return validSubCategories
+        .filter(subCategory => searchQuery.subCategories!.includes(subCategory.title))
+        .map(subCategory => subCategory.title);
+    }
+    
+    return validSubCategories.map(sub => sub.title);
+  }
+
   return {
     products,
     SEARCH_TERMS,
@@ -361,6 +385,7 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
     SIZE_OPTIONS,
     COLORS,
     searchProducts,
-    searchSubCategories
+    searchSubCategories,
+    remapSubCategories
   };
 }
