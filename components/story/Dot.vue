@@ -39,7 +39,14 @@
                 ></v-img>
               </v-list-item-title>
               <v-list-item-action>
-                <v-btn color="primary" variant="flat" class="text-none" width="100%" rounded="lg">Shop</v-btn>
+                <v-btn
+                  color="primary"
+                  variant="flat"
+                  class="text-none"
+                  width="100%"
+                  rounded="lg"
+                  @click="navigateTo({ name: 'shop' })"
+                >Shop</v-btn>
               </v-list-item-action>
             </v-list-item>
           </v-list>

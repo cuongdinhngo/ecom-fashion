@@ -58,7 +58,7 @@
         <v-icon size="x-large">mdi-skip-forward</v-icon>
       </v-chip>
 
-      <v-btn color="primary" variant="flat" class="text-none" width="30%" rounded="lg">Shop</v-btn>
+      <v-btn color="primary" variant="flat" class="text-none" width="30%" rounded="lg" @click="navigateTo({ name: 'shop' })">Shop</v-btn>
     </v-card-actions>
   </v-card>
 </template>

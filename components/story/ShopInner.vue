@@ -26,7 +26,7 @@
               </p>
               <v-card-text class=""></v-card-text>
               <v-card-text class=""></v-card-text>
-              <v-btn color="primary" variant="flat" class="text-none" width="100%" rounded="lg">Shop</v-btn>
+              <v-btn color="primary" variant="flat" class="text-none" width="100%" rounded="lg" @click="navigateTo({ name: 'shop' })">Shop</v-btn>
             </div>
           </div>
         </v-list-item>

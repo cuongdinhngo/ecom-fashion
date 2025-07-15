@@ -16,7 +16,7 @@
       <p class="text-caption subtitle-two-lines">
         Discover the enlightened new Towels with an exciting mix of Ceramic ingredients. New sky blue Chips with ergonomic design for gripping comfort
       </p>
-      <v-btn color="primary" variant="flat" class="text-none" width="30%" rounded="lg">Shop</v-btn>
+      <v-btn color="primary" variant="flat" class="text-none" width="30%" rounded="lg" @click="navigateTo({ name: 'shop' })">Shop</v-btn>
     </v-card-actions>
   </StoryCard>
 </template>
