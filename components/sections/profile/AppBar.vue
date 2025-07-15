@@ -38,9 +38,10 @@
         :show-badge="false"
       ></FormIconBtnText>
 
-      <!-- Top Menu -->
+      <!-- Order history -->
       <FormIconBtnText
         icon="mdi-table-settings"
+        :to="{ name: 'profile-history' }"
       ></FormIconBtnText>
 
       <!-- Setting -->
