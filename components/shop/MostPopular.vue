@@ -31,6 +31,7 @@
         v-slot="{ isSelected, toggle }"
       >
         <ItemsPopularItemCard
+          v-if="item.id !== currentProduct"
           :item="item"
           :toggle="toggle"
         />
@@ -40,6 +41,7 @@
   </v-card>
 </template>
 <script setup lang="ts">
+const currentProduct = useRouteParams('id', null, { transform: Number });
 const searchQuery = useSearchQuery();
 
 const { products } = useProducts({ quantity: 15});

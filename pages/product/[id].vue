@@ -32,7 +32,7 @@
       </div>
 
       <div class="d-flex align-center">
-        <SaleCountDown />
+        <SaleCountDown/>
         <v-btn
           variant="tonal"
           icon="mdi-redo-variant"
