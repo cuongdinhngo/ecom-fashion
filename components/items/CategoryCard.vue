@@ -1,6 +1,5 @@
 <template>
-  <NuxtLink :to="{ name: 'shop', query: { terms: category } }" class="nuxt-link-reset">
-    <v-card class="ma-0 pa-0 category elevation-4" width="100%">
+    <v-card class="ma-0 pa-0 category elevation-4" width="100%" @click="updateSearchQuery(category)">
       <v-card-text class="pa-0">
         <v-row no-gutters>
           <v-col
@@ -24,7 +23,6 @@
         <v-chip class="font-weight-bold">{{ counts }}</v-chip>
       </v-card-title>
     </v-card>
-  </NuxtLink>
 </template>
 <script setup lang="ts">
 defineProps({
@@ -44,4 +42,10 @@ defineProps({
     default: 0
   }
 });
+
+const searchQuery = useSearchQuery();
+
+function updateSearchQuery(category: string) {
+  searchQuery.value.categories.push(category);
+}
 </script>

@@ -2,45 +2,37 @@
   <ItemsContainerCard
     :hidden-header="true"
   >
-    <v-item-group
-      selected-class="bg-primary" multiple
-      v-model="searchQuery.subCategories"
-    >
       <v-row no-gutters>
         <v-col
           v-for="(item, index) in subCategories"
           :key="index"
-          cols="2"
-          class="d-flex flex-column align-center justify-center"
+          cols="3"
+          class="d-flex flex-column align-center justify-center py-1"
+          style="position: relative;"
         >
-          <v-item v-slot="{ isSelected, selectedClass, toggle }" :value="item.title">
-            <div
-              class="avatar-frame elevation-1"
-              :style="{ width: '60px', height: '60px', position: 'relative' }"
-            >
-              <v-avatar
-                :size="50"
-                :image="item.image"
-                @click="toggle()"
-              ></v-avatar>
-              
-              <!-- Check Signal-->
-              <v-avatar
-                v-if="isSelected"
-                size="20"
-                color="primary"
-                style="position: absolute;top: 2px; right: 2px;"
-              >
-                <v-icon size="10">mdi-check-bold</v-icon>
-              </v-avatar>
-            </div>
-            <v-list-item-title class="text-caption text-center text-wrap mt-1" style="height: 36px;">
-              {{ item.title }}
-            </v-list-item-title>
-          </v-item>
+          <v-avatar
+            size="50"
+            class="pa-1 elevation-2"
+            v-ripple
+            @click="handlePickSubCategory(item.title)"
+          >
+            <v-img
+              :src="item.image"
+              cover
+              class="rounded-circle"
+            ></v-img>
+          </v-avatar>
+          <v-card-title class="pa-0 text-caption">{{ item.title }}</v-card-title>
+          <v-avatar
+            v-if="searchQuery.subCategories.includes(item.title)"
+            color="primary"
+            size="15"
+            style="position: absolute; top: 5px; right: 20px;"
+          >
+            <v-icon size="10">mdi-check-bold</v-icon>
+          </v-avatar>
         </v-col>
       </v-row>
-    </v-item-group>
   </ItemsContainerCard>
 </template>
 <script setup lang="ts">
@@ -52,4 +44,13 @@ defineProps({
 });
 
 const searchQuery = useSearchQuery();
+
+function handlePickSubCategory(title: string) {
+  const index = searchQuery.value.subCategories.indexOf(title);
+  if (index > -1) {
+    searchQuery.value.subCategories.splice(index, 1);
+  } else {
+    searchQuery.value.subCategories.push(title);
+  }
+}
 </script>
