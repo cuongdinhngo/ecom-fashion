@@ -32,7 +32,7 @@ definePageMeta({
   pageTitle: 'Vouchers',
 });
 
-const type = useRouteQuery('type');
+const type = useRouteQuery('type', 'active');
 
 const vouchers = ref([
   {

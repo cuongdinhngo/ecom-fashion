@@ -11,9 +11,6 @@
     <!-- Recently Viewed Items -->
     <ProfileRecentlyViewed />
 
-    <!-- My Orders -->
-    <ProfileMyOrders />
-
     <!-- Stories -->
     <ShopStories />
 
