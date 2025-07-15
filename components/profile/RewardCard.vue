@@ -27,6 +27,17 @@
         {{ reward.description }}
       </p>
     </template>
+    <template #append>
+      <v-btn
+        color="primary"
+        variant="flat"
+        class="text-none rounded-xl"
+        icon="mdi-arrow-right"
+        size="x-small"
+        :to="{ name: 'profile-voucher' }"
+      >
+      </v-btn>
+    </template>
   </v-list-item>
 </template>
 <script setup lang="ts">
