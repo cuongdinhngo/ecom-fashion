@@ -242,7 +242,8 @@ const COLORS = [
 
 export const useProducts = (options: ProductOptions = defaultOptions) => {
   const products = Array.from({ length: options.quantity }, (_, index) => {
-    const discount = faker.helpers.arrayElement([10, 20, 30, 40, 50]);
+    const flashSale = faker.datatype.boolean();
+    const discount = flashSale ? faker.helpers.arrayElement([10, 20, 30, 40, 50]) : 0;
     const originalPrice = faker.commerce.price({ min: 10, max: 100, dec: 2 });
     const price = (parseFloat(originalPrice) * (1 - discount / 100)).toFixed(2);
     const category = faker.helpers.arrayElement(CATEGORIES).title;
@@ -265,7 +266,7 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
       price: price,
       discount,
       likeCount: faker.number.int({ min: 0, max: 10000 }),
-      status: faker.helpers.arrayElement(['New', 'Popular', 'Sale', 'Limited']),
+      status: flashSale ? 'Sale' : faker.helpers.arrayElement(['New', 'Popular', 'Limited']),
       to: { name: 'product-id', params: { id: id } }
     };
   });

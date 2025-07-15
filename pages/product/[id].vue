@@ -24,7 +24,7 @@
     </v-carousel>
   </v-card>
 
-  <v-card min-height="100vh">
+  <v-card min-height="" class="pb-10">
     <!-- Product Price -->
     <v-card-title class="d-flex justify-space-between pb-0">
       <div class="d-flex flex-column">
@@ -45,7 +45,10 @@
         ></v-btn>
       </div>
     </v-card-title>
-    <v-card-title class="text-subtitle-1 py-0">
+    <v-card-title
+      v-if="product?.discount"
+      class="text-subtitle-1 py-0"
+    >
       <span class="text-red-lighten-3 text-decoration-line-through text-subtitle-2 font-weight-bold"> ${{ product?.originalPrice }}</span>
       <span class="discount-tag ml-2">-{{ product?.discount }}%</span>
     </v-card-title>
