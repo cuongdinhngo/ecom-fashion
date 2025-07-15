@@ -34,11 +34,10 @@
           </span>
         </v-card-title>
         <v-card-actions class="d-flex justify-space-between align-center">
-          <div class="d-flex flex-wrap ga-2">
+          <div class="d-flex flex-wrap ga-2 text-capitalize">
             <v-chip
               v-if="product.color"
               label
-              class="mr-1"
             >{{ product.color }}</v-chip>
             <v-chip
               v-if="product.size"
