@@ -13,6 +13,7 @@
       color="primary"
       icon
       size="small"
+      @click="navigateTo({ name: 'profile-setting-country' });"
     >
       <v-icon>mdi-arrow-right</v-icon>
     </v-btn>

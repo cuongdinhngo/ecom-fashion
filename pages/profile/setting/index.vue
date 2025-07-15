@@ -26,23 +26,18 @@ const menu = [
     subMenu: [
       { title: 'Profile', to: { name: 'profile-setting-profile' } },
       { title: 'Shipping Address', to: { name: 'profile-setting-address' } },
-      { title: 'Payment methods', to: { name: 'profile-setting' } }
     ]
   },
   {
     header: 'Shop',
     subMenu: [
       { title: 'Country', to: { name: 'profile-setting-country' } },
-      { title: 'Currency', to: { name: 'profile-setting' } },
-      { title: 'Sizes', to: { name: 'profile-setting' } },
-      { title: 'Terms and Conditions', to: { name: 'profile-setting' } },
     ]
   },
   {
     header: 'Account',
     subMenu: [
       { title: 'Language', to: { name: 'profile-setting-language' } },
-      { title: 'Contact Us', to: { name: 'profile-setting' } }
     ]
   }
 ];
