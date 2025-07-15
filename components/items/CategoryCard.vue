@@ -47,5 +47,6 @@ const searchQuery = useSearchQuery();
 
 function updateSearchQuery(category: string) {
   searchQuery.value.categories.push(category);
+  navigateTo({ name: 'shop' });
 }
 </script>
