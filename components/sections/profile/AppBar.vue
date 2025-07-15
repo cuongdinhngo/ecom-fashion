@@ -47,8 +47,8 @@
       <!-- Setting -->
       <FormIconBtnText
         icon="mdi-cog-outline"
-        :to="{ name: 'setting' }"
-        :is-active="pageName === 'setting'"
+        :to="{ name: 'profile-setting' }"
+        :is-active="pageName === 'profile-setting'"
         :show-badge="false"
       ></FormIconBtnText>
     </div>

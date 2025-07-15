@@ -1,5 +1,5 @@
 <template>
-  <v-card-title class="text-h4 font-weight-bold px-0">Settings</v-card-title>
+  <SettingsHeader />
 
   <v-card-title class="text-h6 px-0">Language</v-card-title>
 
