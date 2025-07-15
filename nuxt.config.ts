@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     }
   },
   app: {
-    baseURL: process.env.NUXT_APP_BASE_URL || '/',
+    baseURL: process.env.NUXT_APP_BASE_URL || '/ecom-fashion/',
     head: {
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' },
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
         {
           rel: 'icon',
           type: 'image/svg+xml',
-          href: `${process.env.NUXT_APP_BASE_URL || '/'}logo.svg`
+          href: `${process.env.NUXT_APP_BASE_URL || '/ecom-fashion/'}logo.svg`
         },
         {
           rel: 'stylesheet',
