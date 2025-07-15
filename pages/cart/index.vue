@@ -126,6 +126,7 @@ watch(cartItems, (newCartItems) => {
     remapCartItems();
   } else {
     productsFromCart.value = [];
+    totalPrice.value = 0;
   }
 });
 
