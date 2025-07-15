@@ -41,7 +41,7 @@
       <!-- Order history -->
       <FormIconBtnText
         icon="mdi-table-settings"
-        :to="{ name: 'profile-history' }"
+        :to="{ name: 'profile-to-receive' }"
       ></FormIconBtnText>
 
       <!-- Setting -->
