@@ -55,10 +55,9 @@
 <script setup lang="ts">
 definePageMeta({
   layout: 'profile',
-  title: 'To Receive | My Orders',
+  title: 'My Orders',
   description: 'View your orders that are to be received.',
-  pageTitle: 'To Receive',
-  pageDetail: 'My Orders',
+  pageTitle: 'My Orders',
 });
 
 const { orders } = useOrders({ quantity: 5 });
