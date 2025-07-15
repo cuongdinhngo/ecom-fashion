@@ -28,6 +28,7 @@ export interface SearchFilters {
   };
   size?: string;
   color?: string;
+  quickSearch?: string;
 }
 
 const defaultOptions = {
@@ -279,19 +280,21 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
 
     let filteredProducts = products;
 
-    // Filter by categories
+    // Filter by CATEGORIES
     if (searchTerms.categories && Array.isArray(searchTerms.categories) && searchTerms.categories.length > 0) {
       filteredProducts = filteredProducts.filter(product => 
         searchTerms.categories.includes(product.category)
       );
     }
 
-    // Filter by subcategories
+    // Filter by SUB-CATEGORIES
     if (searchTerms.subCategories && Array.isArray(searchTerms.subCategories) && searchTerms.subCategories.length > 0) {
       filteredProducts = filteredProducts.filter(product => 
         searchTerms.subCategories.includes(product.relative)
       );
-    }    // Filter by price range
+    }
+    
+    // Filter by PRICE RANGE
     if (searchTerms.priceRange && typeof searchTerms.priceRange === 'object') {
       const { min, max } = searchTerms.priceRange;
       
@@ -312,19 +315,16 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
       }
     }
 
-    // Filter by size 
+    // Filter by SIZE 
     if (searchTerms.size && typeof searchTerms.size === 'string') {
       filteredProducts = filteredProducts.filter(product => {
-        // Check if searchTerms.sizes is a number (index) or string (size name)
         const isIndex = /^\d+$/.test(searchTerms.size!);
         
         if (isIndex) {
-          // Convert index to size name
           const sizeIndex = parseInt(searchTerms.size!);
           const sizeName = SIZE_OPTIONS[sizeIndex as keyof typeof SIZE_OPTIONS];
           return product.size === sizeName;
         } else {
-          // Direct size name comparison
           return product.size === searchTerms.size;
         }
       });
@@ -335,6 +335,39 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
       filteredProducts = filteredProducts.filter(product => 
         product.color === searchTerms.color
       );
+    }
+
+    // Filter by quick search => popular, sale, price_low, price_high
+    if (searchTerms.quickSearch && typeof searchTerms.quickSearch === 'string') {
+      switch (searchTerms.quickSearch) {
+        case 'popular':
+          // Sort by likeCount (descending - most liked first)
+          filteredProducts = filteredProducts.sort((a, b) => b.likeCount - a.likeCount);
+          break;
+
+        case 'sale':
+          // Filter by products with 'Sale' status
+          filteredProducts = filteredProducts.filter(product => product.status === 'Sale');
+          break;
+
+        case 'price_low':
+          // Sort by price (ascending - lowest price first)
+          filteredProducts = filteredProducts.sort((a, b) => {
+            const priceA = parseFloat(a.price.replace('$', ''));
+            const priceB = parseFloat(b.price.replace('$', ''));
+            return priceA - priceB;
+          });
+          break;
+
+        case 'price_high':
+          // Sort by price (descending - highest price first)
+          filteredProducts = filteredProducts.sort((a, b) => {
+            const priceA = parseFloat(a.price.replace('$', ''));
+            const priceB = parseFloat(b.price.replace('$', ''));
+            return priceB - priceA;
+          });
+          break;
+      }
     }
 
     return filteredProducts;

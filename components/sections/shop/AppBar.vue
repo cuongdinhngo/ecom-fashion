@@ -287,7 +287,7 @@ const colors = [
 
 const quickFilters = ref([
   { label: 'Popular', value: 'popular' },
-  { label: 'Newest', value: 'newest' },
+  { label: 'Sale', value: 'sale' },
   { label: 'Price Low to High', value: 'price_low' },
   { label: 'Price High to Low', value: 'price_high' }
 ]);
