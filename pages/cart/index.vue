@@ -80,7 +80,7 @@
 </template>
 <script setup lang="ts">
 
-const { wishlist } = useWishlist();
+const { wishlistItems:wishlist } = useWishlist();
 const { products } = useProducts();
 const { cartItems } = useCart();
 const productsFromCart = ref<Product[]>([]);

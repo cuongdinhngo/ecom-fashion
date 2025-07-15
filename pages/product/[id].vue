@@ -192,7 +192,7 @@
   <v-dialog
     v-model="dialog"
     transition="dialog-bottom-transition"
-    height="50%"
+    min-height="50%"
     min-width="100%"
     location="bottom"
   >
@@ -320,6 +320,18 @@
           ></v-btn>
         </div>
       </v-card-title>
+
+      <v-card-actions class="justify-center">
+        <v-btn
+          variant="outlined"
+          :class="['text-none rounded-lg text-white', action === 'add-to-cart' ? 'bg-black' : 'bg-primary']"
+          width="100%"
+          size="large"
+          :text="action === 'add-to-cart' ? 'Add to Cart' : 'Buy Now'"
+          @click="handleAction"
+        >
+        </v-btn>
+      </v-card-actions>
     </v-card>
   </v-dialog>
 
@@ -363,14 +375,14 @@
         active-color="error"
         empty-icon="mdi-heart-outline"
         full-icon="mdi-heart"
-        @click="isInWishlist(productId) ? removeFromWishlist(productId) : addToWishlist(productId)"
+        @click="handleWishlist"
       />
       <v-btn
         variant="outlined"
         class="text-none rounded-lg bg-black text-white"
         width="40%"
         size="large"
-        @click="addProductToCart()"
+        @click="selectVariation('add-to-cart')"
       >
         Add to Cart
       </v-btn>
@@ -378,9 +390,9 @@
         variant="flat"
         color="primary"
         class="text-none rounded-lg"
-        @click="$emit('apply')"
         width="40%"
         size="large"
+        @click="selectVariation('buy-now')"
       >
         Buy Now
       </v-btn>
@@ -405,6 +417,36 @@ function goBack() {
 const productId = useRouteParams('id', null, { transform: Number });
 const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
 const { addToCart, isInCart } = useCart();
+const action = ref('');
+
+function selectVariation(type: string) {
+  action.value = type;
+  dialog.value = true;
+}
+
+function handleAction() {
+  if (action.value === 'add-to-cart') {
+    addProductToCart();
+    dialog.value = false;
+  } else if (action.value === 'buy-now') {
+    // Handle buy now action
+    addProductToCart();
+    router.push({ name: 'cart-checkout' });
+  }
+}
+
+function handleWishlist() {
+  if (isInWishlist(productId.value)) {
+    removeFromWishlist(productId.value);
+  } else {
+    addToWishlist({
+      productId: productId.value,
+      quantity: quantity.value,
+      color: selectedColor.value,
+      size: selectedSize.value
+    });
+  }
+}
 
 function addProductToCart() {
   const newQuantity = isInCart(productId.value) ? quantity.value + 1 : quantity.value;

@@ -31,10 +31,10 @@
   </v-card-text>
 
   <!-- Wishlist -->
-  <v-card-text :class="['pa-0', {'blank-container': wishlistItems.length === 0}]">
+  <v-card-text :class="['pa-0', {'blank-container': items.length === 0}]">
     <ItemsWishlistCard
-      v-if="wishlistItems.length"
-      v-for="item in wishlistItems"
+      v-if="items.length"
+      v-for="item in items"
       :key="item.id"
       :product="item"
     />
@@ -53,7 +53,7 @@
 
   <!-- If wishlist is empty, most popular list should be showed -->
   <ShopMostPopular
-    v-if="wishlistItems.length === 0"
+    v-if="items.length === 0"
   />
 
 </template>
@@ -77,20 +77,15 @@ const recentlyViews = [
   },
 ];
 
-const { wishlist } = useWishlist();
+const { wishlistItems } = useWishlist();
 const { products } = useProducts();
 
-const wishlistItems = computed(() => {
-  return products.filter(product => wishlist.value.includes(product.id));
+const items = computed(() => {
+  return products.filter(product => {
+    return wishlistItems.value.some(item => item.productId === product.id);
+  });
 });
 
-watch(wishlistItems, (newWishlist) => {
-  console.log('wishlistItems => ', newWishlist);
-}, { immediate: true });
-
-watch(wishlist, (newWishlist) => {
-  console.log('Wishlist => ', newWishlist);
-}, { immediate: true });
 </script>
 <style scoped>
 .frame {
