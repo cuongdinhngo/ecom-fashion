@@ -15,7 +15,7 @@
           variant="flat"
           color="primary"
           size="x-small"
-          @click="searchQuery.quickSearch = 'popular'"
+          @click="showAllPopular"
         ><v-icon size="x-large">mdi-arrow-right-thin</v-icon>
         </v-btn>
       </div>
@@ -43,4 +43,9 @@
 const searchQuery = useSearchQuery();
 
 const { products } = useProducts({ quantity: 15});
+
+function showAllPopular() {
+  searchQuery.value.quickSearch = 'popular';
+  navigateTo({ name: 'shop' });
+}
 </script>

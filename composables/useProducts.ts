@@ -261,7 +261,7 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
       image: smallProductImg(),
       size: faker.helpers.arrayElement(Object.values(SIZE_OPTIONS)),
       color: faker.helpers.arrayElement(COLORS).color,
-      originalPrice: `$${originalPrice}`,
+      originalPrice: `${originalPrice}`,
       price: price,
       discount,
       likeCount: faker.number.int({ min: 0, max: 10000 }),

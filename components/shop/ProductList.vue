@@ -3,7 +3,7 @@
     <!-- Header Left -->
     <template #header-left>
       <ItemsHeaderTitle
-        title="All Items"
+        :title="headerTitle"
       />
     </template>
 
@@ -36,6 +36,24 @@ defineProps({
 });
 
 const categoryDialog = ref(false);
+const searchQuery = useSearchQuery();
+const headerTitle = computed(() => {
+  let title = 'All Items';
+  switch (searchQuery.value.quickSearch) {
+    case 'popular':
+      title = 'Most Popular';
+      break;
+    case 'new':
+      title = 'New Items';
+      break;
+  }
+
+  if (searchQuery.value.categories.length > 0) {
+    title = 'All Items';
+  }
+
+  return title;
+});
 </script>
 
 <style>

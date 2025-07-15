@@ -78,7 +78,6 @@ definePageMeta({
   ]
 });
 
-import { faker } from '@faker-js/faker';
 
 const selectedDiscount = ref<string | number>('all');
 const duration = ref(3700);
@@ -91,23 +90,11 @@ const discountOptions = [
   { label: '50%', value: 50 },
 ];
 
-const products = Array.from({ length: 30 }, () => {
-  const discount = faker.helpers.arrayElement([10, 20, 30, 40, 50]);
-  const originalPrice = faker.commerce.price({ min: 10, max: 100, dec: 2});
-  const price = (parseFloat(originalPrice) * (1 - discount / 100)).toFixed(2);
-  return {
-    id: faker.string.uuid(),
-    description: faker.commerce.productDescription(),
-    price: `$${price}`,
-    image: 'https://picsum.photos/180/200?random=' + faker.number.int({ min: 1, max: 1000 }),
-    discount: discount,
-    originalPrice: `$${originalPrice}`,
-  }
-});
+const { products } = useProducts();
 
 const discountProducts = computed(() => {
   if (selectedDiscount.value === 'all') {
-    return products;
+    return products.filter(product => product.discount > 0);
   }
   return products.filter(product => product.discount === selectedDiscount.value);
 });
