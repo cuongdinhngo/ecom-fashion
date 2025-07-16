@@ -44,18 +44,24 @@
           <v-tabs-window-item value="all" class="pb-2">
             <ItemsCategoryExpansion
               :categories="KINDS"
+              gender="all"
+              @closeDialog="closeDialog"
             />
           </v-tabs-window-item>
 
           <v-tabs-window-item value="female">
             <ItemsCategoryExpansion
               :categories="KINDS"
+              gender="female"
+              @closeDialog="closeDialog"
             />
           </v-tabs-window-item>
 
           <v-tabs-window-item value="male">
             <ItemsCategoryExpansion
               :categories="KINDS"
+              gender="male"
+              @closeDialog="closeDialog"
             />
           </v-tabs-window-item>
         </v-tabs-window>
@@ -72,10 +78,15 @@ const categoryDialog = defineModel('categoryDialog', {
 
 const { KINDS } = useProducts();
 
-const selectedGender = ref('all');
+const searchQuery = useSearchQuery();
+const selectedGender = ref(searchQuery.value.gender);
 const GENDERS = [
   { label: 'All', value: 'all' },
   { label: 'Female', value: 'female' },
   { label: 'Male', value: 'male' }
 ]
+
+function closeDialog() {
+  categoryDialog.value = false;
+}
 </script>

@@ -1,9 +1,13 @@
 <template>
-  <v-expansion-panels elevation="0">
+  <v-expansion-panels
+    elevation="0"
+    v-model="selectedPanel"
+  >
     <v-expansion-panel
       v-for="(category, idx) in categories"
       :key="idx"
       class="elevation-0 bg-white my-2"
+      :value="category.category"
     >
       <v-expansion-panel-title class="ma-0 py-1 px-0 elevation-2 rounded-lg">
         <v-list-item>
@@ -33,47 +37,59 @@
               color="primary"
               variant="outlined"
               class="w-100 d-flex justify-center align-center"
+              @click="selectCategory(category.category, item.title)"
+              :text="item.title"
             >
-              <span>{{ item.title }}</span>
+              <template #append>
+                <v-icon
+                  v-if="isSelected(category.category, item.title)"
+                  class="ml-2"
+                >mdi-check-circle</v-icon>
+              </template>
             </v-chip>
           </v-col>
         </v-row>
       </v-expansion-panel-text>
     </v-expansion-panel>
   </v-expansion-panels>
-
-  <v-card-title
-    class="d-flex justify-space-between align-center elevation-2 rounded-lg mt-2"
-    style="width: 100%;"
-  >
-    <div class="left d-flex align-center">
-      <v-avatar
-        size="45"
-        image="https://picsum.photos/50/50?random=11"
-        class="mr-2"
-        tile
-      ></v-avatar>
-      <span class="text-h6 mr-2">Just for You</span>
-      <v-icon size="small" color="primary">mdi-star</v-icon>
-    </div>
-
-    <v-btn
-      variant="flat"
-      icon
-      color="primary"
-      size="small"
-    >
-      <v-icon>mdi-arrow-right</v-icon>
-    </v-btn>
-  </v-card-title>
 </template>
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
   categories: {
     type: Array as () => { category: string; image: string; subCategories: { title: string }[] }[],
     default: () => []
+  },
+  gender: {
+    type: String,
+    default: 'all'
   }
 });
+
+const emit = defineEmits(['closeDialog']);
+
+const searchQuery = useSearchQuery();
+const selectedPanel = ref(searchQuery.value.categories);
+
+const isSelected = (category: string, subCategory: string) => {
+  return searchQuery.value.gender === props.gender && 
+    searchQuery.value.categories.includes(category) &&
+    searchQuery.value.subCategories.includes(subCategory)
+  ;
+};
+
+function selectCategory(category: string, subCategory: string) {
+  searchQuery.value = {
+    categories: [category],
+    subCategories: [subCategory],
+    size: 0,
+    color: '',
+    price: [1, 100],
+    quickSearch: '',
+    gender: props.gender
+  };
+
+  emit('closeDialog');
+}
 </script>
 <style>
 .v-expansion-panel-text__wrapper {
