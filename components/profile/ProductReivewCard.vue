@@ -1,16 +1,17 @@
 <template>
-  <v-card class="px-2 py-4 bg-white elevation-0" tile>
+  <v-card class="pa-1 elevation-0" tile>
     <v-row no-gutters>
       <!-- Product Image -->
-      <v-col cols="5" class="elevation-2 pa-2 rounded-lg">
-        <v-img
-          :src="smallProductImg()"
-          height="110px"
-          width="100%"
-          aspect-ratio="16/9"
-          cover
-          rounded="lg"
-        ></v-img>
+      <v-col cols="5" class="">
+        <v-card class="pa-1 elevation-2 rounded-lg">
+          <v-responsive :aspect-ratio="16/9">
+            <v-img
+              :src="smallProductImg()"
+              cover
+              rounded="lg"
+            ></v-img>
+          </v-responsive>
+        </v-card>
       </v-col>
 
       <!-- Product Details -->
@@ -21,7 +22,7 @@
         <v-card-title class="text-subtitle-1 font-weight-bold">
           Order #{{ faker.string.numeric(9) }}
         </v-card-title>
-        <v-card-title class="d-flex justify-space-between align-center py-0">
+        <v-sheet class="d-flex justify-space-between align-end py-0 px-4" min-height="80px">
           <v-chip label size="large" class="rounded-lg">{{ useDateFormat(new Date(deliveryDate), 'MMM, Do') }}</v-chip>
           <v-btn
             color="primary"
@@ -30,7 +31,7 @@
             width="45%"
             @click="reviewDialog = true"
           >Review</v-btn>
-        </v-card-title>
+        </v-sheet>
       </v-col>
     </v-row>
   </v-card>

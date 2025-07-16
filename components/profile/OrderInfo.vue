@@ -1,12 +1,14 @@
 <template>
-  <div class="order-detail ml-4">
+  <v-card class="order-detail ml-2 elevation-0 bg-transparent" min-height="120px">
     <v-card-title class="d-flex justify-space-between align-center py-0 px-0">
       <span class=" text-subtitle-1 font-weight-bold">Order #{{ order.orderNumber }}</span>
       <v-chip label size="small" class="bg-grey-lighten-5">{{ order.quantity }} items</v-chip>
     </v-card-title>
     <v-card-title class="py-0 px-0 text-subtitle-1">{{ order.delivery }}</v-card-title>
 
-    <v-card-title class="d-flex justify-space-between align-end py-0 px-0 mt-2">
+    <v-card-text></v-card-text>
+
+    <v-sheet class="d-flex justify-space-between align-end py-0 px-0 mt-2 bg-transparent" min-height="50px">
       <span class="text-h6 font-weight-bold d-flex align-center">
         {{ order.status }}
         <v-btn
@@ -36,8 +38,8 @@
         width="40%"
         :to="{ name: 'profile-track-order' }"
       >Track</v-btn>
-    </v-card-title>
-  </div>
+    </v-sheet>
+  </v-card>
 </template>
 <script setup lang="ts">
 defineProps({

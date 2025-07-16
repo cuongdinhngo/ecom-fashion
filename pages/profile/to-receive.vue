@@ -43,9 +43,11 @@
           </v-btn>
         </v-card-title>
 
-        <ProfileProductReivewCard
-          v-for="item in orderToReview?.quantity"
-        />
+        <v-card-text class="px-0" min-height="90vh" style="overflow-y: scroll;">
+          <ProfileProductReivewCard
+            v-for="item in orderToReview?.quantity"
+          />
+        </v-card-text>
 
       </v-card>
     </template>

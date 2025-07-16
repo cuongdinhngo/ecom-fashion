@@ -5,14 +5,14 @@
       cols="6" md="6"
       class="pa-1"
     >
-      <v-img
-        :src="smallProductImg()"
-        height="40px"
-        width="100%"
-        aspect-ratio="16/9"
-        cover
-        rounded="lg"
-      ></v-img>
+      <v-responsive :aspect-ratio="16/9">
+        <v-img
+          :src="smallProductImg()"
+          cover
+          rounded="lg"
+          min-height="30px"
+        ></v-img>
+      </v-responsive>
     </v-col>
   </v-row>
 </template>
