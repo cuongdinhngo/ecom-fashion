@@ -71,7 +71,11 @@
       }
     ],
     "rating": 4.2,
-    "reviewCount": 128
+    "reviewCount": 128,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 2,
@@ -145,7 +149,10 @@
       }
     ],
     "rating": 4.5,
-    "reviewCount": 89
+    "reviewCount": 89,
+    "gender": [
+      "female"
+    ]
   },
   {
     "id": 3,
@@ -153,7 +160,7 @@
     "description": "Stylish Keyboard designed to make you stand out with elastic looks",
     "shortDescription": "Stylish Keyboard designed to make you stand out ...",
     "category": "Watch",
-    "relative": "Smartwatches",
+    "relative": "Smart Watches",
     "image": "/images/item-4.jpg",
     "size": "XS",
     "color": "orange",
@@ -217,7 +224,11 @@
       }
     ],
     "rating": 4.1,
-    "reviewCount": 234
+    "reviewCount": 234,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 4,
@@ -292,82 +303,11 @@
       }
     ],
     "rating": 4.7,
-    "reviewCount": 418
-  },
-  {
-    "id": 5,
-    "name": "Recycled Plastic Pizza",
-    "description": "Featuring Nickel-enhanced technology, our Towels offers unparalleled giving performance",
-    "shortDescription": "Featuring Nickel-enhanced technology, our Towels ...",
-    "category": "Shoes",
-    "relative": "Flats",
-    "image": "/images/item-3.jpg",
-    "size": "XS",
-    "color": "red",
-    "originalPrice": "97.25",
-    "price": "97.25",
-    "discount": 0,
-    "likeCount": 5734,
-    "status": "Popular",
-    "to": {
-      "name": "product-id",
-      "params": {
-        "id": 5
-      }
-    },
-    "images": [
-      "/images/item-7.jpg",
-      "/images/item-10.jpg",
-      "/images/item-4.jpg",
-      "/images/item-6.jpg"
-    ],
-    "thumbnails": [
-      "/images/item-7.jpg",
-      "/images/item-10.jpg",
-      "/images/item-4.jpg"
-    ],
-    "materials": {
-      "material1": "Canvas",
-      "percentage1": 85,
-      "material2": "Synthetic",
-      "percentage2": 15
-    },
-    "origin": {
-      "adjective1": "Luxury",
-      "adjective2": "Sustainable"
-    },
-    "availableSizes": [
-      "7",
-      "8",
-      "9",
-      "10",
-      "11",
-      "12"
-    ],
-    "availableColors": [
-      {
-        "name": "Blue",
-        "value": "blue",
-        "image": "/images/item-7.jpg"
-      },
-      {
-        "name": "Green",
-        "value": "green",
-        "image": "/images/item-10.jpg"
-      },
-      {
-        "name": "Red",
-        "value": "red",
-        "image": "/images/item-4.jpg"
-      },
-      {
-        "name": "Black",
-        "value": "black",
-        "image": "/images/item-6.jpg"
-      }
-    ],
-    "rating": 3.8,
-    "reviewCount": 165
+    "reviewCount": 418,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 6,
@@ -441,7 +381,10 @@
       }
     ],
     "rating": 4.4,
-    "reviewCount": 132
+    "reviewCount": 132,
+    "gender": [
+      "female"
+    ]
   },
   {
     "id": 7,
@@ -516,7 +459,11 @@
       }
     ],
     "rating": 3.9,
-    "reviewCount": 133
+    "reviewCount": 133,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 8,
@@ -590,81 +537,10 @@
       }
     ],
     "rating": 4.6,
-    "reviewCount": 349
-  },
-  {
-    "id": 9,
-    "name": "Intelligent Marble Hat",
-    "description": "Featuring Radium-enhanced technology, our Shirt offers unparalleled burdensome performance",
-    "shortDescription": "Featuring Radium-enhanced technology, our Shirt ...",
-    "category": "Clothing",
-    "relative": "Skirts",
-    "image": "/images/item-1.jpg",
-    "size": "XL",
-    "color": "green",
-    "originalPrice": "49.55",
-    "price": "39.64",
-    "discount": 20,
-    "likeCount": 8508,
-    "status": "Sale",
-    "to": {
-      "name": "product-id",
-      "params": {
-        "id": 9
-      }
-    },
-    "images": [
-      "/images/item-3.jpg",
-      "/images/item-6.jpg",
-      "/images/item-10.jpg",
-      "/images/item-12.jpg"
-    ],
-    "thumbnails": [
-      "/images/item-3.jpg",
-      "/images/item-6.jpg",
-      "/images/item-10.jpg"
-    ],
-    "materials": {
-      "material1": "Cotton",
-      "percentage1": 65,
-      "material2": "Polyester",
-      "percentage2": 35
-    },
-    "origin": {
-      "adjective1": "Designer",
-      "adjective2": "Artisan"
-    },
-    "availableSizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "availableColors": [
-      {
-        "name": "Blue",
-        "value": "blue",
-        "image": "/images/item-3.jpg"
-      },
-      {
-        "name": "White",
-        "value": "white",
-        "image": "/images/item-6.jpg"
-      },
-      {
-        "name": "Red",
-        "value": "red",
-        "image": "/images/item-10.jpg"
-      },
-      {
-        "name": "Purple",
-        "value": "purple",
-        "image": "/images/item-12.jpg"
-      }
-    ],
-    "rating": 3.8,
-    "reviewCount": 382
+    "reviewCount": 349,
+    "gender": [
+      "female"
+    ]
   },
   {
     "id": 10,
@@ -736,81 +612,11 @@
       }
     ],
     "rating": 4.1,
-    "reviewCount": 228
-  },
-  {
-    "id": 11,
-    "name": "Handcrafted Ceramic Bacon",
-    "description": "Kertzmann, Keeling and Predovic's most advanced Chair technology increases biodegradable capabilities",
-    "shortDescription": "Kertzmann, Keeling and Predovic's most advanced ...",
-    "category": "Lingerie",
-    "relative": "Loungewear",
-    "image": "/images/item-10.jpg",
-    "size": "XXL",
-    "color": "yellow",
-    "originalPrice": "87.49",
-    "price": "87.49",
-    "discount": 0,
-    "likeCount": 2644,
-    "status": "Limited",
-    "to": {
-      "name": "product-id",
-      "params": {
-        "id": 11
-      }
-    },
-    "images": [
-      "/images/item-6.jpg",
-      "/images/item-5.jpg",
-      "/images/item-7.jpg",
-      "/images/item-11.jpg"
-    ],
-    "thumbnails": [
-      "/images/item-6.jpg",
-      "/images/item-5.jpg",
-      "/images/item-7.jpg"
-    ],
-    "materials": {
-      "material1": "Cotton",
-      "percentage1": 85,
-      "material2": "Elastane",
-      "percentage2": 15
-    },
-    "origin": {
-      "adjective1": "Modern",
-      "adjective2": "Luxury"
-    },
-    "availableSizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "availableColors": [
-      {
-        "name": "Grey",
-        "value": "grey",
-        "image": "/images/item-6.jpg"
-      },
-      {
-        "name": "Purple",
-        "value": "purple",
-        "image": "/images/item-5.jpg"
-      },
-      {
-        "name": "Pink",
-        "value": "pink",
-        "image": "/images/item-7.jpg"
-      },
-      {
-        "name": "Red",
-        "value": "red",
-        "image": "/images/item-11.jpg"
-      }
-    ],
-    "rating": 4.8,
-    "reviewCount": 69
+    "reviewCount": 228,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 12,
@@ -884,81 +690,11 @@
       }
     ],
     "rating": 3.9,
-    "reviewCount": 108
-  },
-  {
-    "id": 13,
-    "name": "Refined Granite Chair",
-    "description": "Featuring Cobalt-enhanced technology, our Ball offers unparalleled grumpy performance",
-    "shortDescription": "Featuring Cobalt-enhanced technology, our Ball ...",
-    "category": "Lingerie",
-    "relative": "Bras",
-    "image": "/images/item-1.jpg",
-    "size": "XXL",
-    "color": "yellow",
-    "originalPrice": "82.72",
-    "price": "57.90",
-    "discount": 30,
-    "likeCount": 7033,
-    "status": "Sale",
-    "to": {
-      "name": "product-id",
-      "params": {
-        "id": 13
-      }
-    },
-    "images": [
-      "/images/item-10.jpg",
-      "/images/item-11.jpg",
-      "/images/item-1.jpg",
-      "/images/item-6.jpg"
-    ],
-    "thumbnails": [
-      "/images/item-10.jpg",
-      "/images/item-11.jpg",
-      "/images/item-1.jpg"
-    ],
-    "materials": {
-      "material1": "Silk",
-      "percentage1": 70,
-      "material2": "Lace",
-      "percentage2": 30
-    },
-    "origin": {
-      "adjective1": "Elegant",
-      "adjective2": "Classic"
-    },
-    "availableSizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "availableColors": [
-      {
-        "name": "Pink",
-        "value": "pink",
-        "image": "/images/item-10.jpg"
-      },
-      {
-        "name": "Red",
-        "value": "red",
-        "image": "/images/item-11.jpg"
-      },
-      {
-        "name": "Black",
-        "value": "black",
-        "image": "/images/item-1.jpg"
-      },
-      {
-        "name": "Blue",
-        "value": "blue",
-        "image": "/images/item-6.jpg"
-      }
-    ],
-    "rating": 4.7,
-    "reviewCount": 449
+    "reviewCount": 108,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 14,
@@ -1030,7 +766,11 @@
       }
     ],
     "rating": 4.4,
-    "reviewCount": 68
+    "reviewCount": 68,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 15,
@@ -1038,7 +778,7 @@
     "description": "New Shirt model with 90 GB RAM, 563 GB storage, and empty features",
     "shortDescription": "New Shirt model with 90 GB RAM, 563 GB storage, ...",
     "category": "Watch",
-    "relative": "Smartwatches",
+    "relative": "Smart Watches",
     "image": "/images/item-1.jpg",
     "size": "XL",
     "color": "red",
@@ -1102,7 +842,11 @@
       }
     ],
     "rating": 4.8,
-    "reviewCount": 259
+    "reviewCount": 259,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 16,
@@ -1110,7 +854,7 @@
     "description": "Licensed Chips designed with Aluminum for ruddy performance",
     "shortDescription": "Licensed Chips designed with Aluminum for ruddy ...",
     "category": "Watch",
-    "relative": "Smartwatches",
+    "relative": "Smart Watches",
     "image": "/images/item-8.jpg",
     "size": "XL",
     "color": "red",
@@ -1174,81 +918,11 @@
       }
     ],
     "rating": 4.9,
-    "reviewCount": 457
-  },
-  {
-    "id": 17,
-    "name": "Handmade Cotton Pants",
-    "description": "Experience the sky blue brilliance of our Tuna, perfect for voluminous environments",
-    "shortDescription": "Experience the sky blue brilliance of our Tuna, ...",
-    "category": "Clothing",
-    "relative": "Blouses",
-    "image": "/images/item-4.jpg",
-    "size": "XS",
-    "color": "orange",
-    "originalPrice": "36.35",
-    "price": "18.18",
-    "discount": 50,
-    "likeCount": 9036,
-    "status": "Sale",
-    "to": {
-      "name": "product-id",
-      "params": {
-        "id": 17
-      }
-    },
-    "images": [
-      "/images/item-1.jpg",
-      "/images/item-5.jpg",
-      "/images/item-11.jpg",
-      "/images/item-9.jpg"
-    ],
-    "thumbnails": [
-      "/images/item-1.jpg",
-      "/images/item-5.jpg",
-      "/images/item-11.jpg"
-    ],
-    "materials": {
-      "material1": "Cotton",
-      "percentage1": 65,
-      "material2": "Polyester",
-      "percentage2": 35
-    },
-    "origin": {
-      "adjective1": "Eco-friendly",
-      "adjective2": "Refined"
-    },
-    "availableSizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "availableColors": [
-      {
-        "name": "Grey",
-        "value": "grey",
-        "image": "/images/item-1.jpg"
-      },
-      {
-        "name": "Purple",
-        "value": "purple",
-        "image": "/images/item-5.jpg"
-      },
-      {
-        "name": "White",
-        "value": "white",
-        "image": "/images/item-11.jpg"
-      },
-      {
-        "name": "Black",
-        "value": "black",
-        "image": "/images/item-9.jpg"
-      }
-    ],
-    "rating": 3.9,
-    "reviewCount": 231
+    "reviewCount": 457,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 18,
@@ -1320,7 +994,11 @@
       }
     ],
     "rating": 3.6,
-    "reviewCount": 213
+    "reviewCount": 213,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 19,
@@ -1392,7 +1070,11 @@
       }
     ],
     "rating": 4.2,
-    "reviewCount": 484
+    "reviewCount": 484,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 20,
@@ -1467,7 +1149,11 @@
       }
     ],
     "rating": 4.1,
-    "reviewCount": 270
+    "reviewCount": 270,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 21,
@@ -1539,7 +1225,11 @@
       }
     ],
     "rating": 4.1,
-    "reviewCount": 143
+    "reviewCount": 143,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 22,
@@ -1613,7 +1303,11 @@
       }
     ],
     "rating": 3.6,
-    "reviewCount": 127
+    "reviewCount": 127,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 23,
@@ -1685,7 +1379,11 @@
       }
     ],
     "rating": 3.7,
-    "reviewCount": 222
+    "reviewCount": 222,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 24,
@@ -1759,81 +1457,11 @@
       }
     ],
     "rating": 4.7,
-    "reviewCount": 301
-  },
-  {
-    "id": 25,
-    "name": "Rustic Ceramic Bacon",
-    "description": "Featuring Dubnium-enhanced technology, our Keyboard offers unparalleled likable performance",
-    "shortDescription": "Featuring Dubnium-enhanced technology, our ...",
-    "category": "Bags",
-    "relative": "Clutches",
-    "image": "/images/item-4.jpg",
-    "size": "S",
-    "color": "purple",
-    "originalPrice": "16.39",
-    "price": "9.83",
-    "discount": 40,
-    "likeCount": 3386,
-    "status": "Sale",
-    "to": {
-      "name": "product-id",
-      "params": {
-        "id": 25
-      }
-    },
-    "images": [
-      "/images/item-2.jpg",
-      "/images/item-4.jpg",
-      "/images/item-3.jpg",
-      "/images/item-6.jpg"
-    ],
-    "thumbnails": [
-      "/images/item-2.jpg",
-      "/images/item-4.jpg",
-      "/images/item-3.jpg"
-    ],
-    "materials": {
-      "material1": "Leather",
-      "percentage1": 90,
-      "material2": "Metal",
-      "percentage2": 10
-    },
-    "origin": {
-      "adjective1": "Classic",
-      "adjective2": "Modern"
-    },
-    "availableSizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "availableColors": [
-      {
-        "name": "Black",
-        "value": "black",
-        "image": "/images/item-2.jpg"
-      },
-      {
-        "name": "Red",
-        "value": "red",
-        "image": "/images/item-4.jpg"
-      },
-      {
-        "name": "Pink",
-        "value": "pink",
-        "image": "/images/item-3.jpg"
-      },
-      {
-        "name": "Blue",
-        "value": "blue",
-        "image": "/images/item-6.jpg"
-      }
-    ],
-    "rating": 3.7,
-    "reviewCount": 304
+    "reviewCount": 301,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 26,
@@ -1907,81 +1535,10 @@
       }
     ],
     "rating": 4.6,
-    "reviewCount": 170
-  },
-  {
-    "id": 27,
-    "name": "Handcrafted Metal Cheese",
-    "description": "Savor the crunchy essence in our Bike, designed for gaseous culinary adventures",
-    "shortDescription": "Savor the crunchy essence in our Bike, designed ...",
-    "category": "Clothing",
-    "relative": "Dresses",
-    "image": "/images/item-13.jpg",
-    "size": "S",
-    "color": "grey",
-    "originalPrice": "57.75",
-    "price": "34.65",
-    "discount": 40,
-    "likeCount": 5767,
-    "status": "Sale",
-    "to": {
-      "name": "product-id",
-      "params": {
-        "id": 27
-      }
-    },
-    "images": [
-      "/images/item-6.jpg",
-      "/images/item-1.jpg",
-      "/images/item-7.jpg",
-      "/images/item-2.jpg"
-    ],
-    "thumbnails": [
-      "/images/item-6.jpg",
-      "/images/item-1.jpg",
-      "/images/item-7.jpg"
-    ],
-    "materials": {
-      "material1": "Linen",
-      "percentage1": 90,
-      "material2": "Spandex",
-      "percentage2": 10
-    },
-    "origin": {
-      "adjective1": "Innovative",
-      "adjective2": "Smart"
-    },
-    "availableSizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "availableColors": [
-      {
-        "name": "Black",
-        "value": "black",
-        "image": "/images/item-6.jpg"
-      },
-      {
-        "name": "Grey",
-        "value": "grey",
-        "image": "/images/item-1.jpg"
-      },
-      {
-        "name": "Yellow",
-        "value": "yellow",
-        "image": "/images/item-7.jpg"
-      },
-      {
-        "name": "White",
-        "value": "white",
-        "image": "/images/item-2.jpg"
-      }
-    ],
-    "rating": 4,
-    "reviewCount": 175
+    "reviewCount": 170,
+    "gender": [
+      "female"
+    ]
   },
   {
     "id": 28,
@@ -2055,81 +1612,11 @@
       }
     ],
     "rating": 4.1,
-    "reviewCount": 122
-  },
-  {
-    "id": 29,
-    "name": "Licensed Steel Ball",
-    "description": "The sleek and exalted Shoes comes with salmon LED lighting for smart functionality",
-    "shortDescription": "The sleek and exalted Shoes comes with salmon LED ...",
-    "category": "Clothing",
-    "relative": "Blouses",
-    "image": "/images/item-11.jpg",
-    "size": "XXL",
-    "color": "green",
-    "originalPrice": "93.89",
-    "price": "93.89",
-    "discount": 0,
-    "likeCount": 342,
-    "status": "Popular",
-    "to": {
-      "name": "product-id",
-      "params": {
-        "id": 29
-      }
-    },
-    "images": [
-      "/images/item-6.jpg",
-      "/images/item-11.jpg",
-      "/images/item-12.jpg",
-      "/images/item-3.jpg"
-    ],
-    "thumbnails": [
-      "/images/item-6.jpg",
-      "/images/item-11.jpg",
-      "/images/item-12.jpg"
-    ],
-    "materials": {
-      "material1": "Cotton",
-      "percentage1": 65,
-      "material2": "Polyester",
-      "percentage2": 35
-    },
-    "origin": {
-      "adjective1": "Sustainable",
-      "adjective2": "Eco-friendly"
-    },
-    "availableSizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "availableColors": [
-      {
-        "name": "Green",
-        "value": "green",
-        "image": "/images/item-6.jpg"
-      },
-      {
-        "name": "Blue",
-        "value": "blue",
-        "image": "/images/item-11.jpg"
-      },
-      {
-        "name": "Grey",
-        "value": "grey",
-        "image": "/images/item-12.jpg"
-      },
-      {
-        "name": "White",
-        "value": "white",
-        "image": "/images/item-3.jpg"
-      }
-    ],
-    "rating": 3.7,
-    "reviewCount": 465
+    "reviewCount": 122,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 30,
@@ -2203,82 +1690,10 @@
       }
     ],
     "rating": 3.7,
-    "reviewCount": 132
-  },
-  {
-    "id": 31,
-    "name": "Oriental Concrete Pizza",
-    "description": "New Salad model with 67 GB RAM, 306 GB storage, and skeletal features",
-    "shortDescription": "New Salad model with 67 GB RAM, 306 GB storage, ...",
-    "category": "Shoes",
-    "relative": "Flats",
-    "image": "/images/item-8.jpg",
-    "size": "M",
-    "color": "pink",
-    "originalPrice": "14.19",
-    "price": "7.09",
-    "discount": 50,
-    "likeCount": 2526,
-    "status": "Sale",
-    "to": {
-      "name": "product-id",
-      "params": {
-        "id": 31
-      }
-    },
-    "images": [
-      "/images/item-1.jpg",
-      "/images/item-2.jpg",
-      "/images/item-6.jpg",
-      "/images/item-9.jpg"
-    ],
-    "thumbnails": [
-      "/images/item-1.jpg",
-      "/images/item-2.jpg",
-      "/images/item-6.jpg"
-    ],
-    "materials": {
-      "material1": "Leather",
-      "percentage1": 70,
-      "material2": "Rubber",
-      "percentage2": 30
-    },
-    "origin": {
-      "adjective1": "Classic",
-      "adjective2": "Innovative"
-    },
-    "availableSizes": [
-      "7",
-      "8",
-      "9",
-      "10",
-      "11",
-      "12"
-    ],
-    "availableColors": [
-      {
-        "name": "Green",
-        "value": "green",
-        "image": "/images/item-1.jpg"
-      },
-      {
-        "name": "Red",
-        "value": "red",
-        "image": "/images/item-2.jpg"
-      },
-      {
-        "name": "Grey",
-        "value": "grey",
-        "image": "/images/item-6.jpg"
-      },
-      {
-        "name": "Blue",
-        "value": "blue",
-        "image": "/images/item-9.jpg"
-      }
-    ],
-    "rating": 3.9,
-    "reviewCount": 285
+    "reviewCount": 132,
+    "gender": [
+      "female"
+    ]
   },
   {
     "id": 32,
@@ -2352,7 +1767,11 @@
       }
     ],
     "rating": 3.9,
-    "reviewCount": 352
+    "reviewCount": 352,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 33,
@@ -2424,7 +1843,11 @@
       }
     ],
     "rating": 4.1,
-    "reviewCount": 459
+    "reviewCount": 459,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 34,
@@ -2498,81 +1921,10 @@
       }
     ],
     "rating": 4.2,
-    "reviewCount": 11
-  },
-  {
-    "id": 35,
-    "name": "Handmade Marble Ball",
-    "description": "Gusikowski and Sons's most advanced Tuna technology increases glum capabilities",
-    "shortDescription": "Gusikowski and Sons's most advanced Tuna ...",
-    "category": "Lingerie",
-    "relative": "Bras",
-    "image": "/images/item-2.jpg",
-    "size": "L",
-    "color": "blue",
-    "originalPrice": "50.69",
-    "price": "25.34",
-    "discount": 50,
-    "likeCount": 8647,
-    "status": "Sale",
-    "to": {
-      "name": "product-id",
-      "params": {
-        "id": 35
-      }
-    },
-    "images": [
-      "/images/item-1.jpg",
-      "/images/item-2.jpg",
-      "/images/item-7.jpg",
-      "/images/item-10.jpg"
-    ],
-    "thumbnails": [
-      "/images/item-1.jpg",
-      "/images/item-2.jpg",
-      "/images/item-7.jpg"
-    ],
-    "materials": {
-      "material1": "Cotton",
-      "percentage1": 85,
-      "material2": "Elastane",
-      "percentage2": 15
-    },
-    "origin": {
-      "adjective1": "Vintage",
-      "adjective2": "Artisan"
-    },
-    "availableSizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "availableColors": [
-      {
-        "name": "Blue",
-        "value": "blue",
-        "image": "/images/item-1.jpg"
-      },
-      {
-        "name": "Red",
-        "value": "red",
-        "image": "/images/item-2.jpg"
-      },
-      {
-        "name": "White",
-        "value": "white",
-        "image": "/images/item-7.jpg"
-      },
-      {
-        "name": "Black",
-        "value": "black",
-        "image": "/images/item-10.jpg"
-      }
-    ],
-    "rating": 4.8,
-    "reviewCount": 163
+    "reviewCount": 11,
+    "gender": [
+      "female"
+    ]
   },
   {
     "id": 36,
@@ -2647,81 +1999,11 @@
       }
     ],
     "rating": 3.5,
-    "reviewCount": 82
-  },
-  {
-    "id": 37,
-    "name": "Sleek Granite Car",
-    "description": "The lime Cheese combines Pitcairn Islands aesthetics with Dysprosium-based durability",
-    "shortDescription": "The lime Cheese combines Pitcairn Islands ...",
-    "category": "Lingerie",
-    "relative": "Bras",
-    "image": "/images/item-4.jpg",
-    "size": "XXL",
-    "color": "grey",
-    "originalPrice": "50.75",
-    "price": "40.60",
-    "discount": 20,
-    "likeCount": 5509,
-    "status": "Sale",
-    "to": {
-      "name": "product-id",
-      "params": {
-        "id": 37
-      }
-    },
-    "images": [
-      "/images/item-13.jpg",
-      "/images/item-10.jpg",
-      "/images/item-11.jpg",
-      "/images/item-8.jpg"
-    ],
-    "thumbnails": [
-      "/images/item-13.jpg",
-      "/images/item-10.jpg",
-      "/images/item-11.jpg"
-    ],
-    "materials": {
-      "material1": "Silk",
-      "percentage1": 70,
-      "material2": "Lace",
-      "percentage2": 30
-    },
-    "origin": {
-      "adjective1": "Modern",
-      "adjective2": "Luxury"
-    },
-    "availableSizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "availableColors": [
-      {
-        "name": "Pink",
-        "value": "pink",
-        "image": "/images/item-13.jpg"
-      },
-      {
-        "name": "Red",
-        "value": "red",
-        "image": "/images/item-10.jpg"
-      },
-      {
-        "name": "Blue",
-        "value": "blue",
-        "image": "/images/item-11.jpg"
-      },
-      {
-        "name": "White",
-        "value": "white",
-        "image": "/images/item-8.jpg"
-      }
-    ],
-    "rating": 4.2,
-    "reviewCount": 326
+    "reviewCount": 82,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 38,
@@ -2795,81 +2077,10 @@
       }
     ],
     "rating": 4.1,
-    "reviewCount": 245
-  },
-  {
-    "id": 39,
-    "name": "Handmade Metal Shirt",
-    "description": "McKenzie LLC's most advanced Towels technology increases discrete capabilities",
-    "shortDescription": "McKenzie LLC's most advanced Towels technology ...",
-    "category": "Lingerie",
-    "relative": "Sleepwear",
-    "image": "/images/item-4.jpg",
-    "size": "XS",
-    "color": "purple",
-    "originalPrice": "41.09",
-    "price": "28.76",
-    "discount": 30,
-    "likeCount": 63,
-    "status": "Sale",
-    "to": {
-      "name": "product-id",
-      "params": {
-        "id": 39
-      }
-    },
-    "images": [
-      "/images/item-6.jpg",
-      "/images/item-9.jpg",
-      "/images/item-11.jpg",
-      "/images/item-10.jpg"
-    ],
-    "thumbnails": [
-      "/images/item-6.jpg",
-      "/images/item-9.jpg",
-      "/images/item-11.jpg"
-    ],
-    "materials": {
-      "material1": "Modal",
-      "percentage1": 90,
-      "material2": "Spandex",
-      "percentage2": 10
-    },
-    "origin": {
-      "adjective1": "Quality",
-      "adjective2": "Sustainable"
-    },
-    "availableSizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "availableColors": [
-      {
-        "name": "Black",
-        "value": "black",
-        "image": "/images/item-6.jpg"
-      },
-      {
-        "name": "White",
-        "value": "white",
-        "image": "/images/item-9.jpg"
-      },
-      {
-        "name": "Purple",
-        "value": "purple",
-        "image": "/images/item-11.jpg"
-      },
-      {
-        "name": "Grey",
-        "value": "grey",
-        "image": "/images/item-10.jpg"
-      }
-    ],
-    "rating": 4.3,
-    "reviewCount": 67
+    "reviewCount": 245,
+    "gender": [
+      "female"
+    ]
   },
   {
     "id": 40,
@@ -2943,81 +2154,10 @@
       }
     ],
     "rating": 4.8,
-    "reviewCount": 127
-  },
-  {
-    "id": 41,
-    "name": "Tasty Granite Tuna",
-    "description": "Professional-grade Pants perfect for milky training and recreational use",
-    "shortDescription": "Professional-grade Pants perfect for milky ...",
-    "category": "Bags",
-    "relative": "Handbags",
-    "image": "/images/item-4.jpg",
-    "size": "XXL",
-    "color": "purple",
-    "originalPrice": "64.29",
-    "price": "64.29",
-    "discount": 0,
-    "likeCount": 7112,
-    "status": "New",
-    "to": {
-      "name": "product-id",
-      "params": {
-        "id": 41
-      }
-    },
-    "images": [
-      "/images/item-12.jpg",
-      "/images/item-8.jpg",
-      "/images/item-9.jpg",
-      "/images/item-1.jpg"
-    ],
-    "thumbnails": [
-      "/images/item-12.jpg",
-      "/images/item-8.jpg",
-      "/images/item-9.jpg"
-    ],
-    "materials": {
-      "material1": "Canvas",
-      "percentage1": 80,
-      "material2": "Polyester",
-      "percentage2": 20
-    },
-    "origin": {
-      "adjective1": "Smart",
-      "adjective2": "Modern"
-    },
-    "availableSizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "availableColors": [
-      {
-        "name": "Black",
-        "value": "black",
-        "image": "/images/item-12.jpg"
-      },
-      {
-        "name": "Pink",
-        "value": "pink",
-        "image": "/images/item-8.jpg"
-      },
-      {
-        "name": "Brown",
-        "value": "brown",
-        "image": "/images/item-9.jpg"
-      },
-      {
-        "name": "White",
-        "value": "white",
-        "image": "/images/item-1.jpg"
-      }
-    ],
-    "rating": 4,
-    "reviewCount": 103
+    "reviewCount": 127,
+    "gender": [
+      "female"
+    ]
   },
   {
     "id": 42,
@@ -3091,7 +2231,11 @@
       }
     ],
     "rating": 5,
-    "reviewCount": 273
+    "reviewCount": 273,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 43,
@@ -3165,7 +2309,11 @@
       }
     ],
     "rating": 4.2,
-    "reviewCount": 455
+    "reviewCount": 455,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 44,
@@ -3239,7 +2387,10 @@
       }
     ],
     "rating": 4.8,
-    "reviewCount": 282
+    "reviewCount": 282,
+    "gender": [
+      "female"
+    ]
   },
   {
     "id": 45,
@@ -3313,7 +2464,11 @@
       }
     ],
     "rating": 4.5,
-    "reviewCount": 253
+    "reviewCount": 253,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 46,
@@ -3321,7 +2476,7 @@
     "description": "Discover the incomplete new Chips with an exciting mix of Silk ingredients",
     "shortDescription": "Discover the incomplete new Chips with an ...",
     "category": "Watch",
-    "relative": "Smartwatches",
+    "relative": "Smart Watches",
     "image": "/images/item-7.jpg",
     "size": "XL",
     "color": "red",
@@ -3385,81 +2540,11 @@
       }
     ],
     "rating": 4,
-    "reviewCount": 477
-  },
-  {
-    "id": 47,
-    "name": "Ergonomic Wooden Pizza",
-    "description": "Savor the fresh essence in our Bacon, designed for handy culinary adventures",
-    "shortDescription": "Savor the fresh essence in our Bacon, designed ...",
-    "category": "Clothing",
-    "relative": "Dresses",
-    "image": "/images/item-6.jpg",
-    "size": "M",
-    "color": "grey",
-    "originalPrice": "18.29",
-    "price": "14.63",
-    "discount": 20,
-    "likeCount": 3869,
-    "status": "Sale",
-    "to": {
-      "name": "product-id",
-      "params": {
-        "id": 47
-      }
-    },
-    "images": [
-      "/images/item-2.jpg",
-      "/images/item-9.jpg",
-      "/images/item-6.jpg",
-      "/images/item-8.jpg"
-    ],
-    "thumbnails": [
-      "/images/item-2.jpg",
-      "/images/item-9.jpg",
-      "/images/item-6.jpg"
-    ],
-    "materials": {
-      "material1": "Linen",
-      "percentage1": 90,
-      "material2": "Spandex",
-      "percentage2": 10
-    },
-    "origin": {
-      "adjective1": "Elegant",
-      "adjective2": "Handcrafted"
-    },
-    "availableSizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "availableColors": [
-      {
-        "name": "Pink",
-        "value": "pink",
-        "image": "/images/item-2.jpg"
-      },
-      {
-        "name": "Black",
-        "value": "black",
-        "image": "/images/item-9.jpg"
-      },
-      {
-        "name": "Yellow",
-        "value": "yellow",
-        "image": "/images/item-6.jpg"
-      },
-      {
-        "name": "Blue",
-        "value": "blue",
-        "image": "/images/item-8.jpg"
-      }
-    ],
-    "rating": 3.8,
-    "reviewCount": 64
+    "reviewCount": 477,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 48,
@@ -3533,7 +2618,10 @@
       }
     ],
     "rating": 4,
-    "reviewCount": 159
+    "reviewCount": 159,
+    "gender": [
+      "female"
+    ]
   },
   {
     "id": 49,
@@ -3605,7 +2693,11 @@
       }
     ],
     "rating": 4.3,
-    "reviewCount": 158
+    "reviewCount": 158,
+    "gender": [
+      "male",
+      "female"
+    ]
   },
   {
     "id": 50,
@@ -3679,6 +2771,3592 @@
       }
     ],
     "rating": 4.6,
-    "reviewCount": 53
+    "reviewCount": 53,
+    "gender": [
+      "female"
+    ]
+  },
+  {
+    "id": 51,
+    "name": "T-Shirts Product",
+    "description": "High-quality t-shirts with premium materials and modern design",
+    "shortDescription": "Premium t-shirts for everyday wear",
+    "category": "Clothing",
+    "relative": "T-Shirts",
+    "image": "/images/item-1.jpg",
+    "size": "XL",
+    "color": "green",
+    "originalPrice": "101.68",
+    "price": "91.74",
+    "discount": 2,
+    "likeCount": 1527,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 51
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 65,
+      "material2": "Polyester",
+      "percentage2": 35
+    },
+    "origin": {
+      "adjective1": "Designer",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 3.8,
+    "reviewCount": 382,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Jackets Product",
+    "description": "High-quality jackets with premium materials and modern design",
+    "shortDescription": "Premium jackets for everyday wear",
+    "category": "Clothing",
+    "relative": "Jackets",
+    "image": "/images/item-1.jpg",
+    "size": "XL",
+    "color": "green",
+    "originalPrice": "128.34",
+    "price": "98.77",
+    "discount": 1,
+    "likeCount": 1689,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 52
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 65,
+      "material2": "Polyester",
+      "percentage2": 35
+    },
+    "origin": {
+      "adjective1": "Designer",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 3.8,
+    "reviewCount": 382,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Shorts Product",
+    "description": "High-quality shorts with premium materials and modern design",
+    "shortDescription": "Premium shorts for everyday wear",
+    "category": "Clothing",
+    "relative": "Shorts",
+    "image": "/images/item-1.jpg",
+    "size": "XL",
+    "color": "green",
+    "originalPrice": "108.81",
+    "price": "83.09",
+    "discount": 4,
+    "likeCount": 2126,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 53
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 65,
+      "material2": "Polyester",
+      "percentage2": 35
+    },
+    "origin": {
+      "adjective1": "Designer",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 3.8,
+    "reviewCount": 382,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Sneakers Product",
+    "description": "High-quality sneakers with premium materials and modern design",
+    "shortDescription": "Premium sneakers for everyday wear",
+    "category": "Shoes",
+    "relative": "Sneakers",
+    "image": "/images/item-12.jpg",
+    "size": "S",
+    "color": "yellow",
+    "originalPrice": "103.36",
+    "price": "94.33",
+    "discount": 27,
+    "likeCount": 3687,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 54
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 70,
+      "material2": "Rubber",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Sophisticated"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 418,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Boots Product",
+    "description": "High-quality boots with premium materials and modern design",
+    "shortDescription": "Premium boots for everyday wear",
+    "category": "Shoes",
+    "relative": "Boots",
+    "image": "/images/item-12.jpg",
+    "size": "S",
+    "color": "yellow",
+    "originalPrice": "104.31",
+    "price": "93.84",
+    "discount": 28,
+    "likeCount": 3169,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 55
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 70,
+      "material2": "Rubber",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Sophisticated"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 418,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Heels Product",
+    "description": "High-quality heels with premium materials and modern design",
+    "shortDescription": "Premium heels for everyday wear",
+    "category": "Shoes",
+    "relative": "Heels",
+    "image": "/images/item-12.jpg",
+    "size": "S",
+    "color": "yellow",
+    "originalPrice": "67.98",
+    "price": "30.37",
+    "discount": 16,
+    "likeCount": 2968,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 56
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 70,
+      "material2": "Rubber",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Sophisticated"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 418,
+    "gender": [
+      "female"
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Backpacks Product",
+    "description": "High-quality backpacks with premium materials and modern design",
+    "shortDescription": "Premium backpacks for everyday wear",
+    "category": "Bags",
+    "relative": "Backpacks",
+    "image": "/images/item-4.jpg",
+    "size": "S",
+    "color": "purple",
+    "originalPrice": "92.75",
+    "price": "60.11",
+    "discount": 8,
+    "likeCount": 4418,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 57
+      }
+    },
+    "images": [
+      "/images/item-2.jpg",
+      "/images/item-4.jpg",
+      "/images/item-3.jpg",
+      "/images/item-6.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-2.jpg",
+      "/images/item-4.jpg",
+      "/images/item-3.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 90,
+      "material2": "Metal",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Classic",
+      "adjective2": "Modern"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-6.jpg"
+      }
+    ],
+    "rating": 3.7,
+    "reviewCount": 304,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Crossbody Bags Product",
+    "description": "High-quality crossbody bags with premium materials and modern design",
+    "shortDescription": "Premium crossbody bags for everyday wear",
+    "category": "Bags",
+    "relative": "Crossbody Bags",
+    "image": "/images/item-4.jpg",
+    "size": "S",
+    "color": "purple",
+    "originalPrice": "76.28",
+    "price": "69.98",
+    "discount": 25,
+    "likeCount": 3616,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 58
+      }
+    },
+    "images": [
+      "/images/item-2.jpg",
+      "/images/item-4.jpg",
+      "/images/item-3.jpg",
+      "/images/item-6.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-2.jpg",
+      "/images/item-4.jpg",
+      "/images/item-3.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 90,
+      "material2": "Metal",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Classic",
+      "adjective2": "Modern"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-6.jpg"
+      }
+    ],
+    "rating": 3.7,
+    "reviewCount": 304,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "T-Shirts Men's Product",
+    "description": "Premium t-shirts designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality t-shirts for male",
+    "category": "Clothing",
+    "relative": "T-Shirts",
+    "image": "/images/item-1.jpg",
+    "size": "XL",
+    "color": "green",
+    "originalPrice": "104.88",
+    "price": "93.71",
+    "discount": 28,
+    "likeCount": 2908,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 59
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 65,
+      "material2": "Polyester",
+      "percentage2": 35
+    },
+    "origin": {
+      "adjective1": "Designer",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 3.8,
+    "reviewCount": 382,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 60,
+    "name": "T-Shirts Women's Product",
+    "description": "Premium t-shirts designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality t-shirts for female",
+    "category": "Clothing",
+    "relative": "T-Shirts",
+    "image": "/images/item-1.jpg",
+    "size": "XL",
+    "color": "green",
+    "originalPrice": "91.33",
+    "price": "51.04",
+    "discount": 6,
+    "likeCount": 2245,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 60
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 65,
+      "material2": "Polyester",
+      "percentage2": 35
+    },
+    "origin": {
+      "adjective1": "Designer",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 3.8,
+    "reviewCount": 382,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Pants Men's Product",
+    "description": "Premium pants designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality pants for male",
+    "category": "Clothing",
+    "relative": "Pants",
+    "image": "/images/item-11.jpg",
+    "size": "XL",
+    "color": "red",
+    "originalPrice": "108.13",
+    "price": "65.67",
+    "discount": 17,
+    "likeCount": 937,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 61
+      }
+    },
+    "images": [
+      "/images/item-13.jpg",
+      "/images/item-7.jpg",
+      "/images/item-4.jpg",
+      "/images/item-10.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-13.jpg",
+      "/images/item-7.jpg",
+      "/images/item-4.jpg"
+    ],
+    "materials": {
+      "material1": "Viscose",
+      "percentage1": 75,
+      "material2": "Elastane",
+      "percentage2": 25
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Classic"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-13.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Yellow",
+        "value": "yellow",
+        "image": "/images/item-10.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 301,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Pants Women's Product",
+    "description": "Premium pants designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality pants for female",
+    "category": "Clothing",
+    "relative": "Pants",
+    "image": "/images/item-11.jpg",
+    "size": "XL",
+    "color": "red",
+    "originalPrice": "89.23",
+    "price": "79.63",
+    "discount": 23,
+    "likeCount": 3755,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 62
+      }
+    },
+    "images": [
+      "/images/item-13.jpg",
+      "/images/item-7.jpg",
+      "/images/item-4.jpg",
+      "/images/item-10.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-13.jpg",
+      "/images/item-7.jpg",
+      "/images/item-4.jpg"
+    ],
+    "materials": {
+      "material1": "Viscose",
+      "percentage1": 75,
+      "material2": "Elastane",
+      "percentage2": 25
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Classic"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-13.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Yellow",
+        "value": "yellow",
+        "image": "/images/item-10.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 301,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Jackets Men's Product",
+    "description": "Premium jackets designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality jackets for male",
+    "category": "Clothing",
+    "relative": "Jackets",
+    "image": "/images/item-1.jpg",
+    "size": "XL",
+    "color": "green",
+    "originalPrice": "149.41",
+    "price": "80.56",
+    "discount": 23,
+    "likeCount": 2767,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 63
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 65,
+      "material2": "Polyester",
+      "percentage2": 35
+    },
+    "origin": {
+      "adjective1": "Designer",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 3.8,
+    "reviewCount": 382,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Jackets Women's Product",
+    "description": "Premium jackets designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality jackets for female",
+    "category": "Clothing",
+    "relative": "Jackets",
+    "image": "/images/item-1.jpg",
+    "size": "XL",
+    "color": "green",
+    "originalPrice": "136.34",
+    "price": "82.61",
+    "discount": 31,
+    "likeCount": 4005,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 64
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 65,
+      "material2": "Polyester",
+      "percentage2": 35
+    },
+    "origin": {
+      "adjective1": "Designer",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 3.8,
+    "reviewCount": 382,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Skirts Women's Product",
+    "description": "Premium skirts designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality skirts for female",
+    "category": "Clothing",
+    "relative": "Skirts",
+    "image": "/images/item-11.jpg",
+    "size": "XL",
+    "color": "red",
+    "originalPrice": "84.05",
+    "price": "54.06",
+    "discount": 16,
+    "likeCount": 2961,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 65
+      }
+    },
+    "images": [
+      "/images/item-13.jpg",
+      "/images/item-7.jpg",
+      "/images/item-4.jpg",
+      "/images/item-10.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-13.jpg",
+      "/images/item-7.jpg",
+      "/images/item-4.jpg"
+    ],
+    "materials": {
+      "material1": "Viscose",
+      "percentage1": 75,
+      "material2": "Elastane",
+      "percentage2": 25
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Classic"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-13.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Yellow",
+        "value": "yellow",
+        "image": "/images/item-10.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 301,
+    "gender": [
+      "female"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Shorts Men's Product",
+    "description": "Premium shorts designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality shorts for male",
+    "category": "Clothing",
+    "relative": "Shorts",
+    "image": "/images/item-1.jpg",
+    "size": "XL",
+    "color": "green",
+    "originalPrice": "90.88",
+    "price": "36.89",
+    "discount": 41,
+    "likeCount": 4938,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 66
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 65,
+      "material2": "Polyester",
+      "percentage2": 35
+    },
+    "origin": {
+      "adjective1": "Designer",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 3.8,
+    "reviewCount": 382,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Shorts Women's Product",
+    "description": "Premium shorts designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality shorts for female",
+    "category": "Clothing",
+    "relative": "Shorts",
+    "image": "/images/item-1.jpg",
+    "size": "XL",
+    "color": "green",
+    "originalPrice": "56.84",
+    "price": "77.49",
+    "discount": 32,
+    "likeCount": 1942,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 67
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 65,
+      "material2": "Polyester",
+      "percentage2": 35
+    },
+    "origin": {
+      "adjective1": "Designer",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 3.8,
+    "reviewCount": 382,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Sweaters Men's Product",
+    "description": "Premium sweaters designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality sweaters for male",
+    "category": "Clothing",
+    "relative": "Sweaters",
+    "image": "/images/item-4.jpg",
+    "size": "XL",
+    "color": "pink",
+    "originalPrice": "138.44",
+    "price": "38.55",
+    "discount": 48,
+    "likeCount": 1051,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 68
+      }
+    },
+    "images": [
+      "/images/item-4.jpg",
+      "/images/item-1.jpg",
+      "/images/item-7.jpg",
+      "/images/item-11.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-4.jpg",
+      "/images/item-1.jpg",
+      "/images/item-7.jpg"
+    ],
+    "materials": {
+      "material1": "Wool",
+      "percentage1": 80,
+      "material2": "Acrylic",
+      "percentage2": 20
+    },
+    "origin": {
+      "adjective1": "Sustainable",
+      "adjective2": "Innovative"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Yellow",
+        "value": "yellow",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-11.jpg"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 273,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Sweaters Women's Product",
+    "description": "Premium sweaters designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality sweaters for female",
+    "category": "Clothing",
+    "relative": "Sweaters",
+    "image": "/images/item-4.jpg",
+    "size": "XL",
+    "color": "pink",
+    "originalPrice": "149.32",
+    "price": "98.41",
+    "discount": 17,
+    "likeCount": 3463,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 69
+      }
+    },
+    "images": [
+      "/images/item-4.jpg",
+      "/images/item-1.jpg",
+      "/images/item-7.jpg",
+      "/images/item-11.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-4.jpg",
+      "/images/item-1.jpg",
+      "/images/item-7.jpg"
+    ],
+    "materials": {
+      "material1": "Wool",
+      "percentage1": 80,
+      "material2": "Acrylic",
+      "percentage2": 20
+    },
+    "origin": {
+      "adjective1": "Sustainable",
+      "adjective2": "Innovative"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Yellow",
+        "value": "yellow",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-11.jpg"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 273,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Sneakers Men's Product",
+    "description": "Premium sneakers designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality sneakers for male",
+    "category": "Shoes",
+    "relative": "Sneakers",
+    "image": "/images/item-12.jpg",
+    "size": "S",
+    "color": "yellow",
+    "originalPrice": "139.32",
+    "price": "86.61",
+    "discount": 8,
+    "likeCount": 1996,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 70
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 70,
+      "material2": "Rubber",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Sophisticated"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 418,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Sneakers Women's Product",
+    "description": "Premium sneakers designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality sneakers for female",
+    "category": "Shoes",
+    "relative": "Sneakers",
+    "image": "/images/item-12.jpg",
+    "size": "S",
+    "color": "yellow",
+    "originalPrice": "75.98",
+    "price": "41.67",
+    "discount": 19,
+    "likeCount": 608,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 71
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 70,
+      "material2": "Rubber",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Sophisticated"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 418,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Boots Men's Product",
+    "description": "Premium boots designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality boots for male",
+    "category": "Shoes",
+    "relative": "Boots",
+    "image": "/images/item-12.jpg",
+    "size": "S",
+    "color": "yellow",
+    "originalPrice": "149.21",
+    "price": "108.98",
+    "discount": 44,
+    "likeCount": 3712,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 72
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 70,
+      "material2": "Rubber",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Sophisticated"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 418,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Boots Women's Product",
+    "description": "Premium boots designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality boots for female",
+    "category": "Shoes",
+    "relative": "Boots",
+    "image": "/images/item-12.jpg",
+    "size": "S",
+    "color": "yellow",
+    "originalPrice": "117.93",
+    "price": "95.78",
+    "discount": 13,
+    "likeCount": 2447,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 73
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 70,
+      "material2": "Rubber",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Sophisticated"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 418,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Sandals Men's Product",
+    "description": "Premium sandals designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality sandals for male",
+    "category": "Shoes",
+    "relative": "Sandals",
+    "image": "/images/item-12.jpg",
+    "size": "S",
+    "color": "yellow",
+    "originalPrice": "86.27",
+    "price": "82.28",
+    "discount": 2,
+    "likeCount": 4592,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 74
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 70,
+      "material2": "Rubber",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Sophisticated"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 418,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Sandals Women's Product",
+    "description": "Premium sandals designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality sandals for female",
+    "category": "Shoes",
+    "relative": "Sandals",
+    "image": "/images/item-12.jpg",
+    "size": "S",
+    "color": "yellow",
+    "originalPrice": "72.64",
+    "price": "95.80",
+    "discount": 17,
+    "likeCount": 3501,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 75
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 70,
+      "material2": "Rubber",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Sophisticated"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 418,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Loafers Men's Product",
+    "description": "Premium loafers designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality loafers for male",
+    "category": "Shoes",
+    "relative": "Loafers",
+    "image": "/images/item-7.jpg",
+    "size": "S",
+    "color": "green",
+    "originalPrice": "60.94",
+    "price": "67.65",
+    "discount": 0,
+    "likeCount": 1530,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 76
+      }
+    },
+    "images": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-10.jpg",
+      "/images/item-7.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 70,
+      "material2": "Rubber",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Premium"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-7.jpg"
+      }
+    ],
+    "rating": 3.9,
+    "reviewCount": 133,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Loafers Women's Product",
+    "description": "Premium loafers designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality loafers for female",
+    "category": "Shoes",
+    "relative": "Loafers",
+    "image": "/images/item-7.jpg",
+    "size": "S",
+    "color": "green",
+    "originalPrice": "87.08",
+    "price": "59.82",
+    "discount": 44,
+    "likeCount": 1760,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 77
+      }
+    },
+    "images": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-10.jpg",
+      "/images/item-7.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 70,
+      "material2": "Rubber",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Premium"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-7.jpg"
+      }
+    ],
+    "rating": 3.9,
+    "reviewCount": 133,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Flats Women's Product",
+    "description": "Premium flats designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality flats for female",
+    "category": "Shoes",
+    "relative": "Flats",
+    "image": "/images/item-12.jpg",
+    "size": "S",
+    "color": "yellow",
+    "originalPrice": "123.89",
+    "price": "99.10",
+    "discount": 26,
+    "likeCount": 4469,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 78
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 70,
+      "material2": "Rubber",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Sophisticated"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 418,
+    "gender": [
+      "female"
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Handbags Women's Product",
+    "description": "Premium handbags designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality handbags for female",
+    "category": "Bags",
+    "relative": "Handbags",
+    "image": "/images/item-4.jpg",
+    "size": "XL",
+    "color": "blue",
+    "originalPrice": "125.32",
+    "price": "51.55",
+    "discount": 8,
+    "likeCount": 773,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 79
+      }
+    },
+    "images": [
+      "/images/item-8.jpg",
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-9.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-8.jpg",
+      "/images/item-1.jpg",
+      "/images/item-2.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 90,
+      "material2": "Metal",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Modern",
+      "adjective2": "Stylish"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-9.jpg"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 455,
+    "gender": [
+      "female"
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Backpacks Men's Product",
+    "description": "Premium backpacks designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality backpacks for male",
+    "category": "Bags",
+    "relative": "Backpacks",
+    "image": "/images/item-4.jpg",
+    "size": "S",
+    "color": "purple",
+    "originalPrice": "77.50",
+    "price": "78.42",
+    "discount": 16,
+    "likeCount": 874,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 80
+      }
+    },
+    "images": [
+      "/images/item-2.jpg",
+      "/images/item-4.jpg",
+      "/images/item-3.jpg",
+      "/images/item-6.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-2.jpg",
+      "/images/item-4.jpg",
+      "/images/item-3.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 90,
+      "material2": "Metal",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Classic",
+      "adjective2": "Modern"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-6.jpg"
+      }
+    ],
+    "rating": 3.7,
+    "reviewCount": 304,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Backpacks Women's Product",
+    "description": "Premium backpacks designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality backpacks for female",
+    "category": "Bags",
+    "relative": "Backpacks",
+    "image": "/images/item-4.jpg",
+    "size": "S",
+    "color": "purple",
+    "originalPrice": "124.63",
+    "price": "70.39",
+    "discount": 24,
+    "likeCount": 3819,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 81
+      }
+    },
+    "images": [
+      "/images/item-2.jpg",
+      "/images/item-4.jpg",
+      "/images/item-3.jpg",
+      "/images/item-6.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-2.jpg",
+      "/images/item-4.jpg",
+      "/images/item-3.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 90,
+      "material2": "Metal",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Classic",
+      "adjective2": "Modern"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-6.jpg"
+      }
+    ],
+    "rating": 3.7,
+    "reviewCount": 304,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 82,
+    "name": "Clutches Women's Product",
+    "description": "Premium clutches designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality clutches for female",
+    "category": "Bags",
+    "relative": "Clutches",
+    "image": "/images/item-4.jpg",
+    "size": "XL",
+    "color": "blue",
+    "originalPrice": "66.61",
+    "price": "96.34",
+    "discount": 5,
+    "likeCount": 3063,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 82
+      }
+    },
+    "images": [
+      "/images/item-8.jpg",
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-9.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-8.jpg",
+      "/images/item-1.jpg",
+      "/images/item-2.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 90,
+      "material2": "Metal",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Modern",
+      "adjective2": "Stylish"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-9.jpg"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 455,
+    "gender": [
+      "female"
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Totes Men's Product",
+    "description": "Premium totes designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality totes for male",
+    "category": "Bags",
+    "relative": "Totes",
+    "image": "/images/item-4.jpg",
+    "size": "XL",
+    "color": "blue",
+    "originalPrice": "103.67",
+    "price": "98.15",
+    "discount": 40,
+    "likeCount": 586,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 83
+      }
+    },
+    "images": [
+      "/images/item-8.jpg",
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-9.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-8.jpg",
+      "/images/item-1.jpg",
+      "/images/item-2.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 90,
+      "material2": "Metal",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Modern",
+      "adjective2": "Stylish"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-9.jpg"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 455,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Totes Women's Product",
+    "description": "Premium totes designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality totes for female",
+    "category": "Bags",
+    "relative": "Totes",
+    "image": "/images/item-4.jpg",
+    "size": "XL",
+    "color": "blue",
+    "originalPrice": "78.49",
+    "price": "76.67",
+    "discount": 38,
+    "likeCount": 1879,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 84
+      }
+    },
+    "images": [
+      "/images/item-8.jpg",
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-9.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-8.jpg",
+      "/images/item-1.jpg",
+      "/images/item-2.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 90,
+      "material2": "Metal",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Modern",
+      "adjective2": "Stylish"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-9.jpg"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 455,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Crossbody Bags Men's Product",
+    "description": "Premium crossbody bags designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality crossbody bags for male",
+    "category": "Bags",
+    "relative": "Crossbody Bags",
+    "image": "/images/item-4.jpg",
+    "size": "S",
+    "color": "purple",
+    "originalPrice": "128.98",
+    "price": "37.48",
+    "discount": 3,
+    "likeCount": 1231,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 85
+      }
+    },
+    "images": [
+      "/images/item-2.jpg",
+      "/images/item-4.jpg",
+      "/images/item-3.jpg",
+      "/images/item-6.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-2.jpg",
+      "/images/item-4.jpg",
+      "/images/item-3.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 90,
+      "material2": "Metal",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Classic",
+      "adjective2": "Modern"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-6.jpg"
+      }
+    ],
+    "rating": 3.7,
+    "reviewCount": 304,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 86,
+    "name": "Crossbody Bags Women's Product",
+    "description": "Premium crossbody bags designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality crossbody bags for female",
+    "category": "Bags",
+    "relative": "Crossbody Bags",
+    "image": "/images/item-4.jpg",
+    "size": "S",
+    "color": "purple",
+    "originalPrice": "123.93",
+    "price": "37.06",
+    "discount": 45,
+    "likeCount": 2191,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 86
+      }
+    },
+    "images": [
+      "/images/item-2.jpg",
+      "/images/item-4.jpg",
+      "/images/item-3.jpg",
+      "/images/item-6.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-2.jpg",
+      "/images/item-4.jpg",
+      "/images/item-3.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 90,
+      "material2": "Metal",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Classic",
+      "adjective2": "Modern"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-6.jpg"
+      }
+    ],
+    "rating": 3.7,
+    "reviewCount": 304,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Smart Watches Men's Product",
+    "description": "Premium smart watches designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality smart watches for male",
+    "category": "Watch",
+    "relative": "Smart Watches",
+    "image": "/images/item-4.jpg",
+    "size": "XS",
+    "color": "orange",
+    "originalPrice": "144.95",
+    "price": "48.11",
+    "discount": 24,
+    "likeCount": 148,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 87
+      }
+    },
+    "images": [
+      "/images/item-4.jpg",
+      "/images/item-5.jpg",
+      "/images/item-6.jpg",
+      "/images/item-7.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-4.jpg",
+      "/images/item-5.jpg",
+      "/images/item-6.jpg"
+    ],
+    "materials": {
+      "material1": "Stainless Steel",
+      "percentage1": 70,
+      "material2": "Silicone",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Smart",
+      "adjective2": "Innovative"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Orange",
+        "value": "orange",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-5.jpg"
+      },
+      {
+        "name": "Silver",
+        "value": "silver",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Gold",
+        "value": "gold",
+        "image": "/images/item-7.jpg"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 234,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Smart Watches Women's Product",
+    "description": "Premium smart watches designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality smart watches for female",
+    "category": "Watch",
+    "relative": "Smart Watches",
+    "image": "/images/item-4.jpg",
+    "size": "XS",
+    "color": "orange",
+    "originalPrice": "139.02",
+    "price": "105.31",
+    "discount": 49,
+    "likeCount": 3613,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 88
+      }
+    },
+    "images": [
+      "/images/item-4.jpg",
+      "/images/item-5.jpg",
+      "/images/item-6.jpg",
+      "/images/item-7.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-4.jpg",
+      "/images/item-5.jpg",
+      "/images/item-6.jpg"
+    ],
+    "materials": {
+      "material1": "Stainless Steel",
+      "percentage1": 70,
+      "material2": "Silicone",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Smart",
+      "adjective2": "Innovative"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Orange",
+        "value": "orange",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-5.jpg"
+      },
+      {
+        "name": "Silver",
+        "value": "silver",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Gold",
+        "value": "gold",
+        "image": "/images/item-7.jpg"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 234,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Analog Watches Men's Product",
+    "description": "Premium analog watches designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality analog watches for male",
+    "category": "Watch",
+    "relative": "Analog Watches",
+    "image": "/images/item-9.jpg",
+    "size": "L",
+    "color": "pink",
+    "originalPrice": "95.87",
+    "price": "70.78",
+    "discount": 37,
+    "likeCount": 857,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 89
+      }
+    },
+    "images": [
+      "/images/item-13.jpg",
+      "/images/item-3.jpg",
+      "/images/item-8.jpg",
+      "/images/item-11.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-13.jpg",
+      "/images/item-3.jpg",
+      "/images/item-8.jpg"
+    ],
+    "materials": {
+      "material1": "Stainless Steel",
+      "percentage1": 70,
+      "material2": "Silicone",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Smart",
+      "adjective2": "Refined"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-13.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Silver",
+        "value": "silver",
+        "image": "/images/item-11.jpg"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 228,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Analog Watches Women's Product",
+    "description": "Premium analog watches designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality analog watches for female",
+    "category": "Watch",
+    "relative": "Analog Watches",
+    "image": "/images/item-9.jpg",
+    "size": "L",
+    "color": "pink",
+    "originalPrice": "135.27",
+    "price": "103.76",
+    "discount": 4,
+    "likeCount": 116,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 90
+      }
+    },
+    "images": [
+      "/images/item-13.jpg",
+      "/images/item-3.jpg",
+      "/images/item-8.jpg",
+      "/images/item-11.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-13.jpg",
+      "/images/item-3.jpg",
+      "/images/item-8.jpg"
+    ],
+    "materials": {
+      "material1": "Stainless Steel",
+      "percentage1": 70,
+      "material2": "Silicone",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Smart",
+      "adjective2": "Refined"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-13.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Silver",
+        "value": "silver",
+        "image": "/images/item-11.jpg"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 228,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Digital Watches Men's Product",
+    "description": "Premium digital watches designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality digital watches for male",
+    "category": "Watch",
+    "relative": "Digital Watches",
+    "image": "/images/item-3.jpg",
+    "size": "L",
+    "color": "pink",
+    "originalPrice": "53.37",
+    "price": "104.74",
+    "discount": 10,
+    "likeCount": 4378,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 91
+      }
+    },
+    "images": [
+      "/images/item-1.jpg",
+      "/images/item-10.jpg",
+      "/images/item-9.jpg",
+      "/images/item-11.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-1.jpg",
+      "/images/item-10.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Titanium",
+      "percentage1": 80,
+      "material2": "Ceramic",
+      "percentage2": 20
+    },
+    "origin": {
+      "adjective1": "Premium",
+      "adjective2": "Handcrafted"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Gold",
+        "value": "gold",
+        "image": "/images/item-11.jpg"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 68,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Digital Watches Women's Product",
+    "description": "Premium digital watches designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality digital watches for female",
+    "category": "Watch",
+    "relative": "Digital Watches",
+    "image": "/images/item-3.jpg",
+    "size": "L",
+    "color": "pink",
+    "originalPrice": "92.84",
+    "price": "75.78",
+    "discount": 20,
+    "likeCount": 4066,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 92
+      }
+    },
+    "images": [
+      "/images/item-1.jpg",
+      "/images/item-10.jpg",
+      "/images/item-9.jpg",
+      "/images/item-11.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-1.jpg",
+      "/images/item-10.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Titanium",
+      "percentage1": 80,
+      "material2": "Ceramic",
+      "percentage2": 20
+    },
+    "origin": {
+      "adjective1": "Premium",
+      "adjective2": "Handcrafted"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Gold",
+        "value": "gold",
+        "image": "/images/item-11.jpg"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 68,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Pullover Hoodies Men's Product",
+    "description": "Premium pullover hoodies designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality pullover hoodies for male",
+    "category": "Hoodies",
+    "relative": "Pullover Hoodies",
+    "image": "/images/item-6.jpg",
+    "size": "S",
+    "color": "purple",
+    "originalPrice": "138.03",
+    "price": "33.45",
+    "discount": 44,
+    "likeCount": 2329,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 93
+      }
+    },
+    "images": [
+      "/images/item-7.jpg",
+      "/images/item-6.jpg",
+      "/images/item-12.jpg",
+      "/images/item-10.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-7.jpg",
+      "/images/item-6.jpg",
+      "/images/item-12.jpg"
+    ],
+    "materials": {
+      "material1": "Fleece",
+      "percentage1": 85,
+      "material2": "Spandex",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Premium",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-12.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-10.jpg"
+      }
+    ],
+    "rating": 3.6,
+    "reviewCount": 127,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Pullover Hoodies Women's Product",
+    "description": "Premium pullover hoodies designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality pullover hoodies for female",
+    "category": "Hoodies",
+    "relative": "Pullover Hoodies",
+    "image": "/images/item-6.jpg",
+    "size": "S",
+    "color": "purple",
+    "originalPrice": "140.15",
+    "price": "63.60",
+    "discount": 2,
+    "likeCount": 3545,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 94
+      }
+    },
+    "images": [
+      "/images/item-7.jpg",
+      "/images/item-6.jpg",
+      "/images/item-12.jpg",
+      "/images/item-10.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-7.jpg",
+      "/images/item-6.jpg",
+      "/images/item-12.jpg"
+    ],
+    "materials": {
+      "material1": "Fleece",
+      "percentage1": 85,
+      "material2": "Spandex",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Premium",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-12.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-10.jpg"
+      }
+    ],
+    "rating": 3.6,
+    "reviewCount": 127,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 95,
+    "name": "Zip-Up Hoodies Men's Product",
+    "description": "Premium zip-up hoodies designed for male customers with modern styling and comfort",
+    "shortDescription": "High-quality zip-up hoodies for male",
+    "category": "Hoodies",
+    "relative": "Zip-Up Hoodies",
+    "image": "/images/item-1.jpg",
+    "size": "XXL",
+    "color": "grey",
+    "originalPrice": "77.68",
+    "price": "39.37",
+    "discount": 16,
+    "likeCount": 3382,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 95
+      }
+    },
+    "images": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-3.jpg",
+      "/images/item-4.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-3.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 65,
+      "material2": "Polyester",
+      "percentage2": 35
+    },
+    "origin": {
+      "adjective1": "Premium",
+      "adjective2": "Handcrafted"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-4.jpg"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 128,
+    "gender": [
+      "male",
+      "female"
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Zip-Up Hoodies Women's Product",
+    "description": "Premium zip-up hoodies designed for female customers with modern styling and comfort",
+    "shortDescription": "High-quality zip-up hoodies for female",
+    "category": "Hoodies",
+    "relative": "Zip-Up Hoodies",
+    "image": "/images/item-1.jpg",
+    "size": "XXL",
+    "color": "grey",
+    "originalPrice": "83.25",
+    "price": "75.63",
+    "discount": 22,
+    "likeCount": 898,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 96
+      }
+    },
+    "images": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-3.jpg",
+      "/images/item-4.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-3.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 65,
+      "material2": "Polyester",
+      "percentage2": 35
+    },
+    "origin": {
+      "adjective1": "Premium",
+      "adjective2": "Handcrafted"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-4.jpg"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 128,
+    "gender": [
+      "male",
+      "female"
+    ]
   }
 ]

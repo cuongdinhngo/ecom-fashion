@@ -37,6 +37,7 @@ export interface Product {
   }[];
   rating?: number;
   reviewCount?: number;
+  gender?: string[];
 }
 
 export interface SearchFilters {
@@ -48,6 +49,7 @@ export interface SearchFilters {
   };
   size?: string;
   color?: string;
+  gender?: string;
   quickSearch?: string;
 }
 
@@ -374,6 +376,13 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
     if (searchTerms.color && typeof searchTerms.color === 'string') {
       filteredProducts = filteredProducts.filter(product => 
         product.color === searchTerms.color
+      );
+    }
+
+    // Filter by gender
+    if (searchTerms.gender && typeof searchTerms.gender === 'string' && searchTerms.gender !== 'all') {
+      filteredProducts = filteredProducts.filter(product => 
+        product.gender && Array.isArray(product.gender) && product.gender.includes(searchTerms.gender!)
       );
     }
 
