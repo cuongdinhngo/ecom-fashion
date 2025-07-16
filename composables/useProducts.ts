@@ -261,7 +261,54 @@ const COLORS = [
 ];
 
 export const useProducts = (options: ProductOptions = defaultOptions) => {
-  const products: Product[] = (productsData as Product[]).slice(0, options.quantity);
+  // Remap image paths to use correct base URL
+  const remapProductImagePaths = (product: Product): Product => {
+    const remappedProduct = { ...product };
+    
+    // Remap main image
+    if (remappedProduct.image && remappedProduct.image.startsWith('/images/')) {
+      const imageName = remappedProduct.image.replace('/images/', '');
+      remappedProduct.image = imagePath(imageName);
+    }
+    
+    // Remap images array if it exists
+    if (remappedProduct.images && Array.isArray(remappedProduct.images)) {
+      remappedProduct.images = remappedProduct.images.map(img => {
+        if (img.startsWith('/images/')) {
+          const imageName = img.replace('/images/', '');
+          return imagePath(imageName);
+        }
+        return img;
+      });
+    }
+    
+    // Remap thumbnails array if it exists
+    if (remappedProduct.thumbnails && Array.isArray(remappedProduct.thumbnails)) {
+      remappedProduct.thumbnails = remappedProduct.thumbnails.map(thumb => {
+        if (thumb.startsWith('/images/')) {
+          const imageName = thumb.replace('/images/', '');
+          return imagePath(imageName);
+        }
+        return thumb;
+      });
+    }
+    
+    // Remap availableColors images if they exist
+    if (remappedProduct.availableColors && Array.isArray(remappedProduct.availableColors)) {
+      remappedProduct.availableColors = remappedProduct.availableColors.map(color => {
+        if (color.image && color.image.startsWith('/images/')) {
+          const imageName = color.image.replace('/images/', '');
+          return { ...color, image: imagePath(imageName) };
+        }
+        return color;
+      });
+    }
+    
+    return remappedProduct;
+  };
+
+  const rawProducts = (productsData as Product[]).slice(0, options.quantity);
+  const products: Product[] = rawProducts.map(remapProductImagePaths);
 
   const searchProducts = (searchTerms: SearchFilters): Product[] => {
     console.log('SEARCH TERMS =>>> ', searchTerms);
