@@ -44,11 +44,10 @@ export function avatarImg(): string {
     return imageCache.get(cacheKey)!;
   }
   
-  const baseURL = getBaseURL();
   const avatarId = avatarPool[avatarCounter % avatarPool.length];
   avatarCounter++;
   
-  const image = `${baseURL}images/avatar-${avatarId}.jpg`;
+  const image = imagePath(`avatar-${avatarId}.jpg`);
   imageCache.set(cacheKey, image);
   return image;
 }
@@ -59,11 +58,10 @@ export function bannerImg(): string {
     return imageCache.get(cacheKey)!;
   }
   
-  const baseURL = getBaseURL();
   const bannerId = bannerPool[bannerCounter % bannerPool.length];
   bannerCounter++;
   
-  const image = `${baseURL}images/banner-${bannerId}.jpg`;
+  const image = imagePath(`banner-${bannerId}.jpg`);
   imageCache.set(cacheKey, image);
   return image;
 }
@@ -77,8 +75,7 @@ export function categoryImg(): string {
     return imageCache.get(cacheKey)!;
   }
   
-  const baseURL = getBaseURL();
-  const image = `${baseURL}images/c-${categoryId}.jpg`;
+  const image = imagePath(`c-${categoryId}.jpg`);
   imageCache.set(cacheKey, image);
   return image;
 }
@@ -92,8 +89,7 @@ export function smallProductImg(): string {
     return imageCache.get(cacheKey)!;
   }
   
-  const baseURL = getBaseURL();
-  const image = `${baseURL}images/item-${productId}.jpg`;
+  const image = imagePath(`item-${productId}.jpg`);
   imageCache.set(cacheKey, image);
   return image;
 }
@@ -107,8 +103,7 @@ export function productImg(): string {
     return imageCache.get(cacheKey)!;
   }
   
-  const baseURL = getBaseURL();
-  const image = `${baseURL}images/product-${productId}.jpg`;
+  const image = imagePath(`product-${productId}.jpg`);
   imageCache.set(cacheKey, image);
   return image;
 }
