@@ -157,12 +157,6 @@
     <!-- Payment Method -->
     <v-card-title class="d-flex justify-space-between align-center px-0">
       <span class="text-h6 font-weight-bold">Payment Method</span>
-      <v-btn
-        icon
-        variant="flat"
-        color="primary"
-        size="small"
-      ><v-icon>mdi-pencil</v-icon></v-btn>
     </v-card-title>
     <v-card-title class="px-0 d-flex ga-4">
       <v-chip
@@ -170,14 +164,36 @@
         class="text-subtitle-1 font-weight-bold"
         color="primary"
         variant="tonal"
-      >Credit Card</v-chip>
+        text="Credit Card"
+        @click="paymentMethod = 'credit-card'"
+      >
+        <template #append>
+          <v-icon
+            v-if="paymentMethod === 'credit-card'"
+            color="green"
+            icon="mdi-check-circle"
+            class="ml-2"
+          />
+        </template>
+      </v-chip>
 
       <v-chip
         prepend-icon="mdi-cash-multiple"
         class="text-subtitle-1 font-weight-bold"
         color="primary"
         variant="tonal"
-      >Cash on Delivery</v-chip>
+        text="Cash on Delivery"
+        @click="paymentMethod = 'cash-on-delivery'"
+      >
+        <template #append>
+          <v-icon
+            v-if="paymentMethod === 'cash-on-delivery'"
+            color="green"
+            icon="mdi-check-circle"
+            class="ml-2"
+          />
+        </template>
+      </v-chip>
     </v-card-title>
   </v-card>
 
@@ -356,10 +372,12 @@
             <v-btn
               variant="flat"
               color="black"
+              @click="processPayment()"
             >Try Again</v-btn>
             <v-btn
               variant="flat"
               color="grey"
+              @click="processDialog = false"
             >Change</v-btn>
           </v-card-actions>
         </v-card>
@@ -390,6 +408,7 @@
             <v-btn
               variant="flat"
               color="grey"
+              :to="{ name: 'profile-to-receive'}"
             >Track Your Order</v-btn>
           </v-card-actions>
         </v-card>
@@ -456,6 +475,7 @@ const shippingAddressDialog = ref(false);
 const voucherDialog = ref(false);
 const processDialog = ref(false);
 const isProcessing = ref(false);
+const paymentMethod = ref('cash-on-delivery');
 
 const recievedDate = computed(() => {
   const today = new Date();
