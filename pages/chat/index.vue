@@ -204,6 +204,9 @@ const messages = ref(Array.from({ length: 1 }, (_, index) => ({
   category: 'text'
 })));
 
+// Limit message history to prevent memory leaks
+const MAX_MESSAGES = 50;
+
 watch(isReceiverTurn, (newValue) => {
   if (newValue) {
     const category = Math.random() > 0.5 ? 'text' : 'voucher';
@@ -227,6 +230,10 @@ watch(isReceiverTurn, (newValue) => {
       };
     }
     setTimeout(() => {
+      // Limit messages to prevent memory leaks
+      if (messages.value.length >= MAX_MESSAGES) {
+        messages.value.shift(); // Remove oldest message
+      }
       messages.value.push(message);
     }, 2000);
     isReceiverTurn.value = false;

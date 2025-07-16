@@ -1,6 +1,3 @@
-import { faker } from "@faker-js/faker"
-import { get } from "@vueuse/core";
-
 const issues = [
   {
     label: 'Order Issues',

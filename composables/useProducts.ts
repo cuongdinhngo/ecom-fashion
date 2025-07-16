@@ -1,4 +1,4 @@
-import { faker } from '@faker-js/faker';
+import productsData from '~/storage/products.json';
 
 export interface Product {
   id: number|string;
@@ -17,6 +17,26 @@ export interface Product {
   quantity?: number;
   size?: string;
   color?: string;
+  images?: string[];
+  thumbnails?: string[];
+  materials?: {
+    material1: string;
+    percentage1: number;
+    material2: string;
+    percentage2: number;
+  };
+  origin?: {
+    adjective1: string;
+    adjective2: string;
+  };
+  availableSizes?: string[];
+  availableColors?: {
+    name: string;
+    value: string;
+    image: string;
+  }[];
+  rating?: number;
+  reviewCount?: number;
 }
 
 export interface SearchFilters {
@@ -241,35 +261,7 @@ const COLORS = [
 ];
 
 export const useProducts = (options: ProductOptions = defaultOptions) => {
-  const products = Array.from({ length: options.quantity }, (_, index) => {
-    const flashSale = faker.datatype.boolean();
-    const discount = flashSale ? faker.helpers.arrayElement([10, 20, 30, 40, 50]) : 0;
-    const originalPrice = faker.commerce.price({ min: 10, max: 100, dec: 2 });
-    const price = (parseFloat(originalPrice) * (1 - discount / 100)).toFixed(2);
-    const category = faker.helpers.arrayElement(CATEGORIES).title;
-    const subCategories = KINDS.find(item => item.category === category)?.subCategories || [];
-    const id = index + 1;
-    const description = faker.commerce.productDescription();
-    return {
-      id: id,
-      name: faker.commerce.productName(),
-      description: description,
-      shortDescription: description.length > 50
-        ? description.slice(0, description.slice(0, 50).lastIndexOf(' ')) + ' ...'
-        : description,
-      category: category,
-      relative: subCategories.length > 0 ? faker.helpers.arrayElement(subCategories).title : '',
-      image: smallProductImg(),
-      size: faker.helpers.arrayElement(Object.values(SIZE_OPTIONS)),
-      color: faker.helpers.arrayElement(COLORS).color,
-      originalPrice: `${originalPrice}`,
-      price: price,
-      discount,
-      likeCount: faker.number.int({ min: 0, max: 10000 }),
-      status: flashSale ? 'Sale' : faker.helpers.arrayElement(['New', 'Popular', 'Limited']),
-      to: { name: 'product-id', params: { id: id } }
-    };
-  });
+  const products: Product[] = (productsData as Product[]).slice(0, options.quantity);
 
   const searchProducts = (searchTerms: SearchFilters): Product[] => {
     console.log('SEARCH TERMS =>>> ', searchTerms);
@@ -291,7 +283,7 @@ export const useProducts = (options: ProductOptions = defaultOptions) => {
     // Filter by SUB-CATEGORIES
     if (searchTerms.subCategories && Array.isArray(searchTerms.subCategories) && searchTerms.subCategories.length > 0) {
       filteredProducts = filteredProducts.filter(product => 
-        searchTerms.subCategories.includes(product.relative)
+        searchTerms.subCategories!.includes(product.relative)
       );
     }
     

@@ -113,14 +113,14 @@
 
     <v-card-title class="text-h6 font-weight-bold">Material</v-card-title>
     <v-card-title class="text-subtitle-1 d-flex ga-2 py-0">
-      <v-chip label class="bg-pink-lighten-5">{{ faker.commerce.productMaterial() }} {{ faker.number.int({ min: 10, max: 100 }) }}%</v-chip>
-      <v-chip label class="bg-pink-lighten-5">{{ faker.commerce.productMaterial() }} {{ faker.number.int({ min: 10, max: 100 }) }}%</v-chip>
+      <v-chip label class="bg-pink-lighten-5">{{ materialInfo.material1 }} {{ materialInfo.percentage1 }}%</v-chip>
+      <v-chip label class="bg-pink-lighten-5">{{ materialInfo.material2 }} {{ materialInfo.percentage2 }}%</v-chip>
     </v-card-title>
 
     <v-card-title class="text-h6 font-weight-bold">Origin</v-card-title>
     <v-card-title class="text-subtitle-1 d-flex ga-2 py-0">
-      <v-chip label class="bg-orange-lighten-5">{{ faker.commerce.productAdjective() }}</v-chip>
-      <v-chip label class="bg-orange-lighten-5">{{ faker.commerce.productAdjective() }}</v-chip>
+      <v-chip label class="bg-orange-lighten-5">{{ originInfo.adjective1 }}</v-chip>
+      <v-chip label class="bg-orange-lighten-5">{{ originInfo.adjective2 }}</v-chip>
     </v-card-title>
 
     <v-card-title class="d-flex justify-space-between align-center">
@@ -163,11 +163,13 @@
     <v-card-title class="text-h5 font-weight-bold py-0 d-flex align-center">
       <v-rating
         length="5"
-        :model-value="3"
+        :model-value="product?.rating || 3"
         active-color="orange-lighten-1"
         density="compact"
+        readonly
       ></v-rating>
-      <v-chip label color="primary" class="font-weight-bold ml-2">3/5</v-chip>
+      <v-chip label color="primary" class="font-weight-bold ml-2">{{ product?.rating || 3 }}/5</v-chip>
+      <span class="text-subtitle-2 ml-2">({{ product?.reviewCount || 0 }} reviews)</span>
     </v-card-title>
 
     <ItemsReviewCard />
@@ -209,12 +211,12 @@
           height="100"
           aspect-ratio="16/9"
           cover
-          :src="smallProductImg()"
+          :src="product?.image || '/images/item-1.jpg'"
         ></v-img>
       </template>
       <template #title>
         <div class="d-flex flex-column justify-end">
-          <span class="text-h4 font-weight-bold">${{ faker.commerce.price() }}</span>
+          <span class="text-h4 font-weight-bold">${{ product?.price || '0.00' }}</span>
           <div class="selected-options">
             <v-chip
               v-if="selectedColor"
@@ -242,14 +244,14 @@
         <v-item-group selected-class="bg-primary">
           <v-row>
             <v-col
-              v-for="color in colorOptions"
+              v-for="color in productColorOptions"
               :key="color.value"
               cols="3"
             >
               <v-item v-slot="{ isSelected, selectedClass, toggle }">
                 <div
                   style="position: relative;"
-                  @click="toggle(); selectedColor = color.value"
+                  @click="toggle?.(); selectedColor = color.value"
                 >
                   <v-img
                     :src="color.image"
@@ -283,7 +285,7 @@
           v-model="selectedSize"
         >
           <v-chip
-            v-for="size in ['S', 'M', 'L', 'XL', 'XXL']"
+            v-for="size in (product?.availableSizes || ['S', 'M', 'L', 'XL', 'XXL'])"
             :key="size"
             :text="size"
             :value="size"
@@ -425,7 +427,6 @@ definePageMeta({
 });
 
 import { useRouter } from 'vue-router';
-import { faker } from '@faker-js/faker';
 
 const deliveryOptions = [
   {
@@ -439,13 +440,6 @@ const deliveryOptions = [
     price: '$10.00'
   }
 ];
-
-const colorOptions = ref([
-  { name: 'Red', value: 'red', image: smallProductImg() },
-  { name: 'Blue', value: 'green', image: smallProductImg() },
-  { name: 'Green', value: 'blue', image: smallProductImg() },
-  { name: 'Black', value: 'black', image: smallProductImg() },
-]);
 
 const router = useRouter();
 const productId = useRouteParams('id', null, { transform: Number });
@@ -462,6 +456,14 @@ const reviewDialog = ref(false);
 const sizeGuideDialog = ref(false);
 
 const product = getProductById(productId.value);
+
+// Use product's color options if available, otherwise use defaults
+const productColorOptions = product?.availableColors || [
+  { name: 'Red', value: 'red', image: '/images/item-1.jpg' },
+  { name: 'Blue', value: 'blue', image: '/images/item-2.jpg' },
+  { name: 'Green', value: 'green', image: '/images/item-3.jpg' },
+  { name: 'Black', value: 'black', image: '/images/item-4.jpg' },
+];
 
 function selectVariation(type: string) {
   action.value = type;
@@ -502,13 +504,22 @@ function addProductToCart() {
   });
 }
 
-const productImgs = Array.from({ length: 4 }, () => {
-  return productImg();
-});
+const productImgs = product?.images || Array.from({ length: 4 }, (_, i) => `/images/item-${i + 1}.jpg`);
 
-const thumbernailImgs = Array.from({ length: 3 }, () => {
-  return smallProductImg();
-});
+const thumbernailImgs = product?.thumbnails || Array.from({ length: 3 }, (_, i) => `/images/item-${i + 1}.jpg`);
+
+// Use static data from product or generate fallback
+const materialInfo = product?.materials || {
+  material1: 'Cotton',
+  percentage1: 60,
+  material2: 'Polyester',
+  percentage2: 40
+};
+
+const originInfo = product?.origin || {
+  adjective1: 'Premium',
+  adjective2: 'Quality'
+};
 
 function goBack() {
   router.back();

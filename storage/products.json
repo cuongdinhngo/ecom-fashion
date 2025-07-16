@@ -1,0 +1,3684 @@
+[
+  {
+    "id": 1,
+    "name": "Modern Aluminum Gloves",
+    "description": "New Gloves model with 60 GB RAM, 128 GB storage, and unkempt features",
+    "shortDescription": "New Gloves model with 60 GB RAM, 128 GB storage, ...",
+    "category": "Hoodies",
+    "relative": "Zip-Up Hoodies",
+    "image": "/images/item-1.jpg",
+    "size": "XXL",
+    "color": "grey",
+    "originalPrice": "73.95",
+    "price": "36.98",
+    "discount": 50,
+    "likeCount": 6124,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 1
+      }
+    },
+    "images": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-3.jpg",
+      "/images/item-4.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-3.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 65,
+      "material2": "Polyester",
+      "percentage2": 35
+    },
+    "origin": {
+      "adjective1": "Premium",
+      "adjective2": "Handcrafted"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-4.jpg"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 128
+  },
+  {
+    "id": 2,
+    "name": "Fresh Granite Soap",
+    "description": "Discover the hamster-like agility of our Chair, perfect for silky users",
+    "shortDescription": "Discover the hamster-like agility of our Chair, ...",
+    "category": "Lingerie",
+    "relative": "Bras",
+    "image": "/images/item-11.jpg",
+    "size": "S",
+    "color": "purple",
+    "originalPrice": "59.70",
+    "price": "59.70",
+    "discount": 0,
+    "likeCount": 6921,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 2
+      }
+    },
+    "images": [
+      "/images/item-11.jpg",
+      "/images/item-12.jpg",
+      "/images/item-13.jpg",
+      "/images/item-1.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-11.jpg",
+      "/images/item-12.jpg",
+      "/images/item-13.jpg"
+    ],
+    "materials": {
+      "material1": "Silk",
+      "percentage1": 80,
+      "material2": "Lace",
+      "percentage2": 20
+    },
+    "origin": {
+      "adjective1": "Luxury",
+      "adjective2": "Elegant"
+    },
+    "availableSizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "availableColors": [
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-11.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-12.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-13.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-1.jpg"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 89
+  },
+  {
+    "id": 3,
+    "name": "Gorgeous Steel Gloves",
+    "description": "Stylish Keyboard designed to make you stand out with elastic looks",
+    "shortDescription": "Stylish Keyboard designed to make you stand out ...",
+    "category": "Watch",
+    "relative": "Smartwatches",
+    "image": "/images/item-4.jpg",
+    "size": "XS",
+    "color": "orange",
+    "originalPrice": "46.19",
+    "price": "36.95",
+    "discount": 20,
+    "likeCount": 810,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 3
+      }
+    },
+    "images": [
+      "/images/item-4.jpg",
+      "/images/item-5.jpg",
+      "/images/item-6.jpg",
+      "/images/item-7.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-4.jpg",
+      "/images/item-5.jpg",
+      "/images/item-6.jpg"
+    ],
+    "materials": {
+      "material1": "Stainless Steel",
+      "percentage1": 70,
+      "material2": "Silicone",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Smart",
+      "adjective2": "Innovative"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Orange",
+        "value": "orange",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-5.jpg"
+      },
+      {
+        "name": "Silver",
+        "value": "silver",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Gold",
+        "value": "gold",
+        "image": "/images/item-7.jpg"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 234
+  },
+  {
+    "id": 4,
+    "name": "Soft Marble Table",
+    "description": "Discover the horse-like agility of our Bacon, perfect for strong users",
+    "shortDescription": "Discover the horse-like agility of our Bacon, ...",
+    "category": "Shoes",
+    "relative": "Sandals",
+    "image": "/images/item-12.jpg",
+    "size": "S",
+    "color": "yellow",
+    "originalPrice": "38.10",
+    "price": "38.10",
+    "discount": 0,
+    "likeCount": 2664,
+    "status": "Popular",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 4
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 70,
+      "material2": "Rubber",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Sophisticated"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 418
+  },
+  {
+    "id": 5,
+    "name": "Recycled Plastic Pizza",
+    "description": "Featuring Nickel-enhanced technology, our Towels offers unparalleled giving performance",
+    "shortDescription": "Featuring Nickel-enhanced technology, our Towels ...",
+    "category": "Shoes",
+    "relative": "Flats",
+    "image": "/images/item-3.jpg",
+    "size": "XS",
+    "color": "red",
+    "originalPrice": "97.25",
+    "price": "97.25",
+    "discount": 0,
+    "likeCount": 5734,
+    "status": "Popular",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 5
+      }
+    },
+    "images": [
+      "/images/item-7.jpg",
+      "/images/item-10.jpg",
+      "/images/item-4.jpg",
+      "/images/item-6.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-7.jpg",
+      "/images/item-10.jpg",
+      "/images/item-4.jpg"
+    ],
+    "materials": {
+      "material1": "Canvas",
+      "percentage1": 85,
+      "material2": "Synthetic",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Luxury",
+      "adjective2": "Sustainable"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-6.jpg"
+      }
+    ],
+    "rating": 3.8,
+    "reviewCount": 165
+  },
+  {
+    "id": 6,
+    "name": "Frozen Wooden Computer",
+    "description": "Discover the lined new Pants with an exciting mix of Steel ingredients",
+    "shortDescription": "Discover the lined new Pants with an exciting mix ...",
+    "category": "Lingerie",
+    "relative": "Bras",
+    "image": "/images/item-8.jpg",
+    "size": "XXL",
+    "color": "orange",
+    "originalPrice": "81.09",
+    "price": "56.76",
+    "discount": 30,
+    "likeCount": 9361,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 6
+      }
+    },
+    "images": [
+      "/images/item-4.jpg",
+      "/images/item-3.jpg",
+      "/images/item-10.jpg",
+      "/images/item-6.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-4.jpg",
+      "/images/item-3.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Modal",
+      "percentage1": 90,
+      "material2": "Spandex",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Refined",
+      "adjective2": "Premium"
+    },
+    "availableSizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-6.jpg"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 132
+  },
+  {
+    "id": 7,
+    "name": "Tasty Gold Tuna",
+    "description": "Featuring Actinium-enhanced technology, our Chips offers unparalleled unripe performance",
+    "shortDescription": "Featuring Actinium-enhanced technology, our Chips ...",
+    "category": "Shoes",
+    "relative": "Loafers",
+    "image": "/images/item-7.jpg",
+    "size": "S",
+    "color": "green",
+    "originalPrice": "34.89",
+    "price": "34.89",
+    "discount": 0,
+    "likeCount": 3830,
+    "status": "Popular",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 7
+      }
+    },
+    "images": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-10.jpg",
+      "/images/item-7.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 70,
+      "material2": "Rubber",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Premium"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-7.jpg"
+      }
+    ],
+    "rating": 3.9,
+    "reviewCount": 133
+  },
+  {
+    "id": 8,
+    "name": "Fresh Granite Shoes",
+    "description": "The Extended encompassing capability Sausages offers reliable performance and excitable design",
+    "shortDescription": "The Extended encompassing capability Sausages ...",
+    "category": "Lingerie",
+    "relative": "Loungewear",
+    "image": "/images/item-1.jpg",
+    "size": "XXL",
+    "color": "yellow",
+    "originalPrice": "70.69",
+    "price": "70.69",
+    "discount": 0,
+    "likeCount": 6959,
+    "status": "Popular",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 8
+      }
+    },
+    "images": [
+      "/images/item-4.jpg",
+      "/images/item-1.jpg",
+      "/images/item-12.jpg",
+      "/images/item-8.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-4.jpg",
+      "/images/item-1.jpg",
+      "/images/item-12.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 85,
+      "material2": "Elastane",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Premium"
+    },
+    "availableSizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "availableColors": [
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-12.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-8.jpg"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 349
+  },
+  {
+    "id": 9,
+    "name": "Intelligent Marble Hat",
+    "description": "Featuring Radium-enhanced technology, our Shirt offers unparalleled burdensome performance",
+    "shortDescription": "Featuring Radium-enhanced technology, our Shirt ...",
+    "category": "Clothing",
+    "relative": "Skirts",
+    "image": "/images/item-1.jpg",
+    "size": "XL",
+    "color": "green",
+    "originalPrice": "49.55",
+    "price": "39.64",
+    "discount": 20,
+    "likeCount": 8508,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 9
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 65,
+      "material2": "Polyester",
+      "percentage2": 35
+    },
+    "origin": {
+      "adjective1": "Designer",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 3.8,
+    "reviewCount": 382
+  },
+  {
+    "id": 10,
+    "name": "Bespoke Bronze Soap",
+    "description": "Featuring Potassium-enhanced technology, our Tuna offers unparalleled pastel performance",
+    "shortDescription": "Featuring Potassium-enhanced technology, our Tuna ...",
+    "category": "Watch",
+    "relative": "Analog Watches",
+    "image": "/images/item-9.jpg",
+    "size": "L",
+    "color": "pink",
+    "originalPrice": "72.39",
+    "price": "65.15",
+    "discount": 10,
+    "likeCount": 2241,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 10
+      }
+    },
+    "images": [
+      "/images/item-13.jpg",
+      "/images/item-3.jpg",
+      "/images/item-8.jpg",
+      "/images/item-11.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-13.jpg",
+      "/images/item-3.jpg",
+      "/images/item-8.jpg"
+    ],
+    "materials": {
+      "material1": "Stainless Steel",
+      "percentage1": 70,
+      "material2": "Silicone",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Smart",
+      "adjective2": "Refined"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-13.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Silver",
+        "value": "silver",
+        "image": "/images/item-11.jpg"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 228
+  },
+  {
+    "id": 11,
+    "name": "Handcrafted Ceramic Bacon",
+    "description": "Kertzmann, Keeling and Predovic's most advanced Chair technology increases biodegradable capabilities",
+    "shortDescription": "Kertzmann, Keeling and Predovic's most advanced ...",
+    "category": "Lingerie",
+    "relative": "Loungewear",
+    "image": "/images/item-10.jpg",
+    "size": "XXL",
+    "color": "yellow",
+    "originalPrice": "87.49",
+    "price": "87.49",
+    "discount": 0,
+    "likeCount": 2644,
+    "status": "Limited",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 11
+      }
+    },
+    "images": [
+      "/images/item-6.jpg",
+      "/images/item-5.jpg",
+      "/images/item-7.jpg",
+      "/images/item-11.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-6.jpg",
+      "/images/item-5.jpg",
+      "/images/item-7.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 85,
+      "material2": "Elastane",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Modern",
+      "adjective2": "Luxury"
+    },
+    "availableSizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-5.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-11.jpg"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 69
+  },
+  {
+    "id": 12,
+    "name": "Incredible Granite Ball",
+    "description": "The Weldon Car is the latest in a series of known products from Toy and Sons",
+    "shortDescription": "The Weldon Car is the latest in a series of known ...",
+    "category": "Hoodies",
+    "relative": "Zip-Up Hoodies",
+    "image": "/images/item-7.jpg",
+    "size": "M",
+    "color": "pink",
+    "originalPrice": "12.19",
+    "price": "12.19",
+    "discount": 0,
+    "likeCount": 7838,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 12
+      }
+    },
+    "images": [
+      "/images/item-13.jpg",
+      "/images/item-7.jpg",
+      "/images/item-8.jpg",
+      "/images/item-10.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-13.jpg",
+      "/images/item-7.jpg",
+      "/images/item-8.jpg"
+    ],
+    "materials": {
+      "material1": "Fleece",
+      "percentage1": 85,
+      "material2": "Spandex",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Luxury",
+      "adjective2": "Modern"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-13.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Orange",
+        "value": "orange",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-10.jpg"
+      }
+    ],
+    "rating": 3.9,
+    "reviewCount": 108
+  },
+  {
+    "id": 13,
+    "name": "Refined Granite Chair",
+    "description": "Featuring Cobalt-enhanced technology, our Ball offers unparalleled grumpy performance",
+    "shortDescription": "Featuring Cobalt-enhanced technology, our Ball ...",
+    "category": "Lingerie",
+    "relative": "Bras",
+    "image": "/images/item-1.jpg",
+    "size": "XXL",
+    "color": "yellow",
+    "originalPrice": "82.72",
+    "price": "57.90",
+    "discount": 30,
+    "likeCount": 7033,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 13
+      }
+    },
+    "images": [
+      "/images/item-10.jpg",
+      "/images/item-11.jpg",
+      "/images/item-1.jpg",
+      "/images/item-6.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-10.jpg",
+      "/images/item-11.jpg",
+      "/images/item-1.jpg"
+    ],
+    "materials": {
+      "material1": "Silk",
+      "percentage1": 70,
+      "material2": "Lace",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Elegant",
+      "adjective2": "Classic"
+    },
+    "availableSizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "availableColors": [
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-11.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-6.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 449
+  },
+  {
+    "id": 14,
+    "name": "Tasty Metal Pants",
+    "description": "MacGyver - Russel's most advanced Fish technology increases edible capabilities",
+    "shortDescription": "MacGyver - Russel's most advanced Fish technology ...",
+    "category": "Watch",
+    "relative": "Digital Watches",
+    "image": "/images/item-3.jpg",
+    "size": "L",
+    "color": "pink",
+    "originalPrice": "71.25",
+    "price": "71.25",
+    "discount": 0,
+    "likeCount": 1854,
+    "status": "Popular",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 14
+      }
+    },
+    "images": [
+      "/images/item-1.jpg",
+      "/images/item-10.jpg",
+      "/images/item-9.jpg",
+      "/images/item-11.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-1.jpg",
+      "/images/item-10.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Titanium",
+      "percentage1": 80,
+      "material2": "Ceramic",
+      "percentage2": 20
+    },
+    "origin": {
+      "adjective1": "Premium",
+      "adjective2": "Handcrafted"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Gold",
+        "value": "gold",
+        "image": "/images/item-11.jpg"
+      }
+    ],
+    "rating": 4.4,
+    "reviewCount": 68
+  },
+  {
+    "id": 15,
+    "name": "Refined Aluminum Pizza",
+    "description": "New Shirt model with 90 GB RAM, 563 GB storage, and empty features",
+    "shortDescription": "New Shirt model with 90 GB RAM, 563 GB storage, ...",
+    "category": "Watch",
+    "relative": "Smartwatches",
+    "image": "/images/item-1.jpg",
+    "size": "XL",
+    "color": "red",
+    "originalPrice": "80.55",
+    "price": "40.27",
+    "discount": 50,
+    "likeCount": 8460,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 15
+      }
+    },
+    "images": [
+      "/images/item-8.jpg",
+      "/images/item-1.jpg",
+      "/images/item-7.jpg",
+      "/images/item-10.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-8.jpg",
+      "/images/item-1.jpg",
+      "/images/item-7.jpg"
+    ],
+    "materials": {
+      "material1": "Aluminum",
+      "percentage1": 85,
+      "material2": "Plastic",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Stylish",
+      "adjective2": "Quality"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Silver",
+        "value": "silver",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-10.jpg"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 259
+  },
+  {
+    "id": 16,
+    "name": "Incredible Bronze Mouse",
+    "description": "Licensed Chips designed with Aluminum for ruddy performance",
+    "shortDescription": "Licensed Chips designed with Aluminum for ruddy ...",
+    "category": "Watch",
+    "relative": "Smartwatches",
+    "image": "/images/item-8.jpg",
+    "size": "XL",
+    "color": "red",
+    "originalPrice": "37.90",
+    "price": "37.90",
+    "discount": 0,
+    "likeCount": 1225,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 16
+      }
+    },
+    "images": [
+      "/images/item-7.jpg",
+      "/images/item-9.jpg",
+      "/images/item-2.jpg",
+      "/images/item-11.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-7.jpg",
+      "/images/item-9.jpg",
+      "/images/item-2.jpg"
+    ],
+    "materials": {
+      "material1": "Stainless Steel",
+      "percentage1": 70,
+      "material2": "Silicone",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Smart",
+      "adjective2": "Luxury"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Silver",
+        "value": "silver",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-11.jpg"
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 457
+  },
+  {
+    "id": 17,
+    "name": "Handmade Cotton Pants",
+    "description": "Experience the sky blue brilliance of our Tuna, perfect for voluminous environments",
+    "shortDescription": "Experience the sky blue brilliance of our Tuna, ...",
+    "category": "Clothing",
+    "relative": "Blouses",
+    "image": "/images/item-4.jpg",
+    "size": "XS",
+    "color": "orange",
+    "originalPrice": "36.35",
+    "price": "18.18",
+    "discount": 50,
+    "likeCount": 9036,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 17
+      }
+    },
+    "images": [
+      "/images/item-1.jpg",
+      "/images/item-5.jpg",
+      "/images/item-11.jpg",
+      "/images/item-9.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-1.jpg",
+      "/images/item-5.jpg",
+      "/images/item-11.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 65,
+      "material2": "Polyester",
+      "percentage2": 35
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Refined"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-5.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-11.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-9.jpg"
+      }
+    ],
+    "rating": 3.9,
+    "reviewCount": 231
+  },
+  {
+    "id": 18,
+    "name": "Modern Steel Car",
+    "description": "Lueilwitz, Prohaska and Koch's most advanced Towels technology increases subtle capabilities",
+    "shortDescription": "Lueilwitz, Prohaska and Koch's most advanced ...",
+    "category": "Watch",
+    "relative": "Analog Watches",
+    "image": "/images/item-9.jpg",
+    "size": "M",
+    "color": "yellow",
+    "originalPrice": "48.29",
+    "price": "48.29",
+    "discount": 0,
+    "likeCount": 26,
+    "status": "Limited",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 18
+      }
+    },
+    "images": [
+      "/images/item-8.jpg",
+      "/images/item-10.jpg",
+      "/images/item-4.jpg",
+      "/images/item-3.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-8.jpg",
+      "/images/item-10.jpg",
+      "/images/item-4.jpg"
+    ],
+    "materials": {
+      "material1": "Aluminum",
+      "percentage1": 85,
+      "material2": "Plastic",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Designer",
+      "adjective2": "Smart"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Gold",
+        "value": "gold",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Silver",
+        "value": "silver",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-3.jpg"
+      }
+    ],
+    "rating": 3.6,
+    "reviewCount": 213
+  },
+  {
+    "id": 19,
+    "name": "Luxurious Plastic Bacon",
+    "description": "Introducing the Botswana-inspired Tuna, blending powerless style with local craftsmanship",
+    "shortDescription": "Introducing the Botswana-inspired Tuna, blending ...",
+    "category": "Watch",
+    "relative": "Analog Watches",
+    "image": "/images/item-10.jpg",
+    "size": "M",
+    "color": "yellow",
+    "originalPrice": "77.65",
+    "price": "38.83",
+    "discount": 50,
+    "likeCount": 8310,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 19
+      }
+    },
+    "images": [
+      "/images/item-4.jpg",
+      "/images/item-1.jpg",
+      "/images/item-7.jpg",
+      "/images/item-13.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-4.jpg",
+      "/images/item-1.jpg",
+      "/images/item-7.jpg"
+    ],
+    "materials": {
+      "material1": "Stainless Steel",
+      "percentage1": 70,
+      "material2": "Silicone",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Elegant",
+      "adjective2": "Sophisticated"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Silver",
+        "value": "silver",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-13.jpg"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 484
+  },
+  {
+    "id": 20,
+    "name": "Licensed Marble Cheese",
+    "description": "Our horse-friendly Chicken ensures palatable comfort for your pets",
+    "shortDescription": "Our horse-friendly Chicken ensures palatable ...",
+    "category": "Shoes",
+    "relative": "Loafers",
+    "image": "/images/item-13.jpg",
+    "size": "L",
+    "color": "pink",
+    "originalPrice": "64.09",
+    "price": "38.45",
+    "discount": 40,
+    "likeCount": 1475,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 20
+      }
+    },
+    "images": [
+      "/images/item-11.jpg",
+      "/images/item-3.jpg",
+      "/images/item-4.jpg",
+      "/images/item-9.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-11.jpg",
+      "/images/item-3.jpg",
+      "/images/item-4.jpg"
+    ],
+    "materials": {
+      "material1": "Canvas",
+      "percentage1": 85,
+      "material2": "Synthetic",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Trendy",
+      "adjective2": "Sophisticated"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-11.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-9.jpg"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 270
+  },
+  {
+    "id": 21,
+    "name": "Handcrafted Steel Pizza",
+    "description": "The sleek and each Ball comes with orange LED lighting for smart functionality",
+    "shortDescription": "The sleek and each Ball comes with orange LED ...",
+    "category": "Watch",
+    "relative": "Digital Watches",
+    "image": "/images/item-6.jpg",
+    "size": "XL",
+    "color": "orange",
+    "originalPrice": "64.39",
+    "price": "45.07",
+    "discount": 30,
+    "likeCount": 7256,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 21
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-8.jpg",
+      "/images/item-13.jpg",
+      "/images/item-2.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-8.jpg",
+      "/images/item-13.jpg"
+    ],
+    "materials": {
+      "material1": "Aluminum",
+      "percentage1": 85,
+      "material2": "Plastic",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Sophisticated",
+      "adjective2": "Premium"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-13.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-2.jpg"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 143
+  },
+  {
+    "id": 22,
+    "name": "Rustic Ceramic Bike",
+    "description": "Innovative Car featuring uneven technology and Bronze construction",
+    "shortDescription": "Innovative Car featuring uneven technology and ...",
+    "category": "Hoodies",
+    "relative": "Pullover Hoodies",
+    "image": "/images/item-6.jpg",
+    "size": "S",
+    "color": "purple",
+    "originalPrice": "93.49",
+    "price": "56.09",
+    "discount": 40,
+    "likeCount": 5769,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 22
+      }
+    },
+    "images": [
+      "/images/item-7.jpg",
+      "/images/item-6.jpg",
+      "/images/item-12.jpg",
+      "/images/item-10.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-7.jpg",
+      "/images/item-6.jpg",
+      "/images/item-12.jpg"
+    ],
+    "materials": {
+      "material1": "Fleece",
+      "percentage1": 85,
+      "material2": "Spandex",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Premium",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-12.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-10.jpg"
+      }
+    ],
+    "rating": 3.6,
+    "reviewCount": 127
+  },
+  {
+    "id": 23,
+    "name": "Refined Bamboo Hat",
+    "description": "Our crunchy-inspired Car brings a taste of luxury to your equatorial lifestyle",
+    "shortDescription": "Our crunchy-inspired Car brings a taste of luxury ...",
+    "category": "Watch",
+    "relative": "Analog Watches",
+    "image": "/images/item-6.jpg",
+    "size": "S",
+    "color": "blue",
+    "originalPrice": "30.69",
+    "price": "18.41",
+    "discount": 40,
+    "likeCount": 7258,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 23
+      }
+    },
+    "images": [
+      "/images/item-7.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg",
+      "/images/item-5.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-7.jpg",
+      "/images/item-6.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Titanium",
+      "percentage1": 80,
+      "material2": "Ceramic",
+      "percentage2": 20
+    },
+    "origin": {
+      "adjective1": "Classic",
+      "adjective2": "Handcrafted"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Silver",
+        "value": "silver",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-5.jpg"
+      }
+    ],
+    "rating": 3.7,
+    "reviewCount": 222
+  },
+  {
+    "id": 24,
+    "name": "Small Metal Towels",
+    "description": "Discover the bee-like agility of our Keyboard, perfect for oily users",
+    "shortDescription": "Discover the bee-like agility of our Keyboard, ...",
+    "category": "Clothing",
+    "relative": "Pants",
+    "image": "/images/item-11.jpg",
+    "size": "XL",
+    "color": "red",
+    "originalPrice": "98.99",
+    "price": "98.99",
+    "discount": 0,
+    "likeCount": 6974,
+    "status": "Limited",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 24
+      }
+    },
+    "images": [
+      "/images/item-13.jpg",
+      "/images/item-7.jpg",
+      "/images/item-4.jpg",
+      "/images/item-10.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-13.jpg",
+      "/images/item-7.jpg",
+      "/images/item-4.jpg"
+    ],
+    "materials": {
+      "material1": "Viscose",
+      "percentage1": 75,
+      "material2": "Elastane",
+      "percentage2": 25
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Classic"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-13.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Yellow",
+        "value": "yellow",
+        "image": "/images/item-10.jpg"
+      }
+    ],
+    "rating": 4.7,
+    "reviewCount": 301
+  },
+  {
+    "id": 25,
+    "name": "Rustic Ceramic Bacon",
+    "description": "Featuring Dubnium-enhanced technology, our Keyboard offers unparalleled likable performance",
+    "shortDescription": "Featuring Dubnium-enhanced technology, our ...",
+    "category": "Bags",
+    "relative": "Clutches",
+    "image": "/images/item-4.jpg",
+    "size": "S",
+    "color": "purple",
+    "originalPrice": "16.39",
+    "price": "9.83",
+    "discount": 40,
+    "likeCount": 3386,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 25
+      }
+    },
+    "images": [
+      "/images/item-2.jpg",
+      "/images/item-4.jpg",
+      "/images/item-3.jpg",
+      "/images/item-6.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-2.jpg",
+      "/images/item-4.jpg",
+      "/images/item-3.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 90,
+      "material2": "Metal",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Classic",
+      "adjective2": "Modern"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-6.jpg"
+      }
+    ],
+    "rating": 3.7,
+    "reviewCount": 304
+  },
+  {
+    "id": 26,
+    "name": "Handmade Marble Salad",
+    "description": "Featuring Fluorine-enhanced technology, our Table offers unparalleled nautical performance",
+    "shortDescription": "Featuring Fluorine-enhanced technology, our Table ...",
+    "category": "Lingerie",
+    "relative": "Panties",
+    "image": "/images/item-11.jpg",
+    "size": "L",
+    "color": "red",
+    "originalPrice": "75.15",
+    "price": "67.64",
+    "discount": 10,
+    "likeCount": 2484,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 26
+      }
+    },
+    "images": [
+      "/images/item-8.jpg",
+      "/images/item-9.jpg",
+      "/images/item-12.jpg",
+      "/images/item-10.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-8.jpg",
+      "/images/item-9.jpg",
+      "/images/item-12.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 85,
+      "material2": "Elastane",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Modern",
+      "adjective2": "Sophisticated"
+    },
+    "availableSizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-12.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-10.jpg"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 170
+  },
+  {
+    "id": 27,
+    "name": "Handcrafted Metal Cheese",
+    "description": "Savor the crunchy essence in our Bike, designed for gaseous culinary adventures",
+    "shortDescription": "Savor the crunchy essence in our Bike, designed ...",
+    "category": "Clothing",
+    "relative": "Dresses",
+    "image": "/images/item-13.jpg",
+    "size": "S",
+    "color": "grey",
+    "originalPrice": "57.75",
+    "price": "34.65",
+    "discount": 40,
+    "likeCount": 5767,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 27
+      }
+    },
+    "images": [
+      "/images/item-6.jpg",
+      "/images/item-1.jpg",
+      "/images/item-7.jpg",
+      "/images/item-2.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-6.jpg",
+      "/images/item-1.jpg",
+      "/images/item-7.jpg"
+    ],
+    "materials": {
+      "material1": "Linen",
+      "percentage1": 90,
+      "material2": "Spandex",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Innovative",
+      "adjective2": "Smart"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Yellow",
+        "value": "yellow",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-2.jpg"
+      }
+    ],
+    "rating": 4,
+    "reviewCount": 175
+  },
+  {
+    "id": 28,
+    "name": "Modern Plastic Pizza",
+    "description": "Electronic Computer designed with Rubber for black-and-white performance",
+    "shortDescription": "Electronic Computer designed with Rubber for ...",
+    "category": "Hoodies",
+    "relative": "Zip-Up Hoodies",
+    "image": "/images/item-10.jpg",
+    "size": "M",
+    "color": "blue",
+    "originalPrice": "64.79",
+    "price": "64.79",
+    "discount": 0,
+    "likeCount": 1777,
+    "status": "Limited",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 28
+      }
+    },
+    "images": [
+      "/images/item-1.jpg",
+      "/images/item-10.jpg",
+      "/images/item-4.jpg",
+      "/images/item-6.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-1.jpg",
+      "/images/item-10.jpg",
+      "/images/item-4.jpg"
+    ],
+    "materials": {
+      "material1": "Fleece",
+      "percentage1": 85,
+      "material2": "Spandex",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Designer"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-6.jpg"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 122
+  },
+  {
+    "id": 29,
+    "name": "Licensed Steel Ball",
+    "description": "The sleek and exalted Shoes comes with salmon LED lighting for smart functionality",
+    "shortDescription": "The sleek and exalted Shoes comes with salmon LED ...",
+    "category": "Clothing",
+    "relative": "Blouses",
+    "image": "/images/item-11.jpg",
+    "size": "XXL",
+    "color": "green",
+    "originalPrice": "93.89",
+    "price": "93.89",
+    "discount": 0,
+    "likeCount": 342,
+    "status": "Popular",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 29
+      }
+    },
+    "images": [
+      "/images/item-6.jpg",
+      "/images/item-11.jpg",
+      "/images/item-12.jpg",
+      "/images/item-3.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-6.jpg",
+      "/images/item-11.jpg",
+      "/images/item-12.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 65,
+      "material2": "Polyester",
+      "percentage2": 35
+    },
+    "origin": {
+      "adjective1": "Sustainable",
+      "adjective2": "Eco-friendly"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-11.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-12.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-3.jpg"
+      }
+    ],
+    "rating": 3.7,
+    "reviewCount": 465
+  },
+  {
+    "id": 30,
+    "name": "Bespoke Steel Soap",
+    "description": "The pink Chips combines Puerto Rico aesthetics with Bromine-based durability",
+    "shortDescription": "The pink Chips combines Puerto Rico aesthetics ...",
+    "category": "Lingerie",
+    "relative": "Panties",
+    "image": "/images/item-10.jpg",
+    "size": "XXL",
+    "color": "yellow",
+    "originalPrice": "97.95",
+    "price": "68.56",
+    "discount": 30,
+    "likeCount": 6621,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 30
+      }
+    },
+    "images": [
+      "/images/item-6.jpg",
+      "/images/item-1.jpg",
+      "/images/item-11.jpg",
+      "/images/item-9.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-6.jpg",
+      "/images/item-1.jpg",
+      "/images/item-11.jpg"
+    ],
+    "materials": {
+      "material1": "Modal",
+      "percentage1": 90,
+      "material2": "Spandex",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Sophisticated",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "availableColors": [
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-11.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-9.jpg"
+      }
+    ],
+    "rating": 3.7,
+    "reviewCount": 132
+  },
+  {
+    "id": 31,
+    "name": "Oriental Concrete Pizza",
+    "description": "New Salad model with 67 GB RAM, 306 GB storage, and skeletal features",
+    "shortDescription": "New Salad model with 67 GB RAM, 306 GB storage, ...",
+    "category": "Shoes",
+    "relative": "Flats",
+    "image": "/images/item-8.jpg",
+    "size": "M",
+    "color": "pink",
+    "originalPrice": "14.19",
+    "price": "7.09",
+    "discount": 50,
+    "likeCount": 2526,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 31
+      }
+    },
+    "images": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-6.jpg",
+      "/images/item-9.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-6.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 70,
+      "material2": "Rubber",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Classic",
+      "adjective2": "Innovative"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-9.jpg"
+      }
+    ],
+    "rating": 3.9,
+    "reviewCount": 285
+  },
+  {
+    "id": 32,
+    "name": "Frozen Wooden Gloves",
+    "description": "Discover the sea lion-like agility of our Salad, perfect for deserted users",
+    "shortDescription": "Discover the sea lion-like agility of our Salad, ...",
+    "category": "Hoodies",
+    "relative": "Pullover Hoodies",
+    "image": "/images/item-3.jpg",
+    "size": "L",
+    "color": "red",
+    "originalPrice": "87.55",
+    "price": "43.77",
+    "discount": 50,
+    "likeCount": 397,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 32
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-2.jpg",
+      "/images/item-11.jpg",
+      "/images/item-9.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-2.jpg",
+      "/images/item-11.jpg"
+    ],
+    "materials": {
+      "material1": "Fleece",
+      "percentage1": 85,
+      "material2": "Spandex",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Premium",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-11.jpg"
+      },
+      {
+        "name": "Orange",
+        "value": "orange",
+        "image": "/images/item-9.jpg"
+      }
+    ],
+    "rating": 3.9,
+    "reviewCount": 352
+  },
+  {
+    "id": 33,
+    "name": "Small Concrete Fish",
+    "description": "Discover the penguin-like agility of our Fish, perfect for jaunty users",
+    "shortDescription": "Discover the penguin-like agility of our Fish, ...",
+    "category": "Watch",
+    "relative": "Digital Watches",
+    "image": "/images/item-11.jpg",
+    "size": "XS",
+    "color": "blue",
+    "originalPrice": "44.05",
+    "price": "44.05",
+    "discount": 0,
+    "likeCount": 3072,
+    "status": "Limited",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 33
+      }
+    },
+    "images": [
+      "/images/item-4.jpg",
+      "/images/item-8.jpg",
+      "/images/item-1.jpg",
+      "/images/item-9.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-4.jpg",
+      "/images/item-8.jpg",
+      "/images/item-1.jpg"
+    ],
+    "materials": {
+      "material1": "Aluminum",
+      "percentage1": 85,
+      "material2": "Plastic",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Sophisticated",
+      "adjective2": "Trendy"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Silver",
+        "value": "silver",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Gold",
+        "value": "gold",
+        "image": "/images/item-9.jpg"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 459
+  },
+  {
+    "id": 34,
+    "name": "Bespoke Cotton Chips",
+    "description": "Introducing the Pitcairn Islands-inspired Shirt, blending esteemed style with local craftsmanship",
+    "shortDescription": "Introducing the Pitcairn Islands-inspired Shirt, ...",
+    "category": "Lingerie",
+    "relative": "Panties",
+    "image": "/images/item-2.jpg",
+    "size": "L",
+    "color": "yellow",
+    "originalPrice": "88.35",
+    "price": "70.68",
+    "discount": 20,
+    "likeCount": 7392,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 34
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-4.jpg",
+      "/images/item-7.jpg",
+      "/images/item-6.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-4.jpg",
+      "/images/item-7.jpg"
+    ],
+    "materials": {
+      "material1": "Silk",
+      "percentage1": 70,
+      "material2": "Lace",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Elegant",
+      "adjective2": "Premium"
+    },
+    "availableSizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "availableColors": [
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-6.jpg"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 11
+  },
+  {
+    "id": 35,
+    "name": "Handmade Marble Ball",
+    "description": "Gusikowski and Sons's most advanced Tuna technology increases glum capabilities",
+    "shortDescription": "Gusikowski and Sons's most advanced Tuna ...",
+    "category": "Lingerie",
+    "relative": "Bras",
+    "image": "/images/item-2.jpg",
+    "size": "L",
+    "color": "blue",
+    "originalPrice": "50.69",
+    "price": "25.34",
+    "discount": 50,
+    "likeCount": 8647,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 35
+      }
+    },
+    "images": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-7.jpg",
+      "/images/item-10.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-7.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 85,
+      "material2": "Elastane",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Vintage",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-10.jpg"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 163
+  },
+  {
+    "id": 36,
+    "name": "Luxurious Steel Chicken",
+    "description": "The Raheem Bike is the latest in a series of outgoing products from Ruecker, Schmidt and Funk",
+    "shortDescription": "The Raheem Bike is the latest in a series of ...",
+    "category": "Shoes",
+    "relative": "Loafers",
+    "image": "/images/item-4.jpg",
+    "size": "XS",
+    "color": "red",
+    "originalPrice": "36.19",
+    "price": "36.19",
+    "discount": 0,
+    "likeCount": 690,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 36
+      }
+    },
+    "images": [
+      "/images/item-7.jpg",
+      "/images/item-4.jpg",
+      "/images/item-1.jpg",
+      "/images/item-13.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-7.jpg",
+      "/images/item-4.jpg",
+      "/images/item-1.jpg"
+    ],
+    "materials": {
+      "material1": "Suede",
+      "percentage1": 90,
+      "material2": "Textile",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Elegant",
+      "adjective2": "Classic"
+    },
+    "availableSizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-13.jpg"
+      }
+    ],
+    "rating": 3.5,
+    "reviewCount": 82
+  },
+  {
+    "id": 37,
+    "name": "Sleek Granite Car",
+    "description": "The lime Cheese combines Pitcairn Islands aesthetics with Dysprosium-based durability",
+    "shortDescription": "The lime Cheese combines Pitcairn Islands ...",
+    "category": "Lingerie",
+    "relative": "Bras",
+    "image": "/images/item-4.jpg",
+    "size": "XXL",
+    "color": "grey",
+    "originalPrice": "50.75",
+    "price": "40.60",
+    "discount": 20,
+    "likeCount": 5509,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 37
+      }
+    },
+    "images": [
+      "/images/item-13.jpg",
+      "/images/item-10.jpg",
+      "/images/item-11.jpg",
+      "/images/item-8.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-13.jpg",
+      "/images/item-10.jpg",
+      "/images/item-11.jpg"
+    ],
+    "materials": {
+      "material1": "Silk",
+      "percentage1": 70,
+      "material2": "Lace",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Modern",
+      "adjective2": "Luxury"
+    },
+    "availableSizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "availableColors": [
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-13.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-11.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-8.jpg"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 326
+  },
+  {
+    "id": 38,
+    "name": "Fresh Metal Table",
+    "description": "Professional-grade Bacon perfect for bad training and recreational use",
+    "shortDescription": "Professional-grade Bacon perfect for bad training ...",
+    "category": "Clothing",
+    "relative": "Dresses",
+    "image": "/images/item-1.jpg",
+    "size": "XS",
+    "color": "pink",
+    "originalPrice": "96.99",
+    "price": "96.99",
+    "discount": 0,
+    "likeCount": 2445,
+    "status": "Limited",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 38
+      }
+    },
+    "images": [
+      "/images/item-11.jpg",
+      "/images/item-7.jpg",
+      "/images/item-4.jpg",
+      "/images/item-5.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-11.jpg",
+      "/images/item-7.jpg",
+      "/images/item-4.jpg"
+    ],
+    "materials": {
+      "material1": "Wool",
+      "percentage1": 80,
+      "material2": "Acrylic",
+      "percentage2": 20
+    },
+    "origin": {
+      "adjective1": "Eco-friendly",
+      "adjective2": "Sophisticated"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Yellow",
+        "value": "yellow",
+        "image": "/images/item-11.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-5.jpg"
+      }
+    ],
+    "rating": 4.1,
+    "reviewCount": 245
+  },
+  {
+    "id": 39,
+    "name": "Handmade Metal Shirt",
+    "description": "McKenzie LLC's most advanced Towels technology increases discrete capabilities",
+    "shortDescription": "McKenzie LLC's most advanced Towels technology ...",
+    "category": "Lingerie",
+    "relative": "Sleepwear",
+    "image": "/images/item-4.jpg",
+    "size": "XS",
+    "color": "purple",
+    "originalPrice": "41.09",
+    "price": "28.76",
+    "discount": 30,
+    "likeCount": 63,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 39
+      }
+    },
+    "images": [
+      "/images/item-6.jpg",
+      "/images/item-9.jpg",
+      "/images/item-11.jpg",
+      "/images/item-10.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-6.jpg",
+      "/images/item-9.jpg",
+      "/images/item-11.jpg"
+    ],
+    "materials": {
+      "material1": "Modal",
+      "percentage1": 90,
+      "material2": "Spandex",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Quality",
+      "adjective2": "Sustainable"
+    },
+    "availableSizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-11.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-10.jpg"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 67
+  },
+  {
+    "id": 40,
+    "name": "Refined Concrete Soap",
+    "description": "Featuring Curium-enhanced technology, our Table offers unparalleled metallic performance",
+    "shortDescription": "Featuring Curium-enhanced technology, our Table ...",
+    "category": "Clothing",
+    "relative": "Blouses",
+    "image": "/images/item-10.jpg",
+    "size": "M",
+    "color": "pink",
+    "originalPrice": "20.39",
+    "price": "20.39",
+    "discount": 0,
+    "likeCount": 564,
+    "status": "Limited",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 40
+      }
+    },
+    "images": [
+      "/images/item-6.jpg",
+      "/images/item-13.jpg",
+      "/images/item-1.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-6.jpg",
+      "/images/item-13.jpg",
+      "/images/item-1.jpg"
+    ],
+    "materials": {
+      "material1": "Viscose",
+      "percentage1": 75,
+      "material2": "Elastane",
+      "percentage2": 25
+    },
+    "origin": {
+      "adjective1": "Modern",
+      "adjective2": "Premium"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-13.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 127
+  },
+  {
+    "id": 41,
+    "name": "Tasty Granite Tuna",
+    "description": "Professional-grade Pants perfect for milky training and recreational use",
+    "shortDescription": "Professional-grade Pants perfect for milky ...",
+    "category": "Bags",
+    "relative": "Handbags",
+    "image": "/images/item-4.jpg",
+    "size": "XXL",
+    "color": "purple",
+    "originalPrice": "64.29",
+    "price": "64.29",
+    "discount": 0,
+    "likeCount": 7112,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 41
+      }
+    },
+    "images": [
+      "/images/item-12.jpg",
+      "/images/item-8.jpg",
+      "/images/item-9.jpg",
+      "/images/item-1.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-12.jpg",
+      "/images/item-8.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Canvas",
+      "percentage1": 80,
+      "material2": "Polyester",
+      "percentage2": 20
+    },
+    "origin": {
+      "adjective1": "Smart",
+      "adjective2": "Modern"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-12.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-1.jpg"
+      }
+    ],
+    "rating": 4,
+    "reviewCount": 103
+  },
+  {
+    "id": 42,
+    "name": "Bespoke Ceramic Shoes",
+    "description": "New black Computer with ergonomic design for tepid comfort",
+    "shortDescription": "New black Computer with ergonomic design for ...",
+    "category": "Clothing",
+    "relative": "Sweaters",
+    "image": "/images/item-4.jpg",
+    "size": "XL",
+    "color": "pink",
+    "originalPrice": "68.35",
+    "price": "47.84",
+    "discount": 30,
+    "likeCount": 2778,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 42
+      }
+    },
+    "images": [
+      "/images/item-4.jpg",
+      "/images/item-1.jpg",
+      "/images/item-7.jpg",
+      "/images/item-11.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-4.jpg",
+      "/images/item-1.jpg",
+      "/images/item-7.jpg"
+    ],
+    "materials": {
+      "material1": "Wool",
+      "percentage1": 80,
+      "material2": "Acrylic",
+      "percentage2": 20
+    },
+    "origin": {
+      "adjective1": "Sustainable",
+      "adjective2": "Innovative"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Yellow",
+        "value": "yellow",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-11.jpg"
+      }
+    ],
+    "rating": 5,
+    "reviewCount": 273
+  },
+  {
+    "id": 43,
+    "name": "Incredible Marble Computer",
+    "description": "The Phased 24/7 knowledge user Shoes offers reliable performance and noteworthy design",
+    "shortDescription": "The Phased 24/7 knowledge user Shoes offers ...",
+    "category": "Bags",
+    "relative": "Totes",
+    "image": "/images/item-4.jpg",
+    "size": "XL",
+    "color": "blue",
+    "originalPrice": "98.06",
+    "price": "58.84",
+    "discount": 40,
+    "likeCount": 1802,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 43
+      }
+    },
+    "images": [
+      "/images/item-8.jpg",
+      "/images/item-1.jpg",
+      "/images/item-2.jpg",
+      "/images/item-9.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-8.jpg",
+      "/images/item-1.jpg",
+      "/images/item-2.jpg"
+    ],
+    "materials": {
+      "material1": "Leather",
+      "percentage1": 90,
+      "material2": "Metal",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Modern",
+      "adjective2": "Stylish"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-1.jpg"
+      },
+      {
+        "name": "Brown",
+        "value": "brown",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-9.jpg"
+      }
+    ],
+    "rating": 4.2,
+    "reviewCount": 455
+  },
+  {
+    "id": 44,
+    "name": "Recycled Silk Car",
+    "description": "Soft Gloves designed with Cotton for tight performance",
+    "shortDescription": "Soft Gloves designed with Cotton for tight ...",
+    "category": "Clothing",
+    "relative": "Blouses",
+    "image": "/images/item-12.jpg",
+    "size": "XS",
+    "color": "pink",
+    "originalPrice": "50.95",
+    "price": "35.66",
+    "discount": 30,
+    "likeCount": 8814,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 44
+      }
+    },
+    "images": [
+      "/images/item-13.jpg",
+      "/images/item-9.jpg",
+      "/images/item-10.jpg",
+      "/images/item-8.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-13.jpg",
+      "/images/item-9.jpg",
+      "/images/item-10.jpg"
+    ],
+    "materials": {
+      "material1": "Viscose",
+      "percentage1": 75,
+      "material2": "Elastane",
+      "percentage2": 25
+    },
+    "origin": {
+      "adjective1": "Luxury",
+      "adjective2": "Elegant"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-13.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-10.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-8.jpg"
+      }
+    ],
+    "rating": 4.8,
+    "reviewCount": 282
+  },
+  {
+    "id": 45,
+    "name": "Refined Wooden Pizza",
+    "description": "The Paula Gloves is the latest in a series of slimy products from Klocko, Huel and Wilderman",
+    "shortDescription": "The Paula Gloves is the latest in a series of ...",
+    "category": "Hoodies",
+    "relative": "Pullover Hoodies",
+    "image": "/images/item-7.jpg",
+    "size": "XS",
+    "color": "orange",
+    "originalPrice": "41.89",
+    "price": "41.89",
+    "discount": 0,
+    "likeCount": 2731,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 45
+      }
+    },
+    "images": [
+      "/images/item-3.jpg",
+      "/images/item-4.jpg",
+      "/images/item-2.jpg",
+      "/images/item-10.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-3.jpg",
+      "/images/item-4.jpg",
+      "/images/item-2.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 80,
+      "material2": "Polyester",
+      "percentage2": 20
+    },
+    "origin": {
+      "adjective1": "Sophisticated",
+      "adjective2": "Artisan"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Green",
+        "value": "green",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-10.jpg"
+      }
+    ],
+    "rating": 4.5,
+    "reviewCount": 253
+  },
+  {
+    "id": 46,
+    "name": "Handmade Marble Chair",
+    "description": "Discover the incomplete new Chips with an exciting mix of Silk ingredients",
+    "shortDescription": "Discover the incomplete new Chips with an ...",
+    "category": "Watch",
+    "relative": "Smartwatches",
+    "image": "/images/item-7.jpg",
+    "size": "XL",
+    "color": "red",
+    "originalPrice": "77.49",
+    "price": "77.49",
+    "discount": 0,
+    "likeCount": 9935,
+    "status": "Popular",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 46
+      }
+    },
+    "images": [
+      "/images/item-5.jpg",
+      "/images/item-11.jpg",
+      "/images/item-3.jpg",
+      "/images/item-12.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-5.jpg",
+      "/images/item-11.jpg",
+      "/images/item-3.jpg"
+    ],
+    "materials": {
+      "material1": "Stainless Steel",
+      "percentage1": 70,
+      "material2": "Silicone",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Modern",
+      "adjective2": "Trendy"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Gold",
+        "value": "gold",
+        "image": "/images/item-5.jpg"
+      },
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-11.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-3.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-12.jpg"
+      }
+    ],
+    "rating": 4,
+    "reviewCount": 477
+  },
+  {
+    "id": 47,
+    "name": "Ergonomic Wooden Pizza",
+    "description": "Savor the fresh essence in our Bacon, designed for handy culinary adventures",
+    "shortDescription": "Savor the fresh essence in our Bacon, designed ...",
+    "category": "Clothing",
+    "relative": "Dresses",
+    "image": "/images/item-6.jpg",
+    "size": "M",
+    "color": "grey",
+    "originalPrice": "18.29",
+    "price": "14.63",
+    "discount": 20,
+    "likeCount": 3869,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 47
+      }
+    },
+    "images": [
+      "/images/item-2.jpg",
+      "/images/item-9.jpg",
+      "/images/item-6.jpg",
+      "/images/item-8.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-2.jpg",
+      "/images/item-9.jpg",
+      "/images/item-6.jpg"
+    ],
+    "materials": {
+      "material1": "Linen",
+      "percentage1": 90,
+      "material2": "Spandex",
+      "percentage2": 10
+    },
+    "origin": {
+      "adjective1": "Elegant",
+      "adjective2": "Handcrafted"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Yellow",
+        "value": "yellow",
+        "image": "/images/item-6.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-8.jpg"
+      }
+    ],
+    "rating": 3.8,
+    "reviewCount": 64
+  },
+  {
+    "id": 48,
+    "name": "Intelligent Cotton Keyboard",
+    "description": "Ergonomic Pizza made with Wooden for all-day boiling support",
+    "shortDescription": "Ergonomic Pizza made with Wooden for all-day ...",
+    "category": "Clothing",
+    "relative": "Dresses",
+    "image": "/images/item-2.jpg",
+    "size": "XL",
+    "color": "purple",
+    "originalPrice": "30.55",
+    "price": "27.50",
+    "discount": 10,
+    "likeCount": 2001,
+    "status": "Sale",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 48
+      }
+    },
+    "images": [
+      "/images/item-8.jpg",
+      "/images/item-4.jpg",
+      "/images/item-13.jpg",
+      "/images/item-3.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-8.jpg",
+      "/images/item-4.jpg",
+      "/images/item-13.jpg"
+    ],
+    "materials": {
+      "material1": "Viscose",
+      "percentage1": 75,
+      "material2": "Elastane",
+      "percentage2": 25
+    },
+    "origin": {
+      "adjective1": "Classic",
+      "adjective2": "Premium"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "availableColors": [
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Red",
+        "value": "red",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-13.jpg"
+      },
+      {
+        "name": "Yellow",
+        "value": "yellow",
+        "image": "/images/item-3.jpg"
+      }
+    ],
+    "rating": 4,
+    "reviewCount": 159
+  },
+  {
+    "id": 49,
+    "name": "Licensed Wooden Shirt",
+    "description": "Experience the turquoise brilliance of our Mouse, perfect for substantial environments",
+    "shortDescription": "Experience the turquoise brilliance of our Mouse, ...",
+    "category": "Watch",
+    "relative": "Digital Watches",
+    "image": "/images/item-10.jpg",
+    "size": "XL",
+    "color": "orange",
+    "originalPrice": "27.89",
+    "price": "27.89",
+    "discount": 0,
+    "likeCount": 1760,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 49
+      }
+    },
+    "images": [
+      "/images/item-2.jpg",
+      "/images/item-8.jpg",
+      "/images/item-9.jpg",
+      "/images/item-1.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-2.jpg",
+      "/images/item-8.jpg",
+      "/images/item-9.jpg"
+    ],
+    "materials": {
+      "material1": "Stainless Steel",
+      "percentage1": 70,
+      "material2": "Silicone",
+      "percentage2": 30
+    },
+    "origin": {
+      "adjective1": "Vintage",
+      "adjective2": "Refined"
+    },
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "availableColors": [
+      {
+        "name": "Grey",
+        "value": "grey",
+        "image": "/images/item-2.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-8.jpg"
+      },
+      {
+        "name": "Black",
+        "value": "black",
+        "image": "/images/item-9.jpg"
+      },
+      {
+        "name": "Silver",
+        "value": "silver",
+        "image": "/images/item-1.jpg"
+      }
+    ],
+    "rating": 4.3,
+    "reviewCount": 158
+  },
+  {
+    "id": 50,
+    "name": "Oriental Aluminum Table",
+    "description": "New Hat model with 27 GB RAM, 947 GB storage, and greedy features",
+    "shortDescription": "New Hat model with 27 GB RAM, 947 GB storage, and ...",
+    "category": "Lingerie",
+    "relative": "Sleepwear",
+    "image": "/images/item-3.jpg",
+    "size": "S",
+    "color": "pink",
+    "originalPrice": "80.45",
+    "price": "80.45",
+    "discount": 0,
+    "likeCount": 5795,
+    "status": "New",
+    "to": {
+      "name": "product-id",
+      "params": {
+        "id": 50
+      }
+    },
+    "images": [
+      "/images/item-7.jpg",
+      "/images/item-4.jpg",
+      "/images/item-11.jpg",
+      "/images/item-6.jpg"
+    ],
+    "thumbnails": [
+      "/images/item-7.jpg",
+      "/images/item-4.jpg",
+      "/images/item-11.jpg"
+    ],
+    "materials": {
+      "material1": "Cotton",
+      "percentage1": 85,
+      "material2": "Elastane",
+      "percentage2": 15
+    },
+    "origin": {
+      "adjective1": "Designer",
+      "adjective2": "Modern"
+    },
+    "availableSizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "availableColors": [
+      {
+        "name": "Purple",
+        "value": "purple",
+        "image": "/images/item-7.jpg"
+      },
+      {
+        "name": "Pink",
+        "value": "pink",
+        "image": "/images/item-4.jpg"
+      },
+      {
+        "name": "Blue",
+        "value": "blue",
+        "image": "/images/item-11.jpg"
+      },
+      {
+        "name": "White",
+        "value": "white",
+        "image": "/images/item-6.jpg"
+      }
+    ],
+    "rating": 4.6,
+    "reviewCount": 53
+  }
+]
