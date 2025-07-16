@@ -5,6 +5,7 @@ type SearchQuery = {
   color: string;
   price: [number, number];
   quickSearch: string;
+  gender: string;
 };
 
 export const useSearchQuery = () => useState<SearchQuery>(
@@ -16,6 +17,7 @@ export const useSearchQuery = () => useState<SearchQuery>(
     color: '',
     price: [1, 100],
     quickSearch: '',
+    gender: 'all',
   })
 );
 
@@ -28,5 +30,6 @@ export function resetSearchQuery() {
     color: '',
     price: [1, 100],
     quickSearch: '',
+    gender: 'all',
   };
 }
