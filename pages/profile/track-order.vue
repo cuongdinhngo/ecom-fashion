@@ -32,11 +32,9 @@ definePageMeta({
   pageDetail: 'Track Your Order',
 })
 
-import { faker } from '@faker-js/faker';
-
 const finalSteps = ['attempt-to-deliver', 'delivered'];
 const { getTrackerSteps } = useTracker();
-const steps = getTrackerSteps(faker.helpers.arrayElement(finalSteps));
+const steps = getTrackerSteps(getRandomElement(finalSteps));
 
 const attempToDelivery = computed(() => {
   return steps.some(step => step.status.toLowerCase() === 'attempt to deliver');

@@ -1,6 +1,10 @@
 // Cache for generated images to prevent memory leaks
 const imageCache = new Map<string, string>();
 
+export function getRandomElement<T>(array: T[]): T {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
 // Static image pools for rotation
 const avatarPool = [1, 2, 3, 4, 5, 6, 7, 8];
 const bannerPool = [1, 2, 3, 4, 5, 6];

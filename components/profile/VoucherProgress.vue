@@ -37,16 +37,14 @@
   </v-row>
 </template>
 <script lang="ts" setup>
-import { faker } from '@faker-js/faker';
-
 const vouchers = Array.from({ length: 6 }, () => {
-  const randomValue = faker.helpers.arrayElement([0, 25, 50, 75, 100]);
+  const randomValue = getRandomElement([0, 25, 50, 75, 100]);
   return {
-    title: faker.commerce.productName(),
-    description: faker.commerce.productDescription(),
+    title: 'Gift Voucher',
+    description: 'Special discount voucher for your purchase',
     isChecked: randomValue === 0,
     value: randomValue,
-    icon: faker.helpers.arrayElement(['mdi-ticket-percent', 'mdi-gift-outline', 'mdi-star-outline', 'mdi-cake-variant', 'mdi-heart', 'mdi-cash-multiple']),
+    icon: getRandomElement(['mdi-ticket-percent', 'mdi-gift-outline', 'mdi-star-outline', 'mdi-cake-variant', 'mdi-heart', 'mdi-cash-multiple']),
   }
 });
 </script>
