@@ -11,11 +11,11 @@
   </ItemsTopDataCard>
 </template>
 <script setup lang="ts">
-import { faker } from '@faker-js/faker';
-
-const recentlyViews = Array.from({ length: 5 }, (_, index) => ({
-  name: faker.person.fullName(),
-  avatar: categoryImg(),
-  to: { name: 'product-id', params: { id: index + 1 } },
-}));
+const recentlyViews = [
+  { name: 'Emma Johnson', avatar: categoryImg(), to: { name: 'product-id', params: { id: 1 } } },
+  { name: 'Michael Chen', avatar: categoryImg(), to: { name: 'product-id', params: { id: 2 } } },
+  { name: 'Sarah Wilson', avatar: categoryImg(), to: { name: 'product-id', params: { id: 3 } } },
+  { name: 'David Brown', avatar: categoryImg(), to: { name: 'product-id', params: { id: 4 } } },
+  { name: 'Lisa Garcia', avatar: categoryImg(), to: { name: 'product-id', params: { id: 5 } } },
+];
 </script>

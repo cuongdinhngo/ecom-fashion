@@ -39,7 +39,6 @@
   </v-card>
 </template>
 <script setup lang="ts">
-import { faker } from '@faker-js/faker';
 import { resetSearchQuery } from '@/composables/useSearchQuery';
 
 const props = defineProps({
@@ -55,7 +54,7 @@ const searchQuery = useSearchQuery();
 const categories = CATEGORIES.map(category => ({
   category: category.title,
   items: Array.from({ length: 4 }, () => categoryImg()),
-  counts: faker.number.int({ min: 50, max: 500 })
+  counts: Math.floor(Math.random() * 450) + 50
 }));
 
 function listProductsByCategories() {

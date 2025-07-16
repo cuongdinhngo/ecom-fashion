@@ -29,15 +29,30 @@
   </v-card>
 </template>
 <script setup lang="ts">
-import { faker } from '@faker-js/faker';
+// Static data to prevent memory leaks - replaced faker.js calls
 
-const banners = Array.from({ length: 4 }, () => {
-  return {
-    title: faker.commerce.productName(),
-    description: faker.commerce.productDescription(),
+const banners = [
+  {
+    title: 'Summer Collection',
+    description: 'Discover our latest summer fashion trends and styles.',
     image: productImg(),
-  };
-});
+  },
+  {
+    title: 'Winter Sale',
+    description: 'Get up to 50% off on all winter clothing and accessories.',
+    image: productImg(),
+  },
+  {
+    title: 'New Arrivals',
+    description: 'Check out our newest arrivals in fashion and lifestyle.',
+    image: productImg(),
+  },
+  {
+    title: 'Best Sellers',
+    description: 'Shop our most popular items loved by customers.',
+    image: productImg(),
+  },
+];
 </script>
 <style scoped>
 .content-wrapper {

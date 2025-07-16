@@ -94,47 +94,47 @@ definePageMeta({
   pageDetail: null,
 })
 
-import { faker } from '@faker-js/faker';
+// Static data to prevent memory leaks - replaced faker.js calls
 const statistics = [
   {
     month: 'January',
-    totalAmount: faker.number.int({ min: 10000, max: 100000 }),
+    totalAmount: 45000,
     stats: [
       {
         name: 'Orders',
-        value: faker.number.int({ min: 50, max: 100 }),
+        value: 75,
       },
       {
         name: 'Received',
-        value: faker.number.int({ min: 1, max: 50 }),
+        value: 35,
       },
       {
         name: 'To Receive',
-        value: faker.number.int({ min: 1, max: 50 }),
+        value: 40,
       },
     ],
     items: [
       {
         name: 'Clothing',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 5500,
         color: '#D81B60',
         colorName: 'pink-darken-1',
       },
       {
         name: 'Shoes',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 3200,
         color: '#1E88E5',
         colorName: 'blue-darken-1',
       },
       {
         name: 'Bags',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 2800,
         color: '#43A047',
         colorName: 'green-darken-1',
       },
       {
         name: 'Watches',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 4100,
         color: '#FFB300',
         colorName: 'orange-darken-1',
       },
@@ -142,43 +142,43 @@ const statistics = [
   },
   {
     month: 'February',
-    totalAmount: faker.number.int({ min: 10000, max: 100000 }),
+    totalAmount: 52000,
     stats: [
       {
         name: 'Orders',
-        value: faker.number.int({ min: 50, max: 100 }),
+        value: 68,
       },
       {
         name: 'Received',
-        value: faker.number.int({ min: 1, max: 50 }),
+        value: 42,
       },
       {
         name: 'To Receive',
-        value: faker.number.int({ min: 1, max: 50 }),
+        value: 26,
       },
     ],
     items: [
       {
         name: 'Clothing',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 6200,
         color: '#D81B60',
         colorName: 'pink-darken-1',
       },
       {
         name: 'Shoes',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 3800,
         color: '#1E88E5',
         colorName: 'blue-darken-1',
       },
       {
         name: 'Bags',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 3100,
         color: '#43A047',
         colorName: 'green-darken-1',
       },
       {
         name: 'Watches',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 4500,
         color: '#FFB300',
         colorName: 'orange-darken-1',
       },
@@ -186,43 +186,43 @@ const statistics = [
   },
   {
     month: 'March',
-    totalAmount: faker.number.int({ min: 10000, max: 100000 }),
+    totalAmount: 38000,
     stats: [
       {
         name: 'Orders',
-        value: faker.number.int({ min: 50, max: 100 }),
+        value: 55,
       },
       {
         name: 'Received',
-        value: faker.number.int({ min: 1, max: 50 }),
+        value: 48,
       },
       {
         name: 'To Receive',
-        value: faker.number.int({ min: 1, max: 50 }),
+        value: 7,
       },
     ],
     items: [
       {
         name: 'Clothing',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 4200,
         color: '#D81B60',
         colorName: 'pink-darken-1',
       },
       {
         name: 'Shoes',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 2800,
         color: '#1E88E5',
         colorName: 'blue-darken-1',
       },
       {
         name: 'Bags',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 2200,
         color: '#43A047',
         colorName: 'green-darken-1',
       },
       {
         name: 'Watches',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 3600,
         color: '#FFB300',
         colorName: 'orange-darken-1',
       },
@@ -230,43 +230,43 @@ const statistics = [
   },
   {
     month: 'April',
-    totalAmount: faker.number.int({ min: 10000, max: 100000 }),
+    totalAmount: 63000,
     stats: [
       {
         name: 'Orders',
-        value: faker.number.int({ min: 50, max: 100 }),
+        value: 82,
       },
       {
         name: 'Received',
-        value: faker.number.int({ min: 1, max: 50 }),
+        value: 56,
       },
       {
         name: 'To Receive',
-        value: faker.number.int({ min: 1, max: 50 }),
+        value: 26,
       },
     ],
     items: [
       {
         name: 'Clothing',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 7200,
         color: '#D81B60',
         colorName: 'pink-darken-1',
       },
       {
         name: 'Shoes',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 4800,
         color: '#1E88E5',
         colorName: 'blue-darken-1',
       },
       {
         name: 'Bags',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 3500,
         color: '#43A047',
         colorName: 'green-darken-1',
       },
       {
         name: 'Watches',
-        value: faker.number.int({ min: 1000, max: 10000 }),
+        value: 5200,
         color: '#FFB300',
         colorName: 'orange-darken-1',
       },

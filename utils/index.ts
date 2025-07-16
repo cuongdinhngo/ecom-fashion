@@ -1,7 +1,19 @@
-import { faker } from "@faker-js/faker";
-
 // Cache for generated images to prevent memory leaks
 const imageCache = new Map<string, string>();
+
+// Static image pools for rotation
+const avatarPool = [1, 2, 3, 4, 5, 6, 7, 8];
+const bannerPool = [1, 2, 3, 4, 5, 6];
+const categoryPool = Array.from({length: 20}, (_, i) => i + 1);
+const productPool = Array.from({length: 13}, (_, i) => i + 1);
+const largeProductPool = Array.from({length: 7}, (_, i) => i + 1);
+
+// Counters for rotation
+let avatarCounter = 0;
+let bannerCounter = 0;
+let categoryCounter = 0;
+let productCounter = 0;
+let largeProductCounter = 0;
 
 function getBaseURL(): string {
   // Check if we're in a browser environment
@@ -29,7 +41,10 @@ export function avatarImg(): string {
   }
   
   const baseURL = getBaseURL();
-  const image = `${baseURL}images/avatar-${faker.number.int({min: 1, max: 8})}.jpg`;
+  const avatarId = avatarPool[avatarCounter % avatarPool.length];
+  avatarCounter++;
+  
+  const image = `${baseURL}images/avatar-${avatarId}.jpg`;
   imageCache.set(cacheKey, image);
   return image;
 }
@@ -41,49 +56,55 @@ export function bannerImg(): string {
   }
   
   const baseURL = getBaseURL();
-  const image = `${baseURL}images/banner-${faker.number.int({min: 1, max: 6})}.jpg`;
+  const bannerId = bannerPool[bannerCounter % bannerPool.length];
+  bannerCounter++;
+  
+  const image = `${baseURL}images/banner-${bannerId}.jpg`;
   imageCache.set(cacheKey, image);
   return image;
 }
 
 export function categoryImg(): string {
-  const randomId = faker.number.int({min: 1, max: 20});
-  const cacheKey = `category-${randomId}`;
+  const categoryId = categoryPool[categoryCounter % categoryPool.length];
+  categoryCounter++;
+  const cacheKey = `category-${categoryId}`;
   
   if (imageCache.has(cacheKey)) {
     return imageCache.get(cacheKey)!;
   }
   
   const baseURL = getBaseURL();
-  const image = `${baseURL}images/c-${randomId}.jpg`;
+  const image = `${baseURL}images/c-${categoryId}.jpg`;
   imageCache.set(cacheKey, image);
   return image;
 }
 
 export function smallProductImg(): string {
-  const randomId = faker.number.int({min: 1, max: 13});
-  const cacheKey = `small-product-${randomId}`;
+  const productId = productPool[productCounter % productPool.length];
+  productCounter++;
+  const cacheKey = `small-product-${productId}`;
   
   if (imageCache.has(cacheKey)) {
     return imageCache.get(cacheKey)!;
   }
   
   const baseURL = getBaseURL();
-  const image = `${baseURL}images/item-${randomId}.jpg`;
+  const image = `${baseURL}images/item-${productId}.jpg`;
   imageCache.set(cacheKey, image);
   return image;
 }
 
 export function productImg(): string {
-  const randomId = faker.number.int({min: 1, max: 7});
-  const cacheKey = `product-${randomId}`;
+  const productId = largeProductPool[largeProductCounter % largeProductPool.length];
+  largeProductCounter++;
+  const cacheKey = `product-${productId}`;
   
   if (imageCache.has(cacheKey)) {
     return imageCache.get(cacheKey)!;
   }
   
   const baseURL = getBaseURL();
-  const image = `${baseURL}images/product-${randomId}.jpg`;
+  const image = `${baseURL}images/product-${productId}.jpg`;
   imageCache.set(cacheKey, image);
   return image;
 }

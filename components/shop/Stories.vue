@@ -46,10 +46,8 @@
   </ItemsTopDataCard>
 </template>
 <script setup lang="ts">
-import { faker } from '@faker-js/faker';
-
-const stories = Array.from({ length: 15 }, () => {
-  const isLive = faker.datatype.boolean();
+const stories = Array.from({ length: 15 }, (_, index) => {
+  const isLive = index % 3 === 0;
   return {
     image: smallProductImg(),
     isLive: isLive,

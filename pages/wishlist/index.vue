@@ -35,7 +35,6 @@
 
 </template>
 <script setup lang="ts">
-import { faker } from '@faker-js/faker';
 const recentlyViews = [
   {
     avatar: smallProductImg(),

@@ -21,10 +21,9 @@
 </template>
 <script setup lang="ts">
 import { ItemsSaleCard } from '#components';
-import { faker } from '@faker-js/faker';
 const saleItems = Array.from({ length: 6 }, (_, index) => ({
   image: smallProductImg(),
-  discount: faker.number.int({ min: 10, max: 50 }) + '%',
+  discount: (Math.floor(Math.random() * 40) + 10) + '%',
   to: { name: 'product-id', params: { id: index + 1 } },
 }));
 </script>

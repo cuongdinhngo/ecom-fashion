@@ -1,5 +1,3 @@
-import { faker } from "@faker-js/faker";
-
 export interface Order {
   id: number;
   orderNumber: number;
@@ -27,22 +25,51 @@ const orderStatuses = [
   'Shipping',
 ];
 
+const staticOrders = [
+  {
+    id: 1,
+    orderNumber: 1000,
+    quantity: 3,
+    status: 'Delivered',
+    delivery: 'Standard Delivery',
+    images: ['/images/item-1.jpg', '/images/item-2.jpg', '/images/item-3.jpg'],
+  },
+  {
+    id: 2,
+    orderNumber: 1001,
+    quantity: 2,
+    status: 'Shipping',
+    delivery: 'Express Delivery',
+    images: ['/images/item-4.jpg', '/images/item-5.jpg'],
+  },
+  {
+    id: 3,
+    orderNumber: 1002,
+    quantity: 4,
+    status: 'Shipping',
+    delivery: 'Express Delivery',
+    images: ['/images/item-1.jpg', '/images/item-2.jpg', '/images/item-3.jpg', '/images/item-4.jpg'],
+  },
+  {
+    id: 4,
+    orderNumber: 1004,
+    quantity: 1,
+    status: 'Shipping',
+    delivery: 'Express Delivery',
+    images: ['/images/item-2.jpg'],
+  },
+  {
+    id: 5,
+    orderNumber: 1002,
+    quantity: 5,
+    status: 'Shipping',
+    delivery: 'Express Delivery',
+    images: ['/images/item-1.jpg', '/images/item-2.jpg', '/images/item-3.jpg', '/images/item-4.jpg'],
+  },
+];
+
 export const useOrders = (options: OrdersOptions = defaultOption) => {
-  const orders = Array.from({ length: options.quantity }, (_, i) => {
-    const quantity = faker.number.int({ min: 1, max: 5 });
-    const baseImages = Array.from({ length: quantity }, (_, imgIndex) => 
-      smallProductImg() // Generate once and reuse
-    );
-    
-    return {
-      id: i + 1,
-      orderNumber: i + 1000,
-      quantity: quantity,
-      status: faker.helpers.arrayElement(orderStatuses),
-      delivery: faker.helpers.arrayElement(deliveryOptions),
-      images: baseImages,
-    }
-  });
+  const orders = staticOrders.slice(0, options.quantity);
 
   const getOrderList = () => {
     return orders;
