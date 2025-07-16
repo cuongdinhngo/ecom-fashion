@@ -6,6 +6,7 @@
     class="mb-4"
     rounded="pill"
     hide-details
+    v-model="phoneNumber"
   >
     <template #prepend-inner>
       <v-menu offset="15" class="">
@@ -47,7 +48,12 @@
   </v-text-field>
 </template>
 <script setup lang="ts">
-const selectedLocale = ref('en'); // Default locale
+const selectedLocale = ref('en');
+
+const phoneNumber = defineModel('phoneNumber', {
+  type: String,
+  default: '',
+});
 
 const LOCALE = [
   {
