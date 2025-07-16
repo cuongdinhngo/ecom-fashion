@@ -15,7 +15,7 @@
           variant="flat"
           color="primary"
           size="x-small"
-          @click="searchQuery.quickSearch = 'new'"
+          @click="showNewItems"
         ><v-icon size="x-large">mdi-arrow-right-thin</v-icon>
         </v-btn>
       </div>
@@ -40,8 +40,16 @@
   </v-card>
 </template>
 <script setup lang="ts">
+import { resetSearchQuery } from '@/composables/useSearchQuery';
+
 const { products } = useProducts({ quantity: 15});
 
 const searchQuery = useSearchQuery();
+
+function showNewItems() {
+  resetSearchQuery();
+  searchQuery.value.quickSearch = 'new';
+  navigateTo({ name: 'shop' });
+}
 
 </script>

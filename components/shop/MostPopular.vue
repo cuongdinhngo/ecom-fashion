@@ -41,12 +41,15 @@
   </v-card>
 </template>
 <script setup lang="ts">
+import { resetSearchQuery } from '@/composables/useSearchQuery';
+
 const currentProduct = useRouteParams('id', null, { transform: Number });
 const searchQuery = useSearchQuery();
 
 const { products } = useProducts({ quantity: 15});
 
 function showAllPopular() {
+  resetSearchQuery();
   searchQuery.value.quickSearch = 'popular';
   navigateTo({ name: 'shop' });
 }
