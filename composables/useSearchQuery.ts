@@ -18,3 +18,15 @@ export const useSearchQuery = () => useState<SearchQuery>(
     quickSearch: '',
   })
 );
+
+export function resetSearchQuery() {
+  const searchQuery = useSearchQuery();
+  searchQuery.value = {
+    categories: [],
+    subCategories: [],
+    size: 0,
+    color: '',
+    price: [1, 100],
+    quickSearch: '',
+  };
+}
