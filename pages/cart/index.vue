@@ -1,23 +1,20 @@
 <template>
   <v-card-title class="text-h5 font-weight-bold pa-0 d-flex align-center">
-    Cart
-    <span class="cart-counts bg-blue-lighten-4 text-subtitle-1 ml-2">{{ itemCounts }}</span>
+    <div class="d-flex align-center">
+      Cart
+      <span class="cart-counts bg-blue-lighten-4 text-subtitle-1 ml-2">{{ itemCounts }}</span>
+    </div>
+    <v-spacer></v-spacer>
+    <v-btn
+      variant="text"
+      :to="{ name: 'shop' }"
+      color="primary"
+      class="text-none d-flex align-center"
+    >
+      <v-icon>mdi-cart-plus</v-icon>
+      <span class="">Shop more</span>
+    </v-btn>
   </v-card-title>
-
-  <v-list-item
-    subtitle="666 Hoang Hoa, Ward 17, Binh Thanh District, HCM City"
-    link
-    class="bg-grey-lighten-3 rounded-lg pa-3 my-2"
-  >
-    <template #title>
-      <span class="text-subtitle-1 font-weight-bold">Shipping Address</span>
-    </template>
-    <template #append>
-      <v-btn icon variant="flat" color="primary" size="25" class="ml-4">
-        <v-icon size="17">mdi-pencil</v-icon>
-      </v-btn>
-    </template>
-  </v-list-item>
 
   <v-card min-height="90vh" tile class="elevation-0 bg-white mb-10">
     <!-- Products from Cart -->
