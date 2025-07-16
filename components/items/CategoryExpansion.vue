@@ -89,6 +89,8 @@ function selectCategory(category: string, subCategory: string) {
   };
 
   emit('closeDialog');
+
+  navigateTo({ name: 'shop' });
 }
 </script>
 <style>
