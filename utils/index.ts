@@ -1,6 +1,3 @@
-// Cache for generated images to prevent memory leaks
-const imageCache = new Map<string, string>();
-
 export function getRandomElement<T>(array: T[]): T {
   return array[Math.floor(Math.random() * array.length)];
 }
@@ -39,71 +36,36 @@ export function imagePath(image: string): string {
 }
 
 export function avatarImg(): string {
-  const cacheKey = 'avatar';
-  if (imageCache.has(cacheKey)) {
-    return imageCache.get(cacheKey)!;
-  }
-  
   const avatarId = avatarPool[avatarCounter % avatarPool.length];
   avatarCounter++;
   
-  const image = imagePath(`avatar-${avatarId}.jpg`);
-  imageCache.set(cacheKey, image);
-  return image;
+  return imagePath(`avatar-${avatarId}.jpg`);
 }
 
 export function bannerImg(): string {
-  const cacheKey = 'banner';
-  if (imageCache.has(cacheKey)) {
-    return imageCache.get(cacheKey)!;
-  }
-  
   const bannerId = bannerPool[bannerCounter % bannerPool.length];
   bannerCounter++;
   
-  const image = imagePath(`banner-${bannerId}.jpg`);
-  imageCache.set(cacheKey, image);
-  return image;
+  return imagePath(`banner-${bannerId}.jpg`);
 }
 
 export function categoryImg(): string {
   const categoryId = categoryPool[categoryCounter % categoryPool.length];
   categoryCounter++;
-  const cacheKey = `category-${categoryId}`;
   
-  if (imageCache.has(cacheKey)) {
-    return imageCache.get(cacheKey)!;
-  }
-  
-  const image = imagePath(`c-${categoryId}.jpg`);
-  imageCache.set(cacheKey, image);
-  return image;
+  return imagePath(`c-${categoryId}.jpg`);
 }
 
 export function smallProductImg(): string {
   const productId = productPool[productCounter % productPool.length];
   productCounter++;
-  const cacheKey = `small-product-${productId}`;
   
-  if (imageCache.has(cacheKey)) {
-    return imageCache.get(cacheKey)!;
-  }
-  
-  const image = imagePath(`item-${productId}.jpg`);
-  imageCache.set(cacheKey, image);
-  return image;
+  return imagePath(`item-${productId}.jpg`);
 }
 
 export function productImg(): string {
   const productId = largeProductPool[largeProductCounter % largeProductPool.length];
   largeProductCounter++;
-  const cacheKey = `product-${productId}`;
   
-  if (imageCache.has(cacheKey)) {
-    return imageCache.get(cacheKey)!;
-  }
-  
-  const image = imagePath(`product-${productId}.jpg`);
-  imageCache.set(cacheKey, image);
-  return image;
+  return imagePath(`product-${productId}.jpg`);
 }
