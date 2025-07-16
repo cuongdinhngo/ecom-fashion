@@ -2,6 +2,15 @@
   <v-card class="my-4 bg-white" tile elevation="0">
     <v-card-title class="d-flex justify-space-between align-center px-0 pb-0">
       <span class="text-subtitle-1 font-weight-bold">
+        <v-btn
+          v-if="attempToDelivery"
+          variant="flat"
+          color="error"
+          class="mr-2"
+          icon
+          size="30"
+          @click="supportDialog = true"
+        ><v-icon size="small">mdi-alarm-light-outline</v-icon></v-btn>
         {{ stepper.status }}
         <v-btn
           v-if="isDelivered"
@@ -14,12 +23,12 @@
         <v-btn
           v-if="attempToDelivery"
           variant="flat"
-          color="error"
+          color="primary"
           class="ml-2"
           icon
           size="30"
           @click="supportDialog = true"
-        ><v-icon size="small">mdi-alarm-light-outline</v-icon></v-btn>
+        ><v-icon size="small">mdi-face-agent</v-icon></v-btn>
       </span>
       <v-chip label :class="attempToDelivery ? 'bg-red-lighten-1' : 'bg-grey-lighten-5'" size="small">{{ stepper.timestamp }}</v-chip>
     </v-card-title>
