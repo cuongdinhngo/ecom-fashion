@@ -27,14 +27,14 @@
       class="bg-grey-lighten-3 rounded-lg pa-3 my-2"
     >
       <template #title>
-        <span class="text-subtitle-1 font-weight-bold">Shipping Address</span>
+        <span class="text-subtitle-1 font-weight-bold">Contact Information</span>
       </template>
       <v-card-subtitle class="px-0">
-        <p>+908630585643</p>
-        <p>abc.123@local.test</p>
+        <p>{{ contactInformation.phone }}</p>
+        <p>{{ contactInformation.email }}</p>
       </v-card-subtitle>
       <template #append>
-        <v-btn icon variant="flat" color="primary" size="25" class="ml-4">
+        <v-btn icon variant="flat" color="primary" size="25" class="ml-4" @click="contactInformationDialog = true">
           <v-icon size="17">mdi-pencil</v-icon>
         </v-btn>
       </template>
@@ -230,6 +230,43 @@
     </template>
   </v-dialog>
 
+  <!-- Contact Information Dialog -->
+  <v-dialog
+    v-model="contactInformationDialog"
+    transition="dialog-bottom-transition"
+    min-width="100%"
+  >
+    <template v-slot:default="{ isActive }">
+      <v-card width="100%">
+        <v-card-title class="d-flex justify-space-between align-center py-4">
+          <span class="text-h5 font-weight-bold">Contact Information</span>
+        </v-card-title>
+
+        <v-card-text>
+          <v-text-field
+            v-model="contactInformation.phone"
+            label="Phone"
+            variant="outlined"
+            color="primary"
+          ></v-text-field>
+          <v-text-field
+            v-model="contactInformation.email"
+            label="Email"
+            variant="outlined"
+            color="primary"
+          ></v-text-field>
+          <v-btn
+            variant="flat"
+            color="primary"
+            class="text-none rounded-lg"
+            width="100%"
+            @click="contactInformationDialog = false"
+          >Save Change</v-btn>
+        </v-card-text>
+      </v-card>
+    </template>
+  </v-dialog>
+
   <!-- Active Vouchers Dialog -->
   <v-dialog
     v-model="voucherDialog"
@@ -375,13 +412,50 @@
   </v-dialog>
 </template>
 <script lang="ts" setup>
-import { fa, faker, tr } from '@faker-js/faker';
+import { faker } from '@faker-js/faker';
 
 const { cartItems } = useCart();
 const { products } = useProducts();
-const shippingOption = ref('standard');
 
+const shippingAddress = ref({
+  address: '666 Hoang Hoa st',
+  ward: 'Binh Minh',
+  district: 'Hai Chau',
+  state: 'Da Nang',
+});
+
+const contactInformation = ref({
+  phone: '+908630585643',
+  email: 'abc.123@local.test'
+});
+
+const vouchers = ref([
+  {
+    title: 'First Purchase',
+    description: 'off for your next order',
+    value: '5',
+    icon: 'mdi-ticket-percent',
+    expiredDate: 'Jul 25th, 25'
+  },
+  {
+    title: 'Summer Sale',
+    description: 'off on all items',
+    value: '10',
+    icon: 'mdi-gift-outline',
+    expiredDate: 'Aug 15th, 25'
+  }
+]);
+
+const shippingOption = ref('standard');
+const selectedVoucher = ref({});
+const selectedShippingOption = ref('standard');
 const totalPrice = ref(0);
+const paymentStatus = ref('');
+const contactInformationDialog = ref(false);
+const shippingAddressDialog = ref(false);
+const voucherDialog = ref(false);
+const processDialog = ref(false);
+const isProcessing = ref(false);
 
 const recievedDate = computed(() => {
   const today = new Date();
@@ -405,49 +479,33 @@ const sellProducts = computed(() => {
 });
 
 onMounted(() => {
-  totalPrice.value = sellProducts.value.reduce((total, item) => {
+  totalPrice.value = Number(sellProducts.value.reduce((total, item) => {
     return total + (item ? Number(item.price) * Number(item.quantity) : 0);
-  }, 0).toFixed(2);
+  }, 0).toFixed(2));
 });
-
-const voucherDialog = ref(false);
-const vouchers = ref([
-  {
-    title: 'First Purchase',
-    description: 'off for your next order',
-    value: '5',
-    icon: 'mdi-ticket-percent',
-    expiredDate: 'Jul 25th, 25'
-  },
-  {
-    title: 'Summer Sale',
-    description: 'off on all items',
-    value: '10',
-    icon: 'mdi-gift-outline',
-    expiredDate: 'Aug 15th, 25'
-  }
-]);
-const selectedVoucher = ref({});
 
 watch(selectedVoucher, (newValue) => {
   console.log('Selected Voucher:', newValue);
   if (newValue) {
-    totalPrice.value = (Number(totalPrice.value) * (1 - Number(newValue.value) / 100)).toFixed(2);
+    const tmpTotalPrice = Number(sellProducts.value.reduce((total, item) => {
+    return total + (item ? Number(item.price) * Number(item.quantity) : 0);
+  }, 0).toFixed(2));
+    totalPrice.value = Number((tmpTotalPrice * (1 - Number(newValue.value) / 100)).toFixed(2));
   }
 });
 
 watch(shippingOption, (newValue) => {
-  console.log('Selected Shipping Option:', newValue);
-  if (newValue === 'express') {
-    totalPrice.value = (Number(totalPrice.value) + 12).toFixed(2);
+  let tmpTotalPrice = 0;
+  if (newValue === 'express' && selectedShippingOption.value === 'standard') {
+    tmpTotalPrice = Number((totalPrice.value + 12).toFixed(2));
+  } else if (newValue === 'standard' && selectedShippingOption.value === 'express') {
+    tmpTotalPrice = Number((totalPrice.value - 12).toFixed(2));
   } else {
-    totalPrice.value = (Number(totalPrice.value) - 12).toFixed(2);
+    tmpTotalPrice = totalPrice.value;
   }
+  selectedShippingOption.value = newValue;
+  totalPrice.value = tmpTotalPrice;
 });
-
-const processDialog = ref(false);
-const isProcessing = ref(false);
-const paymentStatus = ref('')
 
 function processPayment() {
   console.log('Processing payment...');
@@ -459,15 +517,6 @@ function processPayment() {
     isProcessing.value = false;
   }, 3000);
 }
-
-const shippingAddressDialog = ref(false);
-const shippingAddress = ref({
-  address: '666 Hoang Hoa st',
-  ward: 'Binh Minh',
-  district: 'Hai Chau',
-  state: 'Da Nang',
-});
-
 </script>
 <style scoped>
 .cart-counts {
