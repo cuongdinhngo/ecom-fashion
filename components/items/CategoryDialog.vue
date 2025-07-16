@@ -24,7 +24,6 @@
             :key="gender.value"
             :value="gender.value"
             v-slot="{ toggle, selectedClass, isSelected }"
-            
           >
             <v-btn
               :variant="isSelected ? 'outlined' : 'tonal'"
@@ -79,7 +78,7 @@ const categoryDialog = defineModel('categoryDialog', {
 const { KINDS } = useProducts();
 
 const searchQuery = useSearchQuery();
-const selectedGender = ref(searchQuery.value.gender);
+const selectedGender = ref(searchQuery.value.gender || 'all');
 const GENDERS = [
   { label: 'All', value: 'all' },
   { label: 'Female', value: 'female' },

@@ -372,7 +372,7 @@
     </v-card>
   </v-dialog>
 
-  <!-- Product Options Dialog -->
+  <!-- Size Guide Dialog -->
   <v-dialog
     v-model="sizeGuideDialog"
     transition="dialog-bottom-transition"
@@ -447,7 +447,7 @@ const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
 const { addToCart, isInCart } = useCart();
 const { getProductById } = useProducts();
 
-const action = ref('');
+const action = ref('buy-now');
 const dialog = ref(false);
 const selectedColor = ref('');
 const selectedSize = ref('');
@@ -476,7 +476,7 @@ function handleAction() {
     dialog.value = false;
   } else if (action.value === 'buy-now') {
     addProductToCart();
-    router.push({ name: 'cart-checkout' });
+    navigateTo({ name: 'cart-checkout' })
   }
 }
 
