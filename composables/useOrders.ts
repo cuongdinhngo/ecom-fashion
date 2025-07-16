@@ -23,22 +23,24 @@ const deliveryOptions = [
 ];
 
 const orderStatuses = [
-  'Packed',
   'Delivered',
   'Shipping',
-  'Shipped',
 ];
 
 export const useOrders = (options: OrdersOptions = defaultOption) => {
   const orders = Array.from({ length: options.quantity }, (_, i) => {
     const quantity = faker.number.int({ min: 1, max: 5 });
+    const baseImages = Array.from({ length: quantity }, (_, imgIndex) => 
+      smallProductImg() // Generate once and reuse
+    );
+    
     return {
       id: i + 1,
       orderNumber: i + 1000,
       quantity: quantity,
       status: faker.helpers.arrayElement(orderStatuses),
       delivery: faker.helpers.arrayElement(deliveryOptions),
-      images: Array.from({ length: quantity }, () => smallProductImg()),
+      images: baseImages,
     }
   });
 

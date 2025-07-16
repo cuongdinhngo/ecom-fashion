@@ -32,7 +32,7 @@ export interface SearchFilters {
 }
 
 const defaultOptions = {
-  quantity: 300
+  quantity: 50
 };
 
 type ProductOptions = {
