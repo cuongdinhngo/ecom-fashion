@@ -10,7 +10,7 @@ A modern, responsive e-commerce fashion application built with **Nuxt.js 3**, **
 
 | Home Screen | Product Details | Shopping Cart | Wishlist |
 |-------------|-----------------|---------------|----------|
-| ![Home](./screenshots/home.png) | ![Product](./screenshots/product.png) | ![Cart](./screenshots/cart.png) | ![Wishlist](./screenshots/wishlist.png) |
+| ![Home](./public/images/home.png) | ![Product](./public/images/product.png) | ![Cart](./public/images/cart.png) | ![Wishlist](./public/images/wishlist.png) |
 
 ## ✨ Features
 

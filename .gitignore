@@ -27,8 +27,6 @@ src-tauri/gen/
 
 # Screenshots and temporary files
 screenshot.png
-*.png
-*.jpg
 *.jpeg
 
 # Local env files
