@@ -255,24 +255,13 @@ bun lint                  # Code linting
 bun type-check           # TypeScript checking
 ```
 
-## 🤝 Contributing
+## 👨‍💻 Author
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 👨‍💻 Developer
-
-**Cuong Dinh Ngo**
-- GitHub: [@cuongdinhngo](https://github.com/cuongdinhngo)
-- LinkedIn: [Cuong Dinh Ngo](https://www.linkedin.com/in/ngodinhcuong/e)
-- Email: dinhcuongngo@gmail.com
+**Cuong Ngo**
+- 🌐 Portfolio: [cuongdinhngo.github.io](https://cuongdinhngo.github.io/)
+- 💼 GitHub: [@cuongdinhngo](https://github.com/cuongdinhngo)
+- 📧 Email: dinhcuongngo@gmail.com
+- 💬 LinkedIn: [Connect with me](https://www.linkedin.com/in/ngodinhcuong/)
 
 ## 🙏 Acknowledgments
 
