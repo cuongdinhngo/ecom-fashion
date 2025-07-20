@@ -255,21 +255,16 @@ bun lint                  # Code linting
 bun type-check           # TypeScript checking
 ```
 
+---
+
 ## 👨‍💻 Author
 
-**Cuong Ngo**
+**Cuong Dinh Ngo**
 - 🌐 Portfolio: [cuongdinhngo.github.io](https://cuongdinhngo.github.io/)
 - 💼 GitHub: [@cuongdinhngo](https://github.com/cuongdinhngo)
 - 📧 Email: dinhcuongngo@gmail.com
 - 💬 LinkedIn: [Connect with me](https://www.linkedin.com/in/ngodinhcuong/)
 
-## 🙏 Acknowledgments
-
-- [Nuxt.js](https://nuxt.com/) for the amazing framework
-- [Vuetify](https://vuetifyjs.com/) for the beautiful Material Design components
-- [Tauri](https://tauri.app/) for enabling cross-platform mobile development
-- [Faker.js](https://fakerjs.dev/) for mock data generation
-
 ---
 
-⭐ **Star this repository if you found it helpful!**
+**Built with ❤️ by [Cuong Dinh Ngo](https://cuongdinhngo.github.io/)**
